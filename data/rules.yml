@@ -11,3 +11,9 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: respond to FAQs
+  steps:
+    - intent: faq
+    - action: utter_faq
+

@@ -1,0 +1,23 @@
+version: "2.0"
+
+nlu:
+  - intent: faq/goal_bfz
+    examples: |
+      - Wofür wurde das BfZ entwickelt?
+      - Wofür wurde das Berliner Beratungsnetz für Zugewanderte entwickelt?
+      - Was ist das BfZ?
+  - intent: faq/financing_bfz
+    examples: |
+      - Wie wird das BfZ finanziert?
+      - Wie wird das Berliner Beratungsnetz für Zugewanderte finanziert?
+
+responses:
+  utter_faq/goal_bfz:
+    - text: Das „Berliner Beratungsnetz für Zugewanderte“ ist eine online-Datenbank mit
+        Beratungsangeboten für zugewanderte Menschen. Die Datenbank umfasst Angebote in
+        verschiedenen Themenfeldern und Bereichen der Beratung.
+  utter_faq/financing_bfz:
+    - text: Das „Berliner Beratungsnetz für Zugewanderte“ wird finanziert durch die
+        Senatsverwaltung für Integration, Arbeit und Soziales im Rahmen des Interkulturellen
+        Kompetenznetzwerks für Migrant*innenorganisationen in Berlin (IKMO). Es wurde konzeptionell
+        in enger Kooperation mit dem Willkommenszentrum Berlin entwickelt.

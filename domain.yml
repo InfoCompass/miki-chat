@@ -9,6 +9,7 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
+- faq
 responses:
   utter_greet:
   - text: Hey! Wie geht's dir?
