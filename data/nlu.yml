@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -37,13 +36,12 @@ nlu:
     - Servus
     - Servus bot
     - hi bot
-    - hi bot
     - huhu bot
     - huhu du da
     - huhu hallo
     - huhu
     - huhu sag mal hallo
-
+    - Hallöchen
 - intent: goodbye
   examples: |
     - Schönen Abend noch
@@ -91,7 +89,6 @@ nlu:
     - Tschüss chat bot.
     - Wir sehen uns!
     - Wir sehen uns das nächste mal
-
 - intent: affirm
   examples: |
     - Akzeptieren
@@ -231,7 +228,7 @@ nlu:
     - ja bitte
     - Ja, mach das
     - ja sicher
-    - yeah '=
+    - yeah
     - ja, warum nicht
     - yeeeeezzzzz
     - Jaaa
@@ -239,7 +236,6 @@ nlu:
     - Ja, wenn ich muss
     - Ja, das ist schön
     - Ja, ich werde es Ihnen danken
-    - Ja. : /
     - ja, ich will
     - ja bitte annehmen
     - ja Baby
@@ -274,7 +270,6 @@ nlu:
     - yes
     - ja
     - toll
-
 - intent: deny
   examples: |
     - Nein
@@ -311,15 +306,14 @@ nlu:
     - nein danke
     - keines von denen
     - Nein danke
-
 - intent: mood_great
   examples: |
     - perfekt
     - großartig
     - erstaunlich
     - wunderbar
-    - Ich fühle mich sehr gut.
-
+    - Ich fühle mich sehr gut
+    - Ich bin glücklich
 - intent: mood_unhappy
   examples: |
     - mein Tag war schrecklich
@@ -332,7 +326,6 @@ nlu:
     - seht traurig
     - unglücklich
     - nicht gut
-
 - intent: bot_challenge
   examples: |
     - bist du ein Bot?
