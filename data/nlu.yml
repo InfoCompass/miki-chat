@@ -3,90 +3,339 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Grüß Gott!
+    - Guten Tag!
+    - Guten Tag bot
+    - Guten Tag lieber bot
+    - Hallo.
+    - Sag mal hallo
+    - Hallo du da
+    - Hallo du bot
+    - Hallo lieber bot.
+    - Hallo bot.
+    - Hey!
+    - Hey robo
+    - Hey bot
+    - Hey bot kannst du hallo sagen
+    - Hi
+    - Hi bot kannst du hallo sagen
+    - Hi hallo
+    - Mahlzeit!
+    - Moin!
+    - Moin, bot kannst du hallo sagen
+    - Moin moin!
+    - Na du?!
+    - Na du, bot
+    - Na du sag mal hallo
+    - Na du bot, sag mal hallo
+    - Sag mal hallo.
+    - Kannst du hallo sagen
+    - Kannst mich begrüßen
+    - Kannst du uns begrüßen
+    - sei gegrüßt
+    - sei gegrüßt bot
+    - Servus
+    - Servus bot
+    - hi bot
+    - hi bot
+    - huhu bot
+    - huhu du da
+    - huhu hallo
+    - huhu
+    - huhu sag mal hallo
 
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
+    - Schönen Abend noch
+    - Auf Wiederschauen
+    - Auf Wiederschauen bot
+    - auf wiedersehen
+    - Auf Wiedersehen bot
+    - Auf Wiedersehen, chat bot.
+    - bis bald
+    - bis dann
+    - bis demnächst
+    - bis denn
+    - bis die Tage
+    - Bis morgen
+    - bis nachher
+    - Bis später
+    - bis zum nächsten Mal
+    - bis bald bot
+    - bis dann bot
+    - bis demnächst bot
+    - bis denn bot
+    - bis die Tage bot
+    - Bis morgen bot
+    - bis nachher bot
+    - Bis später bot
+    - bis zum nächsten Mal bot
+    - Bis zum nächsten Mal. Tschau.
     - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - bot
+    - Ciao.
+    - Ich gehe jetzt
+    - Ich verabschiede mich jetzt
+    - Mach es gut
+    - Machs gut!
+    - Man sieht sich!
+    - Pass gut auf dich auf!
+    - Schönen Tag
+    - schönen tag noch
+    - Schönes Wochenende
+    - Schön Feierabend
+    - Tschau
+    - tschüs
+    - tschüs bot
+    - Tschüss.
+    - Tschüss chat bot.
+    - Wir sehen uns!
+    - Wir sehen uns das nächste mal
 
 - intent: affirm
   examples: |
-    - yes
+    - Akzeptieren
+    - Genial!
+    - Cool
+    - Gut
+    - Groß
+    - Ich nehme an
+    - Ich nehme an.
+    - Genau
+    - Ich benutze es
+    - Ich mache
+    - Ich verstehe es
+    - Ich denke schon
+    - Ich werde
+    - Ich würde das absolut lieben
+    - Ich bin mir sicher ich werde!
+    - Nett
+    - IN ORDNUNG
+    - Na sicher
+    - Oh ja
+    - Oh ok
+    - In Ordnung.
+    - In Ordnung
+    - In Ordnung!
+    - BITTE
+    - SICHER
+    - Sicher
+    - Süss
+    - Das wäre toll
+    - JA
+    - JEP
+    - Ja
+    - Ja sicher
+    - Ja, das ist in Ordnung
+    - Ja!
+    - Ja, ich will
+    - Ja bitte
+    - Ja bitte!
+    - Ja, ich akzeptiere
+    - Ja.
+    - Jep
+    - ein bisschen
+    - absolut
+    - akzeptieren
+    - akzeptiert
+    - einverstanden
+    - Ah ok
+    - in Ordung
+    - alles klar, cool
+    - amayzing
+    - tolle!
+    - genial
+    - genial!
+    - bestätigen
+    - cool
+    - cool :)
+    - Coole Geschichte, Bro
+    - cool!
+    - coolio
+    - Auf jeden Fall ja ohne Zweifel
+    - erledigt
+    - Meinetwegen
+    - natürlich
+    - gut
+    - Scheiße ja!
+    - gehen
+    - gehen Sie geradeaus
+    - Tue es
+    - geht super gut
+    - gut.
+    - großartig
+    - Großartig, machen wir das
+    - großartig!
+    - Hölle, ja
+    - Auf jedenfall
+    - Hm, das würde mir gefallen
+    - wie schön!
+    - ich bin!
+    - ich will das
+    - ich werde!
+    - es ist okay
+    - es ist in Ordnung
+    - ja cool
+    - Ja, das ist großartig
+    - Jezz
+    - Jo
+    - k
+    - kk
+    - Machen wir das
+    - Lass uns das machen
+    - nett
+    - nicht schlecht
+    - Natürlich tue ich
+    - Oh toll!
+    - Oh cool
+    - Oh gut !!
+    - oh super
+    - in Ordnung
+    - OK Cool
+    - Okay, gut
+    - ok Freund
+    - OK gut
+    - Ok, großartig
+    - Okay, ich akzeptiere
+    - Okay, Sara
+    - Ok, ich benehme mich jetzt
+    - OK ich habe verstanden
+    - in Ordnung...
+    - alles klar
+    - Okie
+    - Ok
+    - Oui
+    - perfekt
+    - Bitte
+    - si
+    - irgendwie
+    - sicher
+    - sichere Sache
+    - sicher!
+    - Das ist cool
+    - das ist ok
+    - das klingt gut
+    - das ist großartig
+    - das ist gut
+    - oben
+    - Ähm
+    - sehr viel
+    - Nun ja
     - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Du bist cool
+    - Du machst es
+    - Ja, das ist cool
+    - Jaah
+    - Yay
+    - Ihr
+    - ja bitte
+    - Ja, mach das
+    - ja sicher
+    - yeah '=
+    - ja, warum nicht
+    - yeeeeezzzzz
+    - Jaaa
+    - Ja, das will ich
+    - Ja, wenn ich muss
+    - Ja, das ist schön
+    - Ja, ich werde es Ihnen danken
+    - Ja. : /
+    - ja, ich will
+    - ja bitte annehmen
+    - ja Baby
+    - ja, fahre fort
+    - Ja, mach schon
+    - ja, großartig
+    - ja, ich akzeptiere
+    - Ja, ich stimme zu
+    - Ja, habe ich!
+    - ja ist es
+    - ja es war okay
+    - ja natürlich
+    - ja bitte!
+    - Ja, bitte
+    - Ja, Sir
+    - Ja, das ist toll
+    - Ja, das ist was ich will
+    - Ja, du kannst
+    - Ja'
+    - Ja, würde ich gerne
+    - ja bin ich
+    - Jaaaa
+    - Ja, ja
+    - ja Ja Ja
+    - Hoppla
+    - Jahre
+    - yyeeeh
+    - Jawoll
+    - ok
+    - Ja natürlich
+    - ich nehme an
+    - yes
+    - ja
+    - toll
 
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - Nein
+    - definitiv nicht
+    - noch nie
+    - absolut nicht
+    - Ich glaube nicht
+    - Ich fürchte nein
+    - nein Sir
+    - Nein, madam
+    - auf keinen Fall
+    - Nein Entschuldigung
+    - Nein nicht wirklich.
+    - Nein, nicht für mich
+    - nee
+    - nein und wieder nein
+    - No Go
+    - Nein Danke
+    - Ablehnen
+    - verweigern
+    - ich lehne ab
+    - keine Ursache
+    - Nein, ich akzeptiere nicht
+    - Nein!!!!
+    - Nein, du hast es falsch gemacht
+    - Nein, ich kann nicht
+    - ich bin mir nicht sicher
+    - NEIN
+    - nein
+    - nicht wirklich
+    - Ich denke, es bedeutet - nein
+    - Ich will nicht
+    - Beides will ich nicht
+    - nein danke
+    - keines von denen
+    - Nein danke
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - perfekt
+    - großartig
+    - erstaunlich
+    - wunderbar
+    - Ich fühle mich sehr gut.
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - mein Tag war schrecklich
+    - Ich bin traurig
+    - Ich fühle mich nicht sehr gut
+    - Ich bin enttäuscht
+    - Supertraurig
+    - Ich bin so traurig
+    - traurig
+    - seht traurig
+    - unglücklich
+    - nicht gut
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - bist du ein Bot?
+    - bist du ein Mensch?
+    - Spreche ich mit einem Bot?
+    - Spreche ich mit einem Menschen?
