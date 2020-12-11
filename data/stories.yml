@@ -6,6 +6,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_intro
   - intent: mood_great
   - action: utter_happy
 
@@ -13,6 +14,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_intro
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
@@ -23,6 +25,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_intro
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
