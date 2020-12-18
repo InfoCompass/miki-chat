@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Web Interface</title>
+</head>
+<body>
+
+This page is demonstrating how to connect the webchat client that can be found in
+<a href="https://github.com/botfront/rasa-webchat">this page</a>.
+
+<p/>
+
+To start the MIKI chatbot click on the lower right chat icon.
+
+<div id="webchat"></div>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js">
+// you can add a version tag if you need, e.g for version 0.11.5 https://cdn.jsdelivr.net/npm/rasa-webchat@0.11.5/lib/index.min.js
+</script>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/greet",
+    customData: {"language": "de"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://mikichatbot.ydns.eu",
+    socketPath: "/socket.io/",
+    title: "MIKI Chatbot",
+    // subtitle: "Subtitle",
+    params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
+  })
+</script>
+
+</body>
+</html>
