@@ -332,3 +332,13 @@ nlu:
     - bist du ein Mensch?
     - Spreche ich mit einem Bot?
     - Spreche ich mit einem Menschen?
+- synonym: women
+  examples: |
+    - Frauen
+- synonym: young
+  examples: |
+    - Kinder
+    - Jugendliche
+- synonym: asylum_seekers
+  examples: |
+    - Geflüchtete

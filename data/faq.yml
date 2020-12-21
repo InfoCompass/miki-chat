@@ -10,6 +10,13 @@ nlu:
     examples: |
       - Wie wird das BfZ finanziert?
       - Wie wird das Berliner Beratungsnetz für Zugewanderte finanziert?
+  - intent: faq/target_group
+    examples: |
+      - Ich suche Angebote für [Frauen](target_group)?
+      - Welche Angebote gibt es für [Frauen](target_group)?
+      - Gibt es spezielle Angebote für [Frauen](target_group)?
+      - Wissen Sie, wo [Kinder](target_group) Angebote finden können?
+      - Wissen Sie, wo [Jugentliche](target_group) Angebote finden können?
 
 responses:
   utter_faq/goal_bfz:
@@ -21,3 +28,6 @@ responses:
         Senatsverwaltung für Integration, Arbeit und Soziales im Rahmen des Interkulturellen
         Kompetenznetzwerks für Migrant*innenorganisationen in Berlin (IKMO). Es wurde konzeptionell
         in enger Kooperation mit dem Willkommenszentrum Berlin entwickelt.
+  utter_faq/target_group:
+    - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/u/{target_group}
+

@@ -10,6 +10,15 @@ intents:
 - mood_unhappy
 - bot_challenge
 - faq
+entities:
+- target_group
+slots:
+  target_group:
+    type: categorical
+    values:
+    - women
+    - young
+    - asylum_seekers
 responses:
   utter_greet:
   - text: Hey! Wie geht's dir?
