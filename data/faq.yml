@@ -22,6 +22,11 @@ nlu:
       - Unterstützung bei [Sucht](primary_topic)?
       - Informationen beim Thema [Wohnen](primary_topic)?
       - Gibt es [Antigewalt](primary_topic) Beratung?
+  - intent: faq/primary_topic+target_group
+    examples: |
+      - Gibt es für [Frauen](target_group) Angebote zur [Sucht](primary_topic)?
+      - Bitte zeige Angebote zu [Sucht](primary_topic) für [Frauen](target_group)
+      - Wer berät [Frauen](target_group) zu [Sucht](primary_topic)?
 
 responses:
   utter_faq/goal_bfz:
@@ -37,4 +42,6 @@ responses:
     - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/u/{target_group}
   utter_faq/primary_topic:
     - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/c/{primary_topic}
+  utter_faq/primary_topic+target_group:
+    - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/c/{primary_topic}/u/{target_group}
 
