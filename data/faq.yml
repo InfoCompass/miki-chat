@@ -17,6 +17,11 @@ nlu:
       - Gibt es spezielle Angebote für [Frauen](target_group)?
       - Wissen Sie, wo [Kinder](target_group) Angebote finden können?
       - Wissen Sie, wo [Jugentliche](target_group) Angebote finden können?
+  - intent: faq/primary_topic
+    examples: |
+      - Unterstützung bei [Sucht](primary_topic)?
+      - Informationen beim Thema [Wohnen](primary_topic)?
+      - Gibt es [Antigewalt](primary_topic) Beratung?
 
 responses:
   utter_faq/goal_bfz:
@@ -30,4 +35,6 @@ responses:
         in enger Kooperation mit dem Willkommenszentrum Berlin entwickelt.
   utter_faq/target_group:
     - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/u/{target_group}
+  utter_faq/primary_topic:
+    - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/c/{primary_topic}
 

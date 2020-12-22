@@ -342,3 +342,12 @@ nlu:
 - synonym: asylum_seekers
   examples: |
     - Geflüchtete
+- synonym: addiction
+  examples: |
+    - Sucht
+- synonym: violence
+  examples: |
+    - Antigewalt
+- synonym: accommodation
+  examples: |
+    - Wohnung

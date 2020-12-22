@@ -12,6 +12,7 @@ intents:
 - faq
 entities:
 - target_group
+- primary_topic
 slots:
   target_group:
     type: categorical
@@ -19,6 +20,12 @@ slots:
     - women
     - young
     - asylum_seekers
+  primary_topic:
+    type: categorical
+    values:
+    - violence
+    - addiction
+    - accommodation
 responses:
   utter_greet:
   - text: Hey! Wie geht's dir?
