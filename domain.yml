@@ -6,10 +6,8 @@ intents:
 - goodbye
 - affirm
 - deny
-- mood_great
-- mood_unhappy
-- bot_challenge
 - faq
+- chitchat
 entities:
 - target_group
 - primary_topic
@@ -29,19 +27,11 @@ slots:
 responses:
   utter_greet:
   - text: Hey! Wie geht's dir?
+  - text: Hallo!
   utter_intro:
   - text: Ich bin **MIKI**, der Chatbot vom [Berliner Beratungsnetz für
       Zugewanderte](https://www.beratungsnetz-migration.de/). Damit ich dir helfen
       kann, schreib bitte eine Frage, zum beispiel "Was ist das Berliner Beratungsnetz
       für Zugewanderte?"
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Hier ist etwas, um dich aufzumuntern:'
-  utter_did_that_help:
-  - text: Hat dir das geholfen?
-  utter_happy:
-  - text: Großartig, weitermachen!
   utter_goodbye:
   - text: Tschüss
-  utter_iamabot:
-  - text: Ich bin ein Bot, angetrieben von Rasa.
