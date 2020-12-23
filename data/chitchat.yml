@@ -21,10 +21,11 @@ responses:
     - text: Ich bin **MIKI**, der Chatbot vom [Berliner Beratungsnetz für
         Zugewanderte](https://www.beratungsnetz-migration.de/).
   utter_chitchat/help:
-    - text: 'Ich kann deine Fragen über das BfZ beantworten.
+    - text: |
+        Ich kann deine Fragen über das BfZ beantworten.
         Ich kann dir auch helfen, Angebote zu finden. Frag mir z.b.
-        \n- Was ist das BfZ?
-        \n- Welche Angebote gibt es für Kinder?'
+        - Was ist das BfZ?
+        - Welche Angebote gibt es für Kinder?
   utter_chitchat/ask_ishuman:
     - text: Nein, ich bin kein Mensch. Ich bin ein Bot.
   utter_chitchat/ask_isbot:

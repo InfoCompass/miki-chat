@@ -351,3 +351,5 @@ nlu:
 - synonym: accommodation
   examples: |
     - Wohnung
+    - Wohnen
+    - Wohnungen
