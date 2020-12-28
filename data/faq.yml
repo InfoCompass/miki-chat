@@ -1,24 +1,116 @@
-version: "2.0"
-
+version: '2.0'
 nlu:
-  - intent: faq/goal_bfz
-    examples: |
-      - Wofür wurde das BfZ entwickelt?
-      - Wofür wurde das Berliner Beratungsnetz für Zugewanderte entwickelt?
-      - Was ist das BfZ?
-  - intent: faq/financing_bfz
-    examples: |
-      - Wie wird das BfZ finanziert?
-      - Wie wird das Berliner Beratungsnetz für Zugewanderte finanziert?
-
+- intent: faq/bfz_goal
+  examples: |
+    - Was ist die Zielsetzung des BfZ?
+    - Wofür wurde das BfZ entwickelt?
+    - Warum wurde das BfZ entwickelt?
+    - Warum braucht man das BfZ?
+    - Warum ist das BfZ wichtig?
+    - Was wollte Ihr mit dem BfZ erreichen?
+    - Warum gibt es das BfZ?
+- intent: faq/bfz_users
+  examples: |
+    - An wen richtet sich das BfZ?
+    - Wer benutzt das BfZ?
+    - Für wen ist das BfZ?
+    - Wer arbeitet mit dem BfZ?
+    - Wer sollte mit dem BfZ arbeiten?
+    - Wer nutzt das BfZ?
+    - An wen richtet sich das BfZ?
+    - Warum braucht Berlin ein BfZ?
+    - Wer braucht das BfZ?
+    - Wofür brauche ich das BfZ?
+- intent: faq/bfz_update
+  examples: "- Welche Aktualität haben die Daten?\n- Sind die Daten aktuell?\n- Wie\
+    \ aktuell sind die Daten?\n- Wie gewährleisten Sie die Aktualität der Daten?\n\
+    - Wir wird Datenaktualität gewährleistet?\n- Können Sie die Aktualität der Daten\
+    \ gewährleisten?\n- Wie aktuell sind die Daten im BfZ?\n- Wann werden die Daten\
+    \ aktualisiert?\n- Wie oft werden Daten im BfZ aktualisiert?\n- Wer aktualisiert\
+    \ die Daten im BfZ?\n- Wie wird das BfZ aktuell gehalten?\n- Wie aktuell sind\
+    \ die Daten?\n- Wie melde ich eine Aktualisierung?\n- Wie kann ich die Daten meiner\
+    \ Organisation aktualisieren?\n- Meine Daten sind nicht mehr aktuell, was kann\
+    \ ich tun?\n- Die Daten unserer Organisation sind nicht aktuell.\n- Sie zeigen\
+    \ zeigen falsche Daten über unserer Organisation. \n- Ihre Daten sind nicht aktuell.\n\
+    - Warum sind ihre Daten nicht aktuell?\n- Wie oft werden die Daten aktualisiert?\n"
+- intent: faq/bfz_content
+  examples: |
+    - Welche Angebote werden ins BfZ aufgenommen?
+    - Welche Stellen sind im BfZ erfasst?
+    - Welche Angebot werden ins BfZ aufgenommen?
+    - Was erfahre ich hier?
+- intent: faq/bfz_criteria
+  examples: |
+    - Nach welchen Kriterien werden die Inhalte ausgewählt?
+    - Was sind die Aufnahmekriterien für Einträge?
+    - Nach welchen Kriterien werden Einträge aufgenommen?
+    - Warum nehmen sie ein Angebot ins BfZ auf?
+    - Warum werden Datensätze aufgenommen?
+    - Warum sind nur bestimmte Angebote im BfZ?
+    - Wonach wählen Sie die Inhalte aus?
+    - Welche Angebote werden ins BfZ gestellt?
+    - Wer entscheidet über die Aufnahme ins BfZ?
+    - Kann ich selbst Einträge einstellen?
+    - Nach welchen Kriterien werden Inhalte ausgewählt?
+    - Wie sind die aktuellen Inhalte ausgewählt worden?
+    - Wer wählt die Inhalte aus?
+    - Wie werden die Inhalte ausgewählt?
+- intent: faq/bfz_languages
+  examples: |
+    - In welchen Sprachen ist das BfZ verfügbar?
+    - Warum gibt es das BfZ nur in Deutsch und Englisch?
+    - In welchen Sprachen gibt es das BfZ?
+    - Ist das BfZ Mehrsprachig?
+- intent: faq/bfz_help
+  examples: |
+    - Wo finde ich Hilfe zur Benutzung?
+    - Wo finde ich ein Tutorial?
+    - Wo finde ich Hinweise zur Nutzung?
+    - Wer kann mir helfen?
+- intent: faq/bfz_host
+  examples: |
+    - Wer ist für die Inhalte verantwortlich?
+    - Wer ist Betreiber des BfZ?
+    - Wer kümmert sich um das BfZ?
+    - Wer ist Urheber des BfZ?
+    - Wer unterstützt das BfZ?
+- intent: faq/bfz_infomaterial
+  examples: |
+    - Wo erhalte ich InfoMaterial zum BfZ?
+    - Welche Informationsmaterialien gibt es zum BfZ?
+    - Gibt es einen BfZ Flyer?
+    - Wo erhalte ich den BfZ Flyer?
 responses:
-  utter_faq/goal_bfz:
-    - text: Das „Berliner Beratungsnetz für Zugewanderte“ ist eine online-Datenbank mit
-        Beratungsangeboten für zugewanderte Menschen. Die Datenbank umfasst Angebote in
-        verschiedenen Themenfeldern und Bereichen der Beratung.
-  utter_faq/financing_bfz:
-    - text: Das „Berliner Beratungsnetz für Zugewanderte“ wird finanziert durch die
-        Senatsverwaltung für Integration, Arbeit und Soziales im Rahmen des Interkulturellen
-        Kompetenznetzwerks für Migrant*innenorganisationen in Berlin (IKMO). Es wurde konzeptionell
-        in enger Kooperation mit dem Willkommenszentrum Berlin entwickelt.
+  utter_faq/bfz_goal:
+  - text: Das BfZ soll Fachkräften bei Vermittlung und Verweis in andere Fachbereich
+      oder Bezirke erleichtern.
+  utter_faq/bfz_users:
+  - text: Das BfZ richtet sich an Haupt- und Ehrenamtliche, die mit zugewanderten/geflüchteten
+      Menschen in Berlin arbeiten.
+  utter_faq/bfz_update:
+  - text: 'Daten werden aktualisiert, wenn uns Projekte, Einrichtungen oder Benutzer
+      Änderungen mitteilen. Die geschieht über Klick auf "Änderungen vorschlagen"  Alle
+      Institutionen werden zweimal im Jahr angeschrieben und gebeten, ihre Daten zu
+      überprüfen. '
+  utter_faq/bfz_content:
+  - text: 'Wir erfassen grundsätzlich mehrsprachige Beratungsangebote in verschiedenen
+      Bereichen der Sozialarbeit. '
+  utter_faq/bfz_criteria:
+  - text: Neben der Mehrsprachigkeit und Themen sind die Qualität, Erreichbarkeit
+      und gesicherte Finanzierung wichtige Kriterien für die Datenaufnahme. Jeder
+      kann Einträge vorschlagen.
+  utter_faq/bfz_languages:
+  - text: Das BfZ stellt Daten in Deutsch und Englisch zur Verfügung. Wir gehen davon
+      aus, dass alle professionellen Nutzer*innen Deutsch oder Englisch beherrschen,
+      um ihre Arbeit auszuüben.
+  utter_faq/bfz_help:
+  - text: Am besten klicken Sie erst auf "alle Einträge". Diese Ergebnisse können
+      nach Themen, Zielgruppen, Bezirken und Sprachen eingeschränkt werden. Oder Sie
+      geben ein Stichwort im Suchfeld. Beide Suchmöglichkeiten können auch kombiniert
+      werden.
+  utter_faq/bfz_host:
+  - text: Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt
+      das BfZ.
+  utter_faq/bfz_infomaterial:
+  - text: Es gibt einen Flyer im Postkartenformat sowie Aufkleber mit dem BfZ-Logo(A6).
 
