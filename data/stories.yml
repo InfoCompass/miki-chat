@@ -2,6 +2,8 @@ version: "2.0"
 
 stories:
 
+## Starting up the conversation
+
 - story: greet + help
   steps:
   - intent: greet
@@ -12,26 +14,31 @@ stories:
 
 - story: first faq
   steps:
-    - checkpoint: first_question
-    - intent: faq
-    - action: utter_faq
-    - action: utter_another_question
+  - checkpoint: first_question
+  - intent: faq
+  - action: utter_faq
+  - action: utter_another_question
+
+## Continuing the conversation and potentially finishing it
 
 - story: faq
   steps:
   - intent: faq
   - action: utter_faq
   - action: utter_another_question
+  - checkpoint: next_question
+
+- story: next faq
+  steps:
+  - checkpoint: next_question
   - intent: faq
   - action: utter_faq
   - action: utter_another_question
 
-- story: faq + goodbye
+- story: no more faq + goodbye
   steps:
-    - intent: faq
-    - action: utter_faq
-    - action: utter_another_question
-    - intent: deny
-    - action: utter_goodbye
+  - checkpoint: next_question
+  - intent: deny
+  - action: utter_goodbye
 
 
