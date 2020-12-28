@@ -89,12 +89,6 @@ nlu:
     - Tschüss chat bot.
     - Wir sehen uns!
     - Wir sehen uns das nächste mal
-- intent: bot_challenge
-  examples: |
-    - bist du ein Bot?
-    - bist du ein Mensch?
-    - Spreche ich mit einem Bot?
-    - Spreche ich mit einem Menschen?
 - synonym: women
   examples: |
     - Frauen
