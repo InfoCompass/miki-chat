@@ -4,8 +4,6 @@ session_config:
 intents:
 - greet
 - goodbye
-- affirm
-- deny
 - faq
 - chitchat
 entities:
