@@ -8,10 +8,30 @@ stories:
   - action: utter_greet
   - action: utter_chitchat/who_are_you
   - action: utter_chitchat/help
+  - checkpoint: first_question
 
-- story: goodbye
+- story: first faq
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - checkpoint: first_question
+    - intent: faq
+    - action: utter_faq
+    - action: utter_another_question
+
+- story: faq
+  steps:
+  - intent: faq
+  - action: utter_faq
+  - action: utter_another_question
+  - intent: faq
+  - action: utter_faq
+  - action: utter_another_question
+
+- story: faq + goodbye
+  steps:
+    - intent: faq
+    - action: utter_faq
+    - action: utter_another_question
+    - intent: deny
+    - action: utter_goodbye
 
 
