@@ -19,6 +19,15 @@ stories:
   - action: utter_faq
   - action: utter_another_question
 
+- story: first filter_question
+  steps:
+    - checkpoint: first_question
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - action: utter_another_question
+
 ## Continuing the conversation and potentially finishing it
 
 - story: faq
@@ -28,12 +37,30 @@ stories:
   - action: utter_another_question
   - checkpoint: next_question
 
+- story: filter_question
+  steps:
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - action: utter_another_question
+    - checkpoint: next_question
+
 - story: next faq
   steps:
   - checkpoint: next_question
   - intent: faq
   - action: utter_faq
   - action: utter_another_question
+
+- story: next filter_question
+  steps:
+    - checkpoint: next_question
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - action: utter_another_question
 
 - story: no more faq + goodbye
   steps:

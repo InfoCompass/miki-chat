@@ -1,0 +1,5 @@
+version: "2.0"
+intents:
+- filter_question
+actions:
+  - action_filter_results

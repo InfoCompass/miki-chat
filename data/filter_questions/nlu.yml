@@ -1,29 +1,18 @@
 version: "2.0"
 
 nlu:
-  - intent: faq/target_group
+  - intent: filter_question
     examples: |
-      - Ich suche Angebote für [Frauen](target_group)?
-      - Welche Angebote gibt es für [Frauen](target_group)?
-      - Gibt es spezielle Angebote für [Frauen](target_group)?
-      - Wissen Sie, wo [Kinder](target_group) Angebote finden können?
-      - Wissen Sie, wo [Jugentliche](target_group) Angebote finden können?
-  - intent: faq/primary_topic
-    examples: |
-      - Unterstützung bei [Sucht](primary_topic)?
-      - Informationen beim Thema [Wohnen](primary_topic)?
-      - Gibt es [Antigewalt](primary_topic) Beratung?
-  - intent: faq/primary_topic+target_group
-    examples: |
-      - Gibt es für [Frauen](target_group) Angebote zur [Sucht](primary_topic)?
-      - Bitte zeige Angebote zu [Sucht](primary_topic) für [Frauen](target_group)
-      - Wer berät [Frauen](target_group) zu [Sucht](primary_topic)?
+      - Ich suche Angebote für [Frauen](filter)?
+      - Welche Angebote gibt es für [Frauen](filter)?
+      - Gibt es spezielle Angebote für [Frauen](filter)?
+      - Wissen Sie, wo [Kinder](filter) Angebote finden können?
+      - Wissen Sie, wo [Jugentliche](filter) Angebote finden können?
+      - Unterstützung bei [Sucht](filter)?
+      - Informationen beim Thema [Wohnen](filter)?
+      - Gibt es [Antigewalt](filter) Beratung?
+      - Gibt es für [Frauen](filter) Angebote zur [Sucht](filter)?
+      - Bitte zeige Angebote zu [Sucht](filter) für [Frauen](filter)
+      - Wer berät [Frauen](filter) zu [Sucht](filter)?
 
-responses:
-  utter_faq/target_group:
-    - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/u/{target_group}
-  utter_faq/primary_topic:
-    - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/c/{primary_topic}
-  utter_faq/primary_topic+target_group:
-    - text: Ich habe folgende Angebote gefunden https://www.beratungsnetz-migration.de/list/c/{primary_topic}/u/{target_group}
 

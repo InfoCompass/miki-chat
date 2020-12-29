@@ -1,17 +1,6 @@
 version: "2.0"
 entities:
-- target_group
-- primary_topic
+- filter
 slots:
-  target_group:
-    type: categorical
-    values:
-    - women
-    - young
-    - asylum_seekers
-  primary_topic:
-    type: categorical
-    values:
-    - violence
-    - addiction
-    - accommodation
+  filter:
+    type: text
