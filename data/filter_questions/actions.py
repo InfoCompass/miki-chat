@@ -28,8 +28,13 @@ class ActionFilterResults(Action):
         self.filters = self.filter_mapping['display'].keys()
 
     def _format(self, filters):
-        filters = [f'*{filter}*' for filter in filters]
-        filters = ' '.join(filters)
+        filters = [f'`{filter}`' for filter in filters]
+        init = filters[:-1]
+        last = filters[-1]
+        if init is []:
+            return last
+        else:
+            return f'{", ".join(init)} und {last}'
         return filters
 
     def run(
@@ -39,19 +44,18 @@ class ActionFilterResults(Action):
             domain: Dict[Text, Any],
     ) -> List[EventType]:
         filters = list(tracker.get_latest_entity_values("filter"))
-
         filters = list(set(filters) & set(self.filters))
-
-        display_filters = [self.filter_mapping['display'][filter] for filter in filters]
-        display_filters = self._format(display_filters)
-
-        url_filters = [self.filter_mapping['filter_category'][filter] + '/' + filter for filter in filters]
-        url_filters = '/'.join(url_filters)
-        url = f'{BFZ_URL}/list/{url_filters}'
 
         if filters is []:
             dispatcher.utter_message(text='Leider ich habe deine Anfrage nicht verstanden')
         else:
+            display_filters = [self.filter_mapping['display'][filter] for filter in filters]
+            display_filters = self._format(display_filters)
+
+            url_filters = [self.filter_mapping['filter_category'][filter] + '/' + filter for filter in filters]
+            url_filters = '/'.join(url_filters)
+            url = f'{BFZ_URL}/list/{url_filters}'
+
             dispatcher.utter_message(text=f'Ich habe Angebote gefunden für: {display_filters}')
             dispatcher.utter_message(text=f'Die Ergebnisse stehen hier zu verfügung {url}')
 
