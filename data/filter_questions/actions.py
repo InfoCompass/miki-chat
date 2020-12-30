@@ -31,7 +31,7 @@ class ActionFilterResults(Action):
         filters = [f'`{filter}`' for filter in filters]
         init = filters[:-1]
         last = filters[-1]
-        if init is []:
+        if not init:
             return last
         else:
             return f'{", ".join(init)} und {last}'
