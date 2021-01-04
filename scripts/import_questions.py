@@ -13,20 +13,27 @@ parser.add_argument('--output-dir', type=str, help='Directory name where output 
 
 args = parser.parse_args()
 
-scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name(args.client_secret, scope)
-client = gspread.authorize(creds)
+def open_spreadsheet(args):
+    scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
+    creds = ServiceAccountCredentials.from_json_keyfile_name(args.client_secret, scope)
+    client = gspread.authorize(creds)
+    spreadsheet = client.open_by_key(args.spreadsheet_key)
+    return spreadsheet
 
-sheet = client.open_by_key(args.spreadsheet_key).worksheet("Fragenkatalog")
-
-# Extract and print all of the values
-list_of_hashes = sheet.get_all_records()
+spreadsheet = open_spreadsheet(args)
 
 # Raw rows of the spreadsheet
 Row = namedtuple('Row', 'intention context question question_variant answer')
 
-rows = [Row(r['Intention'], r['Kontext'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'], r['Antwort_Part1'])
-        for r in list_of_hashes]
+def get_question_sheet(spreadsheet):
+    sheet = spreadsheet.worksheet("Fragenkatalog")
+    list_of_hashes = sheet.get_all_records()
+
+    rows = [Row(r['Intention'], r['Kontext'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'], r['Antwort_Part1'])
+            for r in list_of_hashes]
+    return rows
+
+rows = get_question_sheet(spreadsheet)
 
 Question = namedtuple('Question', 'intent question question_variants answer')
 
