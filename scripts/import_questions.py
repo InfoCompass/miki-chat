@@ -2,6 +2,7 @@ import os
 import argparse
 from collections import namedtuple, OrderedDict
 import yaml
+import pandas as pd
 
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -12,22 +13,59 @@ def main():
 
     # Create directory structure
     os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/filter_questions/entities', exist_ok=True)
 
-    # Dump faq NLU data
+    # Dump FAQ NLU data
     question_rows = get_question_sheet(spreadsheet)
     with open(f'{args.output_dir}/data/faq/nlu.yml', 'w') as f:
         faq = questions_answers_nlu_data(args, question_rows)
         f.write(yaml.dump(faq, allow_unicode=True))
+
+    filter_rows = get_filter_keyword_sheet(spreadsheet)
+    filter_rows = filter_keywords(args, filter_rows)
+
+    filters_df(filter_rows).to_csv(f'{args.output_dir}/data/filter_questions/entities/filter_mapping.csv', index=False)
+
+    with open(f'{args.output_dir}/data/filter_questions/entities/nlu.yml', 'w') as f:
+        nlu = filters_nlu_data(filter_rows)
+        f.write(yaml.dump(nlu, allow_unicode=True))
 
 
 #################
 # Spreadsheet processing logic
 #################
 
-# Raw rows of the question spreadsheet
-Row = namedtuple('Row', 'intention context question question_variant answer')
-
 Question = namedtuple('Question', 'intent question question_variants answer')
+
+
+def filter_keywords(args, filter_rows):
+    gs = group_by_column(filter_rows, 'context')
+
+    filters_with_key = [row._replace(key=rows[0].key)
+                        for _, rows in gs.items() if rows[0].key
+                        for row in rows]
+    filters_with_key_and_filter = [row for row in filters_with_key if row.filter]
+    return filters_with_key_and_filter
+
+def filters_df(filter_rows):
+    return pd.DataFrame({
+        'filter': [r.filter for r in filter_rows],
+        'display': [r.keyword for r in filter_rows],
+        'filter_category': [r.key for r in filter_rows]
+    })
+
+def filters_nlu_data(filter_rows):
+    return OrderedDict({
+        'version': 2.0,
+        'nlu':
+            [OrderedDict(
+                {
+                    'synonym': r.filter,
+                    'examples': format_examples([r.keyword] + r.synonyms)
+                }
+             )
+             for r in filter_rows if r.synonyms]
+    })
 
 def questions_answers_nlu_data(args, question_rows):
     gs = group_by_column(question_rows, 'intention')
@@ -46,7 +84,7 @@ def questions_answers_nlu_data(args, question_rows):
         'nlu':
             [OrderedDict(
                 {'intent': f'faq/{q.intent}',
-                 'examples': format_questions([q.question] + [v for v in q.question_variants])})
+                 'examples': format_examples([q.question] + [v for v in q.question_variants])})
                 for q in questions],
         'responses':
             OrderedDict(
@@ -57,7 +95,7 @@ def questions_answers_nlu_data(args, question_rows):
     return faq
 
 
-def format_questions(qs):
+def format_examples(qs):
     return ''.join([f'- {q}\n' for q in qs])
 
 
@@ -84,25 +122,46 @@ def group_by_column(rows, col):
 def get_args():
     parser = argparse.ArgumentParser(description="Import Question and Answer examples from BfZ spreadsheet")
     parser.add_argument('--client-secret', type=str, help='Path to json key file of service account', required=True)
-    parser.add_argument('--spreadsheet-key', type=str, help='Key of Google Spreadsheet containing Questions and Answers', required=True)
+    parser.add_argument('--spreadsheet-url', type=str, help='URL of Google Spreadsheet containing Questions and Answers', required=True)
     parser.add_argument('--output-dir', type=str, help='Directory name where output will be saved', required=True)
     return parser.parse_args()
+
 
 def open_spreadsheet(args):
     scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
     creds = ServiceAccountCredentials.from_json_keyfile_name(args.client_secret, scope)
     client = gspread.authorize(creds)
-    spreadsheet = client.open_by_key(args.spreadsheet_key)
+    spreadsheet = client.open_by_url(args.spreadsheet_url)
     return spreadsheet
 
+
 def get_question_sheet(spreadsheet):
+    # Raw rows of the question spreadsheet
+    Row = namedtuple('Row', 'intention context question question_variant answer')
+
     sheet = spreadsheet.worksheet("Fragenkatalog")
     list_of_hashes = sheet.get_all_records()
 
-    rows = [Row(r['Intention'], r['Kontext'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'], r['Antwort_Part1'])
+    rows = [Row(r['Context'], r['Intent'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'], r['Antwort_Part1'])
             for r in list_of_hashes]
     return rows
 
+
+def get_filter_keyword_sheet(spreadsheet):
+
+    def clean(s):
+        return '(' not in s
+
+    # Raw rows of the question spreadsheet
+    Row = namedtuple('Row', 'context key filter keyword synonyms')
+
+    sheet = spreadsheet.worksheet("Schlüsselwörter")
+    list_of_hashes = sheet.get_all_records()
+
+    rows = [Row(r['Context'], r['Key'], r['Filter'], r['Schlüsselwörter'],
+                [r[f'Synonym {i}'] for i in range(1,6) if r[f'Synonym {i}'] and clean(r[f'Synonym {i}'])])
+            for r in list_of_hashes]
+    return rows
 
 #################
 # YAML rendering setup
