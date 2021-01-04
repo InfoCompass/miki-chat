@@ -1,3 +1,4 @@
+import os
 import argparse
 from collections import namedtuple, OrderedDict
 import yaml
@@ -8,16 +9,15 @@ from oauth2client.service_account import ServiceAccountCredentials
 parser = argparse.ArgumentParser(description="Import Question and Answer examples from BfZ spreadsheet")
 parser.add_argument('--client-secret', type=str, help='Path to json key file of service account', required=True)
 parser.add_argument('--spreadsheet-key', type=str, help='Key of Google Spreadsheet containing Questions and Answers', required=True)
+parser.add_argument('--output-dir', type=str, help='Directory name where output will be saved', required=True)
 
 args = parser.parse_args()
-print(args)
-
 
 scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name(args.client_secret, scope)
 client = gspread.authorize(creds)
 
-sheet = client.open_by_key(args.spreadsheet_key).sheet1
+sheet = client.open_by_key(args.spreadsheet_key).worksheet("Fragenkatalog")
 
 # Extract and print all of the values
 list_of_hashes = sheet.get_all_records()
@@ -60,20 +60,7 @@ questions = [Question(f'bfz_{intent[1:]}',
 def format_questions(qs):
     return ''.join([f'- {q}\n' for q in qs])
 
-# Create faq yaml
-faq = OrderedDict({
-    'version': '2.0',
-    'nlu':
-        [OrderedDict(
-            {'intent': f'faq/{q.intent}',
-             'examples': format_questions([q.question] + [v for v in q.question_variants])})
-         for q in questions],
-    'responses':
-        OrderedDict(
-            {f'utter_faq/{q.intent}': [{'text': q.answer}]
-             for q in questions})
-})
-
+# YAML rendering setup
 
 def str_presenter(dumper, data):
     if len(data.splitlines()) > 1:  # check for multiline string
@@ -83,7 +70,27 @@ def str_presenter(dumper, data):
 def ordered_dict_presenter(dumper, data):
     return dumper.represent_dict(data.items())
 yaml.add_representer(OrderedDict, ordered_dict_presenter)
-
 yaml.add_representer(str, str_presenter)
 
-print(yaml.dump(faq, allow_unicode=True))
+
+# Create directory structure
+os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
+
+# Dump faq NLU data
+
+# Create faq yaml
+faq = OrderedDict({
+    'version': '2.0',
+    'nlu':
+        [OrderedDict(
+            {'intent': f'faq/{q.intent}',
+             'examples': format_questions([q.question] + [v for v in q.question_variants])})
+            for q in questions],
+    'responses':
+        OrderedDict(
+            {f'utter_faq/{q.intent}': [{'text': q.answer}]
+             for q in questions})
+})
+
+with open(f'{args.output_dir}/data/faq/nlu.yml', 'w') as f:
+    f.write(yaml.dump(faq, allow_unicode=True))
