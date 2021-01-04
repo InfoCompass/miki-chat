@@ -1,4 +1,5 @@
 import os
+import re
 import argparse
 from collections import namedtuple, OrderedDict
 import yaml
@@ -28,6 +29,11 @@ def main():
 
     with open(f'{args.output_dir}/data/filter_questions/entities/nlu.yml', 'w') as f:
         nlu = filters_nlu_data(filter_rows)
+        f.write(yaml.dump(nlu, allow_unicode=True))
+
+    synonyms = [syn for row in filter_rows for syn in [row.keyword] + row.synonyms]
+    with open(f'{args.output_dir}/data/filter_questions/nlu.yml', 'w') as f:
+        nlu = filter_questions_nlu_data(question_rows, synonyms)
         f.write(yaml.dump(nlu, allow_unicode=True))
 
 
@@ -93,6 +99,55 @@ def questions_answers_nlu_data(args, question_rows):
     })
 
     return faq
+
+TaggedQuestion = namedtuple('TaggedQuestion', 'question entities auto_entities invalid_entities')
+
+def process_question(synonyms, question):
+    # Find all text marked by square braces
+    tagged_entities = re.findall(r'\[[^\[]*\]', question)
+    tagged_entities = [t[1:-1] for t in tagged_entities]
+    tagged_entities = set(tagged_entities)
+
+    invalid_entities = list(tagged_entities - synonyms)
+
+    remaining_synonyms = list(synonyms - tagged_entities)
+
+    new_entities = []
+    tagged_entities = list(tagged_entities)
+
+    # Order remaining synonyms by larger to smaller to avoid accidental matches
+    remaining_synonyms = sorted([(len(s), s) for s in remaining_synonyms], reverse=True)
+    remaining_synonyms = [s[1] for s in remaining_synonyms]
+
+    for syn in remaining_synonyms:
+        if not [syn in s for s in new_entities + tagged_entities]:
+            # Make sure that analyzed new synonym is not a substring of an existing tag
+            i = question.find(syn)
+            if i>=0 and (i+len(syn) >= len(question) or question[i+len(syn)] in ' .,'):
+                new_entities.append(syn)
+                question = question[:i] + '[' + syn + ']' + question[i+len(syn):]
+
+    return TaggedQuestion(question, tagged_entities, new_entities, invalid_entities)
+
+def filter_questions_nlu_data(question_rows, synonyms):
+    synonyms = set(synonyms)
+    gs = group_by_column(question_rows, 'intention')
+    content_questions = gs['/content']
+
+    qs = [process_question(synonyms, r.question_variant) for r in content_questions if r.question_variant]
+
+    vqs = [q for q in qs if q.entities + q.auto_entities and not q.invalid_entities]
+
+    return OrderedDict({
+        'version': 2.0,
+        'nlu':
+            [OrderedDict(
+                {
+                    'intent': 'filter_question',
+                    'examples': format_examples([q.question for q in vqs])
+                }
+            )]
+    })
 
 
 def format_examples(qs):
