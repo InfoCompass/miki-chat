@@ -6,36 +6,60 @@ import yaml
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-parser = argparse.ArgumentParser(description="Import Question and Answer examples from BfZ spreadsheet")
-parser.add_argument('--client-secret', type=str, help='Path to json key file of service account', required=True)
-parser.add_argument('--spreadsheet-key', type=str, help='Key of Google Spreadsheet containing Questions and Answers', required=True)
-parser.add_argument('--output-dir', type=str, help='Directory name where output will be saved', required=True)
+def main():
+    args = get_args()
+    spreadsheet = open_spreadsheet(args)
 
-args = parser.parse_args()
+    # Create directory structure
+    os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
 
-def open_spreadsheet(args):
-    scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
-    creds = ServiceAccountCredentials.from_json_keyfile_name(args.client_secret, scope)
-    client = gspread.authorize(creds)
-    spreadsheet = client.open_by_key(args.spreadsheet_key)
-    return spreadsheet
+    # Dump faq NLU data
+    question_rows = get_question_sheet(spreadsheet)
+    with open(f'{args.output_dir}/data/faq/nlu.yml', 'w') as f:
+        faq = questions_answers_nlu_data(args, question_rows)
+        f.write(yaml.dump(faq, allow_unicode=True))
 
-spreadsheet = open_spreadsheet(args)
 
-# Raw rows of the spreadsheet
+#################
+# Spreadsheet processing logic
+#################
+
+# Raw rows of the question spreadsheet
 Row = namedtuple('Row', 'intention context question question_variant answer')
 
-def get_question_sheet(spreadsheet):
-    sheet = spreadsheet.worksheet("Fragenkatalog")
-    list_of_hashes = sheet.get_all_records()
-
-    rows = [Row(r['Intention'], r['Kontext'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'], r['Antwort_Part1'])
-            for r in list_of_hashes]
-    return rows
-
-rows = get_question_sheet(spreadsheet)
-
 Question = namedtuple('Question', 'intent question question_variants answer')
+
+def questions_answers_nlu_data(args, question_rows):
+    gs = group_by_column(question_rows, 'intention')
+    bfz_questions = group_by_column(gs['/bfz'], 'context')
+
+    questions = [Question(f'bfz_{intent[1:]}',
+                          rows[0].question,
+                          [r.question_variant for r in rows if r.question_variant is not ''],
+                          rows[0].answer)
+                 for intent, rows in bfz_questions.items()
+                 if rows[0].question]
+
+    # Create faq yaml
+    faq = OrderedDict({
+        'version': '2.0',
+        'nlu':
+            [OrderedDict(
+                {'intent': f'faq/{q.intent}',
+                 'examples': format_questions([q.question] + [v for v in q.question_variants])})
+                for q in questions],
+        'responses':
+            OrderedDict(
+                {f'utter_faq/{q.intent}': [{'text': q.answer}]
+                 for q in questions})
+    })
+
+    return faq
+
+
+def format_questions(qs):
+    return ''.join([f'- {q}\n' for q in qs])
+
 
 def group_by_column(rows, col):
     groups = {}
@@ -53,21 +77,36 @@ def group_by_column(rows, col):
         groups[current_val] = current
     return groups
 
-gs = group_by_column(rows, 'intention')
+#################
+# Utility Functions
+#################
 
-bfz_questions = group_by_column(gs['/bfz'], 'context')
+def get_args():
+    parser = argparse.ArgumentParser(description="Import Question and Answer examples from BfZ spreadsheet")
+    parser.add_argument('--client-secret', type=str, help='Path to json key file of service account', required=True)
+    parser.add_argument('--spreadsheet-key', type=str, help='Key of Google Spreadsheet containing Questions and Answers', required=True)
+    parser.add_argument('--output-dir', type=str, help='Directory name where output will be saved', required=True)
+    return parser.parse_args()
 
-questions = [Question(f'bfz_{intent[1:]}',
-                      rows[0].question,
-                      [r.question_variant for r in rows if r.question_variant is not ''],
-                      rows[0].answer)
-             for intent, rows in bfz_questions.items()
-             if rows[0].question]
+def open_spreadsheet(args):
+    scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
+    creds = ServiceAccountCredentials.from_json_keyfile_name(args.client_secret, scope)
+    client = gspread.authorize(creds)
+    spreadsheet = client.open_by_key(args.spreadsheet_key)
+    return spreadsheet
 
-def format_questions(qs):
-    return ''.join([f'- {q}\n' for q in qs])
+def get_question_sheet(spreadsheet):
+    sheet = spreadsheet.worksheet("Fragenkatalog")
+    list_of_hashes = sheet.get_all_records()
 
+    rows = [Row(r['Intention'], r['Kontext'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'], r['Antwort_Part1'])
+            for r in list_of_hashes]
+    return rows
+
+
+#################
 # YAML rendering setup
+#################
 
 def str_presenter(dumper, data):
     if len(data.splitlines()) > 1:  # check for multiline string
@@ -80,24 +119,7 @@ yaml.add_representer(OrderedDict, ordered_dict_presenter)
 yaml.add_representer(str, str_presenter)
 
 
-# Create directory structure
-os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
+# Run the main function
+main()
 
-# Dump faq NLU data
 
-# Create faq yaml
-faq = OrderedDict({
-    'version': '2.0',
-    'nlu':
-        [OrderedDict(
-            {'intent': f'faq/{q.intent}',
-             'examples': format_questions([q.question] + [v for v in q.question_variants])})
-            for q in questions],
-    'responses':
-        OrderedDict(
-            {f'utter_faq/{q.intent}': [{'text': q.answer}]
-             for q in questions})
-})
-
-with open(f'{args.output_dir}/data/faq/nlu.yml', 'w') as f:
-    f.write(yaml.dump(faq, allow_unicode=True))
