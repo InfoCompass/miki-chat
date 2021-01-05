@@ -6,6 +6,7 @@ import yaml
 import pandas as pd
 
 import gspread
+from gspread.models import Cell
 from oauth2client.service_account import ServiceAccountCredentials
 
 def main():
@@ -44,14 +45,14 @@ def save_logs(spreadsheet, filter_questions_logs):
     save_df(worksheet, filter_questions_logs, 1, 10)
 
 def save_df(worksheet, df, init_col, init_row):
+    total_cells = []
     for col_name, col in zip(df.columns.values, range(len(df.columns.values))):
-        worksheet.update_cell(init_row, col+init_col, col_name)
         vals = df[col_name].values
-        cells = worksheet.range(first_row=init_row, last_row=init_row+len(vals), first_col=col, last_col=col)
-        cells[0].value = col_name
-        for cell, val in zip(cells[1:], vals):
-            cell.value = val
-        worksheet.update_cells(cells)
+        header = Cell(init_row, col + init_col, col_name)
+        cells = [Cell(init_row+row+1, col + init_col, str(val)) for val, row in zip(vals, range(len(vals)))]
+        total_cells.extend([header])
+        total_cells.extend(cells)
+    worksheet.update_cells(total_cells)
 
 
 #################
