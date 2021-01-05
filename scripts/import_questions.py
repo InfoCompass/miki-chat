@@ -76,11 +76,11 @@ def filters_df(filter_rows):
         'filter': [r.filter for r in filter_rows],
         'display': [r.keyword for r in filter_rows],
         'filter_category': [r.key for r in filter_rows]
-    })
+    }).sort_values('filter')
 
 def filters_nlu_data(filter_rows):
     return OrderedDict({
-        'version': 2.0,
+        'version': '2.0',
         'nlu':
             [OrderedDict(
                 {
@@ -88,7 +88,7 @@ def filters_nlu_data(filter_rows):
                     'examples': format_examples([r.keyword] + r.synonyms)
                 }
              )
-             for r in filter_rows if r.synonyms]
+             for r in filter_rows]
     })
 
 def questions_answers_nlu_data(args, question_rows):
@@ -171,7 +171,7 @@ def filter_questions_nlu_data(question_rows, synonyms):
     logs = pd.DataFrame(qs).sort_values('is_valid', ascending=False)
 
     return logs, OrderedDict({
-        'version': 2.0,
+        'version': '2.0',
         'nlu':
             [OrderedDict(
                 {
