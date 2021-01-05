@@ -46,7 +46,7 @@ class ActionFilterResults(Action):
         filters = list(tracker.get_latest_entity_values("filter"))
         filters = list(set(filters) & set(self.filters))
 
-        if filters is []:
+        if not filters:
             dispatcher.utter_message(text='Leider ich habe deine Anfrage nicht verstanden')
         else:
             display_filters = [self.filter_mapping['display'][filter] for filter in filters]
