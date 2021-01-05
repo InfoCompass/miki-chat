@@ -183,7 +183,7 @@ def filter_questions_nlu_data(question_rows, synonyms):
 
 
 def format_examples(qs):
-    return ''.join([f'- {q}\n' for q in qs])
+    return '\n'.join([f'- {q}' for q in qs if q])
 
 
 def group_by_column(rows, col):
