@@ -1,90 +1,82 @@
 version: '2.0'
 nlu:
 - synonym: migration_counseling
-  examples: '- Migrationsberatung
-
-    '
+  examples: '- Migrationsberatung'
 - synonym: support
-  examples: |
+  examples: |-
     - Begleitung und Sprachmittlung
     - Sprachmittlung
     - Begleitung
 - synonym: labour
-  examples: |
+  examples: |-
     - Arbeit und Bildung
     - Arbeit
     - Bildung
 - synonym: health
-  examples: '- Gesundheit
-
-    '
+  examples: '- Gesundheit'
 - synonym: addiction
-  examples: |
+  examples: |-
     - Sucht
     - Drogen
     - Abhängigkeit
 - synonym: disability
-  examples: |
+  examples: |-
     - Behinderung
     - Beeinträchtigung
     - Behindertenausweis
     - Schwerbehinderung
 - synonym: accommodation
-  examples: |
+  examples: |-
     - Wohnen
     - Wohnungslosigkeit
     - Wohnungsuche
 - synonym: discrimation
-  examples: |
+  examples: |-
     - Antidiskriminierung
     - Diskriminierung
     - Rassismus
     - rechte Gewalt
 - synonym: violence
-  examples: |
+  examples: |-
     - Antigewalt
     - Gewalt
     - Opfer
 - synonym: other
-  examples: |
+  examples: |-
     - Schulden
     - Schuldnerberatung
     - Schuldenregulierung
     - Pfändung
 - synonym: young
-  examples: |
+  examples: |-
     - Kinder und Jugendliche
     - Kinder
     - Jugendliche
     - junge Menschen
 - synonym: women
-  examples: '- Frauen
-
-    '
+  examples: '- Frauen'
 - synonym: asylum_seekers
-  examples: |
+  examples: |-
     - Geflüchtete
     - Flüchtlinge
     - Asylsuchende
     - Asylbewerber
     - Menschen mit Fluchthintergrund
 - synonym: eu_citizens
-  examples: |
+  examples: |-
     - EU-Bürger*innen
     - EU-Ausländer
 - synonym: no_health_insurance
-  examples: '- Ohne Krankenversicherung
-
-    '
+  examples: '- Ohne Krankenversicherung'
 - synonym: houseless
-  examples: |
+  examples: |-
     - Wohnungslose
     - Obdachlose
     - Wohnungsnot
     - Wohnungslosigkeit
     - Obdachlosigkeit
 - synonym: lgbtqi
-  examples: |
+  examples: |-
     - LGBTIQ*
     - queer
     - LSBTI
@@ -92,77 +84,43 @@ nlu:
     - LGBTTIQ*
     - Trans
 - synonym: elderly
-  examples: |
+  examples: |-
     - Senior*innen
     - Ältere
     - Menschen im Alter
     - Senioren
     - Seniorinnen
 - synonym: misc_target
-  examples: '- Sonstige
-
-    '
+  examples: '- Sonstige'
 - synonym: mitte
-  examples: '- Mitte
-
-    '
+  examples: '- Mitte'
 - synonym: friedrichshain_kreuzberg
-  examples: '- Friedrichshain-Kreuzberg
-
-    '
+  examples: '- Friedrichshain-Kreuzberg'
 - synonym: pankow
-  examples: '- Pankow
-
-    '
+  examples: '- Pankow'
 - synonym: charlottenburg_wilmersdorf
-  examples: '- Charlottenburg-Wilmersdorf
-
-    '
+  examples: '- Charlottenburg-Wilmersdorf'
 - synonym: spandau
-  examples: '- Spandau
-
-    '
+  examples: '- Spandau'
 - synonym: steglitz_zehlendorf
-  examples: '- Steglitz-Zehlendorf
-
-    '
+  examples: '- Steglitz-Zehlendorf'
 - synonym: tempelhof_schoeneberg
-  examples: '- Tempelhof-Schöneberg
-
-    '
+  examples: '- Tempelhof-Schöneberg'
 - synonym: neukoelln
-  examples: '- Neukölln
-
-    '
+  examples: '- Neukölln'
 - synonym: treptow_koepenik
-  examples: '- Treptow-Köpenick
-
-    '
+  examples: '- Treptow-Köpenick'
 - synonym: marzahn_hellersdorf
-  examples: '- Marzahn-Hellersdorf
-
-    '
+  examples: '- Marzahn-Hellersdorf'
 - synonym: lichtenberg
-  examples: '- Lichtenberg
-
-    '
+  examples: '- Lichtenberg'
 - synonym: reinickendorf
-  examples: '- Reinickendorf
-
-    '
+  examples: '- Reinickendorf'
 - synonym: arabic
-  examples: '- Arabisch
-
-    '
+  examples: '- Arabisch'
 - synonym: english
-  examples: '- Englisch
-
-    '
+  examples: '- Englisch'
 - synonym: polish
-  examples: '- Polnisch
-
-    '
+  examples: '- Polnisch'
 - synonym: vietnamese
-  examples: '- Vietnamesisch
-
-    '
+  examples: '- Vietnamesisch'

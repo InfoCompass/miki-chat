@@ -1,7 +1,7 @@
 version: '2.0'
 nlu:
 - intent: faq/bfz_goal
-  examples: |
+  examples: |-
     - Was ist die Zielsetzung des BfZ?
     - Wofür wurde das BfZ entwickelt?
     - Warum wurde das BfZ entwickelt?
@@ -10,7 +10,7 @@ nlu:
     - Was wollte Ihr mit dem BfZ erreichen?
     - Warum gibt es das BfZ?
 - intent: faq/bfz_users
-  examples: |
+  examples: |-
     - An wen richtet sich das BfZ?
     - Wer benutzt das BfZ?
     - Für wen ist das BfZ?
@@ -32,15 +32,15 @@ nlu:
     \ Organisation aktualisieren?\n- Meine Daten sind nicht mehr aktuell, was kann\
     \ ich tun?\n- Die Daten unserer Organisation sind nicht aktuell.\n- Sie zeigen\
     \ zeigen falsche Daten über unserer Organisation. \n- Ihre Daten sind nicht aktuell.\n\
-    - Warum sind ihre Daten nicht aktuell?\n- Wie oft werden die Daten aktualisiert?\n"
+    - Warum sind ihre Daten nicht aktuell?\n- Wie oft werden die Daten aktualisiert?"
 - intent: faq/bfz_content
-  examples: |
+  examples: |-
     - Welche Angebote werden ins BfZ aufgenommen?
     - Welche Stellen sind im BfZ erfasst?
     - Welche Angebot werden ins BfZ aufgenommen?
     - Was erfahre ich hier?
 - intent: faq/bfz_criteria
-  examples: |
+  examples: |-
     - Nach welchen Kriterien werden die Inhalte ausgewählt?
     - Was sind die Aufnahmekriterien für Einträge?
     - Nach welchen Kriterien werden Einträge aufgenommen?
@@ -56,13 +56,13 @@ nlu:
     - Wer wählt die Inhalte aus?
     - Wie werden die Inhalte ausgewählt?
 - intent: faq/bfz_languages
-  examples: |
+  examples: |-
     - In welchen Sprachen ist das BfZ verfügbar?
     - Warum gibt es das BfZ nur in Deutsch und Englisch?
     - In welchen Sprachen gibt es das BfZ?
     - Ist das BfZ Mehrsprachig?
 - intent: faq/bfz_help
-  examples: |
+  examples: |-
     - Wo finde ich Hilfe zur Benutzung?
     - Wo finde ich ein Tutorial?
     - Wo finde ich Hinweise zur Nutzung?
@@ -70,14 +70,14 @@ nlu:
     - Wie funktioniert das BfZ?
     - Was kann ich hier tun?
 - intent: faq/bfz_responsibility
-  examples: |
+  examples: |-
     - Wer ist für die Inhalte verantwortlich?
     - Wer ist Betreiber des BfZ?
     - Wer kümmert sich um das BfZ?
     - Wer ist Urheber des BfZ?
     - Wer unterstützt das BfZ?
 - intent: faq/bfz_infomaterial
-  examples: |
+  examples: |-
     - Wo erhalte ich InfoMaterial zum BfZ?
     - Welche Informationsmaterialien gibt es zum BfZ?
     - Gibt es einen BfZ Flyer?
