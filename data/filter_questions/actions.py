@@ -52,9 +52,17 @@ class ActionFilterResults(Action):
             display_filters = [self.filter_mapping['display'][filter] for filter in filters]
             display_filters = self._format(display_filters)
 
-            url_filters = [self.filter_mapping['filter_category'][filter] + '/' + filter for filter in filters]
-            url_filters = '/'.join(url_filters)
-            url = f'{BFZ_URL}/list/{url_filters}'
+            key_filters = [(self.filter_mapping['filter_category'][filter], filter) for filter in filters]
+            keys = set([k for k, _ in key_filters])
+
+            # The special case where two filters share the same key, they have to be concatenated with dash
+            # and passed together as a parameter
+            url_filters = ['/' + k + '/' +
+                           '-'.join([filter for k2, filter in key_filters if k==k2])
+                           for k in keys]
+
+            url_filters = ''.join(url_filters)
+            url = f'{BFZ_URL}/list{url_filters}'
 
             dispatcher.utter_message(text=f'Ich habe Angebote gefunden für: {display_filters}')
             dispatcher.utter_message(text=f'Die Ergebnisse stehen hier zu verfügung {url}')
