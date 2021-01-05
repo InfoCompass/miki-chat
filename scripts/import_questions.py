@@ -1,9 +1,10 @@
 import os
 import re
 import argparse
-from collections import namedtuple, OrderedDict
+from collections import namedtuple, OrderedDict, defaultdict
 import yaml
 import pandas as pd
+import random
 
 import gspread
 from gspread.models import Cell
@@ -32,12 +33,70 @@ def main():
         nlu = filters_nlu_data(filter_rows)
         f.write(yaml.dump(nlu, allow_unicode=True))
 
-    synonyms = [syn for row in filter_rows for syn in [row.keyword] + row.synonyms]
-    filter_questions_logs, nlu = filter_questions_nlu_data(question_rows, synonyms)
+    synonyms = make_synonyms(filter_rows)
+    filter_questions_logs, qs = filter_questions_nlu_data(question_rows, synonyms)
+    new_qs = generate_examples(qs, synonyms, filter_rows)
+    nlu = filter_questions_yaml(qs + new_qs)
+
     with open(f'{args.output_dir}/data/filter_questions/nlu.yml', 'w') as f:
         f.write(yaml.dump(nlu, allow_unicode=True))
 
     # save_logs(spreadsheet, filter_questions_logs)
+
+
+def make_synonyms(filter_rows):
+    Synonym = namedtuple('Synonym', 'syn filter num_examples')
+    synonyms = [Synonym(syn, row.filter, 0) for row in filter_rows for syn in [row.keyword] + row.synonyms]
+    return synonyms
+
+
+def generate_examples(qs, synonyms, filter_rows):
+
+    def quote_star(s):
+        return s.replace('*', r'\*')
+
+    syn_to_filter = {s: f for f in filter_rows for s in [f.keyword] + f.synonyms}
+    ctx_to_filter = defaultdict(list)
+    for f in filter_rows:
+        ctx_to_filter[f.context] += [f]
+
+    q_dict = defaultdict(list)
+    ctx_dict = {}
+    for q in qs:
+        if q.is_valid:
+            for s in q.entities + q.auto_entities:
+                q_dict[s] += [q]
+
+    qs = []
+    for s in synonyms:
+        filter = syn_to_filter[s.syn]
+
+        if not s.syn in q_dict:
+            syns = [filter.keyword] + filter.synonyms
+            random.shuffle(syns)
+
+            example = None
+
+            for syn in syns:
+                if syn in q_dict:
+                    q = random.choice(q_dict[syn])
+                    question = re.sub(f'\[{quote_star(syn)}\]', f'[{s.syn}]', q.question)
+                    example = (syn, q._replace(question=question))
+
+            # If still no examples, fallback to context
+            if filter.context in ['_quarter', '_language', '_targetgroup']:
+                for f in ctx_to_filter[filter.context]:
+                    for syn in [f.keyword] + f.synonyms:
+                        if syn in q_dict:
+                            q = random.choice(q_dict[syn])
+                            question = re.sub(f'\[{quote_star(syn)}\]', f'[{s.syn}]', q.question)
+                            example = (syn, q._replace(question=question))
+
+            if example:
+                qs.append(example[1])
+
+    return qs
+
 
 
 def save_logs(spreadsheet, filter_questions_logs):
@@ -65,8 +124,8 @@ Question = namedtuple('Question', 'intent question question_variants answer')
 def filter_keywords(args, filter_rows):
     gs = group_by_column(filter_rows, 'context')
 
-    filters_with_key = [row._replace(key=rows[0].key)
-                        for _, rows in gs.items() if rows[0].key
+    filters_with_key = [row._replace(key=rows[0].key, context=context)
+                        for context, rows in gs.items() if rows[0].key
                         for row in rows]
     filters_with_key_and_filter = [row for row in filters_with_key if row.filter]
     return filters_with_key_and_filter
@@ -156,11 +215,7 @@ def process_question(synonyms, question):
 
 def filter_questions_nlu_data(question_rows, synonyms):
 
-    def rasa_tagging(s):
-        '''Replaces, appends all entities tagged with a square bracket with a annotation (filter)'''
-        return re.sub(r'\[([^\[]*)\]', '[\\1](filter)', s)
-
-    synonyms = set(synonyms)
+    synonyms = set([s.syn for s in synonyms])
     gs = group_by_column(question_rows, 'intention')
     content_questions = gs['/content']
 
@@ -170,13 +225,21 @@ def filter_questions_nlu_data(question_rows, synonyms):
 
     logs = pd.DataFrame(qs).sort_values('is_valid', ascending=False)
 
-    return logs, OrderedDict({
+    return logs, qs
+
+def filter_questions_yaml(qs):
+
+    def rasa_tagging(s):
+        '''Replaces, appends all entities tagged with a square bracket with a annotation (filter)'''
+        return re.sub(r'\[([^\[]*)\]', '[\\1](filter)', s)
+
+    return OrderedDict({
         'version': '2.0',
         'nlu':
             [OrderedDict(
                 {
                     'intent': 'filter_question',
-                    'examples': format_examples([rasa_tagging(q.question) for q in vqs])
+                    'examples': format_examples([rasa_tagging(q.question) for q in qs if q.is_valid])
                 }
             )]
     })
