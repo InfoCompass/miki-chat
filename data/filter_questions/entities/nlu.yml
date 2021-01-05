@@ -116,6 +116,8 @@ nlu:
   examples: '- Lichtenberg'
 - synonym: reinickendorf
   examples: '- Reinickendorf'
+- synonym: albanian
+  examples: '- Albanisch'
 - synonym: arabic
   examples: '- Arabisch'
 - synonym: english

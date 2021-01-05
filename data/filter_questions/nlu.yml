@@ -18,8 +18,10 @@ nlu:
     \ habe?\n- Wie finde ich Hilfe gegen [Diskriminierung](filter)?\n- [Frauen](filter)\
     \ , [Sucht](filter)\n- Gibt es für [Frauen](filter) Angebote zur [Sucht](filter)?\n\
     - Bitte zeige Angebote zu [Sucht](filter) für [Frauen](filter)\n- Wer berät [Frauen](filter)\
-    \ zu [Sucht](filter)?\n- Gibt es Hilfe für [Opfer](filter) auf türkisch?\n- Wer\
-    \ berät in [Mitte](filter) zum Thema [Sucht](filter)?\n- Wird in [Mitte](filter)\
+    \ zu [Sucht](filter)?\n- Gibt es Angebote auf [Albanisch](filter) für Menschen\
+    \ mit [Beeinträchtigung](filter)?\n- Wer hilft bei [Rassismus](filter) mit Sprachmittlung\
+    \ auf [Albanisch](filter)?\n- Gibt es Hilfe für [Opfer](filter) auf türkisch?\n\
+    - Wer berät in [Mitte](filter) zum Thema [Sucht](filter)?\n- Wird in [Mitte](filter)\
     \ zum Thema [Sucht](filter) beraten?\n- Wissen Sie, wer in [Mitte](filter) zum\
     \ Thema [Sucht](filter) berät?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt\
     \ es Angebote für [Migrationsberatung](filter)?\n- Macht jemand Beratung zu [Arbeit\
@@ -31,4 +33,37 @@ nlu:
     - Haben Sie Angebote zum Thema [Sucht](filter)?\n- Was wissen Sie über Angebote\
     \ zum Thema [Sucht](filter)?\n- Können Sie zu [Sucht](filter) beraten?\n- Wer\
     \ kann zu [Sucht](filter) beraten?\n- Gibt es Einrichtungen, die zu [Sucht](filter)\
-    \ beraten?"
+    \ beraten?\n- Macht jemand Beratung zu [Arbeit](filter) in [Steglitz-Zehlendorf](filter)?\n\
+    - Macht jemand Beratung zu [Bildung](filter) in [Steglitz-Zehlendorf](filter)?\n\
+    - Haben Sie Angebote zum Thema [Drogen](filter)?\n- Welche Angebote zum Thema\
+    \ [Abhängigkeit](filter) gibt es?\n- Gibt es Angebote auf [Albanisch](filter)\
+    \ für Menschen mit [Behindertenausweis](filter)?\n- Gibt es Angebote auf [Albanisch](filter)\
+    \ für Menschen mit [Schwerbehinderung](filter)?\n- Was tun, wenn [Wohnungsuche](filter)\
+    \ droht?\n- Gibt es Hilfsangebote bei [Antidiskriminierung](filter)?\n- Gibt es\
+    \ Hilfsangebote bei [rechte Gewalt](filter)?\n- Gibt es Hilfe für [Antigewalt](filter)\
+    \ auf türkisch?\n- Gibt es Hilfe für [Gewalt](filter) auf türkisch?\n- Wer hilft\
+    \ mir, wenn ich zu viele [Schuldnerberatung](filter) habe?\n- Wer hilft mir, wenn\
+    \ ich zu viele [Schuldenregulierung](filter) habe?\n- Wer hilft mir, wenn ich\
+    \ zu viele [Pfändung](filter) habe?\n- Was gibt es für [junge Menschen](filter)\
+    \ an Möglichkeiten?\n- Gibt es hier Kontakte für [EU-Ausländer](filter)?\n- Gibt\
+    \ es hier Kontakte für [Ohne Krankenversicherung](filter)?\n- Was gibt es für\
+    \ [Obdachlose](filter) an Möglichkeiten?\n- Gibt es hier Kontakte für [Wohnungsnot](filter)?\n\
+    - Was gibt es für [Obdachlosigkeit](filter) an Möglichkeiten?\n- Was gibt es für\
+    \ [LGBTIQ*](filter) an Möglichkeiten?\n- Was gibt es für [queer](filter) an Möglichkeiten?\n\
+    - Was gibt es für [LSBTI](filter) an Möglichkeiten?\n- Gibt es hier Kontakte für\
+    \ [LGBT](filter)?\n- Was gibt es für [LGBTTIQ*](filter) an Möglichkeiten?\n- Was\
+    \ gibt es für [Trans](filter) an Möglichkeiten?\n- Was gibt es für [Ältere](filter)\
+    \ an Möglichkeiten?\n- Gibt es hier Kontakte für [Menschen im Alter](filter)?\n\
+    - Gibt es hier Kontakte für [Senioren](filter)?\n- Was gibt es für [Seniorinnen](filter)\
+    \ an Möglichkeiten?\n- Gibt es hier Kontakte für [Sonstige](filter)?\n- Wer hat\
+    \ Informationen zum Thema [Wohnen](filter) in [Pankow](filter)\n- Wer hat Informationen\
+    \ zum Thema [Wohnen](filter) in [Charlottenburg-Wilmersdorf](filter)\n- Wer hat\
+    \ Informationen zum Thema [Wohnen](filter) in [Spandau](filter)\n- Wer hat Informationen\
+    \ zum Thema [Wohnen](filter) in [Tempelhof-Schöneberg](filter)\n- Wer hat Informationen\
+    \ zum Thema [Wohnen](filter) in [Marzahn-Hellersdorf](filter)\n- Wer hat Informationen\
+    \ zum Thema [Wohnen](filter) in [Lichtenberg](filter)\n- Wer hat Informationen\
+    \ zum Thema [Wohnen](filter) in [Reinickendorf](filter)\n- Wer hilft bei [Rassismus](filter)\
+    \ mit Sprachmittlung auf [Arabisch](filter)?\n- Gibt es Angebote auf [Englisch](filter)\
+    \ für Menschen mit [Beeinträchtigung](filter)?\n- Gibt es Angebote auf [Polnisch](filter)\
+    \ für Menschen mit [Beeinträchtigung](filter)?\n- Wer hilft bei [Rassismus](filter)\
+    \ mit Sprachmittlung auf [Vietnamesisch](filter)?"
