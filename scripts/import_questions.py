@@ -32,9 +32,26 @@ def main():
         f.write(yaml.dump(nlu, allow_unicode=True))
 
     synonyms = [syn for row in filter_rows for syn in [row.keyword] + row.synonyms]
+    filter_questions_logs, nlu = filter_questions_nlu_data(question_rows, synonyms)
     with open(f'{args.output_dir}/data/filter_questions/nlu.yml', 'w') as f:
-        nlu = filter_questions_nlu_data(question_rows, synonyms)
         f.write(yaml.dump(nlu, allow_unicode=True))
+
+    # save_logs(spreadsheet, filter_questions_logs)
+
+
+def save_logs(spreadsheet, filter_questions_logs):
+    worksheet = spreadsheet.worksheet("Logs")
+    save_df(worksheet, filter_questions_logs, 1, 10)
+
+def save_df(worksheet, df, init_col, init_row):
+    for col_name, col in zip(df.columns.values, range(len(df.columns.values))):
+        worksheet.update_cell(init_row, col+init_col, col_name)
+        vals = df[col_name].values
+        cells = worksheet.range(first_row=init_row, last_row=init_row+len(vals), first_col=col, last_col=col)
+        cells[0].value = col_name
+        for cell, val in zip(cells[1:], vals):
+            cell.value = val
+        worksheet.update_cells(cells)
 
 
 #################
@@ -100,7 +117,7 @@ def questions_answers_nlu_data(args, question_rows):
 
     return faq
 
-TaggedQuestion = namedtuple('TaggedQuestion', 'question entities auto_entities invalid_entities')
+TaggedQuestion = namedtuple('TaggedQuestion', 'question entities auto_entities invalid_entities is_valid reason_invalid')
 
 def process_question(synonyms, question):
     # Find all text marked by square braces
@@ -123,28 +140,42 @@ def process_question(synonyms, question):
         if not [syn in s for s in new_entities + tagged_entities]:
             # Make sure that analyzed new synonym is not a substring of an existing tag
             i = question.find(syn)
-            if i>=0 and (i+len(syn) >= len(question) or question[i+len(syn)] in ' .,'):
+            if i>=0 and (i+len(syn) >= len(question) or question[i+len(syn)] in ' .,?'):
                 new_entities.append(syn)
                 question = question[:i] + '[' + syn + ']' + question[i+len(syn):]
 
-    return TaggedQuestion(question, tagged_entities, new_entities, invalid_entities)
+    if invalid_entities:
+        reason_invalid = 'Invalid entities found'
+    elif not (new_entities + tagged_entities):
+        reason_invalid = 'No valid entities found'
+    else:
+        reason_invalid = ''
+
+    return TaggedQuestion(question, tagged_entities, new_entities, invalid_entities, not reason_invalid, reason_invalid)
 
 def filter_questions_nlu_data(question_rows, synonyms):
+
+    def rasa_tagging(s):
+        '''Replaces, appends all entities tagged with a square bracket with a annotation (filter)'''
+        return re.sub(r'\[([^\[]*)\]', '[\\1](filter)', s)
+
     synonyms = set(synonyms)
     gs = group_by_column(question_rows, 'intention')
     content_questions = gs['/content']
 
     qs = [process_question(synonyms, r.question_variant) for r in content_questions if r.question_variant]
 
-    vqs = [q for q in qs if q.entities + q.auto_entities and not q.invalid_entities]
+    vqs = [q for q in qs if q.is_valid]
 
-    return OrderedDict({
+    logs = pd.DataFrame(qs).sort_values('is_valid', ascending=False)
+
+    return logs, OrderedDict({
         'version': 2.0,
         'nlu':
             [OrderedDict(
                 {
                     'intent': 'filter_question',
-                    'examples': format_examples([q.question for q in vqs])
+                    'examples': format_examples([rasa_tagging(q.question) for q in vqs])
                 }
             )]
     })
