@@ -1,23 +1,168 @@
-version: "2.0"
+version: '2.0'
 nlu:
-- synonym: women
+- synonym: migration_counseling
+  examples: '- Migrationsberatung
+
+    '
+- synonym: support
   examples: |
-    - Frauen
-- synonym: young
+    - Begleitung und Sprachmittlung
+    - Sprachmittlung
+    - Begleitung
+- synonym: labour
   examples: |
-    - Kinder
-    - Jugendliche
-- synonym: asylum_seekers
-  examples: |
-    - Geflüchtete
+    - Arbeit und Bildung
+    - Arbeit
+    - Bildung
+- synonym: health
+  examples: '- Gesundheit
+
+    '
 - synonym: addiction
   examples: |
     - Sucht
+    - Drogen
+    - Abhängigkeit
+- synonym: disability
+  examples: |
+    - Behinderung
+    - Beeinträchtigung
+    - Behindertenausweis
+    - Schwerbehinderung
+- synonym: accommodation
+  examples: |
+    - Wohnen
+    - Wohnungslosigkeit
+    - Wohnungsuche
+- synonym: discrimation
+  examples: |
+    - Antidiskriminierung
+    - Diskriminierung
+    - Rassismus
+    - rechte Gewalt
 - synonym: violence
   examples: |
     - Antigewalt
-- synonym: accommodation
+    - Gewalt
+    - Opfer
+- synonym: other
   examples: |
-    - Wohnung
-    - Wohnen
-    - Wohnungen
+    - Schulden
+    - Schuldnerberatung
+    - Schuldenregulierung
+    - Pfändung
+- synonym: young
+  examples: |
+    - Kinder und Jugendliche
+    - Kinder
+    - Jugendliche
+    - junge Menschen
+- synonym: women
+  examples: '- Frauen
+
+    '
+- synonym: asylum_seekers
+  examples: |
+    - Geflüchtete
+    - Flüchtlinge
+    - Asylsuchende
+    - Asylbewerber
+    - Menschen mit Fluchthintergrund
+- synonym: eu_citizens
+  examples: |
+    - EU-Bürger*innen
+    - EU-Ausländer
+- synonym: no_health_insurance
+  examples: '- Ohne Krankenversicherung
+
+    '
+- synonym: houseless
+  examples: |
+    - Wohnungslose
+    - Obdachlose
+    - Wohnungsnot
+    - Wohnungslosigkeit
+    - Obdachlosigkeit
+- synonym: lgbtqi
+  examples: |
+    - LGBTIQ*
+    - queer
+    - LSBTI
+    - LGBT
+    - LGBTTIQ*
+    - Trans
+- synonym: elderly
+  examples: |
+    - Senior*innen
+    - Ältere
+    - Menschen im Alter
+    - Senioren
+    - Seniorinnen
+- synonym: misc_target
+  examples: '- Sonstige
+
+    '
+- synonym: mitte
+  examples: '- Mitte
+
+    '
+- synonym: friedrichshain_kreuzberg
+  examples: '- Friedrichshain-Kreuzberg
+
+    '
+- synonym: pankow
+  examples: '- Pankow
+
+    '
+- synonym: charlottenburg_wilmersdorf
+  examples: '- Charlottenburg-Wilmersdorf
+
+    '
+- synonym: spandau
+  examples: '- Spandau
+
+    '
+- synonym: steglitz_zehlendorf
+  examples: '- Steglitz-Zehlendorf
+
+    '
+- synonym: tempelhof_schoeneberg
+  examples: '- Tempelhof-Schöneberg
+
+    '
+- synonym: neukoelln
+  examples: '- Neukölln
+
+    '
+- synonym: treptow_koepenik
+  examples: '- Treptow-Köpenick
+
+    '
+- synonym: marzahn_hellersdorf
+  examples: '- Marzahn-Hellersdorf
+
+    '
+- synonym: lichtenberg
+  examples: '- Lichtenberg
+
+    '
+- synonym: reinickendorf
+  examples: '- Reinickendorf
+
+    '
+- synonym: arabic
+  examples: '- Arabisch
+
+    '
+- synonym: english
+  examples: '- Englisch
+
+    '
+- synonym: polish
+  examples: '- Polnisch
+
+    '
+- synonym: vietnamese
+  examples: '- Vietnamesisch
+
+    '

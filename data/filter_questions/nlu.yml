@@ -1,18 +1,34 @@
-version: "2.0"
-
+version: '2.0'
 nlu:
-  - intent: filter_question
-    examples: |
-      - Ich suche Angebote für [Frauen](filter)?
-      - Welche Angebote gibt es für [Frauen](filter)?
-      - Gibt es spezielle Angebote für [Frauen](filter)?
-      - Wissen Sie, wo [Kinder](filter) Angebote finden können?
-      - Wissen Sie, wo [Jugentliche](filter) Angebote finden können?
-      - Unterstützung bei [Sucht](filter)?
-      - Informationen beim Thema [Wohnen](filter)?
-      - Gibt es [Antigewalt](filter) Beratung?
-      - Gibt es für [Frauen](filter) Angebote zur [Sucht](filter)?
-      - Bitte zeige Angebote zu [Sucht](filter) für [Frauen](filter)
-      - Wer berät [Frauen](filter) zu [Sucht](filter)?
-
-
+- intent: filter_question
+  examples: "- Ich suche Angebote für [Frauen](filter)\n- Welche Angebote gibt es\
+    \ für [Frauen](filter)?\n- Gibt es spezielle Angebote für [Frauen](filter). \n\
+    - Wissen Sie, wo [Kinder und Jugendliche](filter) Angebote finden können?\n- Wo\
+    \ finden [Geflüchtete](filter) Angebote?\n- Gibt es hier Kontakte für [Senior*innen](filter)?\n\
+    - Gibt es hier Hilfe für [Wohnungslose](filter)?\n- Wo finde ich Hilfe für [Kinder](filter)?\n\
+    - Gibt es Unterstützung für [Jugendliche](filter)?\n- Was gibt es für [Senior*innen](filter)\
+    \ an Möglichkeiten?\n- Zeig mir, was es für [Wohnungslose](filter) Menschen gibt?\n\
+    - Unterstützungsmöglichkeiten für [EU-Bürger*innen](filter), bitte?\n- Bitte stelle\
+    \ mir eine Liste mit Unterstützungsmöglichkeiten für [Kinder und Jugendliche](filter)\
+    \ zusammen.\n- Ich brauche alle Angebote für [Frauen](filter).\n- Hilfe für [Asylbewerber](filter)?\n\
+    - Hilfe für [Asylsuchende](filter)?\n- Hilfe für [Flüchtlinge](filter)?\n- Hilfe\
+    \ für [Geflüchtete](filter)?\n- Hilfe für [Menschen mit Fluchthintergrund](filter)?\n\
+    - Was tun, wenn [Wohnungslosigkeit](filter) droht?\n- Gibt es Hilfsangebote bei\
+    \ [Rassismus](filter)?\n- Wer hilft mir, wenn ich zu viele [Schulden](filter)\
+    \ habe?\n- Wie finde ich Hilfe gegen [Diskriminierung](filter)?\n- [Frauen](filter)\
+    \ , [Sucht](filter)\n- Gibt es für [Frauen](filter) Angebote zur [Sucht](filter)?\n\
+    - Bitte zeige Angebote zu [Sucht](filter) für [Frauen](filter)\n- Wer berät [Frauen](filter)\
+    \ zu [Sucht](filter)?\n- Gibt es Hilfe für [Opfer](filter) auf türkisch?\n- Wer\
+    \ berät in [Mitte](filter) zum Thema [Sucht](filter)?\n- Wird in [Mitte](filter)\
+    \ zum Thema [Sucht](filter) beraten?\n- Wissen Sie, wer in [Mitte](filter) zum\
+    \ Thema [Sucht](filter) berät?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt\
+    \ es Angebote für [Migrationsberatung](filter)?\n- Macht jemand Beratung zu [Arbeit\
+    \ und Bildung](filter) in [Steglitz-Zehlendorf](filter)?\n- Hilfe bei [Behinderung](filter)\
+    \ in [Neukölln](filter)\n- Wer hat Informationen zum Thema [Wohnen](filter) in\
+    \ [Treptow-Köpenick](filter)\n- Welche Angebote zum Thema [Sucht](filter) gibt\
+    \ es?\n- Gibt es Angebote zum Thema [Sucht](filter)?\n- [Sucht](filter)?\n- Haben\
+    \ Sie Angebote zum Thema [Sucht](filter)?\n- Was haben Sie zum Thema [Sucht](filter)?\n\
+    - Haben Sie Angebote zum Thema [Sucht](filter)?\n- Was wissen Sie über Angebote\
+    \ zum Thema [Sucht](filter)?\n- Können Sie zu [Sucht](filter) beraten?\n- Wer\
+    \ kann zu [Sucht](filter) beraten?\n- Gibt es Einrichtungen, die zu [Sucht](filter)\
+    \ beraten?\n"

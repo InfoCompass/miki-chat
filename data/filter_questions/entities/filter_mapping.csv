@@ -1,7 +1,36 @@
 filter,display,filter_category
+accommodation,Wohnen,c
+addiction,Sucht,c
+arabic,Arabisch,u
+asylum_seekers,Geflüchtete,u
+charlottenburg_wilmersdorf,Charlottenburg-Wilmersdorf,u
+disability,Behinderung,c
+discrimation,Antidiskriminierung,c
+elderly,Senior*innen,u
+english,Englisch,u
+eu_citizens,EU-Bürger*innen,u
+friedrichshain_kreuzberg,Friedrichshain-Kreuzberg,u
+health,Gesundheit,c
+houseless,Wohnungslose,u
+labour,Arbeit und Bildung,c
+lgbtqi,LGBTIQ*,u
+lichtenberg,Lichtenberg,u
+marzahn_hellersdorf,Marzahn-Hellersdorf,u
+migration_counseling,Migrationsberatung,c
+misc_target,Sonstige,u
+mitte,Mitte,u
+neukoelln,Neukölln,u
+no_health_insurance,Ohne Krankenversicherung,u
+other,Schulden,c
+pankow,Pankow,u
+polish,Polnisch,u
+reinickendorf,Reinickendorf,u
+spandau,Spandau,u
+steglitz_zehlendorf,Steglitz-Zehlendorf,u
+support,Begleitung und Sprachmittlung,c
+tempelhof_schoeneberg,Tempelhof-Schöneberg,u
+treptow_koepenik,Treptow-Köpenick,u
+vietnamese,Vietnamesisch,u
+violence,Antigewalt,c
 women,Frauen,u
 young,Kinder und Jugendliche,u
-asylum_seekers,Geflüchtete,u
-violence,Antigewalt,c
-addiction,Sucht,c
-accommodation,Wohnung,c

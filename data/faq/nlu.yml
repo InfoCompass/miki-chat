@@ -67,7 +67,9 @@ nlu:
     - Wo finde ich ein Tutorial?
     - Wo finde ich Hinweise zur Nutzung?
     - Wer kann mir helfen?
-- intent: faq/bfz_host
+    - Wie funktioniert das BfZ?
+    - Was kann ich hier tun?
+- intent: faq/bfz_responsibility
   examples: |
     - Wer ist für die Inhalte verantwortlich?
     - Wer ist Betreiber des BfZ?
@@ -106,11 +108,10 @@ responses:
   utter_faq/bfz_help:
   - text: Am besten klicken Sie erst auf "alle Einträge". Diese Ergebnisse können
       nach Themen, Zielgruppen, Bezirken und Sprachen eingeschränkt werden. Oder Sie
-      geben ein Stichwort im Suchfeld. Beide Suchmöglichkeiten können auch kombiniert
+      geben ein Stichwort im Suchfeld ein. Beide Suchmöglichkeiten können auch kombiniert
       werden.
-  utter_faq/bfz_host:
+  utter_faq/bfz_responsibility:
   - text: Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt
       das BfZ.
   utter_faq/bfz_infomaterial:
   - text: Es gibt einen Flyer im Postkartenformat sowie Aufkleber mit dem BfZ-Logo(A6).
-
