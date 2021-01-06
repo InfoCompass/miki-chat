@@ -134,7 +134,8 @@ def filters_df(filter_rows):
     return pd.DataFrame({
         'filter': [r.filter for r in filter_rows],
         'display': [r.keyword for r in filter_rows],
-        'filter_category': [r.key for r in filter_rows]
+        'filter_category': [r.key for r in filter_rows],
+        'context': [r.context for r in filter_rows]
     }).sort_values('filter')
 
 def filters_nlu_data(filter_rows):
@@ -308,7 +309,7 @@ def get_filter_keyword_sheet(spreadsheet):
     sheet = spreadsheet.worksheet("Schlüsselwörter")
     list_of_hashes = sheet.get_all_records()
 
-    rows = [Row(r['Context'], r['Key'], r['Filter'], r['Schlüsselwörter'],
+    rows = [Row(r['Context'], r['Key'], r['Filter ID'], r['Schlüsselwörter'],
                 [r[f'Synonym {i}'] for i in range(1,6) if r[f'Synonym {i}'] and clean(r[f'Synonym {i}'])])
             for r in list_of_hashes]
     return rows
