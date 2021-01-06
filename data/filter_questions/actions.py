@@ -31,6 +31,7 @@ class ActionFilterResults(Action):
         self.filter_mapping = df.to_dict()
         self.filters = self.filter_mapping['display'].keys()
 
+
     def _format(self, filters):
         filters = [f'`{filter}`' for filter in filters]
         init = filters[:-1]
@@ -40,6 +41,28 @@ class ActionFilterResults(Action):
         else:
             return f'{", ".join(init)} und {last}'
         return filters
+
+
+    def _template_filters(self, filters):
+        display_filters = [self.filter_mapping['display'][filter] for filter in filters]
+        display_filters = self._format(display_filters)
+
+        return f'Du hast gefragt nach Angebote für: {display_filters}'
+
+
+    def _bfz_url(self, filters):
+        key_filters = [(self.filter_mapping['filter_category'][filter], filter) for filter in filters]
+        keys = set([k for k, _ in key_filters])
+
+        # The special case where two filters share the same key, they have to be concatenated with dash
+        # and passed together as a parameter
+        url_filters = ['/' + k + '/' +
+                       '-'.join([filter for k2, filter in key_filters if k==k2])
+                       for k in keys]
+
+        url_filters = ''.join(url_filters)
+        return f'{BFZ_URL}/list{url_filters}'
+
 
     # TODO:
     #   - Handle exceptions in request
@@ -66,28 +89,12 @@ class ActionFilterResults(Action):
         if not filters:
             dispatcher.utter_message(text='Leider ich habe deine Anfrage nicht verstanden')
         else:
-            display_filters = [self.filter_mapping['display'][filter] for filter in filters]
-            display_filters = self._format(display_filters)
-
-            key_filters = [(self.filter_mapping['filter_category'][filter], filter) for filter in filters]
-            keys = set([k for k, _ in key_filters])
-
-            # The special case where two filters share the same key, they have to be concatenated with dash
-            # and passed together as a parameter
-            url_filters = ['/' + k + '/' +
-                           '-'.join([filter for k2, filter in key_filters if k==k2])
-                           for k in keys]
-
-            url_filters = ''.join(url_filters)
-            url = f'{BFZ_URL}/list{url_filters}'
-
-            dispatcher.utter_message(text=f'Du hast gefragt nach Angebote für: {display_filters}')
+            dispatcher.utter_message(text=self._template_filters(filters))
 
             num_documents = await self._num_bfz_documents(filters)
-
             if num_documents:
                 dispatcher.utter_message(text=f'Es gibt {num_documents} ergebnisse zu Verfügung')
-                dispatcher.utter_message(text=f'Du kannst die hier erreichen {url}')
+                dispatcher.utter_message(text=f'Du kannst die hier erreichen {self._bfz_url(filters)}')
             else:
                 dispatcher.utter_message(text=f'Es wurde leider keine Dokumenten gefunden')
 
