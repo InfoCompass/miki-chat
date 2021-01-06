@@ -2,6 +2,7 @@
 import logging
 from typing import Any, Dict, List, Text, Optional
 import json
+from collections import defaultdict
 
 from aiohttp import ClientSession
 
@@ -45,9 +46,32 @@ class ActionFilterResults(Action):
 
     def _template_filters(self, filters):
         display_filters = [self.filter_mapping['display'][filter] for filter in filters]
-        display_filters = self._format(display_filters)
+        d_filters = defaultdict(list)
 
-        return f'Du hast gefragt nach Angebote für: {display_filters}'
+        for filter in filters:
+            d_filters[self.filter_mapping['context'][filter]] += [self.filter_mapping['display'][filter]]
+
+        if {'_topic', '_targetgroup', '_language'} >= set(d_filters.keys()):
+
+            if '_targetgroup' in d_filters:
+                target_group = f' für {self._format(d_filters["_targetgroup"])}'
+            else:
+                target_group = ''
+
+            if '_topic' in d_filters:
+                topic = f' zum Thema {self._format(d_filters["_topic"])}'
+            else:
+                topic = ''
+
+            if '_language' in d_filters:
+                language = f' auf {self._format(d_filters["_language"])}'
+            else:
+                language = ''
+
+            return f'Sie möchten wissen welche Angebote es{target_group} im BfZ{topic}{language} gibt'
+
+        else:
+            return f'Sie möchten wissen welche Angebote es für : {self._format(display_filters)} gibt'
 
 
     def _bfz_url(self, filters):
@@ -87,15 +111,15 @@ class ActionFilterResults(Action):
         filters = list(set(filters) & set(self.filters))
 
         if not filters:
-            dispatcher.utter_message(text='Leider ich habe deine Anfrage nicht verstanden')
+            dispatcher.utter_message(text='Leider habe ich Ihre Anfrage nicht verstanden')
         else:
             dispatcher.utter_message(text=self._template_filters(filters))
 
             num_documents = await self._num_bfz_documents(filters)
             if num_documents:
                 dispatcher.utter_message(text=f'Es gibt {num_documents} ergebnisse zu Verfügung')
-                dispatcher.utter_message(text=f'Du kannst die hier erreichen {self._bfz_url(filters)}')
+                dispatcher.utter_message(text=f'Die verfügbaren Angebote werden jetzt im BfZ angezeigt {self._bfz_url(filters)}')
             else:
-                dispatcher.utter_message(text=f'Es wurde leider keine Dokumenten gefunden')
+                dispatcher.utter_message(text=f'Es wurden leider keine Angebote gefunden')
 
         return []
