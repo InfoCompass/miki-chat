@@ -110,7 +110,14 @@ class ActionFilterResults(Action):
             else:
                 search_param = ''
 
-            url = f'{BFZ_API_URL}/actions/exportItems?format=JSON&keys=id&tags={",".join(filters)}{search_param}'
+            if filters:
+                tag_param = ('tag' if len(filters)==1 else 'tags')
+                tag_param = f'&{tag_param}={",".join(filters)}'
+            else:
+                tag_param = ''
+
+            url = f'{BFZ_API_URL}/actions/exportItems?format=JSON&keys=id{tag_param}{search_param}'
+
             resp = await session.request(method="GET", url=url)
             resp.raise_for_status()
             res = await resp.text()
