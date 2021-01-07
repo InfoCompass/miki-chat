@@ -6,6 +6,8 @@ from collections import defaultdict
 
 from aiohttp import ClientSession
 
+from nltk.stem import SnowballStemmer
+
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import (
@@ -15,6 +17,7 @@ from rasa_sdk.events import (
 logger = logging.getLogger(__name__)
 
 FILTER_MAPPING_PATH = 'data/filter_questions/entities/filter_mapping.csv'
+FILTER_SYNONYMS_PATH = 'data/filter_questions/entities/filter_synonyms.csv'
 BFZ_URL = 'https://www.beratungsnetz-migration.de'
 BFZ_API_URL = 'https://api.beratungsnetz-migration.de'
 
@@ -31,6 +34,12 @@ class ActionFilterResults(Action):
         df = df.set_index('filter')
         self.filter_mapping = df.to_dict()
         self.filters = self.filter_mapping['display'].keys()
+
+        df = pd.read_csv(FILTER_SYNONYMS_PATH)
+        df = df.set_index('synonym')
+        self.synonym_to_filter = df.to_dict()['filter']
+
+        self.stemmer = SnowballStemmer('german')
 
 
     def _format(self, filters):
@@ -99,7 +108,7 @@ class ActionFilterResults(Action):
             if search_filters:
                 search_param = f'&search={search_filters[0]}'
             else:
-                search_params = ''
+                search_param = ''
 
             url = f'{BFZ_API_URL}/actions/exportItems?format=JSON&keys=id&tags={",".join(filters)}{search_param}'
             resp = await session.request(method="GET", url=url)
@@ -115,11 +124,22 @@ class ActionFilterResults(Action):
             tracker: Tracker,
             domain: Dict[Text, Any],
     ) -> List[EventType]:
-        filters = list(tracker.get_latest_entity_values("filter"))
-        filters = list(set(filters) & set(self.filters))
+        raw_filters = list(tracker.get_latest_entity_values("filter"))
+
+        filters = []
+        for f in raw_filters:
+            if f in self.filters:
+                filters.append(f)
+            else:
+                # This filter was picked up as an entity but not synonym resolved, let's try a custom resolution
+                stemmed = self.stemmer.stem(f)
+                if stemmed in self.synonym_to_filter:
+                    logger.info(f'Resolving synonym {f} to {self.synonym_to_filter[stemmed]}')
+                    filters.append(self.synonym_to_filter[stemmed])
 
         if not filters:
             dispatcher.utter_message(text='Leider habe ich Ihre Anfrage nicht verstanden')
+            dispatcher.utter_message(text=f'Ich erkenne nicht folgende Schlüsselwörter: {self._format(raw_filters)}')
         else:
             dispatcher.utter_message(text=self._template_filters(filters))
 

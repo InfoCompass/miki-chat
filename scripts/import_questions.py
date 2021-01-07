@@ -6,6 +6,8 @@ import yaml
 import pandas as pd
 import random
 
+from nltk.stem import SnowballStemmer
+
 import gspread
 from gspread.models import Cell
 from oauth2client.service_account import ServiceAccountCredentials
@@ -28,6 +30,7 @@ def main():
     filter_rows = filter_keywords(args, filter_rows)
 
     filters_df(filter_rows).to_csv(f'{args.output_dir}/data/filter_questions/entities/filter_mapping.csv', index=False)
+    synonyms_df(filter_rows).to_csv(f'{args.output_dir}/data/filter_questions/entities/filter_synonyms.csv', index=False)
 
     with open(f'{args.output_dir}/data/filter_questions/entities/nlu.yml', 'w') as f:
         nlu = filters_nlu_data(filter_rows)
@@ -132,12 +135,23 @@ def filter_keywords(args, filter_rows):
 
 # CONSTANT
 def filters_df(filter_rows):
+    stemmer = SnowballStemmer('german')
+    stemmed_filters = [r.keyword for r in filter_rows]
     return pd.DataFrame({
         'filter': [r.filter for r in filter_rows],
         'display': [r.keyword for r in filter_rows],
         'filter_category': [r.key for r in filter_rows],
         'context': [r.context for r in filter_rows],
         'is_search_term': [r.context=='_searchterms' for r in filter_rows],
+        'stemmed': [r.context=='_searchterms' for r in filter_rows],
+    }).sort_values('filter')
+
+def synonyms_df(filter_rows):
+    stemmer = SnowballStemmer('german')
+    syns = [(stemmer.stem(s), r.filter) for r in filter_rows for s in [r.keyword] + r.synonyms]
+    return pd.DataFrame({
+        'synonym': [s for s, _ in syns],
+        'filter': [f for _, f in syns],
     }).sort_values('filter')
 
 def filters_nlu_data(filter_rows):
