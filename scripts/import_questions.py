@@ -130,12 +130,14 @@ def filter_keywords(args, filter_rows):
     filters_with_key_and_filter = [row for row in filters_with_key if row.filter]
     return filters_with_key_and_filter
 
+# CONSTANT
 def filters_df(filter_rows):
     return pd.DataFrame({
         'filter': [r.filter for r in filter_rows],
         'display': [r.keyword for r in filter_rows],
         'filter_category': [r.key for r in filter_rows],
-        'context': [r.context for r in filter_rows]
+        'context': [r.context for r in filter_rows],
+        'is_search_term': [r.context=='_searchterms' for r in filter_rows],
     }).sort_values('filter')
 
 def filters_nlu_data(filter_rows):

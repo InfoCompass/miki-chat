@@ -51,15 +51,15 @@ class ActionFilterResults(Action):
         for filter in filters:
             d_filters[self.filter_mapping['context'][filter]] += [self.filter_mapping['display'][filter]]
 
-        if {'_topic', '_targetgroup', '_language'} >= set(d_filters.keys()):
+        if {'_topic', '_targetgroup', '_language', '_searchterms'} >= set(d_filters.keys()):
 
             if '_targetgroup' in d_filters:
                 target_group = f' für {self._format(d_filters["_targetgroup"])}'
             else:
                 target_group = ''
 
-            if '_topic' in d_filters:
-                topic = f' zum Thema {self._format(d_filters["_topic"])}'
+            if '_topic' in d_filters or '_searchterms' in d_filters:
+                topic = f' zum Thema {self._format(d_filters["_topic"] + d_filters["_searchterms"])}'
             else:
                 topic = ''
 
@@ -90,15 +90,23 @@ class ActionFilterResults(Action):
 
     # TODO:
     #   - Handle exceptions in request
-    #   - Basic copy
-    #   - More fancy copy
     async def _num_bfz_documents(self, filters):
         async with ClientSession() as session:
-            url = f'{BFZ_API_URL}/actions/exportItems?format=JSON&keys=id&tags={",".join(filters)}'
+
+            search_filters = [f for f in filters if self.filter_mapping['is_search_term'][f]]
+            filters = [f for f in filters if not self.filter_mapping['is_search_term'][f]]
+
+            if search_filters:
+                search_param = f'&search={search_filters[0]}'
+            else:
+                search_params = ''
+
+            url = f'{BFZ_API_URL}/actions/exportItems?format=JSON&keys=id&tags={",".join(filters)}{search_param}'
             resp = await session.request(method="GET", url=url)
             resp.raise_for_status()
             res = await resp.text()
             num_documents = len(json.loads(res))
+            logger.info(f'Issued backend request to {url} with {num_documents} results')
         return num_documents
 
     async def run(
