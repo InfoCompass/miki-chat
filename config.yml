@@ -25,7 +25,7 @@ pipeline:
     retrieval_intent: chitchat
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.65
     ambiguity_threshold: 0.1
 
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.

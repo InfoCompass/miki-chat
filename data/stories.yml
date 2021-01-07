@@ -28,6 +28,13 @@ stories:
     - action: action_filter_results
     - action: utter_another_question
 
+- story: first filter_question confused
+  steps:
+    - checkpoint: first_question
+    - intent: filter_question
+    - action: utter_dont_understand
+    - action: utter_ask_again
+
 ## Continuing the conversation and potentially finishing it
 
 - story: faq
@@ -44,6 +51,12 @@ stories:
         - filter
     - action: action_filter_results
     - action: utter_another_question
+
+- story: filter_question confused
+  steps:
+    - intent: filter_question
+    - action: utter_dont_understand
+    - action: utter_ask_again
     - checkpoint: next_question
 
 - story: next faq
@@ -61,6 +74,13 @@ stories:
         - filter
     - action: action_filter_results
     - action: utter_another_question
+
+- story: next filter_question confused
+  steps:
+    - checkpoint: next_question
+    - intent: filter_question
+    - action: utter_dont_understand
+    - action: utter_ask_again
 
 - story: no more faq + goodbye
   steps:

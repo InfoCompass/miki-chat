@@ -19,5 +19,12 @@ responses:
   utter_another_question:
   - text: Hast du eine andere Frage? Wenn ja, frag bitte erneut.
   - text: Willst du noch mal etwas fragen? Los geht's.
+  utter_dont_understand:
+  - text: Ich habe Ihre Frage nicht verstanden.
+  utter_default:
+    - text: Ich habe Ihre Frage leider nicht verstanden. Versuchen Sie mal erneut.
+  utter_ask_again:
+  - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut,
+      wenn sie möglichst kurz formuliert sind und nur wenige Teilaspekte beinhalten.
   utter_goodbye:
   - text: Tschüss
