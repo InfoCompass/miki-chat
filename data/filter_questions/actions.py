@@ -53,6 +53,8 @@ class ActionFilterResults(Action):
         return filters
 
 
+    # TODO:
+    #  - Extract text into top of the file for ease of maintenance
     def _template_filters(self, filters):
         display_filters = [self.filter_mapping['display'][filter] for filter in filters]
         d_filters = defaultdict(list)
@@ -125,6 +127,8 @@ class ActionFilterResults(Action):
             logger.info(f'Issued backend request to {url} with {num_documents} results')
         return num_documents
 
+    # TODO:
+    #   - Extract text into top of the file for ease of maintenance
     async def run(
             self,
             dispatcher: CollectingDispatcher,
@@ -152,7 +156,7 @@ class ActionFilterResults(Action):
 
             num_documents = await self._num_bfz_documents(filters)
             if num_documents:
-                dispatcher.utter_message(text=f'Es gibt {num_documents} ergebnisse zu Verfügung')
+                dispatcher.utter_message(text=f'Ich habe einige Ergebnisse gefunden')
                 dispatcher.utter_message(text=f'Die verfügbaren Angebote werden jetzt im BfZ angezeigt {self._bfz_url(filters)}')
             else:
                 dispatcher.utter_message(text=f'Es wurden leider keine Angebote gefunden')
