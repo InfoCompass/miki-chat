@@ -170,10 +170,12 @@ def filters_nlu_data(filter_rows):
     })
 
 def questions_answers_nlu_data(args, question_rows):
-    gs = group_by_column(question_rows, 'intention')
-    bfz_questions = group_by_column(gs['/bfz'], 'context')
+    gs = group_by_column(question_rows, 'context')
+    # CONSTANT
+    qa_rows = [row._replace(context=context) for context in ['/bfz', '/specialitems'] for row in gs[context]]
+    bfz_questions = group_by_column(qa_rows, 'intent')
 
-    questions = [Question(f'bfz_{intent[1:]}',
+    questions = [Question(f'{rows[0].context[1:]}_{intent[1:]}',
                           rows[0].question,
                           [r.question_variant for r in rows if r.question_variant is not ''],
                           rows[0].answers)
@@ -242,7 +244,7 @@ def process_question(synonyms, question):
 def filter_questions_nlu_data(question_rows, synonyms):
 
     synonyms = set([s.syn for s in synonyms])
-    gs = group_by_column(question_rows, 'intention')
+    gs = group_by_column(question_rows, 'context')
     content_questions = gs['/content']
 
     qs = [process_question(synonyms, r.question_variant) for r in content_questions if r.question_variant]
@@ -317,7 +319,7 @@ def get_question_sheet(spreadsheet):
         return [a for a in answers if a]
 
     # Raw rows of the question spreadsheet
-    Row = namedtuple('Row', 'intention context question question_variant answers')
+    Row = namedtuple('Row', 'context intent question question_variant answers')
 
     sheet = spreadsheet.worksheet("Fragenkatalog")
     list_of_hashes = sheet.get_all_records()
