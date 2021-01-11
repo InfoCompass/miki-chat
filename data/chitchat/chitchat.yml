@@ -22,8 +22,8 @@ responses:
         Zugewanderte](https://www.beratungsnetz-migration.de/).
   utter_chitchat/help:
     - text: |
-        Ich kann deine Fragen über das BfZ beantworten.
-        Ich kann dir auch helfen, Angebote zu finden. Frag mir z.b.
+        Ich kann Ihre Fragen über das BfZ beantworten.
+        Ich kann Ihnen auch helfen, Angebote zu finden. Fragen Sie mir z.b.
         - Was ist das BfZ?
         - Welche Angebote gibt es für Kinder?
   utter_chitchat/ask_ishuman:

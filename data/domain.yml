@@ -13,8 +13,8 @@ responses:
   - text: Hallo!
   utter_intro:
   - text: Ich bin **MIKI**, der Chatbot vom [Berliner Beratungsnetz für
-      Zugewanderte](https://www.beratungsnetz-migration.de/). Damit ich dir helfen
-      kann, schreib bitte eine Frage, zum beispiel "Was ist das Berliner Beratungsnetz
+      Zugewanderte](https://www.beratungsnetz-migration.de/). Damit ich Ihnen helfen
+      kann, schreiben Sie bitte eine Frage, zum beispiel "Was ist das Berliner Beratungsnetz
       für Zugewanderte?"
   utter_another_question:
   - text: Hast du eine andere Frage? Wenn ja, frag bitte erneut.
