@@ -1,37 +1,139 @@
-filter,display,filter_category
-accommodation,Wohnen,c
-addiction,Sucht,c
-albanian,Albanisch,u
-arabic,Arabisch,u
-asylum_seekers,Geflüchtete,u
-charlottenburg_wilmersdorf,Charlottenburg-Wilmersdorf,u
-disability,Behinderung,c
-discrimation,Antidiskriminierung,c
-elderly,Senior*innen,u
-english,Englisch,u
-eu_citizens,EU-Bürger*innen,u
-friedrichshain_kreuzberg,Friedrichshain-Kreuzberg,u
-health,Gesundheit,c
-houseless,Wohnungslose,u
-labour,Arbeit und Bildung,c
-lgbtqi,LGBTIQ*,u
-lichtenberg,Lichtenberg,u
-marzahn_hellersdorf,Marzahn-Hellersdorf,u
-migration_counseling,Migrationsberatung,c
-misc_target,Sonstige,u
-mitte,Mitte,u
-neukoelln,Neukölln,u
-no_health_insurance,Ohne Krankenversicherung,u
-other,Schulden,c
-pankow,Pankow,u
-polish,Polnisch,u
-reinickendorf,Reinickendorf,u
-spandau,Spandau,u
-steglitz_zehlendorf,Steglitz-Zehlendorf,u
-support,Begleitung und Sprachmittlung,c
-tempelhof_schoeneberg,Tempelhof-Schöneberg,u
-treptow_koepenik,Treptow-Köpenick,u
-vietnamese,Vietnamesisch,u
-violence,Antigewalt,c
-women,Frauen,u
-young,Kinder und Jugendliche,u
+filter,display,filter_category,context,is_search_term,stemmed
+Antiziganismus,Antiziganismus,s,_searchterms,True,True
+Arbeitslosengeld,Arbeitslosengeld,s,_searchterms,True,True
+Aufenthaltsrecht,Aufenthaltsrecht,s,_searchterms,True,True
+Aussiedler,Aussiedler,s,_searchterms,True,True
+Begleitung,Begleitung,s,_searchterms,True,True
+Berufsanerkennung,Berufsanerkennung,s,_searchterms,True,True
+Berufsberatung,Berufsberatung,s,_searchterms,True,True
+Deutschkurs,Deutschkurs,s,_searchterms,True,True
+EU-Recht,EU-Recht,s,_searchterms,True,True
+Einbürgerung,Einbürgerung,s,_searchterms,True,True
+Familiennachzug,Familiennachzug,s,_searchterms,True,True
+Frauengesundheit,Frauengesundheit,s,_searchterms,True,True
+Frühe Hilfen,Frühe Hilfen,s,_searchterms,True,True
+Genitalverstümmelung,Genitalverstümmelung,s,_searchterms,True,True
+Gewalt gegen Mädchen,Gewalt gegen Mädchen,s,_searchterms,True,True
+Hort,Hort,s,_searchterms,True,True
+Häusliche Gewalt,Häusliche Gewalt,s,_searchterms,True,True
+JMD,JMD,s,_searchterms,True,True
+Kindergeld,Kindergeld,s,_searchterms,True,True
+Krankenversicherung,Krankenversicherung,s,_searchterms,True,True
+MBE,MBE,s,_searchterms,True,True
+MSD,MSD,s,_searchterms,True,True
+Mehrsprachige Ärzte,Mehrsprachige Ärzte,s,_searchterms,True,True
+Menschen ohne Papier,Menschen ohne Papier,s,_searchterms,True,True
+Menschenhandel,Menschenhandel,s,_searchterms,True,True
+Mieterberatung,Mieterberatung,s,_searchterms,True,True
+Moschee,Moschee,s,_searchterms,True,True
+Nachhilfe,Nachhilfe,s,_searchterms,True,True
+Notdienst,Notdienst,s,_searchterms,True,True
+PoC,PoC,s,_searchterms,True,True
+Rechtsberatung,Rechtsberatung,s,_searchterms,True,True
+Rente,Rente,s,_searchterms,True,True
+Roma,Roma,s,_searchterms,True,True
+Rückkehrhilfe,Rückkehrhilfe,s,_searchterms,True,True
+Schulanmeldung,Schulanmeldung,s,_searchterms,True,True
+Sexuelle Gewalt,Sexuelle Gewalt,s,_searchterms,True,True
+Sprachmittlung,Sprachmittlung,s,_searchterms,True,True
+Therapie,Therapie,s,_searchterms,True,True
+Verbraucherschutz,Verbraucherschutz,s,_searchterms,True,True
+Verbraucherzentrale,Verbraucherzentrale,s,_searchterms,True,True
+Weiterbildung,Weiterbildung,s,_searchterms,True,True
+Wohnungssuche,Wohnungssuche,s,_searchterms,True,True
+accommodation,Wohnen,c,_topic,False,False
+addiction,Sucht,c,_topic,False,False
+albanian,Albanisch,u,_language,False,False
+amharic,Amharisch,u,_language,False,False
+arabic,Arabisch,u,_language,False,False
+aramaic,Aramäisch,u,_language,False,False
+armenian,Armenisch,u,_language,False,False
+asylum_counseling,Asylberatung,c,_topic,False,False
+asylum_seekers,Geflüchtete,u,_targetgroup,False,False
+azerbaijani,Aserbaidschanisch,u,_language,False,False
+bengali,Bengali,u,_language,False,False
+besonders schutzbedürftige Flüchtlinge,besonders schutzbedürftige Flüchtlinge,s,_searchterms,True,True
+bulgarian,Bulgarisch,u,_language,False,False
+care,Pflege,c,_topic,False,False
+charlottenburg_wilmersdorf,Charlottenburg-Wilmersdorf,u,_quarter,False,False
+chechen,Tschetschenisch,u,_language,False,False
+chinese,Chinesisch,u,_language,False,False
+creole,Kreolisch,u,_language,False,False
+dari,Dari,u,_language,False,False
+debt,Schulden,c,_topic,False,False
+disability,Behinderung,c,_topic,False,False
+discrimation,Antidiskriminierung,c,_topic,False,False
+dutch,Niederländisch,u,_language,False,False
+elderly,Senior*innen,u,_targetgroup,False,False
+english,Englisch,u,_language,False,False
+eu_citizens,EU-Bürger*innen,u,_targetgroup,False,False
+family_conflict,Familienkonflikt,c,_topic,False,False
+farsi,Farsi,u,_language,False,False
+felony,Straftat,c,_topic,False,False
+french,Französisch,u,_language,False,False
+friedrichshain_kreuzberg,Friedrichshain-Kreuzberg,u,_quarter,False,False
+greek,Griechisch,u,_language,False,False
+health,Gesundheit,c,_topic,False,False
+hebrew,Hebräisch,u,_language,False,False
+hindu,Hindi,u,_language,False,False
+houseless,Wohnungslose,u,_targetgroup,False,False
+hungarian,Ungarisch,u,_language,False,False
+italian,Italienisch,u,_language,False,False
+japanese,Japanisch,u,_language,False,False
+kikuyu,Kikuyu,u,_language,False,False
+korean,Koreanisch,u,_language,False,False
+kurdish,Kurdisch,u,_language,False,False
+labour,Arbeit und Bildung,c,_topic,False,False
+laz,Lasisch,u,_language,False,False
+lgbtqi,LGBTIQ*,u,_targetgroup,False,False
+lichtenberg,Lichtenberg,u,_quarter,False,False
+lithuanian,Litauisch,u,_language,False,False
+luo,Luo,u,_language,False,False
+macedonian,Mazedonisch,u,_language,False,False
+marzahn_hellersdorf,Marzahn-Hellersdorf,u,_quarter,False,False
+mental_health,Psychische Krankheit,c,_topic,False,False
+migration_counseling,Migrationsberatung,c,_topic,False,False
+misc_target,Sonstige,u,_targetgroup,False,False
+mitte,Mitte,u,_quarter,False,False
+montenegrin,Montenegrinisch,u,_language,False,False
+nepali,Nepali,u,_language,False,False
+neukoelln,Neukölln,u,_quarter,False,False
+no_health_insurance,Ohne Krankenversicherung,u,_targetgroup,False,False
+oromo,Oromo,u,_language,False,False
+pankow,Pankow,u,_quarter,False,False
+pashto,Paschtu,u,_language,False,False
+polish,Polnisch,u,_language,False,False
+portuguese,Portugiesisch,u,_language,False,False
+pregnacy,Schwangerschaft,c,_topic,False,False
+punjabi,Punjabi,u,_language,False,False
+reinickendorf,Reinickendorf,u,_quarter,False,False
+romani,Romanes,u,_language,False,False
+romanian,Rumänisch,u,_language,False,False
+russian,Russisch,u,_language,False,False
+serbian_croatian,Bosnisch/Kroatisch/Serbisch,u,_language,False,False
+sex_work,Sexarbeit,c,_topic,False,False
+slovene,Slowenisch,u,_language,False,False
+spandau,Spandau,u,_quarter,False,False
+spanish,Spanisch,u,_language,False,False
+sport,Sport,c,_topic,False,False
+steglitz_zehlendorf,Steglitz-Zehlendorf,u,_quarter,False,False
+sti,HIV und STI,c,_topic,False,False
+suomi,Finnisch,u,_language,False,False
+support,Begleitung und Sprachmittlung,c,_topic,False,False
+swahili,Kisuaheli,u,_language,False,False
+tajiki,Tadschikisch,u,_language,False,False
+tempelhof_schoeneberg,Tempelhof-Schöneberg,u,_quarter,False,False
+thai,Thailändisch,u,_language,False,False
+tigrinya,Tigrinya,u,_language,False,False
+treptow_koepenik,Treptow-Köpenick,u,_quarter,False,False
+turkish,Türkisch,u,_language,False,False
+turkmen,Turkmenisch,u,_language,False,False
+ukranian,Ukrainisch,u,_language,False,False
+unbegleitete minderjährige Flüchtlinge,unbegleitete minderjährige Flüchtlinge,s,_searchterms,True,True
+urdu,Urdu,u,_language,False,False
+uzbek,Usbekisch,u,_language,False,False
+vietnamese,Vietnamesisch,u,_language,False,False
+violence,Antigewalt,c,_topic,False,False
+wolof,Wolof,u,_language,False,False
+women,Frauen,u,_targetgroup,False,False
+young,Kinder und Jugendliche,u,_targetgroup,False,False

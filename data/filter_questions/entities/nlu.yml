@@ -2,6 +2,14 @@ version: '2.0'
 nlu:
 - synonym: migration_counseling
   examples: '- Migrationsberatung'
+- synonym: asylum_counseling
+  examples: |-
+    - Asylberatung
+    - Asylrechtsberatung
+    - Asyl- und Verfahrensberatung
+    - Bleibeperspektive
+    - Bleiberecht
+    - Aufenthaltssicherung
 - synonym: support
   examples: |-
     - Begleitung und Sprachmittlung
@@ -14,6 +22,29 @@ nlu:
     - Bildung
 - synonym: health
   examples: '- Gesundheit'
+- synonym: mental_health
+  examples: |-
+    - Psychische Krankheit
+    - psychische Gesundheit
+    - Depression
+    - psychologische Beratung
+    - Psychotherapie
+    - PTBS
+- synonym: sti
+  examples: |-
+    - HIV und STI
+    - sexuelle Gesundheit
+    - AIDS
+    - Sexuell übertragbare Krankheiten
+- synonym: pregnacy
+  examples: |-
+    - Schwangerschaft
+    - Familienplanung
+- synonym: care
+  examples: |-
+    - Pflege
+    - Demenz
+    - Pflegebedürftigkeit
 - synonym: addiction
   examples: |-
     - Sucht
@@ -28,8 +59,11 @@ nlu:
 - synonym: accommodation
   examples: |-
     - Wohnen
-    - Wohnungslosigkeit
+    - Wohnscouting
     - Wohnungsuche
+    - Wohnraum
+    - Wohnhilfe
+    - Wohnungsnot
 - synonym: discrimation
   examples: |-
     - Antidiskriminierung
@@ -41,12 +75,222 @@ nlu:
     - Antigewalt
     - Gewalt
     - Opfer
-- synonym: other
+- synonym: debt
   examples: |-
     - Schulden
     - Schuldnerberatung
     - Schuldenregulierung
     - Pfändung
+- synonym: family_conflict
+  examples: |-
+    - Familienkonflikt
+    - Familienberatung
+    - Erziehungsberatung
+- synonym: sex_work
+  examples: |-
+    - Sexarbeit
+    - Sexarbeiter*in
+    - Sexwork
+    - Prostitution
+- synonym: felony
+  examples: |-
+    - Straftat
+    - Haft
+- synonym: sport
+  examples: '- Sport'
+- synonym: PoC
+  examples: "- PoC\n- BIPoC\n- BPoC\n- \nPeople of Color"
+- synonym: Menschen ohne Papier
+  examples: |-
+    - Menschen ohne Papier
+    - Illegalisierte
+    - Menschen ohne Aufenthaltsstatus
+- synonym: Deutschkurs
+  examples: |-
+    - Deutschkurs
+    - Integrationskurs
+    - Sprachkurs
+    - Alphabetisierung
+- synonym: EU-Recht
+  examples: |-
+    - EU-Recht
+    - Daueraufenthaltsrecht
+- synonym: Notdienst
+  examples: |-
+    - Notdienst
+    - Krise
+    - Krisendienst
+- synonym: Sprachmittlung
+  examples: '- Sprachmittlung'
+- synonym: Aufenthaltsrecht
+  examples: |-
+    - Aufenthaltsrecht
+    - Aufenthaltserlaubnis
+    - Niederlassungserlaubnis
+    - Aufenthaltsstatus
+- synonym: unbegleitete minderjährige Flüchtlinge
+  examples: |-
+    - unbegleitete minderjährige Flüchtlinge
+    - UMF
+    - minderjährige Flüchtlinge
+    - minderjährige
+    - unbegleitete minderjährige Geflüchtete
+- synonym: besonders schutzbedürftige Flüchtlinge
+  examples: |-
+    - besonders schutzbedürftige Flüchtlinge
+    - schutzbedürftige Flüchtlinge
+    - schutzbedürftige Geflüchtete
+- synonym: Familiennachzug
+  examples: |-
+    - Familiennachzug
+    - Familienzusammenführung
+    - Familie nachholen
+- synonym: Weiterbildung
+  examples: |-
+    - Weiterbildung
+    - Berufsausbildung
+    - Berufsorientierung
+    - Praktika
+    - Praktikum
+    - berufliche Ausbildung
+- synonym: Häusliche Gewalt
+  examples: |-
+    - Häusliche Gewalt
+    - Gewalt gegen Frauen
+    - Gewalt gegen Kinder
+- synonym: Gewalt gegen Mädchen
+  examples: |-
+    - Gewalt gegen Mädchen
+    - Zwangsheirat
+    - Mädchennotdienst
+- synonym: Berufsanerkennung
+  examples: |-
+    - Berufsanerkennung
+    - Anerkennung von Abschlüssen
+    - Anerkennung ausländischer Abschlüsse
+    - Anerkennungsberatung
+    - Anerkennungs- und Qualifizierungsberatung
+    - Schulabschluss
+- synonym: Wohnungssuche
+  examples: '- Wohnungssuche'
+- synonym: Rente
+  examples: '- Rente'
+- synonym: Genitalverstümmelung
+  examples: |-
+    - Genitalverstümmelung
+    - FGM
+- synonym: Menschenhandel
+  examples: "- Menschenhandel\n- Human Trafficking "
+- synonym: Antiziganismus
+  examples: |-
+    - Antiziganismus
+    - Rassismus gegen Roma
+    - Gadjé-Rassismus
+- synonym: Sexuelle Gewalt
+  examples: |-
+    - Sexuelle Gewalt
+    - sexualisierte Gewalt
+- synonym: Begleitung
+  examples: |-
+    - Begleitung
+    - Integrationslotsen
+    - Integrationslots*innen
+- synonym: Rechtsberatung
+  examples: |-
+    - Rechtsberatung
+    - Anwalt
+    - juristische Beratung
+- synonym: Berufsberatung
+  examples: |-
+    - Berufsberatung
+    - Berufsorientierung
+- synonym: MBE
+  examples: |-
+    - MBE
+    - Migrationsberatung für erwachsene Zuwanderer
+    - Migrationsberatung
+    - Migrationsberatung für Neuzuwanderer
+- synonym: MSD
+  examples: |-
+    - MSD
+    - Migrationssozialdienst
+- synonym: JMD
+  examples: |-
+    - JMD
+    - Jugendmigrationsdienst
+    - Migrationsberatung für Jugendliche
+- synonym: Mehrsprachige Ärzte
+  examples: |-
+    - Mehrsprachige Ärzte
+    - Ärzte mehrsprachig
+    - Arztpraxen
+- synonym: Mieterberatung
+  examples: '- Mieterberatung'
+- synonym: Aussiedler
+  examples: |-
+    - Aussiedler
+    - Spätaussiedler
+- synonym: Roma
+  examples: |-
+    - Roma
+    - Rroma
+    - Roma und Sinti
+- synonym: Einbürgerung
+  examples: |-
+    - Einbürgerung
+    - Staatsangehörigkeit
+    - Staatsbürgerschaft
+- synonym: Verbraucherschutz
+  examples: |-
+    - Verbraucherschutz
+    - Verbraucherfragen
+- synonym: Kindergeld
+  examples: |-
+    - Kindergeld
+    - Kinderzuschlag
+    - Familienleistungen
+- synonym: Krankenversicherung
+  examples: '- Krankenversicherung'
+- synonym: Hort
+  examples: |-
+    - Hort
+    - Hortbetreuung
+    - Betreuungsgutschein
+    - Kita
+    - Kitagutschein
+    - Kitabetreuung
+- synonym: Arbeitslosengeld
+  examples: |-
+    - Arbeitslosengeld
+    - ALGI
+    - Jobcenter
+    - ALGII
+    - Hartz4
+- synonym: Rückkehrhilfe
+  examples: |-
+    - Rückkehrhilfe
+    - Rückkehrberatung
+    - Rückkehr
+- synonym: Frühe Hilfen
+  examples: '- Frühe Hilfen'
+- synonym: Frauengesundheit
+  examples: '- Frauengesundheit'
+- synonym: Moschee
+  examples: |-
+    - Moschee
+    - Religionsgemeinde
+- synonym: Schulanmeldung
+  examples: |-
+    - Schulanmeldung
+    - Schulwechsel
+- synonym: Nachhilfe
+  examples: "- Nachhilfe\n- Hausaufgaben \n- Hausaufgaben Hilfe"
+- synonym: Therapie
+  examples: |-
+    - Therapie
+    - Psychotherapie
+- synonym: Verbraucherzentrale
+  examples: '- Verbraucherzentrale'
 - synonym: young
   examples: |-
     - Kinder und Jugendliche
@@ -118,11 +362,109 @@ nlu:
   examples: '- Reinickendorf'
 - synonym: albanian
   examples: '- Albanisch'
+- synonym: amharic
+  examples: '- Amharisch'
+- synonym: aramaic
+  examples: '- Aramäisch'
 - synonym: arabic
   examples: '- Arabisch'
+- synonym: armenian
+  examples: '- Armenisch'
+- synonym: azerbaijani
+  examples: '- Aserbaidschanisch'
+- synonym: bengali
+  examples: '- Bengali'
+- synonym: bulgarian
+  examples: '- Bulgarisch'
+- synonym: chechen
+  examples: '- Tschetschenisch'
+- synonym: chinese
+  examples: '- Chinesisch'
+- synonym: creole
+  examples: '- Kreolisch'
+- synonym: dari
+  examples: '- Dari'
+- synonym: dutch
+  examples: '- Niederländisch'
 - synonym: english
   examples: '- Englisch'
+- synonym: farsi
+  examples: '- Farsi'
+- synonym: french
+  examples: '- Französisch'
+- synonym: greek
+  examples: '- Griechisch'
+- synonym: hebrew
+  examples: '- Hebräisch'
+- synonym: hindu
+  examples: '- Hindi'
+- synonym: hungarian
+  examples: '- Ungarisch'
+- synonym: italian
+  examples: '- Italienisch'
+- synonym: japanese
+  examples: '- Japanisch'
+- synonym: kikuyu
+  examples: '- Kikuyu'
+- synonym: korean
+  examples: '- Koreanisch'
+- synonym: kurdish
+  examples: '- Kurdisch'
+- synonym: laz
+  examples: '- Lasisch'
+- synonym: lithuanian
+  examples: '- Litauisch'
+- synonym: luo
+  examples: '- Luo'
+- synonym: macedonian
+  examples: '- Mazedonisch'
+- synonym: montenegrin
+  examples: '- Montenegrinisch'
+- synonym: nepali
+  examples: '- Nepali'
+- synonym: oromo
+  examples: '- Oromo'
+- synonym: pashto
+  examples: '- Paschtu'
 - synonym: polish
   examples: '- Polnisch'
+- synonym: portuguese
+  examples: '- Portugiesisch'
+- synonym: punjabi
+  examples: '- Punjabi'
+- synonym: romani
+  examples: '- Romanes'
+- synonym: romanian
+  examples: '- Rumänisch'
+- synonym: russian
+  examples: '- Russisch'
+- synonym: serbian_croatian
+  examples: '- Bosnisch/Kroatisch/Serbisch'
+- synonym: slovene
+  examples: '- Slowenisch'
+- synonym: spanish
+  examples: '- Spanisch'
+- synonym: suomi
+  examples: '- Finnisch'
+- synonym: swahili
+  examples: '- Kisuaheli'
+- synonym: tajiki
+  examples: '- Tadschikisch'
+- synonym: thai
+  examples: '- Thailändisch'
+- synonym: tigrinya
+  examples: '- Tigrinya'
+- synonym: turkish
+  examples: '- Türkisch'
+- synonym: turkmen
+  examples: '- Turkmenisch'
+- synonym: ukranian
+  examples: '- Ukrainisch'
+- synonym: urdu
+  examples: '- Urdu'
+- synonym: uzbek
+  examples: '- Usbekisch'
 - synonym: vietnamese
   examples: '- Vietnamesisch'
+- synonym: wolof
+  examples: '- Wolof'
