@@ -12,6 +12,8 @@ import gspread
 from gspread.models import Cell
 from oauth2client.service_account import ServiceAccountCredentials
 
+PARA_QUESTION = 'Sie möchten wissen'
+
 def main():
     args = get_args()
     spreadsheet = open_spreadsheet(args)
@@ -121,7 +123,7 @@ def save_df(worksheet, df, init_col, init_row):
 # Spreadsheet processing logic
 #################
 
-Question = namedtuple('Question', 'intent question question_variants answer')
+Question = namedtuple('Question', 'intent question question_variants answers')
 
 
 def filter_keywords(args, filter_rows):
@@ -174,9 +176,15 @@ def questions_answers_nlu_data(args, question_rows):
     questions = [Question(f'bfz_{intent[1:]}',
                           rows[0].question,
                           [r.question_variant for r in rows if r.question_variant is not ''],
-                          rows[0].answer)
+                          rows[0].answers)
                  for intent, rows in bfz_questions.items()
                  if rows[0].question]
+
+    def create_responses(question):
+        paraphrase = f'{PARA_QUESTION}: "{question.question}"'
+        responses = [paraphrase] + question.answers
+        responses = [r + '\n' for r in responses]
+        return '\n'.join(responses)
 
     # Create faq yaml
     faq = OrderedDict({
@@ -188,7 +196,8 @@ def questions_answers_nlu_data(args, question_rows):
                 for q in questions],
         'responses':
             OrderedDict(
-                {f'utter_faq/{q.intent}': [{'text': q.answer}]
+                # CONSTANT
+                {f'utter_faq/{q.intent}': [{'text': create_responses(q)}]
                  for q in questions})
     })
 
@@ -303,13 +312,18 @@ def open_spreadsheet(args):
 
 
 def get_question_sheet(spreadsheet):
+
+    def consume_answers(*answers):
+        return [a for a in answers if a]
+
     # Raw rows of the question spreadsheet
-    Row = namedtuple('Row', 'intention context question question_variant answer')
+    Row = namedtuple('Row', 'intention context question question_variant answers')
 
     sheet = spreadsheet.worksheet("Fragenkatalog")
     list_of_hashes = sheet.get_all_records()
 
-    rows = [Row(r['Context'], r['Intent'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'], r['Antwort_Part1'])
+    rows = [Row(r['Context'], r['Intent'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'],
+                consume_answers(r['Antwort_Part1'], r['Antwort_Part2'], r['Antwort_Part3'], r['Link 1']))
             for r in list_of_hashes]
     return rows
 
