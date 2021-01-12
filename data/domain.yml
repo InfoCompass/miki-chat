@@ -30,6 +30,11 @@ responses:
       wenn sie möglichst kurz formuliert sind und nur wenige Teilaspekte beinhalten.
   utter_ask_whether_question_answered:
   - text: Habe ich Ihre Frage richtig beantwortet?
+    buttons:
+    - title: Ja
+      payload: '/affirm'
+    - title: Nein
+      payload: '/deny'
   utter_rephrase_question:
   - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut, wenn sie möglichst kurz formuliert sind.
   utter_goodbye:
