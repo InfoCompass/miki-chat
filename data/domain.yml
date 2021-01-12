@@ -17,14 +17,20 @@ responses:
       kann, schreiben Sie bitte eine Frage, zum beispiel "Was ist das Berliner Beratungsnetz
       für Zugewanderte?"
   utter_another_question:
-  - text: Hast du eine andere Frage? Wenn ja, frag bitte erneut.
-  - text: Willst du noch mal etwas fragen? Los geht's.
+  - text: |
+      Kann ich Ihnen noch eine weitere Frage beantworten?
+
+      Wenn Ja, fragen Sie noch mal.
   utter_dont_understand:
   - text: Ich habe Ihre Frage nicht verstanden.
   utter_default:
-    - text: Ich habe Ihre Frage leider nicht verstanden. Versuchen Sie mal erneut.
+  - text: Ich habe Ihre Frage leider nicht verstanden. Versuchen Sie mal erneut.
   utter_ask_again:
   - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut,
       wenn sie möglichst kurz formuliert sind und nur wenige Teilaspekte beinhalten.
+  utter_ask_whether_question_answered:
+  - text: Habe ich Ihre Frage richtig beantwortet?
+  utter_rephrase_question:
+  - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut, wenn sie möglichst kurz formuliert sind.
   utter_goodbye:
   - text: Tschüss

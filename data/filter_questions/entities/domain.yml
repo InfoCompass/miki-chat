@@ -1,6 +1,3 @@
 version: "2.0"
 entities:
 - filter
-slots:
-  filter:
-    type: text

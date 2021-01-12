@@ -2,7 +2,7 @@ version: "2.0"
 
 stories:
 
-## Starting up the conversation
+## What comes before questions
 
 - story: greet + help
   steps:
@@ -10,82 +10,83 @@ stories:
   - action: utter_greet
   - action: utter_chitchat/who_are_you
   - action: utter_chitchat/help
-  - checkpoint: first_question
+  - checkpoint: before_question
 
-- story: first faq
+- story: before question check positive
   steps:
-  - checkpoint: first_question
-  - intent: faq
-  - action: utter_faq
-  - action: utter_another_question
-
-- story: first filter_question
-  steps:
-    - checkpoint: first_question
-    - intent: filter_question
-      entities:
-        - filter
-    - action: action_filter_results
+    - intent: affirm
     - action: utter_another_question
+    - checkpoint: before_question
 
-- story: first filter_question confused
+- story: before question check negative
   steps:
-    - checkpoint: first_question
+    - intent: deny
+    - action: utter_rephrase_question
+    - checkpoint: before_question
+
+- story: before question filter_question confused
+  steps:
     - intent: filter_question
     - action: utter_dont_understand
     - action: utter_ask_again
-
-## Continuing the conversation and potentially finishing it
+    - checkpoint: before_question
 
 - story: faq
   steps:
+  - checkpoint: before_question
   - intent: faq
   - action: utter_faq
-  - action: utter_another_question
-  - checkpoint: next_question
+  - action: utter_ask_whether_question_answered
 
-- story: filter_question
+- story: no more questions + goodbye
   steps:
-    - intent: filter_question
-      entities:
-        - filter
-    - action: action_filter_results
-    - action: utter_another_question
+    - checkpoint: before_question
+    - intent: deny
+    - action: utter_goodbye
+
+- story: filter question
+  steps:
+  - checkpoint: before_question
+  - intent: filter_question
+    entities:
+      - filter
+  - action: action_filter_results
+  - action: utter_ask_whether_question_answered
 
 - story: filter_question confused
   steps:
+    - checkpoint: before_question
     - intent: filter_question
     - action: utter_dont_understand
     - action: utter_ask_again
-    - checkpoint: next_question
 
-- story: next faq
+  ## Continuing the check after a question
+
+- story: faq before check
   steps:
-  - checkpoint: next_question
   - intent: faq
   - action: utter_faq
+  - action: utter_ask_whether_question_answered
+  - checkpoint: before_check
+
+- story: filter question before check
+  steps:
+  - intent: filter_question
+    entities:
+      - filter
+  - action: action_filter_results
+  - action: utter_ask_whether_question_answered
+  - checkpoint: before_check
+
+- story: check answered positive
+  steps:
+  - checkpoint: before_check
+  - intent: affirm
   - action: utter_another_question
 
-- story: next filter_question
+- story: check answered negative
   steps:
-    - checkpoint: next_question
-    - intent: filter_question
-      entities:
-        - filter
-    - action: action_filter_results
-    - action: utter_another_question
-
-- story: next filter_question confused
-  steps:
-    - checkpoint: next_question
-    - intent: filter_question
-    - action: utter_dont_understand
-    - action: utter_ask_again
-
-- story: no more faq + goodbye
-  steps:
-  - checkpoint: next_question
+  - checkpoint: before_check
   - intent: deny
-  - action: utter_goodbye
-
+  - action: utter_rephrase_question
 
