@@ -158,7 +158,6 @@ class ActionFilterResults(Action):
             if num_documents:
                 dispatcher.utter_message(text=f'Ich habe einige Ergebnisse gefunden')
                 dispatcher.utter_message(text=f'[Hier klicken]({self._bfz_url(filters)}) um die Ergebnisse im Bfz anzuzeigen')
-                dispatcher.utter_message(text=f'Die verfügbaren Angebote werden jetzt im BfZ angezeigt {self._bfz_url(filters)}')
             else:
                 dispatcher.utter_message(text=f'Es wurden leider keine Angebote gefunden')
 
