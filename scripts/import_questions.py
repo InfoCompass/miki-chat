@@ -5,6 +5,7 @@ from collections import namedtuple, OrderedDict, defaultdict
 import yaml
 import pandas as pd
 import random
+import logging
 
 from nltk.stem import SnowballStemmer
 
@@ -12,11 +13,55 @@ import gspread
 from gspread.models import Cell
 from oauth2client.service_account import ServiceAccountCredentials
 
+########################################
+# Constants (templates or references to the question spreadsheet)
+########################################
+
+# The contexts for which questions and answers are retrieved
+QNA_CONTEXTS = ['/bfz', '/specialitems']
+
+# The contexts for filter questions
+FQ_CONTEXTS = ['/content']
+
+# Sheets
+SHEET_QUESTIONS = 'Fragenkatalog'
+SHEET_FILTER_KEYWORDS = 'Schlüsselwörter'
+
+# Columns used in the Questions Sheet
+COL_CONTEXT = 'Context'
+COL_INTENT = 'Intent'
+COL_EXAMPLE = 'Beschreibung / Beispiel'
+COL_VARIANTS = 'Fragen (Varianten)'
+COL_ANSWER_1 = 'Antwort_Part1'
+COL_ANSWER_2 = 'Antwort_Part2'
+COL_ANSWER_3 = 'Antwort_Part3'
+COL_LINK_1 = 'Link 1'
+
+# Columns used in the filter keywords sheet
+COL_FILTER_CONTEXT = 'Context'
+COL_KEY = 'Key'
+COL_FILTER = 'Filter ID'
+COL_KEYWORD = 'Schlüsselwörter'
+COL_SYNONYM = 'Synonym _NUMBER_'
+NUM_SYNONYMS = 6
+
+# Paraphrase of question in questions and answers
 PARA_QUESTION = 'Sie möchten wissen'
+
+# Summary logger
+sum_logger = logging.getLogger('import.summary')
+sum_logger.setLevel(logging.INFO)
+str_handler = logging.StreamHandler()
+str_handler.setLevel(logging.INFO)
+sum_logger.addHandler(str_handler)
+
+logger = logging.getLogger('import.detailed')
 
 def main():
     args = get_args()
     spreadsheet = open_spreadsheet(args)
+
+    sum_logger.info('Opened spreadsheet')
 
     # Create directory structure
     os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
@@ -123,7 +168,7 @@ def save_df(worksheet, df, init_col, init_row):
 # Spreadsheet processing logic
 #################
 
-Question = namedtuple('Question', 'intent question question_variants answers')
+Question = namedtuple('Question', 'context intent question question_variants answers')
 
 
 def filter_keywords(args, filter_rows):
@@ -171,16 +216,22 @@ def filters_nlu_data(filter_rows):
 
 def questions_answers_nlu_data(args, question_rows):
     gs = group_by_column(question_rows, 'context')
-    # CONSTANT
-    qa_rows = [row._replace(context=context) for context in ['/bfz', '/specialitems'] for row in gs[context]]
+    qa_rows = [row._replace(context=context) for context in QNA_CONTEXTS if context in gs for row in gs[context]]
     bfz_questions = group_by_column(qa_rows, 'intent')
 
-    questions = [Question(f'{rows[0].context[1:]}_{intent[1:]}',
+    questions = [Question(rows[0].context,
+                          f'{rows[0].context[1:]}_{intent[1:]}',
                           rows[0].question,
                           [r.question_variant for r in rows if r.question_variant is not ''],
                           rows[0].answers)
-                 for intent, rows in bfz_questions.items()
-                 if rows[0].question]
+                 for intent, rows in bfz_questions.items()]
+
+    for context in QNA_CONTEXTS:
+        qs = [q for q in questions if q.context==context]
+        discarded = [q for q in qs if not q.question]
+        sum_logger.info(f'Importing {len(qs)} questions and answers from context {context}, discarding {len(discarded)}')
+
+    questions = [q for q in questions if q.question]
 
     def create_responses(question):
         paraphrase = f'{PARA_QUESTION}: "{question.question}"'
@@ -246,6 +297,7 @@ def filter_questions_nlu_data(question_rows, synonyms):
     synonyms = set([s.syn for s in synonyms])
     gs = group_by_column(question_rows, 'context')
     content_questions = gs['/content']
+    content_questions = [row for context in FQ_CONTEXTS if context in gs for row in gs[context]]
 
     qs = [process_question(synonyms, r.question_variant) for r in content_questions if r.question_variant]
 
@@ -321,11 +373,11 @@ def get_question_sheet(spreadsheet):
     # Raw rows of the question spreadsheet
     Row = namedtuple('Row', 'context intent question question_variant answers')
 
-    sheet = spreadsheet.worksheet("Fragenkatalog")
+    sheet = spreadsheet.worksheet(SHEET_QUESTIONS)
     list_of_hashes = sheet.get_all_records()
 
-    rows = [Row(r['Context'], r['Intent'], r['Beschreibung / Beispiel'], r['Fragen (Varianten)'],
-                consume_answers(r['Antwort_Part1'], r['Antwort_Part2'], r['Antwort_Part3'], r['Link 1']))
+    rows = [Row(r[COL_CONTEXT], r[COL_INTENT], r[COL_EXAMPLE], r[COL_VARIANTS],
+                consume_answers(r[COL_ANSWER_1], r[COL_ANSWER_2], r[COL_ANSWER_3], r[COL_LINK_1]))
             for r in list_of_hashes]
     return rows
 
@@ -338,11 +390,14 @@ def get_filter_keyword_sheet(spreadsheet):
     # Raw rows of the question spreadsheet
     Row = namedtuple('Row', 'context key filter keyword synonyms')
 
-    sheet = spreadsheet.worksheet("Schlüsselwörter")
+    sheet = spreadsheet.worksheet(SHEET_FILTER_KEYWORDS)
     list_of_hashes = sheet.get_all_records()
 
-    rows = [Row(r['Context'], r['Key'], r['Filter ID'], r['Schlüsselwörter'],
-                [r[f'Synonym {i}'] for i in range(1,6) if r[f'Synonym {i}'] and clean(r[f'Synonym {i}'])])
+    def syn(i):
+        return COL_SYNONYM.replace('_NUMBER_', str(i))
+
+    rows = [Row(r[COL_FILTER_CONTEXT], r[COL_KEY], r[COL_FILTER], r[COL_KEYWORD],
+                [r[syn(i)] for i in range(1, NUM_SYNONYMS) if r[syn(i)] and clean(r[syn(i)])])
             for r in list_of_hashes]
     return rows
 
