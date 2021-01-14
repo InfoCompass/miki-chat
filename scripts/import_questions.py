@@ -384,9 +384,6 @@ def get_question_sheet(spreadsheet):
 
 def get_filter_keyword_sheet(spreadsheet):
 
-    def clean(s):
-        return '(' not in s
-
     # Raw rows of the question spreadsheet
     Row = namedtuple('Row', 'context key filter keyword synonyms')
 
@@ -397,7 +394,7 @@ def get_filter_keyword_sheet(spreadsheet):
         return COL_SYNONYM.replace('_NUMBER_', str(i))
 
     rows = [Row(r[COL_FILTER_CONTEXT], r[COL_KEY], r[COL_FILTER], r[COL_KEYWORD],
-                [r[syn(i)] for i in range(1, NUM_SYNONYMS) if r[syn(i)] and clean(r[syn(i)])])
+                [r[syn(i)] for i in range(1, NUM_SYNONYMS) if r[syn(i)]])
             for r in list_of_hashes]
     return rows
 
