@@ -56,12 +56,14 @@ str_handler.setLevel(logging.INFO)
 sum_logger.addHandler(str_handler)
 
 logger = logging.getLogger('import.detailed')
+logger.setLevel(logging.INFO)
+str_handler = logging.StreamHandler()
+str_handler.setLevel(logging.INFO)
+logger.addHandler(str_handler)
 
 def main():
     args = get_args()
     spreadsheet = open_spreadsheet(args)
-
-    sum_logger.info('Opened spreadsheet')
 
     # Create directory structure
     os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
@@ -175,9 +177,39 @@ def filter_keywords(args, filter_rows):
     gs = group_by_column(filter_rows, 'context')
 
     filters_with_key = [row._replace(key=rows[0].key, context=context)
-                        for context, rows in gs.items() if rows[0].key
-                        for row in rows]
-    filters_with_key_and_filter = [row for row in filters_with_key if row.filter]
+                        for context, rows in gs.items()
+                        for row in rows[1:]
+                        if row.keyword] # We remove cosmetic empty rows
+
+    # Logging
+    contexts = set([f.context for f in filters_with_key])
+    for c in contexts:
+        fs = [f for f in filters_with_key if f.context==c]
+        invalid = [f for f in fs if not f.filter or not f.key]
+
+        overlapped_keywords = 0
+        # Expensive overlap check
+        for f in fs:
+            syns = [f.keyword] + f.synonyms
+            other_syns = [syn
+                          for of in filters_with_key if of.key and of.filter and of.keyword!=f.keyword
+                          for syn in [of.keyword] + of.synonyms]
+            overlap = [s for s in syns if s in other_syns]
+            if overlap:
+                sum_logger.info(f'Synonyms, context {c}, keyword {f.keyword}, found conflicting synonyms: {overlap}, please solve the conflicts in the filter keywords sheet')
+                overlapped_keywords += 1
+
+
+        sum_logger.info(f'Synonyms, context {c}: Reading {len(fs)} synonyms')
+        if invalid:
+            sum_logger.info(f'Synonyms, context {c}: WARNING discarding {len(invalid)} filter keywords')
+            logger.info(f'Synonyms, context {c}: Discarding filter keywords {[f.keyword for f in invalid]} because of missing key or filter')
+
+        if overlapped_keywords:
+            sum_logger.info(f'Synonyms, context {c}: WARNING found {overlapped_keywords} filter keywords with conflicts, see detailed log and resolve the conflicts')
+
+    filters_with_key_and_filter = [row for row in filters_with_key if row.filter and row.key]
+
     return filters_with_key_and_filter
 
 # CONSTANT
@@ -229,7 +261,7 @@ def questions_answers_nlu_data(args, question_rows):
     for context in QNA_CONTEXTS:
         qs = [q for q in questions if q.context==context]
         discarded = [q for q in qs if not q.question]
-        sum_logger.info(f'Importing {len(qs)} questions and answers from context {context}, discarding {len(discarded)}')
+        sum_logger.info(f'Questions and Answers, context {context}: Importing {len(qs)} questions and answers, discarding {len(discarded)}')
 
     questions = [q for q in questions if q.question]
 
@@ -330,7 +362,7 @@ def format_examples(qs):
 
 
 def group_by_column(rows, col):
-    groups = {}
+    groups = OrderedDict()
     current_val = None
     current = []
     for r in rows:

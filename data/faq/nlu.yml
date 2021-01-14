@@ -143,6 +143,35 @@ nlu:
     - Wer kann zur Aufenthaltserlaubnis eine Beratung anbieten?
     - Wo finde ich Beratung zum Aufenthaltsstatus?
     - Gibt es aufenthaltsrechtliche Beratung im BfZ?
+- intent: faq/specialitems_Kinder- und Jugendzentrum
+  examples: |-
+    - Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?
+    - Jugendclub
+    - JFE / Jugendfreizeiteinrichtung
+    - Kinder- und Jugendzentrum
+- intent: faq/specialitems_Frauencafé
+  examples: |-
+    - Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?
+    - Frauenzentren
+    - Frauenzentrum
+- intent: faq/specialitems_Sprachcafé
+  examples: '- Finde ich Informationen zu Sprachcafés im BfZ?'
+- intent: faq/specialitems_Nachbarschaftszentrum
+  examples: '- Finde ich Informationen zu Nachbarschaftszentren im BfZ?'
+- intent: faq/specialitems_Familienzentrum
+  examples: '- Finde ich Informationen zu Familenzentren im BfZ?'
+- intent: faq/specialitems_Nachbarschaftshaus
+  examples: |-
+    - Finde ich Informationen zu Nachbarschaftshäusern im BfZ?
+    - NBH
+- intent: faq/specialitems_Stadtteilzentrum
+  examples: |-
+    - Finde ich Informationen zu Stadtteilzentren im BfZ?
+    - STZ
+- intent: faq/specialitems_Mehrgenerationenhaus
+  examples: |-
+    - Finde ich Informationen zu Mehrgenerationenhäusern im BfZ?
+    - MGH
 responses:
   utter_faq/bfz_goal:
   - text: |
@@ -175,7 +204,8 @@ responses:
       Wir erfassen grundsätzlich mehrsprachige Beratungsangebote in verschiedenen\
       \ Bereichen der Sozialarbeit. \n\nHinzu kommen Begleitung und Sprachmittlung\
       \ sowie weitere migrationsrelevante Angebote, auch wenn sie nicht mehrsprachig\
-      \ sind.\n"
+      \ sind.\n\nGruppeangebote, Sprachschulen und sonstige Bildungsangebote finden\
+      \ Sie aber hier nicht\n"
   utter_faq/bfz_criteria:
   - text: |
       Sie möchten wissen: "Nach welchen Kriterien werden die Inhalte ausgewählt?"
@@ -262,3 +292,43 @@ responses:
       \nAuch die Beratung bei der Berliner Integrationsbeauftragten ist eine Anlaufstelle\
       \ zu aufenthaltsrechtlichen Fragen: https://www.beratungsnetz-migration.de/list/item/3a9adcd034d44962/s/beauftragte\
       \ \n"
+  utter_faq/specialitems_Kinder- und Jugendzentrum:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?"
+
+      https://www.berlin.de/familie/de/informationen/jugendfreizeiteinrichtungen-in-berlin-289
+  utter_faq/specialitems_Frauencafé:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?"
+
+      https://www.berlin.de/sen/frauen/vielfalt/soziale-und-kulturelle-projekte/
+  utter_faq/specialitems_Sprachcafé:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Sprachcafés im BfZ?"
+
+      https://www.info-compass.net/list/l/de/s/sprachcafe/t/location
+  utter_faq/specialitems_Nachbarschaftszentrum:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Nachbarschaftszentren im BfZ?"
+
+      https://www.info-compass.net/list/l/de/s/nachbarschaftszentrum/t/location
+  utter_faq/specialitems_Familienzentrum:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Familenzentren im BfZ?"
+
+      https://www.info-compass.net/list/l/de/s/familienzentrum/t/location
+  utter_faq/specialitems_Nachbarschaftshaus:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Nachbarschaftshäusern im BfZ?"
+
+      https://www.info-compass.net/list/l/de/s/nachbarschaftshaus
+  utter_faq/specialitems_Stadtteilzentrum:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Stadtteilzentren im BfZ?"
+
+      https://www.info-compass.net/list/l/de/s/stadtteilzentrum/t/location
+  utter_faq/specialitems_Mehrgenerationenhaus:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Mehrgenerationenhäusern im BfZ?"
+
+      https://www.info-compass.net/list/l/de/s/mehrgenerationenhaus/t/location

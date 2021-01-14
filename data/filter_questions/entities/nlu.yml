@@ -219,6 +219,7 @@ nlu:
     - JMD
     - Jugendmigrationsdienst
     - Migrationsberatung für Jugendliche
+    - Migrationsberatung für Kinder
 - synonym: Mehrsprachige Ärzte
   examples: |-
     - Mehrsprachige Ärzte
@@ -297,6 +298,7 @@ nlu:
     - Kinder
     - Jugendliche
     - junge Menschen
+    - JMD
 - synonym: women
   examples: '- Frauen'
 - synonym: asylum_seekers
