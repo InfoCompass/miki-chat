@@ -88,6 +88,8 @@ def main():
     synonyms = make_synonyms(filter_rows)
     filter_questions_logs, qs = filter_questions_nlu_data(question_rows, synonyms)
     new_qs = generate_examples(qs, synonyms, filter_rows)
+    log_synonyms_without_examples(qs + new_qs, filter_rows)
+    log_generated_questions(new_qs)
     nlu = filter_questions_yaml(qs + new_qs)
 
     with open(f'{args.output_dir}/data/filter_questions/nlu.yml', 'w') as f:
@@ -100,6 +102,29 @@ def make_synonyms(filter_rows):
     Synonym = namedtuple('Synonym', 'syn filter num_examples')
     synonyms = [Synonym(syn, row.filter, 0) for row in filter_rows for syn in [row.keyword] + row.synonyms]
     return synonyms
+
+
+
+def log_synonyms_without_examples(qs, filter_rows):
+    contexts = set([f.context for f in filter_rows])
+    for c in contexts:
+        fs = [f for f in filter_rows if f.context==c]
+
+        filters_without_examples = []
+        for f in fs:
+            examples = [q for q in qs if q.is_valid and f.keyword in q.entities + q.auto_entities]
+            if not examples:
+                filters_without_examples.append(f.keyword)
+
+        if filters_without_examples:
+            sum_logger.info(f'Synonyms, context {c}, WARNING there are {len(filters_without_examples)} filters without examples')
+            logger.info(f'Synonyms, context {c}, WARNING the following filters have no examples: {filters_without_examples}')
+
+
+def log_generated_questions(qs):
+    for q in qs:
+        logger.info(f'Generated question: {q.question}')
+
 
 
 def generate_examples(qs, synonyms, filter_rows):
@@ -120,8 +145,10 @@ def generate_examples(qs, synonyms, filter_rows):
                 q_dict[s] += [q]
 
     qs = []
+    generated = []
     for s in synonyms:
         filter = syn_to_filter[s.syn]
+        generated.append((s, filter))
 
         if not s.syn in q_dict:
             syns = [filter.keyword] + filter.synonyms
@@ -134,6 +161,7 @@ def generate_examples(qs, synonyms, filter_rows):
                     q = random.choice(q_dict[syn])
                     question = re.sub(f'\[{quote_star(syn)}\]', f'[{s.syn}]', q.question)
                     example = (syn, q._replace(question=question))
+                    break
 
             # If still no examples, fallback to context
             if filter.context in ['_quarter', '_language', '_targetgroup']:
@@ -142,10 +170,19 @@ def generate_examples(qs, synonyms, filter_rows):
                         if syn in q_dict:
                             q = random.choice(q_dict[syn])
                             question = re.sub(f'\[{quote_star(syn)}\]', f'[{s.syn}]', q.question)
-                            example = (syn, q._replace(question=question))
+                            example = (syn, q._replace(question=question, auto_entities=q.auto_entities+[s.syn]))
+                            break
+                    if example:
+                        break
 
             if example:
                 qs.append(example[1])
+
+    contexts = set([f.context for _, f in generated])
+    for c in contexts:
+        gens = [g for g in generated if g[1].context==c]
+        sum_logger.info(f'Example generation, context {c}, examples generated for {len(gens)} synonyms')
+        logger.info(f'Example generation, context {c}, examples generated for {[s.syn for s, _ in gens]}')
 
     return qs
 
@@ -316,9 +353,9 @@ def process_question(synonyms, question):
                 question = question[:i] + '[' + syn + ']' + question[i+len(syn):]
 
     if invalid_entities:
-        reason_invalid = 'Invalid entities found'
+        reason_invalid = 'Invalid filter keywords found'
     elif not (new_entities + tagged_entities):
-        reason_invalid = 'No valid entities found'
+        reason_invalid = 'No filter keywords found'
     else:
         reason_invalid = ''
 
@@ -328,12 +365,18 @@ def filter_questions_nlu_data(question_rows, synonyms):
 
     synonyms = set([s.syn for s in synonyms])
     gs = group_by_column(question_rows, 'context')
-    content_questions = gs['/content']
     content_questions = [row for context in FQ_CONTEXTS if context in gs for row in gs[context]]
 
     qs = [process_question(synonyms, r.question_variant) for r in content_questions if r.question_variant]
 
     vqs = [q for q in qs if q.is_valid]
+
+    sum_logger.info(f'Filter questions, reading {len(qs)} questions, discarding {len(qs) - len(vqs)}')
+    for q in qs:
+        if not q.is_valid:
+            logger.info(f'Filter questions, discarding question {q.question} because {q.reason_invalid}')
+            if q.invalid_entities:
+                 logger.info(f'Invalid keywords: {q.invalid_entities}')
 
     logs = pd.DataFrame(qs).sort_values('is_valid', ascending=False)
 
