@@ -1,17 +1,57 @@
-import os
-import re
-import argparse
+import os, re, argparse
 from collections import namedtuple, OrderedDict, defaultdict
 import yaml
 import pandas as pd
 import random
 import logging
+import io
+import datetime
 
 from nltk.stem import SnowballStemmer
 
 import gspread
 from gspread.models import Cell
 from oauth2client.service_account import ServiceAccountCredentials
+
+########################################
+# Arguments and logging
+########################################
+
+def get_args():
+    parser = argparse.ArgumentParser(description="Import Question and Answer examples from BfZ spreadsheet")
+    parser.add_argument('--client-secret', type=str, help='Path to json key file of service account', required=True)
+    parser.add_argument('--spreadsheet-url', type=str, help='URL of Google Spreadsheet containing Questions and Answers', required=True)
+    parser.add_argument('--output-dir', type=str, help='Directory name where output will be saved', required=True)
+    parser.add_argument('--quiet', action='store_true')
+    parser.add_argument('--detailed-logging', action='store_true')
+    parser.add_argument('--save-logs-to-spreadsheet', help='Save logs to spreadsheet, make sure there are Sheets named "Logs" and "Logs Detailed"', action='store_true')
+    return parser.parse_args()
+
+args = get_args()
+
+# Summary logger
+sum_logger = logging.getLogger('import.summary')
+sum_logger.setLevel(logging.INFO)
+summary_stream = io.StringIO()
+sum_logger.addHandler(logging.StreamHandler(summary_stream))
+
+logger = logging.getLogger('import.detailed')
+logger.setLevel(logging.INFO)
+detailed_stream = io.StringIO()
+logger.addHandler(logging.StreamHandler(detailed_stream))
+
+if not args.quiet:
+    str_handler = logging.StreamHandler()
+    str_handler.setLevel(logging.INFO)
+    sum_logger.addHandler(str_handler)
+
+if not args.quiet and args.detailed_logging:
+    str_handler = logging.StreamHandler()
+    str_handler.setLevel(logging.INFO)
+    logger.addHandler(str_handler)
+
+sum_logger.info(f'Starting Question Import {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+logger.info(f'Starting Question Import {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
 
 ########################################
 # Constants (templates or references to the question spreadsheet)
@@ -48,21 +88,7 @@ NUM_SYNONYMS = 6
 # Paraphrase of question in questions and answers
 PARA_QUESTION = 'Sie möchten wissen'
 
-# Summary logger
-sum_logger = logging.getLogger('import.summary')
-sum_logger.setLevel(logging.INFO)
-str_handler = logging.StreamHandler()
-str_handler.setLevel(logging.INFO)
-sum_logger.addHandler(str_handler)
-
-logger = logging.getLogger('import.detailed')
-logger.setLevel(logging.INFO)
-str_handler = logging.StreamHandler()
-str_handler.setLevel(logging.INFO)
-logger.addHandler(str_handler)
-
 def main():
-    args = get_args()
     spreadsheet = open_spreadsheet(args)
 
     # Create directory structure
@@ -86,7 +112,7 @@ def main():
         f.write(yaml.dump(nlu, allow_unicode=True))
 
     synonyms = make_synonyms(filter_rows)
-    filter_questions_logs, qs = filter_questions_nlu_data(question_rows, synonyms)
+    qs = filter_questions_nlu_data(question_rows, synonyms)
     new_qs = generate_examples(qs, synonyms, filter_rows)
     log_synonyms_without_examples(qs + new_qs, filter_rows)
     log_generated_questions(new_qs)
@@ -95,7 +121,11 @@ def main():
     with open(f'{args.output_dir}/data/filter_questions/nlu.yml', 'w') as f:
         f.write(yaml.dump(nlu, allow_unicode=True))
 
-    # save_logs(spreadsheet, filter_questions_logs)
+    if args.save_logs_to_spreadsheet:
+        sum_logger.info('End of import\n')
+        logger.info('End of import\n')
+        save_logs_to_sheet(spreadsheet, 'Logs', summary_stream.getvalue())
+        save_logs_to_sheet(spreadsheet, 'Logs Detailed', detailed_stream.getvalue())
 
 
 def make_synonyms(filter_rows):
@@ -187,20 +217,11 @@ def generate_examples(qs, synonyms, filter_rows):
     return qs
 
 
-
-def save_logs(spreadsheet, filter_questions_logs):
-    worksheet = spreadsheet.worksheet("Logs")
-    save_df(worksheet, filter_questions_logs, 1, 10)
-
-def save_df(worksheet, df, init_col, init_row):
-    total_cells = []
-    for col_name, col in zip(df.columns.values, range(len(df.columns.values))):
-        vals = df[col_name].values
-        header = Cell(init_row, col + init_col, col_name)
-        cells = [Cell(init_row+row+1, col + init_col, str(val)) for val, row in zip(vals, range(len(vals)))]
-        total_cells.extend([header])
-        total_cells.extend(cells)
-    worksheet.update_cells(total_cells)
+def save_logs_to_sheet(spreadsheet, sheetname, logs):
+    worksheet = spreadsheet.worksheet(sheetname)
+    lines = logs.split('\n')
+    cells = [Cell(1+number,1, line) for line, number in zip(lines, range(len(lines)))]
+    worksheet.update_cells(cells)
 
 
 #################
@@ -233,7 +254,7 @@ def filter_keywords(args, filter_rows):
                           for syn in [of.keyword] + of.synonyms]
             overlap = [s for s in syns if s in other_syns]
             if overlap:
-                sum_logger.info(f'Synonyms, context {c}, keyword {f.keyword}, found conflicting synonyms: {overlap}, please solve the conflicts in the filter keywords sheet')
+                logger.info(f'Synonyms, context {c}, keyword {f.keyword}, found conflicting synonyms: {overlap}, please solve the conflicts in the filter keywords sheet')
                 overlapped_keywords += 1
 
 
@@ -374,13 +395,13 @@ def filter_questions_nlu_data(question_rows, synonyms):
     sum_logger.info(f'Filter questions, reading {len(qs)} questions, discarding {len(qs) - len(vqs)}')
     for q in qs:
         if not q.is_valid:
-            logger.info(f'Filter questions, discarding question {q.question} because {q.reason_invalid}')
             if q.invalid_entities:
-                 logger.info(f'Invalid keywords: {q.invalid_entities}')
+                invalid_entities = f'Invalid keywords: {q.invalid_entities}'
+            else:
+                invalid_entities = ''
+            logger.info(f'Filter questions, discarding question {q.question} because {q.reason_invalid}. {invalid_entities}')
 
-    logs = pd.DataFrame(qs).sort_values('is_valid', ascending=False)
-
-    return logs, qs
+    return qs
 
 def filter_questions_yaml(qs):
 
@@ -423,13 +444,6 @@ def group_by_column(rows, col):
 #################
 # Utility Functions
 #################
-
-def get_args():
-    parser = argparse.ArgumentParser(description="Import Question and Answer examples from BfZ spreadsheet")
-    parser.add_argument('--client-secret', type=str, help='Path to json key file of service account', required=True)
-    parser.add_argument('--spreadsheet-url', type=str, help='URL of Google Spreadsheet containing Questions and Answers', required=True)
-    parser.add_argument('--output-dir', type=str, help='Directory name where output will be saved', required=True)
-    return parser.parse_args()
 
 
 def open_spreadsheet(args):
