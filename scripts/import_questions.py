@@ -115,6 +115,7 @@ def main():
     qs = filter_questions_nlu_data(question_rows, synonyms)
     new_qs = generate_examples(qs, synonyms, filter_rows)
     log_synonyms_without_examples(qs + new_qs, filter_rows)
+    log_invalid_questions(qs)
     log_generated_questions(new_qs)
     nlu = filter_questions_yaml(qs + new_qs)
 
@@ -148,7 +149,7 @@ def log_synonyms_without_examples(qs, filter_rows):
 
         if filters_without_examples:
             sum_logger.info(f'Synonyms, context {c}, WARNING there are {len(filters_without_examples)} filters without examples')
-            logger.info(f'Synonyms, context {c}, WARNING the following filters have no examples: {filters_without_examples}')
+            logger.info(f'Synonyms, context {c}, WARNING neither the following filters or the corresponding synonyms have no examples: {filters_without_examples}')
 
 
 def log_generated_questions(qs):
@@ -178,7 +179,6 @@ def generate_examples(qs, synonyms, filter_rows):
     generated = []
     for s in synonyms:
         filter = syn_to_filter[s.syn]
-        generated.append((s, filter))
 
         if not s.syn in q_dict:
             syns = [filter.keyword] + filter.synonyms
@@ -207,6 +207,7 @@ def generate_examples(qs, synonyms, filter_rows):
 
             if example:
                 qs.append(example[1])
+                generated.append((s, filter))
 
     contexts = set([f.context for _, f in generated])
     for c in contexts:
@@ -393,6 +394,11 @@ def filter_questions_nlu_data(question_rows, synonyms):
     vqs = [q for q in qs if q.is_valid]
 
     sum_logger.info(f'Filter questions, reading {len(qs)} questions, discarding {len(qs) - len(vqs)}')
+
+    return qs
+
+
+def log_invalid_questions(qs):
     for q in qs:
         if not q.is_valid:
             if q.invalid_entities:
@@ -400,8 +406,6 @@ def filter_questions_nlu_data(question_rows, synonyms):
             else:
                 invalid_entities = ''
             logger.info(f'Filter questions, discarding question {q.question} because {q.reason_invalid}. {invalid_entities}')
-
-    return qs
 
 def filter_questions_yaml(qs):
 
