@@ -43,7 +43,7 @@ COL_KEY = 'Key'
 COL_FILTER = 'Filter ID'
 COL_KEYWORD = 'Schlüsselwörter'
 COL_SYNONYM = 'Synonym _NUMBER_'
-NUM_SYNONYMS = 6
+NUM_SYNONYMS = 7
 
 # Paraphrase of question in questions and answers
 PARA_QUESTION = 'Sie möchten wissen'
@@ -490,8 +490,8 @@ def get_filter_keyword_sheet(spreadsheet):
     def syn(i):
         return COL_SYNONYM.replace('_NUMBER_', str(i))
 
-    rows = [Row(r[COL_FILTER_CONTEXT], r[COL_KEY], r[COL_FILTER], r[COL_KEYWORD],
-                [r[syn(i)] for i in range(1, NUM_SYNONYMS) if r[syn(i)]])
+    rows = [Row(r[COL_FILTER_CONTEXT], r[COL_KEY].strip(), r[COL_FILTER].strip(), r[COL_KEYWORD].strip(),
+                [r[syn(i)].strip() for i in range(1, NUM_SYNONYMS) if r[syn(i)].strip()])
             for r in list_of_hashes]
     return rows
 
