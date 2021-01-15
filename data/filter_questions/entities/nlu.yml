@@ -98,8 +98,6 @@ nlu:
     - Haft
 - synonym: sport
   examples: '- Sport'
-- synonym: PoC
-  examples: "- PoC\n- BIPoC\n- BPoC\n- \nPeople of Color"
 - synonym: Menschen ohne Papier
   examples: |-
     - Menschen ohne Papier
@@ -208,7 +206,6 @@ nlu:
   examples: |-
     - MBE
     - Migrationsberatung für erwachsene Zuwanderer
-    - Migrationsberatung
     - Migrationsberatung für Neuzuwanderer
 - synonym: MSD
   examples: |-

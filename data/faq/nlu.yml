@@ -90,12 +90,9 @@ nlu:
     - Wo finde ich mehr/weitere Infos über das BfZ?
     - Wer kann mir weitere Infomationen über das BfZ geben?
 - intent: faq/specialitems_POC
-  examples: |-
-    - Welche Stellen beraten zu PoC?
-    - Wo finde ich Hilfe für PoC?
-    - Sind alle Stellen PoC sensibel?
-    - Gibt es spezielle Angebote für PoC?
-    - Wer kann mich zum Thema PoC beraten?
+  examples: "- Welche Stellen beraten zu PoC?\n- Wo finde ich Hilfe für PoC?\n- Sind\
+    \ alle Stellen PoC sensibel?\n- Gibt es spezielle Angebote für PoC?\n- Wer kann\
+    \ mich zum Thema PoC beraten?\n- BIPoC \n\n- BPoC\n- People of Color"
 - intent: faq/specialitems_people_withoutpaper
   examples: "- Wo werden Menschen ohne Papier beraten?\n- Wo finde ich Hilfe für Menschen\
     \ ohne Papier?\n- Stehen alle Beratungsstellen auch für Menschen ohne Papier offen?\n\
@@ -172,6 +169,14 @@ nlu:
   examples: |-
     - Finde ich Informationen zu Mehrgenerationenhäusern im BfZ?
     - MGH
+- intent: faq/specialitems_UMF
+  examples: |-
+    - Finde ich Beratung für UMF?
+    - Gibt es Angebote für unbegleitete minderjährige Flüchtlinge?
+- intent: faq/specialitems_Häusliche Gewalt
+  examples: |-
+    - Finde ich Beratung zum Thema Häusliche Gewalt?
+    - Gibt es Angebote für Opfer von häuslicher Gewalt?
 responses:
   utter_faq/bfz_goal:
   - text: |
@@ -332,3 +337,21 @@ responses:
       Sie möchten wissen: "Finde ich Informationen zu Mehrgenerationenhäusern im BfZ?"
 
       https://www.info-compass.net/list/l/de/s/mehrgenerationenhaus/t/location
+  utter_faq/specialitems_UMF:
+  - text: |
+      Sie möchten wissen: "Finde ich Beratung für UMF?"
+
+      Asylberatungsstellen im BfZ sind in der Regel auch für UMF zuständig. Beim BumF – Bundesfachverband unbegleitete minderjährige Flüchtlinge finden Sie umfassende Beratung auch für Ehrenamtliche.
+
+      https://www.beratungsnetz-migration.de/list/item/bf68547fc22b7805/s/UNBEGLEITETE%20minderj%C3%A4hrige
+  utter_faq/specialitems_Häusliche Gewalt:
+  - text: |
+      Sie möchten wissen: "Finde ich Beratung zum Thema Häusliche Gewalt?"
+
+      Fachberatungs- und Interventionsstelle bei häuslicher Gewalt können Ihnen weiterhelfen.
+
+      https://www.beratungsnetz-migration.de/list/s/fachberatung/u/women
+
+      Im Notfall rufen Sie bitte die Notdienste an. Die Übersicht der Telefonnummer finden Sie hier.
+
+      https://www.beratungsnetz-migration.de/list/item/5182626457a5e885
