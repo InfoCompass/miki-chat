@@ -177,6 +177,16 @@ nlu:
   examples: |-
     - Finde ich Beratung zum Thema Häusliche Gewalt?
     - Gibt es Angebote für Opfer von häuslicher Gewalt?
+- intent: faq/specialitems_esonders schützbedürftige Flüchtlinge
+  examples: |-
+    - Finde ich Beratung für besonders schützbedürftige Flüchtlinge?
+    - Wo gibt es Angebot für besonders schützbedürftige Flüchtlinge?
+- intent: faq/specialitems_Gewalt gegen Mädchen
+  examples: '- Finde ich Beratung zum Thema Gewalt gegen Mädchen?'
+- intent: faq/specialitems_MBE
+  examples: |-
+    - Finde ich MBE im BfZ?
+    - Wie kann ich MBE im BfZ finden?
 responses:
   utter_faq/bfz_goal:
   - text: |
@@ -341,7 +351,9 @@ responses:
   - text: |
       Sie möchten wissen: "Finde ich Beratung für UMF?"
 
-      Asylberatungsstellen im BfZ sind in der Regel auch für UMF zuständig. Beim BumF – Bundesfachverband unbegleitete minderjährige Flüchtlinge finden Sie umfassende Beratung auch für Ehrenamtliche.
+      KommMit-BBZ ist die Fachstelle für minderjährige und unbegleitete minderjährige Flüchtlinge:https://www.beratungsnetz-migration.de/list/item/0a50e4fc98eed87b/s/bbz
+
+      Beim BumF – Bundesfachverband unbegleitete minderjährige Flüchtlinge finden Sie außerdem umfassende Beratung auch für Haupt- und Ehrenamtliche.
 
       https://www.beratungsnetz-migration.de/list/item/bf68547fc22b7805/s/UNBEGLEITETE%20minderj%C3%A4hrige
   utter_faq/specialitems_Häusliche Gewalt:
@@ -355,3 +367,23 @@ responses:
       Im Notfall rufen Sie bitte die Notdienste an. Die Übersicht der Telefonnummer finden Sie hier.
 
       https://www.beratungsnetz-migration.de/list/item/5182626457a5e885
+  utter_faq/specialitems_esonders schützbedürftige Flüchtlinge:
+  - text: "Sie möchten wissen: \"Finde ich Beratung für besonders schützbedürftige\
+      \ Flüchtlinge?\"\n\nAlle Einrichtungen im Berliner Netzwerk für besonders schutzbedürftige\
+      \ Flüchtlinge (BNS) sind im BfZ einzeln erfasst. \n\nEine Übersicht aller Projekt\
+      \ im Netzwerk schutzbedürftiger Flüchtlinge (BNS) finden Sie hier (externer\
+      \ Link).\n\nhttps://www.ueberleben.org/allgemein/schutzbeduerftige-fluechtlinge-bns-iii/\n"
+  utter_faq/specialitems_Gewalt gegen Mädchen:
+  - text: |
+      Sie möchten wissen: "Finde ich Beratung zum Thema Gewalt gegen Mädchen?"
+
+      Viele Beratungsstellen im BfZ sind spazialisiert für Frauen und Mädchen als Opfer von Gewalt.
+
+      Hier finden Sie auch Beratungen speziellen Themen wie sexualisierte Gewalt oder Menschenhandel.
+
+      https://www.beratungsnetz-migration.de/list/c/violence/u/women
+  utter_faq/specialitems_MBE:
+  - text: |
+      Sie möchten wissen: "Finde ich MBE im BfZ?"
+
+      https://www.beratungsnetz-migration.de/list/u/bamf_mbe

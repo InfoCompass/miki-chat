@@ -15,54 +15,66 @@ nlu:
     \ für [Asylsuchende](filter)?\n- [Bleibeperspektive](filter) für [Geflüchtete](filter)?\n\
     - [Bleiberecht](filter) für [Flüchtlinge](filter)?\n- Bietet Berlin ein [Bleiberecht](filter)?\n\
     - Bietet Berlin eine [Aufenthaltssicherung](filter)?\n- Bietet Berlin eine [Bleibeperspektive](filter)?\n\
-    - Gibt es [Aufenthaltssicherung](filter) für [Asylsuchende](filter)?\n- Gibt es\
-    \ [Bleibeperspektive](filter) für [Geflüchtete](filter)?\n- Gibt es [Bleiberecht](filter)\
-    \ für [Flüchtlinge](filter)?\n- Gibt es Beratungsangebote zu [Aufenthaltssicherung](filter)?\n\
+    - Gibt es [Abschiebung](filter) in Berlin?\n- Gibt es [Aufenthaltssicherung](filter)\
+    \ für [Asylsuchende](filter)?\n- Gibt es [Bleibeperspektive](filter) für [Geflüchtete](filter)?\n\
+    - Gibt es [Bleiberecht](filter) für [Flüchtlinge](filter)?\n- Gibt es Beratungsangebote\
+    \ zu [Abschiebung](filter)?\n- Gibt es Beratungsangebote zu [Aufenthaltssicherung](filter)?\n\
     - Gibt es Beratungsangebote zu [Bleiberecht](filter)?\n- Gibt es Hilfsangebote\
-    \ bei [Aufenthaltssicherung](filter)?\n- Gibt es in Berlin [Aufenthaltssicherung](filter)\
-    \ für [Asylsuchende](filter)?\n- Gibt es in Berlin [Bleibeperspektive](filter)\
-    \ für [Geflüchtete](filter)?\n- Gibt es in Berlin [Bleiberecht](filter) für [Flüchtlinge](filter)?\n\
-    - Haben [Asylsuchende](filter) einen Anspruch auf [Aufenthaltssicherung](filter)?\n\
+    \ bei [Abschiebung](filter)?\n- Gibt es Hilfsangebote bei [Aufenthaltssicherung](filter)?\n\
+    - Gibt es in Berlin [Aufenthaltssicherung](filter) für [Asylsuchende](filter)?\n\
+    - Gibt es in Berlin [Bleibeperspektive](filter) für [Geflüchtete](filter)?\n-\
+    \ Gibt es in Berlin [Bleiberecht](filter) für [Flüchtlinge](filter)?\n- Haben\
+    \ [Asylsuchende](filter) einen Anspruch auf [Aufenthaltssicherung](filter)?\n\
     - Hilfe für [Asylbewerber](filter)?\n- Hilfe für [Asylsuchende](filter)?\n- Hilfe\
     \ für [Flüchtlinge](filter)?\n- Hilfe für [Geflüchtete](filter)?\n- Hilfe für\
     \ [Menschen mit Fluchthintergrund](filter)?\n- Hilft jemand [Geflüchtete](filter)\
     \ dabei, eine [Bleibeperspektive](filter) zu finden?\n- Ich muss dringend Hilfe\
-    \ bei [Aufenthaltssicherung](filter) finden\n- Unterstützung für [Flüchtlinge](filter)\
-    \ mit [Bleiberecht](filter)?\n- Unterstützung für [Geflüchtete](filter) mit [Bleibeperspektive](filter)?\n\
-    - Welche Angebote gibt es für [Asylsuchende](filter) zum Thema [Aufenthaltssicherung](filter)?\n\
-    - Welche Angebote gibt es für [Flüchtlinge](filter) zum Thema [Bleiberecht](filter)?\n\
-    - Welche Angebote gibt es für [Geflüchtete](filter) zum Thema [Bleibeperspektive](filter)?\n\
+    \ bei [Abschiebung](filter) finden\n- Ich muss dringend Hilfe bei [Aufenthaltssicherung](filter)\
+    \ finden\n- Unterstützung für [Flüchtlinge](filter) mit [Bleiberecht](filter)?\n\
+    - Unterstützung für [Geflüchtete](filter) mit [Bleibeperspektive](filter)?\n-\
+    \ Was tun, wenn [Abschiebung](filter) droht?\n- Welche Angebote gibt es für [Asylbewerber](filter)\
+    \ zum Thema [Abschiebung](filter)?\n- Welche Angebote gibt es für [Asylsuchende](filter)\
+    \ zum Thema [Aufenthaltssicherung](filter)?\n- Welche Angebote gibt es für [Flüchtlinge](filter)\
+    \ zum Thema [Bleiberecht](filter)?\n- Welche Angebote gibt es für [Geflüchtete](filter)\
+    \ zum Thema [Bleibeperspektive](filter)?\n- Welche Beratung gibt es bei [Abschiebung](filter)?\n\
     - Welche Beratung gibt es bei [Aufenthaltssicherung](filter)?\n- Wer hilft mir\
     \ mit [Aufenthaltssicherung](filter)?\n- Wer hilft mir mit [Bleiberecht](filter)?\n\
-    - Wer kann was zum Thema [Aufenthaltssicherung](filter) sagen?\n- Wer kann was\
-    \ zum Thema [Bleibeperspektive](filter) sagen?\n- Wer kann was zum Thema [Bleiberecht](filter)\
-    \ sagen?\n- Wie ist das [Bleiberecht](filter), wenn ich krank bin?\n- Wie ist\
-    \ die [Aufenthaltssicherung](filter), wenn ich krank bin?\n- Wie ist die [Bleibeperspektive](filter),\
-    \ wenn ich krank bin?\n- Wie können [Asylsuchende](filter) in Deutschland eine\
-    \ [Aufenthaltssicherung](filter) beantragen?\n- Wie können [Flüchtlinge](filter)\
+    - Wer kann was zum Thema [Abschiebung](filter) sagen?\n- Wer kann was zum Thema\
+    \ [Aufenthaltssicherung](filter) sagen?\n- Wer kann was zum Thema [Bleibeperspektive](filter)\
+    \ sagen?\n- Wer kann was zum Thema [Bleiberecht](filter) sagen?\n- Wie finde ich\
+    \ Hilfe gegen [Abschiebung](filter)?\n- Wie ist das [Bleiberecht](filter), wenn\
+    \ ich krank bin?\n- Wie ist die [Abschiebung](filter), wenn ich krank bin?\n-\
+    \ Wie ist die [Aufenthaltssicherung](filter), wenn ich krank bin?\n- Wie ist die\
+    \ [Bleibeperspektive](filter), wenn ich krank bin?\n- Wie können [Asylbewerber](filter)\
+    \ eine [Abschiebung](filter) anzeigen?\n- Wie können [Asylsuchende](filter) in\
+    \ Deutschland eine [Aufenthaltssicherung](filter) beantragen?\n- Wie können [Flüchtlinge](filter)\
     \ in Deutschland ein [Bleiberecht](filter) beantragen?\n- Wie können [Geflüchtete](filter)\
     \ in Deutschland eine [Bleibeperspektive](filter) beantragen?\n- Wie können Migrant*innen\
-    \ ihr [Bleiberecht](filter) anerkennen lassen?\n- Wir brauchen Hilfe bei [Aufenthaltssicherung](filter).\n\
-    - Wo erhalte ich Informationen zu [Aufenthaltssicherung](filter) in Deutschland?\n\
-    - Wo erhalte ich Informationen zu [Bleiberecht](filter) in Deutschland?\n- Wo\
-    \ finde ich Informationen zu [Aufenthaltssicherung](filter)?\n- Wo finde ich Informationen\
-    \ zu [Bleiberecht](filter)?\n- Wo finde ich Unterstützung bei [Aufenthaltssicherung](filter)?\n\
-    - Wo finde ich Unterstützung bei [Bleiberecht](filter)?\n- Wo kann ich was über\
-    \ [Asylsuchende](filter) und [Aufenthaltssicherung](filter) erfahren?\n- Wo kann\
-    \ ich was über [Bleiberecht](filter) und [Flüchtlinge](filter) erfahren?\n- Wo\
-    \ kann ich was über [Geflüchtete](filter) und [Bleibeperspektive](filter) erfahren?\n\
-    - Wo können [Geflüchtete](filter) erfahren, wie gut die [Bleibeperspektive](filter)\
-    \ ist?\n- Zeige mir Möglichkeiten für ein [Bleiberecht](filter) für [Flüchtlinge](filter).\n\
-    - Zeige mir Möglichkeiten für eine [Aufenthaltssicherung](filter) für [Asylsuchende](filter).\n\
-    - Zeige mir Möglichkeiten für eine [Bleibeperspektive](filter) für [Geflüchtete](filter).\n\
-    - [Bleibeperspektive](filter) für [Frauen](filter)?\n- Ich möchte etwas über [Familienzusammenführung](filter)\
-    \ bei [Frauen](filter) erfahren?\n- Wo können [Geflüchtete](filter) erfahren,\
-    \ wie gut die [Bleibeperspektive](filter) ist?\n- Was tun, wenn [Wohnungslosigkeit](filter)\
-    \ droht?\n- Gibt es Hilfsangebote bei [Rassismus](filter)?\n- Ich suche einen\
-    \ [Sprachkurs](filter) nur für [Frauen](filter).\n- Wer hilft mir, wenn ich zu\
-    \ viele [Schulden](filter) habe?\n- Haben [EU-Bürger*innen](filter) einen Anspruch\
-    \ auf [Rente](filter)?\n- Ich brauche Beratung zu [Aufenthaltsrecht](filter) von\
-    \ [EU-Bürger*innen](filter)\n- Wer kann was zum Thema [Menschenhandel](filter)\
+    \ ihr [Bleiberecht](filter) anerkennen lassen?\n- Wir brauchen Hilfe bei [Abschiebung](filter).\n\
+    - Wir brauchen Hilfe bei [Aufenthaltssicherung](filter).\n- Wo erhalte ich Informationen\
+    \ zu [Abschiebung](filter) in Deutschland?\n- Wo erhalte ich Informationen zu\
+    \ [Aufenthaltssicherung](filter) in Deutschland?\n- Wo erhalte ich Informationen\
+    \ zu [Bleiberecht](filter) in Deutschland?\n- Wo finde ich Informationen zu [Abschiebung](filter)?\n\
+    - Wo finde ich Informationen zu [Aufenthaltssicherung](filter)?\n- Wo finde ich\
+    \ Informationen zu [Bleiberecht](filter)?\n- Wo finde ich Unterstützung bei [Abschiebung](filter)?\n\
+    - Wo finde ich Unterstützung bei [Aufenthaltssicherung](filter)?\n- Wo finde ich\
+    \ Unterstützung bei [Bleiberecht](filter)?\n- Wo kann ich was über [Abschiebung](filter)\
+    \ und [Asylbewerber](filter) erfahren?\n- Wo kann ich was über [Asylsuchende](filter)\
+    \ und [Aufenthaltssicherung](filter) erfahren?\n- Wo kann ich was über [Bleiberecht](filter)\
+    \ und [Flüchtlinge](filter) erfahren?\n- Wo kann ich was über [Geflüchtete](filter)\
+    \ und [Bleibeperspektive](filter) erfahren?\n- Wo können [Geflüchtete](filter)\
+    \ erfahren, wie gut die [Bleibeperspektive](filter) ist?\n- Wo können sich [Asylbewerber](filter)\
+    \ wegen [Abschiebung](filter) beschweren?\n- Zeige mir Möglichkeiten für ein [Bleiberecht](filter)\
+    \ für [Flüchtlinge](filter).\n- Zeige mir Möglichkeiten für eine [Aufenthaltssicherung](filter)\
+    \ für [Asylsuchende](filter).\n- Zeige mir Möglichkeiten für eine [Bleibeperspektive](filter)\
+    \ für [Geflüchtete](filter).\n- [Bleibeperspektive](filter) für [Frauen](filter)?\n\
+    - Ich möchte etwas über [Familienzusammenführung](filter) bei [Frauen](filter)\
+    \ erfahren?\n- Wo können [Geflüchtete](filter) erfahren, wie gut die [Bleibeperspektive](filter)\
+    \ ist?\n- Was tun, wenn [Wohnungslosigkeit](filter) droht?\n- Gibt es Hilfsangebote\
+    \ bei [Rassismus](filter)?\n- Ich suche einen [Sprachkurs](filter) nur für [Frauen](filter).\n\
+    - Wer hilft mir, wenn ich zu viele [Schulden](filter) habe?\n- Haben [EU-Bürger*innen](filter)\
+    \ einen Anspruch auf [Rente](filter)?\n- Ich brauche Beratung zu [Aufenthaltsrecht](filter)\
+    \ von [EU-Bürger*innen](filter)\n- Wer kann was zum Thema [Menschenhandel](filter)\
     \ sagen?\n- Wie können [EU-Bürger*innen](filter) in Deutschland eine [Krankenversicherung](filter)\
     \ beantragen?\n- Wie finde ich Hilfe gegen [Diskriminierung](filter)?\n- [Frauen](filter)\
     \ , [Sucht](filter)\n- Gibt es für [Frauen](filter) Angebote zur [Sucht](filter)?\n\
@@ -92,44 +104,47 @@ nlu:
     \ auf [Urdu](filter)\n- Informationen beim Thema [Wohnen](filter) in [Wolof](filter)\n\
     - Welche Möglichkeiten gibt es, etwas zum Thema [Antidiskriminierung auf [Finnisch](filter)\
     \ zu erfahren?\n- Gibt es [Antigewalt](filter) Beratung auf [Tadschikisch](filter)?\n\
-    - Gibt es [Asylrechtsberatung](filter) in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Asyl- und Verfahrensberatung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Begleitung und Sprachmittlung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    - Gibt es [Asylrechtsberatung](filter) in [Spanisch](filter)?\n- Gibt es [Asyl-\
+    \ und Verfahrensberatung](filter) in [Spanisch](filter)?\n- Gibt es [Begleitung\
+    \ und Sprachmittlung](filter) in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
     \ gibt es Angebote für [Arbeit](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
     \ gibt es Angebote für [Gesundheit](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
     \ gibt es Angebote für [Psychische Krankheit](filter)?\n- Gibt es [psychische\
     \ Gesundheit](filter) in [Spanisch](filter)?\n- Gibt es [Depression](filter) in\
     \ [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote\
     \ für [psychologische Beratung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [PTBS](filter)?\n- Gibt es [HIV und STI](filter) in [Spanisch](filter)?\n\
-    - Gibt es [sexuelle Gesundheit](filter) in [Spanisch](filter)?\n- Gibt es [AIDS](filter)\
+    \ gibt es Angebote für [PTBS](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [HIV und STI](filter)?\n- Gibt es [sexuelle Gesundheit](filter)\
     \ in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote\
-    \ für [Sexuell übertragbare Krankheiten](filter)?\n- Gibt es [Schwangerschaft](filter)\
-    \ in [Spanisch](filter)?\n- Gibt es [Familienplanung](filter) in [Spanisch](filter)?\n\
-    - Gibt es [Pflege](filter) in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Demenz](filter)?\n- Gibt es [Pflegebedürftigkeit](filter)\
-    \ in [Spanisch](filter)?\n- Gibt es [Drogen](filter) in [Spanisch](filter)?\n\
-    - Gibt es [Abhängigkeit](filter) in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Behindertenausweis](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Schwerbehinderung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ für [AIDS](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote\
+    \ für [Sexuell übertragbare Krankheiten](filter)?\n- Gibt es [HIV](filter) in\
+    \ [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote\
+    \ für [Schwangerschaft](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt\
+    \ es Angebote für [Familienplanung](filter)?\n- Gibt es [Pflege](filter) in [Spanisch](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Demenz](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Pflegebedürftigkeit](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Drogen](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Abhängigkeit](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Behindertenausweis](filter)?\n\
+    - Gibt es [Schwerbehinderung](filter) in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
     \ gibt es Angebote für [Wohnscouting](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Wohnungsuche](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Wohnraum](filter)?\n- Gibt es [Wohnhilfe](filter) in [Spanisch](filter)?\n\
-    - Wissen Sie, wo [Wohnungsnot](filter) Angebote finden können?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Antidiskriminierung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [rechte Gewalt](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Gewalt](filter)?\n- Gibt es [Schuldnerberatung](filter)\
-    \ in [Spanisch](filter)?\n- Gibt es [Schuldenregulierung](filter) in [Spanisch](filter)?\n\
-    - Gibt es [Pfändung](filter) in [Spanisch](filter)?\n- Gibt es [Familienkonflikt](filter)\
-    \ in [Spanisch](filter)?\n- Gibt es [Familienberatung](filter) in [Spanisch](filter)?\n\
-    - Gibt es [Erziehungsberatung](filter) in [Spanisch](filter)?\n- Gibt es [Sexarbeit](filter)\
+    \ gibt es Angebote für [Wohnungsuche](filter)?\n- Gibt es [Wohnraum](filter) in\
+    \ [Spanisch](filter)?\n- Gibt es [Wohnhilfe](filter) in [Spanisch](filter)?\n\
+    - Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Wohnungsnot](filter)\
+    \ zusammen.\n- Gibt es [Antidiskriminierung](filter) in [Spanisch](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [rechte Gewalt](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Gewalt](filter)?\n\
+    - Gibt es [Schuldnerberatung](filter) in [Spanisch](filter)?\n- Gibt es [Schuldenregulierung](filter)\
     \ in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote\
-    \ für [Sexarbeiter*in](filter)?\n- Gibt es [Sexwork](filter) in [Spanisch](filter)?\n\
-    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Prostitution](filter)?\n\
-    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Straftat](filter)?\n\
-    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Haft](filter)?\n\
-    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Sport](filter)?\n\
-    - Ich suche einen [Deutschkurs](filter) nur für [Frauen](filter).\n- Ich suche\
+    \ für [Pfändung](filter)?\n- Gibt es [Familienkonflikt](filter) in [Spanisch](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Familienberatung](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Erziehungsberatung](filter)?\n\
+    - Gibt es [Sexarbeit](filter) in [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [Sexarbeiter*in](filter)?\n- Gibt es [Sexwork](filter)\
+    \ in [Spanisch](filter)?\n- Gibt es [Prostitution](filter) in [Spanisch](filter)?\n\
+    - Gibt es [Straftat](filter) in [Spanisch](filter)?\n- Gibt es [Haft](filter)\
+    \ in [Spanisch](filter)?\n- Gibt es [Sport](filter) in [Spanisch](filter)?\n-\
+    \ Ich suche einen [Deutschkurs](filter) nur für [Frauen](filter).\n- Ich suche\
     \ einen [Integrationskurs](filter) nur für [Frauen](filter).\n- Ich suche einen\
     \ [Alphabetisierung](filter) nur für [Frauen](filter).\n- Ich brauche Beratung\
     \ zu [Aufenthaltserlaubnis](filter) von [EU-Bürger*innen](filter)\n- Ich brauche\
@@ -143,78 +158,77 @@ nlu:
     \ bekommen, wenn ich nur [Albanisch](filter) spreche?\n- Kann ich Informationen\
     \ zu [berufliche Ausbildung](filter) bekommen, wenn ich nur [Albanisch](filter)\
     \ spreche?\n- Gibt es in Berlin Hilfe bei [FGM](filter) in [Albanisch](filter)\n\
-    - Wer kann was zum Thema [Human Trafficking ](filter) sagen?\n- Bitte stelle mir\
-    \ eine Liste mit Unterstützungsmöglichkeiten für [JMD](filter) zusammen.\n- Bitte\
-    \ stelle mir eine Liste mit Unterstützungsmöglichkeiten für [junge Menschen](filter)\
-    \ zusammen.\n- Wissen Sie, wo [JMD](filter) Angebote finden können?\n- Bitte stelle\
-    \ mir eine Liste mit Unterstützungsmöglichkeiten für [EU-Ausländer](filter) zusammen.\n\
-    - Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Ohne Krankenversicherung](filter)\
-    \ zusammen.\n- Wissen Sie, wo [Obdachlose](filter) Angebote finden können?\n-\
-    \ Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Wohnungsnot](filter)\
+    - Wer kann was zum Thema [Human Trafficking](filter) sagen?\n- Wissen Sie, wo\
+    \ [JMD](filter) Angebote finden können?\n- Wissen Sie, wo [junge Menschen](filter)\
+    \ Angebote finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
+    \ für [JMD](filter) zusammen.\n- Wissen Sie, wo [EU-Ausländer](filter) Angebote\
+    \ finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
+    \ für [Ohne Krankenversicherung](filter) zusammen.\n- Bitte stelle mir eine Liste\
+    \ mit Unterstützungsmöglichkeiten für [Obdachlose](filter) zusammen.\n- Bitte\
+    \ stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Wohnungsnot](filter)\
     \ zusammen.\n- Wissen Sie, wo [Obdachlosigkeit](filter) Angebote finden können?\n\
     - Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für [LGBTIQ*](filter)\
     \ zusammen.\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für\
-    \ [queer](filter) zusammen.\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [LSBTI](filter) zusammen.\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [LGBT](filter) zusammen.\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [LGBTTIQ*](filter) zusammen.\n- Wissen Sie, wo [Trans](filter) Angebote\
-    \ finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [Ältere](filter) zusammen.\n- Wissen Sie, wo [Menschen im Alter](filter)\
-    \ Angebote finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [Senioren](filter) zusammen.\n- Wissen Sie, wo [Seniorinnen](filter) Angebote\
-    \ finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [Sonstige](filter) zusammen.\n- Wissen Sie, wer in [Charlottenburg-Wilmersdorf](filter)\
+    \ [queer](filter) zusammen.\n- Wissen Sie, wo [LSBTI](filter) Angebote finden\
+    \ können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für [LGBT](filter)\
+    \ zusammen.\n- Wissen Sie, wo [LGBTTIQ*](filter) Angebote finden können?\n- Wissen\
+    \ Sie, wo [Trans](filter) Angebote finden können?\n- Bitte stelle mir eine Liste\
+    \ mit Unterstützungsmöglichkeiten für [Trans*](filter) zusammen.\n- Wissen Sie,\
+    \ wo [Ältere](filter) Angebote finden können?\n- Wissen Sie, wo [Menschen im Alter](filter)\
+    \ Angebote finden können?\n- Wissen Sie, wo [Senioren](filter) Angebote finden\
+    \ können?\n- Wissen Sie, wo [Seniorinnen](filter) Angebote finden können?\n- Wissen\
+    \ Sie, wo [Sonstige](filter) Angebote finden können?\n- Wissen Sie, wer in [Charlottenburg-Wilmersdorf](filter)\
     \ zum Thema [Sucht](filter) berät?\n- Wird in [Spandau](filter) zum Thema [Sucht](filter)\
-    \ beraten?\n- Wissen Sie, wer in [Tempelhof-Schöneberg](filter) zum Thema [Sucht](filter)\
-    \ berät?\n- Wird in [Marzahn-Hellersdorf](filter) zum Thema [Sucht](filter) beraten?\n\
+    \ beraten?\n- Wird in [Tempelhof-Schöneberg](filter) zum Thema [Sucht](filter)\
+    \ beraten?\n- Wer berät in [Marzahn-Hellersdorf](filter) zum Thema [Sucht](filter)?\n\
     - Wer berät in [Lichtenberg](filter) zum Thema [Sucht](filter)?\n- Wissen Sie,\
-    \ wer in [Reinickendorf](filter) zum Thema [Sucht](filter) berät?\n- Kann ich\
-    \ Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur [Amharisch](filter)\
-    \ spreche?\n- Kann ich Informationen zu [Berufsausbildung](filter) bekommen, wenn\
-    \ ich nur [Aramäisch](filter) spreche?\n- Ich suche Informationen zum [Bleiberecht](filter)\
-    \ auf [Arabisch](filter).\n- Ich suche Informationen zum [Bleiberecht](filter)\
-    \ auf [Armenisch](filter).\n- Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter)\
-    \ in [Aserbaidschanisch](filter)\n- Kann ich Informationen zu [Berufsausbildung](filter)\
-    \ bekommen, wenn ich nur [Bengali](filter) spreche?\n- Ich suche Informationen\
-    \ zum [Bleiberecht](filter) auf [Bulgarisch](filter).\n- Wo gibt es Beratung zu\
-    \ [Bleiberecht](filter) auf [Tschetschenisch](filter)?\n- Kann ich Informationen\
-    \ zu [Berufsausbildung](filter) bekommen, wenn ich nur [Chinesisch](filter) spreche?\n\
-    - Gibt es Angebote auf [Kreolisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Dari](filter)?\n-\
-    \ Gibt es Angebote auf [Niederländisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
-    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Englisch](filter)?\n- Wo gibt\
-    \ es Beratung zu [Bleiberecht](filter) auf [Farsi](filter)?\n- Wo gibt es Beratung\
-    \ zu [Bleiberecht](filter) auf [Französisch](filter)?\n- Wer hilft bei [Rassismus](filter)\
-    \ mit Sprachmittlung auf [Griechisch](filter)?\n- Kann ich Informationen zu [Berufsausbildung](filter)\
-    \ bekommen, wenn ich nur [Hebräisch](filter) spreche?\n- Wo gibt es Beratung zu\
-    \ [Bleiberecht](filter) auf [Hindi](filter)?\n- Wo gibt es Beratung zu [Bleiberecht](filter)\
-    \ auf [Ungarisch](filter)?\n- Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter)\
-    \ in [Italienisch](filter)\n- Ich suche Informationen zum [Bleiberecht](filter)\
-    \ auf [Japanisch](filter).\n- Wer hilft bei [Rassismus](filter) mit Sprachmittlung\
-    \ auf [Kikuyu](filter)?\n- Ich suche Informationen zum [Bleiberecht](filter) auf\
-    \ [Koreanisch](filter).\n- Kann ich Informationen zu [Berufsausbildung](filter)\
-    \ bekommen, wenn ich nur [Kurdisch](filter) spreche?\n- Gibt es Angebote auf [Lasisch](filter)\
-    \ für Menschen mit [Beeinträchtigung](filter)?\n- Kann ich Informationen zu [Berufsausbildung](filter)\
-    \ bekommen, wenn ich nur [Litauisch](filter) spreche?\n- Gibt es in Berlin Hilfe\
-    \ bei [Genitalverstümmelung](filter) in [Luo](filter)\n- Gibt es in Berlin Hilfe\
-    \ bei [Genitalverstümmelung](filter) in [Mazedonisch](filter)\n- Wo gibt es Beratung\
-    \ zu [Bleiberecht](filter) auf [Montenegrinisch](filter)?\n- Wer hilft bei [Rassismus](filter)\
-    \ mit Sprachmittlung auf [Nepali](filter)?\n- Kann ich Informationen zu [Berufsausbildung](filter)\
-    \ bekommen, wenn ich nur [Oromo](filter) spreche?\n- Gibt es Angebote auf [Paschtu](filter)\
-    \ für Menschen mit [Beeinträchtigung](filter)?\n- Gibt es Angebote auf [Polnisch](filter)\
-    \ für Menschen mit [Beeinträchtigung](filter)?\n- Gibt es Angebote auf [Portugiesisch](filter)\
-    \ für Menschen mit [Beeinträchtigung](filter)?\n- Gibt es in Berlin Hilfe bei\
-    \ [Genitalverstümmelung](filter) in [Punjabi](filter)\n- Gibt es in Berlin Hilfe\
-    \ bei [Genitalverstümmelung](filter) in [Romanes](filter)\n- Gibt es in Berlin\
-    \ Hilfe bei [Genitalverstümmelung](filter) in [Rumänisch](filter)\n- Ich suche\
-    \ Informationen zum [Bleiberecht](filter) auf [Russisch](filter).\n- Wo gibt es\
-    \ Beratung zu [Bleiberecht](filter) auf [Bosnisch/Kroatisch/Serbisch](filter)?\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Slowenisch](filter)?\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Kisuaheli](filter)?\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Thailändisch](filter)?\n\
-    - Gibt es Angebote auf [Türkisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    \ wer in [Reinickendorf](filter) zum Thema [Sucht](filter) berät?\n- Gibt es in\
+    \ Berlin Hilfe bei [Genitalverstümmelung](filter) in [Amharisch](filter)\n- Gibt\
+    \ es Angebote auf [Aramäisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
     - Kann ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur\
-    \ [Turkmenisch](filter) spreche?\n- Gibt es Angebote auf [Ukrainisch](filter)\
-    \ für Menschen mit [Beeinträchtigung](filter)?\n- Wer hilft bei [Rassismus](filter)\
-    \ mit Sprachmittlung auf [Usbekisch](filter)?\n- Wo gibt es Beratung zu [Bleiberecht](filter)\
-    \ auf [Vietnamesisch](filter)?"
+    \ [Arabisch](filter) spreche?\n- Ich suche Informationen zum [Bleiberecht](filter)\
+    \ auf [Armenisch](filter).\n- Kann ich Informationen zu [Berufsausbildung](filter)\
+    \ bekommen, wenn ich nur [Aserbaidschanisch](filter) spreche?\n- Wer hilft bei\
+    \ [Rassismus](filter) mit Sprachmittlung auf [Bengali](filter)?\n- Wer hilft bei\
+    \ [Rassismus](filter) mit Sprachmittlung auf [Bulgarisch](filter)?\n- Wo gibt\
+    \ es Beratung zu [Bleiberecht](filter) auf [Tschetschenisch](filter)?\n- Ich suche\
+    \ Informationen zum [Bleiberecht](filter) auf [Chinesisch](filter).\n- Kann ich\
+    \ Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur [Kreolisch](filter)\
+    \ spreche?\n- Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Dari](filter)\n\
+    - Ich suche Informationen zum [Bleiberecht](filter) auf [Niederländisch](filter).\n\
+    - Gibt es Angebote auf [Englisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    - Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Farsi](filter)\n\
+    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Französisch](filter)?\n\
+    - Kann ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur\
+    \ [Griechisch](filter) spreche?\n- Wo gibt es Beratung zu [Bleiberecht](filter)\
+    \ auf [Hebräisch](filter)?\n- Kann ich Informationen zu [Berufsausbildung](filter)\
+    \ bekommen, wenn ich nur [Hindi](filter) spreche?\n- Ich suche Informationen zum\
+    \ [Bleiberecht](filter) auf [Ungarisch](filter).\n- Gibt es in Berlin Hilfe bei\
+    \ [Genitalverstümmelung](filter) in [Italienisch](filter)\n- Gibt es Angebote\
+    \ auf [Japanisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n- Gibt\
+    \ es Angebote auf [Kikuyu](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Koreanisch](filter)?\n- Gibt\
+    \ es Angebote auf [Kurdisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    - Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Lasisch](filter)\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Litauisch](filter)?\n- Wo\
+    \ gibt es Beratung zu [Bleiberecht](filter) auf [Luo](filter)?\n- Kann ich Informationen\
+    \ zu [Berufsausbildung](filter) bekommen, wenn ich nur [Mazedonisch](filter) spreche?\n\
+    - Ich suche Informationen zum [Bleiberecht](filter) auf [Montenegrinisch](filter).\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Nepali](filter)?\n- Gibt es\
+    \ in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Oromo](filter)\n- Kann\
+    \ ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur [Paschtu](filter)\
+    \ spreche?\n- Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Polnisch](filter)\n\
+    - Ich suche Informationen zum [Bleiberecht](filter) auf [Portugiesisch](filter).\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Punjabi](filter)?\n- Gibt\
+    \ es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Romanes](filter)\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Rumänisch](filter)?\n- Wer\
+    \ hilft bei [Rassismus](filter) mit Sprachmittlung auf [Russisch](filter)?\n-\
+    \ Wo gibt es Beratung zu [Bleiberecht](filter) auf [Bosnisch/Kroatisch/Serbisch](filter)?\n\
+    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Slowenisch](filter)?\n\
+    - Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Kisuaheli](filter)\n\
+    - Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Thailändisch](filter)\n\
+    - Ich suche Informationen zum [Bleiberecht](filter) auf [Türkisch](filter).\n\
+    - Ich suche Informationen zum [Bleiberecht](filter) auf [Turkmenisch](filter).\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Ukrainisch](filter)?\n- Kann\
+    \ ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur [Usbekisch](filter)\
+    \ spreche?\n- Ich suche Informationen zum [Bleiberecht](filter) auf [Vietnamesisch](filter)."

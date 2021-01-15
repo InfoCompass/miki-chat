@@ -10,6 +10,7 @@ nlu:
     - Bleibeperspektive
     - Bleiberecht
     - Aufenthaltssicherung
+    - Abschiebung
 - synonym: support
   examples: |-
     - Begleitung und Sprachmittlung
@@ -36,6 +37,7 @@ nlu:
     - sexuelle Gesundheit
     - AIDS
     - Sexuell übertragbare Krankheiten
+    - HIV
 - synonym: pregnacy
   examples: |-
     - Schwangerschaft
@@ -169,6 +171,7 @@ nlu:
     - Anerkennungsberatung
     - Anerkennungs- und Qualifizierungsberatung
     - Schulabschluss
+    - IQ Netzwerk
 - synonym: Wohnungssuche
   examples: '- Wohnungssuche'
 - synonym: Rente
@@ -178,7 +181,9 @@ nlu:
     - Genitalverstümmelung
     - FGM
 - synonym: Menschenhandel
-  examples: "- Menschenhandel\n- Human Trafficking "
+  examples: |-
+    - Menschenhandel
+    - Human Trafficking
 - synonym: Antiziganismus
   examples: |-
     - Antiziganismus
@@ -257,6 +262,7 @@ nlu:
     - Kita
     - Kitagutschein
     - Kitabetreuung
+    - Betreuungsgutschein
 - synonym: Arbeitslosengeld
   examples: |-
     - Arbeitslosengeld
@@ -282,7 +288,10 @@ nlu:
     - Schulanmeldung
     - Schulwechsel
 - synonym: Nachhilfe
-  examples: "- Nachhilfe\n- Hausaufgaben \n- Hausaufgaben Hilfe"
+  examples: |-
+    - Nachhilfe
+    - Hausaufgaben
+    - Hausaufgaben Hilfe
 - synonym: Therapie
   examples: |-
     - Therapie
@@ -326,6 +335,7 @@ nlu:
     - LGBT
     - LGBTTIQ*
     - Trans
+    - Trans*
 - synonym: elderly
   examples: |-
     - Senior*innen
