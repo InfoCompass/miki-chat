@@ -14,6 +14,44 @@ from gspread.models import Cell
 from oauth2client.service_account import ServiceAccountCredentials
 
 ########################################
+# Constants (templates or references to the question spreadsheet)
+########################################
+
+# The contexts for which questions and answers are retrieved
+QNA_CONTEXTS = ['/bfz', '/specialitems']
+
+# The contexts for filter questions
+FQ_CONTEXTS = ['/content']
+
+# Sheets
+SHEET_QUESTIONS = 'Fragenkatalog'
+SHEET_FILTER_KEYWORDS = 'Schlüsselwörter'
+
+# Columns used in the Questions Sheet
+COL_CONTEXT = 'Context'
+COL_INTENT = 'Intent'
+COL_EXAMPLE = 'Beschreibung / Beispiel'
+COL_VARIANTS = 'Fragen (Varianten)'
+COL_ANSWER_1 = 'Antwort_Part1'
+COL_ANSWER_2 = 'Antwort_Part2'
+COL_ANSWER_3 = 'Antwort_Part3'
+COL_LINK_1 = 'Link 1'
+
+# Columns used in the filter keywords sheet
+COL_FILTER_CONTEXT = 'Context'
+COL_KEY = 'Key'
+COL_FILTER = 'Filter ID'
+COL_KEYWORD = 'Schlüsselwörter'
+COL_SYNONYM = 'Synonym _NUMBER_'
+NUM_SYNONYMS = 6
+
+# Paraphrase of question in questions and answers
+PARA_QUESTION = 'Sie möchten wissen'
+
+# Automatic example generation, generate examples for the following contexts
+AUTO_GENERATE_FOR_CONTEXTS =  ['_quarter', '_language', '_targetgroup', '_topic']
+
+########################################
 # Arguments and logging
 ########################################
 
@@ -53,40 +91,6 @@ if not args.quiet and args.detailed_logging:
 sum_logger.info(f'Starting Question Import {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
 logger.info(f'Starting Question Import {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
 
-########################################
-# Constants (templates or references to the question spreadsheet)
-########################################
-
-# The contexts for which questions and answers are retrieved
-QNA_CONTEXTS = ['/bfz', '/specialitems']
-
-# The contexts for filter questions
-FQ_CONTEXTS = ['/content']
-
-# Sheets
-SHEET_QUESTIONS = 'Fragenkatalog'
-SHEET_FILTER_KEYWORDS = 'Schlüsselwörter'
-
-# Columns used in the Questions Sheet
-COL_CONTEXT = 'Context'
-COL_INTENT = 'Intent'
-COL_EXAMPLE = 'Beschreibung / Beispiel'
-COL_VARIANTS = 'Fragen (Varianten)'
-COL_ANSWER_1 = 'Antwort_Part1'
-COL_ANSWER_2 = 'Antwort_Part2'
-COL_ANSWER_3 = 'Antwort_Part3'
-COL_LINK_1 = 'Link 1'
-
-# Columns used in the filter keywords sheet
-COL_FILTER_CONTEXT = 'Context'
-COL_KEY = 'Key'
-COL_FILTER = 'Filter ID'
-COL_KEYWORD = 'Schlüsselwörter'
-COL_SYNONYM = 'Synonym _NUMBER_'
-NUM_SYNONYMS = 6
-
-# Paraphrase of question in questions and answers
-PARA_QUESTION = 'Sie möchten wissen'
 
 def main():
     spreadsheet = open_spreadsheet(args)
@@ -194,7 +198,7 @@ def generate_examples(qs, synonyms, filter_rows):
                     break
 
             # If still no examples, fallback to context
-            if filter.context in ['_quarter', '_language', '_targetgroup']:
+            if filter.context in AUTO_GENERATE_FOR_CONTEXTS:
                 for f in ctx_to_filter[filter.context]:
                     for syn in [f.keyword] + f.synonyms:
                         if syn in q_dict:
