@@ -10,7 +10,9 @@ nlu:
     - Bleibeperspektive
     - Bleiberecht
     - Aufenthaltssicherung
-    - Abschiebung
+    - Bleibeperspektiven
+    - drohender Abschiebung
+    - drohende Abschiebung
 - synonym: support
   examples: |-
     - Begleitung und Sprachmittlung
@@ -31,6 +33,7 @@ nlu:
     - psychologische Beratung
     - Psychotherapie
     - PTBS
+    - Trauma
 - synonym: sti
   examples: |-
     - HIV und STI
@@ -38,6 +41,7 @@ nlu:
     - AIDS
     - Sexuell übertragbare Krankheiten
     - HIV
+    - STI
 - synonym: pregnacy
   examples: |-
     - Schwangerschaft
@@ -171,7 +175,7 @@ nlu:
     - Anerkennungsberatung
     - Anerkennungs- und Qualifizierungsberatung
     - Schulabschluss
-    - IQ Netzwerk
+    - Abschluss nachholen
 - synonym: Wohnungssuche
   examples: '- Wohnungssuche'
 - synonym: Rente
@@ -207,21 +211,6 @@ nlu:
   examples: |-
     - Berufsberatung
     - Berufsorientierung
-- synonym: MBE
-  examples: |-
-    - MBE
-    - Migrationsberatung für erwachsene Zuwanderer
-    - Migrationsberatung für Neuzuwanderer
-- synonym: MSD
-  examples: |-
-    - MSD
-    - Migrationssozialdienst
-- synonym: JMD
-  examples: |-
-    - JMD
-    - Jugendmigrationsdienst
-    - Migrationsberatung für Jugendliche
-    - Migrationsberatung für Kinder
 - synonym: Mehrsprachige Ärzte
   examples: |-
     - Mehrsprachige Ärzte
@@ -262,7 +251,6 @@ nlu:
     - Kita
     - Kitagutschein
     - Kitabetreuung
-    - Betreuungsgutschein
 - synonym: Arbeitslosengeld
   examples: |-
     - Arbeitslosengeld
@@ -314,6 +302,7 @@ nlu:
     - Asylsuchende
     - Asylbewerber
     - Menschen mit Fluchthintergrund
+    - Geflüchteten
 - synonym: eu_citizens
   examples: |-
     - EU-Bürger*innen
@@ -334,8 +323,9 @@ nlu:
     - LSBTI
     - LGBT
     - LGBTTIQ*
-    - Trans
+    - LGBTIQ
     - Trans*
+    - Transpersonen
 - synonym: elderly
   examples: |-
     - Senior*innen
