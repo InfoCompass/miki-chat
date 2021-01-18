@@ -10,6 +10,7 @@ nlu:
     - Bleibeperspektive
     - Bleiberecht
     - Aufenthaltssicherung
+    - Abschiebung
     - Bleibeperspektiven
     - drohender Abschiebung
     - drohende Abschiebung
@@ -56,6 +57,7 @@ nlu:
     - Sucht
     - Drogen
     - Abhängigkeit
+    - Suchtberatung
 - synonym: disability
   examples: |-
     - Behinderung
@@ -175,6 +177,7 @@ nlu:
     - Anerkennungsberatung
     - Anerkennungs- und Qualifizierungsberatung
     - Schulabschluss
+    - IQ Netzwerk
     - Abschluss nachholen
 - synonym: Wohnungssuche
   examples: '- Wohnungssuche'
@@ -251,12 +254,13 @@ nlu:
     - Kita
     - Kitagutschein
     - Kitabetreuung
+    - Betreuungsgutschein
 - synonym: Arbeitslosengeld
   examples: |-
     - Arbeitslosengeld
-    - ALGI
+    - ALG1
     - Jobcenter
-    - ALGII
+    - ALG2
     - Hartz4
 - synonym: Rückkehrhilfe
   examples: |-
@@ -303,6 +307,7 @@ nlu:
     - Asylbewerber
     - Menschen mit Fluchthintergrund
     - Geflüchteten
+    - Geflüchteter
 - synonym: eu_citizens
   examples: |-
     - EU-Bürger*innen
@@ -324,6 +329,7 @@ nlu:
     - LGBT
     - LGBTTIQ*
     - LGBTIQ
+    - Trans
     - Trans*
     - Transpersonen
 - synonym: elderly

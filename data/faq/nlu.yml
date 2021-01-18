@@ -112,15 +112,16 @@ nlu:
     - Wer berät zu BPoC ?
 - intent: faq/specialitems_people_withoutpaper
   examples: "- Wo werden Menschen ohne Papier beraten?\n- Wo finde ich Hilfe für Menschen\
-    \ ohne Papier?\n- Stehen alle Beratungsstellen auch für Menschen ohne Papier offen?\n\
-    - Können Menschen ohne Papier alle Angebote im BfZ nutzen?\n- Gibt es Beratung\
-    \ für Menschen ohne Papier?\n- Wohin können Menschen ohne Papier vermittelt werden?\n\
-    - Welche Angebote können Menschen ohne Papier nutzen?\n- Muss ich für die Beratung\
-    \ einen Aufenthaltsstatus haben? "
+    \ ohne Papier?\n- Stehen alle Beratungsstellen auch Menschen ohne Papiere offen?\n\
+    - Können Menschen ohne Papiere alle Angebote im BfZ nutzen?\n- Gibt es Beratung\
+    \ für Menschen ohne Papiere?\n- Wohin können Menschen ohne Papiere vermittelt\
+    \ werden?\n- Welche Angebote können Menschen ohne Papiere nutzen?\n- Muss ich\
+    \ für die Beratung einen Aufenthaltsstatus haben? "
 - intent: faq/specialitems_german_course
   examples: |-
     - Finde ich Deutschkurse im BfZ?
-    - Wo findet ein Deutschkurs statt?
+    - Wo finden Deutschkurse statt?
+    - Ich suche Anbieter für Deutschkurse.
     - Finde ich Integrationskurse im BfZ?
     - Sind Deutschkurse im BfZ erfasst?
     - Wo kann mein Klient Deutsch lernen?
@@ -138,9 +139,9 @@ nlu:
 - intent: faq/specialitems_emergency_service
   examples: |-
     - Finde ich Adressen der Notdienste im BfZ
-    - Wo gibt es Mädchennotdienst?
-    - Wo gibt es Kindernotdienst?
-    - Wo finde ich Krisennotdienst?
+    - Wo gibt es einen Mädchennotdienst?
+    - Wo gibt es einen Kindernotdienst?
+    - Wo finde ich den Krisennotdienst?
     - Wo finde ich Angebote für Krisensituation?
 - intent: faq/specialitems_language_mediation
   examples: |-
@@ -172,7 +173,7 @@ nlu:
 - intent: faq/specialitems_Sprachcafé
   examples: |-
     - Finde ich Informationen zu Sprachcafés im BfZ?
-    - Sprachcafé
+    - Welche Sprachcafés werden in Berlin angeboten?
 - intent: faq/specialitems_Nachbarschaftszentrum
   examples: |-
     - Finde ich Informationen zu Nachbarschaftszentren im BfZ?

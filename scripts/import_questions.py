@@ -43,7 +43,7 @@ COL_KEY = 'Key'
 COL_FILTER = 'Filter ID'
 COL_KEYWORD = 'Schlüsselwörter'
 COL_SYNONYM = 'Synonym _NUMBER_'
-NUM_SYNONYMS = 10
+NUM_SYNONYMS = 15
 
 # Paraphrase of question in questions and answers
 PARA_QUESTION = 'Sie möchten wissen'
