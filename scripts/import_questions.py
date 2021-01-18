@@ -30,7 +30,7 @@ SHEET_FILTER_KEYWORDS = 'Schlüsselwörter'
 # Columns used in the Questions Sheet
 COL_CONTEXT = 'Context'
 COL_INTENT = 'Intent'
-COL_EXAMPLE = 'Beschreibung / Beispiel'
+COL_EXAMPLE = 'Ausgangsfrage / Beispiel'
 COL_VARIANTS = 'Fragen (Varianten)'
 COL_ANSWER_1 = 'Antwort_Part1'
 COL_ANSWER_2 = 'Antwort_Part2'
@@ -43,7 +43,7 @@ COL_KEY = 'Key'
 COL_FILTER = 'Filter ID'
 COL_KEYWORD = 'Schlüsselwörter'
 COL_SYNONYM = 'Synonym _NUMBER_'
-NUM_SYNONYMS = 7
+NUM_SYNONYMS = 10
 
 # Paraphrase of question in questions and answers
 PARA_QUESTION = 'Sie möchten wissen'
@@ -239,7 +239,7 @@ Question = namedtuple('Question', 'context intent question question_variants ans
 def filter_keywords(args, filter_rows):
     gs = group_by_column(filter_rows, 'context')
 
-    filters_with_key = [row._replace(key=rows[0].key, context=context)
+    filters_with_key = [row._replace(key=rows[0].key, context=context, valid=rows[0].key and context)
                         for context, rows in gs.items()
                         for row in rows[1:]
                         if row.keyword] # We remove cosmetic empty rows
@@ -248,14 +248,18 @@ def filter_keywords(args, filter_rows):
     contexts = set([f.context for f in filters_with_key])
     for c in contexts:
         fs = [f for f in filters_with_key if f.context==c]
-        invalid = [f for f in fs if not f.filter or not f.key]
+        invalid = [f for f in fs if not f.valid]
+
+        sum_logger.info(f'Synonyms, context {c}: Reading {len(fs)} synonyms')
+        all_syns = [s for f in fs if f.valid for s in [f.keyword] + f.synonyms]
+        logger.info(f'Synonyms, context {c}: Reading keyword and synonym variants: {all_syns}')
 
         overlapped_keywords = 0
         # Expensive overlap check
         for f in fs:
             syns = [f.keyword] + f.synonyms
             other_syns = [syn
-                          for of in filters_with_key if of.key and of.filter and of.keyword!=f.keyword
+                          for of in filters_with_key if of.valid and of.keyword!=f.keyword
                           for syn in [of.keyword] + of.synonyms]
             overlap = [s for s in syns if s in other_syns]
             if overlap:
@@ -263,7 +267,6 @@ def filter_keywords(args, filter_rows):
                 overlapped_keywords += 1
 
 
-        sum_logger.info(f'Synonyms, context {c}: Reading {len(fs)} synonyms')
         if invalid:
             sum_logger.info(f'Synonyms, context {c}: WARNING discarding {len(invalid)} filter keywords')
             logger.info(f'Synonyms, context {c}: Discarding filter keywords {[f.keyword for f in invalid]} because of missing key or filter')
@@ -482,16 +485,20 @@ def get_question_sheet(spreadsheet):
 def get_filter_keyword_sheet(spreadsheet):
 
     # Raw rows of the question spreadsheet
-    Row = namedtuple('Row', 'context key filter keyword synonyms')
+    Row = namedtuple('Row', 'context key filter keyword synonyms valid')
 
     sheet = spreadsheet.worksheet(SHEET_FILTER_KEYWORDS)
     list_of_hashes = sheet.get_all_records()
 
-    def syn(i):
-        return COL_SYNONYM.replace('_NUMBER_', str(i))
+    def syn(r, i):
+        key = COL_SYNONYM.replace('_NUMBER_', str(i))
+        if key in r:
+            return r[key]
+        else:
+            return ''
 
     rows = [Row(r[COL_FILTER_CONTEXT], r[COL_KEY].strip(), r[COL_FILTER].strip(), r[COL_KEYWORD].strip(),
-                [r[syn(i)].strip() for i in range(1, NUM_SYNONYMS) if r[syn(i)].strip()])
+                [syn(r, i).strip() for i in range(1, NUM_SYNONYMS) if syn(r, i).strip()], True)
             for r in list_of_hashes]
     return rows
 
