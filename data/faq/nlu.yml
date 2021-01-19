@@ -138,9 +138,9 @@ nlu:
     - Wo gibt es Beratung für Migranten und Migrantinnen aus EU-Staaten?
 - intent: faq/specialitems_emergency_service
   examples: |-
-    - Finde ich Adressen der Notdienste im BfZ
+    - Finde ich Adressen der Notdienste im BfZ?
     - Wo gibt es einen Mädchennotdienst?
-    - Wo gibt es einen Kindernotdienst?
+    - Wo gibt es einen [Kinder]notdienst?
     - Wo finde ich den Krisennotdienst?
     - Wo finde ich Angebote für Krisensituation?
 - intent: faq/specialitems_language_mediation
@@ -158,58 +158,110 @@ nlu:
     - Wer kann zur Aufenthaltserlaubnis eine Beratung anbieten?
     - Wo finde ich Beratung zum Aufenthaltsstatus?
     - Gibt es aufenthaltsrechtliche Beratung im BfZ?
-- intent: faq/specialitems_Kinder- und Jugendzentrum
+- intent: faq/specialitems_[Kinder]- und Jugendzentrum
   examples: |-
-    - Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?
-    - Jugendclub
-    - JFE / Jugendfreizeiteinrichtung
-    - Kinder- und Jugendzentrum
-- intent: faq/specialitems_Frauencafé
+    - Finde ich Informationen zu [Kinder]- und Jugendzentren im BfZ?
+    - Wer ist für Jugendclubs verantwortlich?
+    - Welche Jugendclubs gibt es in Berlin?
+    - Wo finde ich Jugendclubs?
+    - Welche Jugendfreizeiteinrichtungen gibt es?
+    - Ich suche JFE.
+    - Wo finde ich JFE?
+    - Ich suche [Kinder]- und Jugendzentren.
+- intent: faq/specialitems_[Frauen]café
   examples: |-
-    - Finde ich Informationen zu Frauenzentren im BfZ?
-    - Frauenzentren
-    - Frauenzentrum
-    - Frauencafé
+    - Finde ich Informationen zu [Frauen]zentren im BfZ?
+    - Ich suche Frauenzentren
+    - Ich suche Frauenzentren
+    - Ich suche Frauencafés
+    - zeige alle Frauencafés
 - intent: faq/specialitems_Sprachcafé
   examples: |-
     - Finde ich Informationen zu Sprachcafés im BfZ?
     - Welche Sprachcafés werden in Berlin angeboten?
+    - Wer organisiert Sprachcafés?
+    - Sprachcafés
+    - Sprachcafés
+    - Sprachcafés
+    - Sprachcafés
 - intent: faq/specialitems_Nachbarschaftszentrum
   examples: |-
     - Finde ich Informationen zu Nachbarschaftszentren im BfZ?
-    - Nachbarschaftszentrum
+    - Ich suche Nachbarschaftszentren
+    - Welche Nachbarschaftszentren gibt es?
+    - Nachbarschaftszentren
+    - NBZ
+    - NBZ
+    - NBZ
 - intent: faq/specialitems_Familienzentrum
   examples: |-
     - Finde ich Informationen zu Familenzentren im BfZ?
-    - Familienzentrum
+    - Ich suche Familienzentren
+    - zeige alle Familienzentren
+    - Familienzentren
+    - Familienzentren
+    - Familienzentren
 - intent: faq/specialitems_Nachbarschaftshaus
   examples: |-
     - Finde ich Informationen zu Nachbarschaftshäusern im BfZ?
-    - NBH
+    - Ich suche Nachbaschaftshäuser
+    - Ich suche ein Nachbarschaftshaus
+    - Welche Nachbarschaftshäuser gibt es?
+    - Welche Angebote gibt es im Nachbarschaftshaus?
+    - Bitte zeige alle NBH
+    - zeige alle NBH
+    - Ich suche NBH
+    - Wer betreut die Nachbaschaftshäuser?
 - intent: faq/specialitems_Stadtteilzentrum
-  examples: |-
-    - Finde ich Informationen zu Stadtteilzentren im BfZ?
-    - STZ
+  examples: "- Finde ich Informationen zu Stadtteilzentren im BfZ?\n- Ich suche Stadtteilzentren\n\
+    - Zeige ein Stadtteilzentrum\n- Bitte zeige alle \n- Ich suche STZ\n- zeige alle\
+    \ Stadtteilzentren"
 - intent: faq/specialitems_Mehrgenerationenhaus
   examples: |-
     - Finde ich Informationen zu Mehrgenerationenhäusern im BfZ?
+    - Ich suche MGH
     - MGH
+    - Mehrgenerationenhäusern
+    - Mehrgenerationenhäusern
+    - Mehrgenerationenhäusern
 - intent: faq/specialitems_UMF
   examples: |-
     - Wo erhalte ich Beratung für UMF?
     - Gibt es Angebote für unbegleitete minderjährige Flüchtlinge?
+    - Wer betreut unbegleitete minderjährige Flüchtlinge?
+    - Wer macht Angebote für unbegleitete minderjährige Flüchtlinge?
+    - Wer macht Angebote für UMF?
+    - Wer betreut UMF?
+    - Wo gibt es Angebote für UMF?
+    - Wer kümmert sich um UMF?
 - intent: faq/specialitems_Häusliche Gewalt
   examples: |-
     - Wo erhalte ich Beratung zum Thema Häusliche Gewalt?
-    - Gibt es Angebote für Opfer von häuslicher Gewalt?
+    - Gibt es Angebote für Opfer häuslicher Gewalt?
+    - Wer berät zum Thema häusliche Gewalt?
+    - Welche Angebote gibt es zum Thema häusliche Gewalt
+    - Wer arbeitet mit Opfern häuslicher Gewalt?
+    - Welche Einrichtungen beschäftigen sich mit häuslicher Gewalt?
+    - Wer hat Erfahrung mit Opfern häuslicher Gewalt?
 - intent: faq/specialitems_besonders schützbedürftige Flüchtlinge
   examples: |-
     - Wo erhalte ich Beratung für besonders schützbedürftige Flüchtlinge?
     - Wo gibt es Angebot für besonders schützbedürftige Flüchtlinge?
+    - besonders schützbedürftige Flüchtling
+    - besonders schützbedürftige Flüchtling
+    - Wer arbeitet mit besonders schützbedürftige Flüchtling
+    - Welche Einrichtungen beschäftigen sich mit BNS?
+    - Welche Einrichtungen beschäftigen sich mit BNS?
+    - BNS
 - intent: faq/specialitems_Gewalt gegen Mädchen
   examples: |-
     - Wo erhalte ich Beratung zum Thema Gewalt gegen Mädchen?
     - Wo erhalte ich Beratung zum Thema Gewalt gegen Mädchen?
+    - Welche Einrichtungen beschäftigen sich mit Gewalt gegen Mädchen
+    - Wer kennt sich aus mit Gewalt gegen Mädchen?
+    - Wer berät zu Gewalt gegen Mädchen?
+    - Haben sie Informationen zu Gewalt gegen Mädchen?
+    - Gewalt gegen Mädchen
 - intent: faq/specialitems_MBE
   examples: |-
     - Finde ich MBE im BfZ?
@@ -226,23 +278,46 @@ nlu:
     - Finde ich MSD im BfZ?
     - Wie kann ich MSD im BfZ finden?
     - Welche Angebote gibt es zum Thema Migrationssozialdienst?
+    - Wer arbeitet mit MSD?
+    - Wo finde ich MSD?
+    - Welche MSD gibt es?
+    - Wer arbeitet mit Migrationssozialdiensten zusammen?
+    - Welche Migrationssozialdienste gibt es?
+    - Welche Migrationssozialdienste kennst du?
+    - Haben sie Informationen zu MSD?
+    - Wo finde ich Migrationssozialdienste?
 - intent: faq/specialitems_JMD
   examples: |-
     - Finde ich JMD im BfZ?
     - Wie kann ich JMD im BfZ finden?
     - Welche Angebote gibt es zum Thema Jugendmigrationsdienst?
+    - Migrationssozialdiensten Jugendmigrationsdiensten?
+    - Welche Jugendmigrationsdienste gibt es?
+    - Haben sie Informationen zu Jugendmigrationsdiensten?
+    - Jugendmigrationsdienst
+    - Jugendmigrationsdienst
+    - Wer arbeitet mit JMD?
+    - Welche JMD gibt es?
+    - Haben sie Informationen zu JMD?
 - intent: faq/specialitems_mehrsprachige Ärzte
-  examples: |-
-    - Finde ich mehrsprachige Ärzte im BfZ?
-    - Finde ich mehrsprachige Ärzte im BfZ?
+  examples: "- Finde ich mehrsprachige Ärzte im BfZ?\n- Finde ich mehrsprachige Ärzte\
+    \ im BfZ?\n- Wer kennt sich aus mit mehrsprachigen Ärzten?\n- Wer ist spezialisiert\
+    \ auf mehrsprachige medizinische Beratung?\n- Haben sie Informationen zu "
 - intent: faq/specialitems_Integrationslotsen
   examples: |-
     - Finde ich Integrationslots*innen im BfZ?
     - Finde ich Integrationslots*innen im BfZ?
+    - Haben sie Informationen zu Integrationslots*innen?
+    - Welche Integrationslots*innen gibt es?
+    - Wo finde ich die Integrationslots*innen?
 - intent: faq/specialitems_Berufsankernnung
   examples: |-
     - Finde ich Beratung zur Berufsanerkennung im BfZ?
     - Gibt es Angebote zur Berufsanerkennung im BfZ?
+    - Wer berät zu Berufsanerkennung?
+    - Welche Angebote gibt es zu Berufsanerkennung?
+    - Wer kennt sich aus mit Berufsanerkennung?
+    - Welche Einrichtungen arbeiten zum Thema Berufsanerkennung?
 responses:
   utter_faq/bfz_goal:
   - text: |
@@ -257,7 +332,7 @@ responses:
   - text: |
       Sie möchten wissen: "An wen richtet sich das BfZ?"
 
-      Das BfZ richtet sich an Haupt- und Ehrenamtliche, die mit zugewanderten/geflüchteten Menschen in Berlin arbeiten.
+      Das BfZ richtet sich an Haupt- und Ehrenamtliche, die mit zugewanderten/[Geflüchtete]n Menschen in Berlin arbeiten.
 
       Darüber hinaus ist die Onlineplattform natürlich für alle da und kann von jedem genutzt werden.
   utter_faq/bfz_update:
@@ -347,7 +422,7 @@ responses:
       \ https://www.beratungsnetz-migration.de/list/item/f1c3fcdb1634e9fb/c/migration_counseling/u/eu_citizens\
       \ \n\n… sowie zum Arbeitsrecht bei BEMA https://www.beratungsnetz-migration.de/list/s/bema.\n"
   utter_faq/specialitems_emergency_service:
-  - text: "Sie möchten wissen: \"Finde ich Adressen der Notdienste im BfZ\"\n\nHier\
+  - text: "Sie möchten wissen: \"Finde ich Adressen der Notdienste im BfZ?\"\n\nHier\
       \ finden Sie Nummern für Notfälle für viele unterschiedliche Zielgruppen: \n\
       \nhttps://www.beratungsnetz-migration.de/p/emergency \n"
   utter_faq/specialitems_language_mediation:
@@ -363,16 +438,16 @@ responses:
       \nAuch die Beratung bei der Berliner Integrationsbeauftragten ist eine Anlaufstelle\
       \ zu aufenthaltsrechtlichen Fragen: https://www.beratungsnetz-migration.de/list/item/3a9adcd034d44962/s/beauftragte\
       \ \n"
-  utter_faq/specialitems_Kinder- und Jugendzentrum:
+  utter_faq/specialitems_[Kinder]- und Jugendzentrum:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?"
+      Sie möchten wissen: "Finde ich Informationen zu [Kinder]- und Jugendzentren im BfZ?"
 
       https://www.berlin.de/familie/de/informationen/jugendfreizeiteinrichtungen-in-berlin-289
-  utter_faq/specialitems_Frauencafé:
+  utter_faq/specialitems_[Frauen]café:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Frauenzentren im BfZ?"
+      Sie möchten wissen: "Finde ich Informationen zu [Frauen]zentren im BfZ?"
 
-      https://www.berlin.de/sen/frauen/vielfalt/soziale-und-kulturelle-projekte/
+      https://www.berlin.de/sen/[Frauen]/vielfalt/soziale-und-kulturelle-projekte/
   utter_faq/specialitems_Sprachcafé:
   - text: |
       Sie möchten wissen: "Finde ich Informationen zu Sprachcafés im BfZ?"
@@ -392,14 +467,10 @@ responses:
   - text: |
       Sie möchten wissen: "Finde ich Informationen zu Nachbarschaftshäusern im BfZ?"
 
-      Nachbarschaftshaus
-
       https://www.info-compass.net/list/l/de/s/nachbarschaftshaus
   utter_faq/specialitems_Stadtteilzentrum:
   - text: |
       Sie möchten wissen: "Finde ich Informationen zu Stadtteilzentren im BfZ?"
-
-      Stadtteilzentrum
 
       https://www.info-compass.net/list/l/de/s/stadtteilzentrum/t/location
   utter_faq/specialitems_Mehrgenerationenhaus:
@@ -439,7 +510,7 @@ responses:
   - text: |
       Sie möchten wissen: "Wo erhalte ich Beratung zum Thema Gewalt gegen Mädchen?"
 
-      Viele Beratungsstellen im BfZ sind spazialisiert für Frauen und Mädchen als Opfer von Gewalt.
+      Viele Beratungsstellen im BfZ sind spazialisiert für [Frauen] und Mädchen als Opfer von Gewalt.
 
       Hier finden Sie auch Beratungen speziellen Themen wie sexualisierte Gewalt oder Menschenhandel.
 

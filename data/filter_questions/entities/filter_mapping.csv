@@ -37,7 +37,7 @@ Verbraucherschutz,Verbraucherschutz,s,_searchterms,True,True
 Verbraucherzentrale,Verbraucherzentrale,s,_searchterms,True,True
 Weiterbildung,Weiterbildung,s,_searchterms,True,True
 Wohnungssuche,Wohnungssuche,s,_searchterms,True,True
-accommodation,Wohnen,c,_topic,False,False
+accomodation,Wohnen,c,_topic,False,False
 addiction,Sucht,c,_topic,False,False
 albanian,Albanisch,u,_language,False,False
 amharic,Amharisch,u,_language,False,False

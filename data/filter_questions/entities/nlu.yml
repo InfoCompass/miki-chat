@@ -64,7 +64,7 @@ nlu:
     - Beeinträchtigung
     - Behindertenausweis
     - Schwerbehinderung
-- synonym: accommodation
+- synonym: accomodation
   examples: |-
     - Wohnen
     - Wohnscouting
@@ -245,7 +245,9 @@ nlu:
     - Kinderzuschlag
     - Familienleistungen
 - synonym: Krankenversicherung
-  examples: '- Krankenversicherung'
+  examples: |-
+    - Krankenversicherung
+    - Menschen ohne Krankenversicherung
 - synonym: Hort
   examples: |-
     - Hort
@@ -312,6 +314,7 @@ nlu:
   examples: |-
     - EU-Bürger*innen
     - EU-Ausländer
+    - EU-Bürger
 - synonym: no_health_insurance
   examples: '- Ohne Krankenversicherung'
 - synonym: houseless
