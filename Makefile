@@ -5,7 +5,7 @@ APP_NAME=miki-chat
 DOCKER_REPO=mikichatbot
 
 build:
-	docker build -t $(APP_NAME) .
+	docker build --no-cache -t $(APP_NAME) .
 
 run-local:
 	docker run -i -t -p 5055:5055 $(APP_NAME)
