@@ -9,7 +9,7 @@
     VAR_RASA_X_DEMO_VERSION: 0.34.0
     VAR_RASA_TELEMETRY_ENABLED: "{{ lookup('env', 'RASA_TELEMETRY_ENABLED') | default((rasa_x_license_file.stat.exists | ternary('false', 'true')), True) }}"
     terms_confirmed: False
-    MIKI_VERSION: 0.1.10
+    VAR_MIKI_VERSION: 0.1.10
   roles:
     - role: geerlingguy.docker
       when: ansible_testing is not defined
@@ -172,6 +172,7 @@
         RASA_VERSION={{ VAR_RASA_VERSION }}
         RASA_X_DEMO_VERSION={{ VAR_RASA_X_DEMO_VERSION }}
         RASA_TELEMETRY_ENABLED={{ VAR_RASA_TELEMETRY_ENABLED }}
+        MIKI_VERSION={{ VAR_MIKI_VERSION }}
       dest: "{{ RASA_HOME }}/.env"
     when: rasa_x_env.stat.exists == False
 
@@ -372,8 +373,8 @@
     when: (rasa_x_license_file.stat.exists and ansible_testing is not defined)
 
   - name: Retrieve docker compose to run Rasa X (Community Edition)
-    get_url:
-      url: https://storage.googleapis.com/rasa-x-releases/{{ VAR_RASA_X_VERSION }}/docker-compose.ce.yml
+    copy:
+      src: scripts/rasa-x/docker-compose.yml
       dest: "{{ RASA_HOME }}/docker-compose.yml"
       mode: 0766
       force: yes
