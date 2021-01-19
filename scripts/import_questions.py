@@ -497,8 +497,11 @@ def get_filter_keyword_sheet(spreadsheet):
         else:
             return ''
 
-    rows = [Row(r[COL_FILTER_CONTEXT], r[COL_KEY].strip(), r[COL_FILTER].strip(), r[COL_KEYWORD].strip(),
-                [syn(r, i).strip() for i in range(1, NUM_SYNONYMS) if syn(r, i).strip()], True)
+    def clean(s):
+        return s.strip().replace('[','').replace(']','')
+
+    rows = [Row(r[COL_FILTER_CONTEXT], clean(r[COL_KEY]), clean(r[COL_FILTER]), clean(r[COL_KEYWORD]),
+                [clean(syn(r, i)) for i in range(1, NUM_SYNONYMS) if clean(syn(r, i))], True)
             for r in list_of_hashes]
     return rows
 
