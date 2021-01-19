@@ -7,6 +7,9 @@ DOCKER_REPO=mikichatbot
 build:
 	docker build -t $(APP_NAME) .
 
+run-local:
+	docker run -i -t -p 5055:5055 $(APP_NAME)
+
 publish: build docker-login publish-version
 
 publish-version: tag-version
