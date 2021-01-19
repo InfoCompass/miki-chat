@@ -9,6 +9,7 @@
     VAR_RASA_X_DEMO_VERSION: 0.34.0
     VAR_RASA_TELEMETRY_ENABLED: "{{ lookup('env', 'RASA_TELEMETRY_ENABLED') | default((rasa_x_license_file.stat.exists | ternary('false', 'true')), True) }}"
     terms_confirmed: False
+    MIKI_VERSION: 0.1.10
   roles:
     - role: geerlingguy.docker
       when: ansible_testing is not defined
@@ -309,6 +310,10 @@
   - name: Create the environment for the docker compose runner
     copy:
       content: |
+        socketio:
+          user_message_evt: user_uttered
+          bot_message_evt: bot_uttered
+          session_persistence: false
         rasa:
           url: ${RASA_X_HOST}/api
       dest: "{{ RASA_HOME }}/credentials.yml"

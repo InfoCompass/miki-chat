@@ -130,7 +130,7 @@ services:
 
   app:
     restart: always
-    image: "rasa/rasa-x-demo:${RASA_X_DEMO_VERSION}"
+    image: "mikichatbot/miki-chat:${MIKI_VERSION}"
     expose:
       - "5055"
     depends_on:
