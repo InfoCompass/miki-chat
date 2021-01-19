@@ -9,7 +9,7 @@
     VAR_RASA_X_DEMO_VERSION: 0.34.0
     VAR_RASA_TELEMETRY_ENABLED: "{{ lookup('env', 'RASA_TELEMETRY_ENABLED') | default((rasa_x_license_file.stat.exists | ternary('false', 'true')), True) }}"
     terms_confirmed: False
-    VAR_MIKI_VERSION: 0.1.10
+    VAR_MIKI_VERSION: "{{ lookup('env','MIKI_VERSION') }}"
   roles:
     - role: geerlingguy.docker
       when: ansible_testing is not defined
