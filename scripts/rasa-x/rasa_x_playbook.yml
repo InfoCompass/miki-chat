@@ -374,7 +374,7 @@
 
   - name: Retrieve docker compose to run Rasa X (Community Edition)
     copy:
-      src: scripts/rasa-x/docker-compose.yml
+      src: docker-compose.yml
       dest: "{{ RASA_HOME }}/docker-compose.yml"
       mode: 0766
       force: yes
