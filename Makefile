@@ -1,6 +1,6 @@
 include config/production
 
-VERSION=$(shell cat MIKI_ACTION_SERVER_VERSION)
+VERSION=$(shell cat config/MIKI_ACTION_SERVER_VERSION)
 APP_NAME=miki-chat
 DOCKER_REPO=mikichatbot
 
