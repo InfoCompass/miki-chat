@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 FILTER_MAPPING_PATH = 'data/filter_questions/entities/filter_mapping.csv'
 FILTER_SYNONYMS_PATH = 'data/filter_questions/entities/filter_synonyms.csv'
-BFZ_URL = 'https://www.beratungsnetz-migration.de'
+BFZ_URL = ''
 BFZ_API_URL = 'https://api.beratungsnetz-migration.de'
 
 class ActionFilterResults(Action):
