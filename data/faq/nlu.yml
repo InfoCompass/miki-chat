@@ -69,6 +69,7 @@ nlu:
   examples: |-
     - Wer ist für die Inhalte verantwortlich?
     - Wer ist Betreiber des BfZ?
+    - Wer ist verantwortlich für das BfZ?
     - Wer kümmert sich um das BfZ?
     - Wer ist Urheber des BfZ?
     - Wer unterstützt das BfZ?
@@ -132,15 +133,14 @@ nlu:
   examples: |-
     - Finde ich Beratung zum EU-Recht?
     - Finde ich spezialisierte Beratung zum EU-Recht?
-    - Wo kann ich mich spezielle Beratung für EU-Bürger bekommen?
-    - Wer kann EU-Bürger zur Freizügigkeit beraten?
+    - Wer berät zur Freizügigkeit?
     - Wo gibt es Beratung für Zugewanderte aus EU-Staaten?
     - Wo gibt es Beratung für Migranten und Migrantinnen aus EU-Staaten?
 - intent: faq/specialitems_emergency_service
   examples: |-
     - Finde ich Adressen der Notdienste im BfZ?
     - Wo gibt es einen Mädchennotdienst?
-    - Wo gibt es einen [Kinder]notdienst?
+    - Wo gibt es einen Kindernotdienst?
     - Wo finde ich den Krisennotdienst?
     - Wo finde ich Angebote für Krisensituation?
 - intent: faq/specialitems_language_mediation
@@ -158,17 +158,17 @@ nlu:
     - Wer kann zur Aufenthaltserlaubnis eine Beratung anbieten?
     - Wo finde ich Beratung zum Aufenthaltsstatus?
     - Gibt es aufenthaltsrechtliche Beratung im BfZ?
-- intent: faq/specialitems_[Kinder]- und Jugendzentrum
+- intent: faq/specialitems_Kinder- und Jugendzentrum
   examples: |-
-    - Finde ich Informationen zu [Kinder]- und Jugendzentren im BfZ?
+    - Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?
     - Wer ist für Jugendclubs verantwortlich?
     - Welche Jugendclubs gibt es in Berlin?
     - Wo finde ich Jugendclubs?
     - Welche Jugendfreizeiteinrichtungen gibt es?
     - Ich suche JFE.
     - Wo finde ich JFE?
-    - Ich suche [Kinder]- und Jugendzentren.
-- intent: faq/specialitems_[Frauen]café
+    - Ich suche Kinder- und Jugendzentren.
+- intent: faq/specialitems_Frauencafé
   examples: |-
     - Finde ich Informationen zu [Frauen]zentren im BfZ?
     - Ich suche Frauenzentren
@@ -180,17 +180,17 @@ nlu:
     - Finde ich Informationen zu Sprachcafés im BfZ?
     - Welche Sprachcafés werden in Berlin angeboten?
     - Wer organisiert Sprachcafés?
-    - Sprachcafés
-    - Sprachcafés
-    - Sprachcafés
-    - Sprachcafés
+    - zeige alle Sprachcafés
+    - Ich suche Sprachcafés
+    - Ich möchte ein Sprachcafé aufsuchen
+    - Kennst du die Sprachcafés in Berlin?
 - intent: faq/specialitems_Nachbarschaftszentrum
   examples: |-
     - Finde ich Informationen zu Nachbarschaftszentren im BfZ?
     - Ich suche Nachbarschaftszentren
     - Welche Nachbarschaftszentren gibt es?
     - Nachbarschaftszentren
-    - NBZ
+    - zeige alle NBZ
     - NBZ
     - NBZ
 - intent: faq/specialitems_Familienzentrum
@@ -198,9 +198,9 @@ nlu:
     - Finde ich Informationen zu Familenzentren im BfZ?
     - Ich suche Familienzentren
     - zeige alle Familienzentren
-    - Familienzentren
-    - Familienzentren
-    - Familienzentren
+    - Welche Familienzentren gibt es?
+    - Wo finde ich die Familienzentren?
+    - Wer kennt sich aus mit Familienzentren?
 - intent: faq/specialitems_Nachbarschaftshaus
   examples: |-
     - Finde ich Informationen zu Nachbarschaftshäusern im BfZ?
@@ -219,11 +219,11 @@ nlu:
 - intent: faq/specialitems_Mehrgenerationenhaus
   examples: |-
     - Finde ich Informationen zu Mehrgenerationenhäusern im BfZ?
-    - Ich suche MGH
-    - MGH
-    - Mehrgenerationenhäusern
-    - Mehrgenerationenhäusern
-    - Mehrgenerationenhäusern
+    - Ich suche MGHer
+    - Wo finde ich Informationen zu MGH?
+    - Wo finde ich Informationen zu Mehrgenerationenhäusern?
+    - Welche Mehrgenerationenhäuse gibt es?
+    - In welchen Stadtteilen gibt es Mehrgenerationenhäuser?
 - intent: faq/specialitems_UMF
   examples: |-
     - Wo erhalte ich Beratung für UMF?
@@ -332,7 +332,7 @@ responses:
   - text: |
       Sie möchten wissen: "An wen richtet sich das BfZ?"
 
-      Das BfZ richtet sich an Haupt- und Ehrenamtliche, die mit zugewanderten/[Geflüchtete]n Menschen in Berlin arbeiten.
+      Das BfZ richtet sich an Haupt- und Ehrenamtliche, die mit zugewanderten/ Geflüchteten Menschen in Berlin arbeiten.
 
       Darüber hinaus ist die Onlineplattform natürlich für alle da und kann von jedem genutzt werden.
   utter_faq/bfz_update:
@@ -377,6 +377,14 @@ responses:
       Allgemeine Informationen zur Einführung erhalten Sie hier: (Hilfeseite)
 
       https://www.beratungsnetz-migration.de/p/manual
+  - text: |
+      Sie möchten wissen: "Wo finde ich Hilfe zur Benutzung?"
+
+      https://www.beratungsnetz-migration.de/p/manual
+  - text: |
+      Sie möchten wissen: "Wo finde ich Hilfe zur Benutzung?"
+
+      https://www.beratungsnetz-migration.de/p/contact
   utter_faq/bfz_responsibility:
   - text: |
       Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
@@ -384,13 +392,23 @@ responses:
       Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt das BfZ.
 
       GANGWAY Straßensozialarbeit Berlin e.V. und das WIllkommenszentrum Berlin des Senats waren an der Konzeption beteiligt.
+  - text: |
+      Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
+
+      Die Erstellung wurde durch das Land Berlin finanziert. Die Weiterentwicklung finanzierten der Paritätische Wohlfahrtsverband, Landesverband Berlin aus Mitteln der Klasenlotterie.
+
+      Der Chat-Bot MIKI wurde gefördert duch das Bundesministerium für Familien, Senioren, Frauen und Jugend.
   utter_faq/bfz_infomaterial:
   - text: |
       Sie möchten wissen: "Wo erhalte ich InfoMaterial zum BfZ?"
 
-      Es gibt einen Flyer im Postkartenformat sowie Aufkleber mit dem BfZ-Logo(A6).
+      Es gibt einen Flyer im Postkartenformat sowie Aufkleber mit dem BfZ-Logo (im Format A6).
 
       Auf Wünschen senden wir Ihnen die Materialien zu.
+
+      https://www.beratungsnetz-migration.de/p/contact
+  - text: |
+      Sie möchten wissen: "Wo erhalte ich InfoMaterial zum BfZ?"
 
       https://www.beratungsnetz-migration.de/p/contact
   utter_faq/specialitems_POC:
@@ -433,17 +451,18 @@ responses:
 
       Sprachmittler*innen können bei kostenpflichtigen Dolmeschdiensten wie z.B. Gemeindedolmetschdient angefordert werden.
   utter_faq/specialitems_residence_right:
-  - text: "Sie möchten wissen: \"Finde ich Beratung zum Aufenthaltsrecht im BfZ?\"\
-      \n\nBeratung zum Aufenthaltsrecht erhalten Sie bei MBE https://www.beratungsnetz-migration.de/list/u/bamf_mbe\n\
-      \nAuch die Beratung bei der Berliner Integrationsbeauftragten ist eine Anlaufstelle\
-      \ zu aufenthaltsrechtlichen Fragen: https://www.beratungsnetz-migration.de/list/item/3a9adcd034d44962/s/beauftragte\
-      \ \n"
-  utter_faq/specialitems_[Kinder]- und Jugendzentrum:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu [Kinder]- und Jugendzentren im BfZ?"
+      Sie möchten wissen: "Finde ich Beratung zum Aufenthaltsrecht im BfZ?"
+
+      Beratung zum Aufenthaltsrecht erhalten Sie bei MBE https://www.beratungsnetz-migration.de/list/u/bamf_mbe
+
+      Auch die Beratung bei der Berliner Integrationsbeauftragten ist eine Anlaufstelle zu aufenthaltsrechtlichen Fragen: https://www.beratungsnetz-migration.de/list/item/3a9adcd034d44962/s/beauftragte
+  utter_faq/specialitems_Kinder- und Jugendzentrum:
+  - text: |
+      Sie möchten wissen: "Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?"
 
       https://www.berlin.de/familie/de/informationen/jugendfreizeiteinrichtungen-in-berlin-289
-  utter_faq/specialitems_[Frauen]café:
+  utter_faq/specialitems_Frauencafé:
   - text: |
       Sie möchten wissen: "Finde ich Informationen zu [Frauen]zentren im BfZ?"
 
@@ -510,7 +529,7 @@ responses:
   - text: |
       Sie möchten wissen: "Wo erhalte ich Beratung zum Thema Gewalt gegen Mädchen?"
 
-      Viele Beratungsstellen im BfZ sind spazialisiert für [Frauen] und Mädchen als Opfer von Gewalt.
+      Viele Beratungsstellen im BfZ sind spazialisiert für Frauen und Mädchen als Opfer von Gewalt.
 
       Hier finden Sie auch Beratungen speziellen Themen wie sexualisierte Gewalt oder Menschenhandel.
 

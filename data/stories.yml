@@ -40,7 +40,7 @@ stories:
   steps:
     - checkpoint: before_question
     - intent: deny
-    - action: utter_goodbye
+    - action: utter_chitchat/chitchat_bye
 
 - story: filter question
   steps:

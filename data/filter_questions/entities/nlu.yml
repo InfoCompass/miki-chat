@@ -113,10 +113,11 @@ nlu:
     - Menschen ohne Aufenthaltsstatus
 - synonym: Deutschkurs
   examples: |-
-    - Deutschkurs
+    - Deutschkurse
     - Integrationskurs
     - Sprachkurs
     - Alphabetisierung
+    - Deutschkurs
 - synonym: EU-Recht
   examples: |-
     - EU-Recht
@@ -230,6 +231,7 @@ nlu:
     - Roma
     - Rroma
     - Roma und Sinti
+    - Sinti und Roma
 - synonym: Einbürgerung
   examples: |-
     - Einbürgerung
