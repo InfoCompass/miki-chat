@@ -29,6 +29,34 @@ stories:
     - action: utter_ask_again
     - checkpoint: before_question
 
+- story: before question filter question no results
+  steps:
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - slot_was_set:
+        - action_filter_error: 'no_results_found'
+    - action: reset_action_filter_error
+    - slot_was_set:
+        - action_filter_error: null
+    - action: utter_ask_another_question
+    - checkpoint: before_question
+
+- story: before question filter question unknown keyword
+  steps:
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - slot_was_set:
+        - action_filter_error: 'keyword_not_understood'
+    - action: reset_action_filter_error
+    - slot_was_set:
+        - action_filter_error: null
+    - action: utter_ask_question_another_form
+    - checkpoint: before_question
+
 - story: faq
   steps:
   - checkpoint: before_question
@@ -51,6 +79,34 @@ stories:
   - action: action_filter_results
   - action: utter_ask_whether_question_answered
 
+- story: filter question no results
+  steps:
+    - checkpoint: before_question
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - slot_was_set:
+        - action_filter_error: 'no_results_found'
+    - action: reset_action_filter_error
+    - slot_was_set:
+        - action_filter_error: null
+    - action: utter_ask_another_question
+
+- story: filter question unknown keyword
+  steps:
+    - checkpoint: before_question
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - slot_was_set:
+        - action_filter_error: 'keyword_not_understood'
+    - action: reset_action_filter_error
+    - slot_was_set:
+        - action_filter_error: null
+    - action: utter_ask_question_another_form
+
 - story: filter_question confused
   steps:
     - checkpoint: before_question
@@ -58,7 +114,7 @@ stories:
     - action: utter_dont_understand
     - action: utter_ask_again
 
-  ## Continuing the check after a question
+## Continuing the check after a question
 
 - story: faq before check
   steps:

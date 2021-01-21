@@ -3,3 +3,10 @@ intents:
 - filter_question
 actions:
   - action_filter_results
+  - reset_action_filter_error
+slots:
+  action_filter_error:
+    type: categorical
+    values:
+      - keyword_not_understood
+      - no_results_found

@@ -11,7 +11,7 @@ from nltk.stem import SnowballStemmer
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import (
-    EventType,
+    EventType, SlotSet
 )
 
 logger = logging.getLogger(__name__)
@@ -20,6 +20,7 @@ FILTER_MAPPING_PATH = 'data/filter_questions/entities/filter_mapping.csv'
 FILTER_SYNONYMS_PATH = 'data/filter_questions/entities/filter_synonyms.csv'
 BFZ_URL = ''
 BFZ_API_URL = 'https://api.beratungsnetz-migration.de'
+
 
 class ActionFilterResults(Action):
     """Display the results of a Filter Question request"""
@@ -151,6 +152,7 @@ class ActionFilterResults(Action):
         if not filters:
             dispatcher.utter_message(text='Leider habe ich Ihre Anfrage nicht verstanden')
             dispatcher.utter_message(text=f'Ich erkenne nicht folgende Schlüsselwörter: {self._format(raw_filters)}')
+            action_filter_error = 'keyword_not_understood'
         else:
             dispatcher.utter_message(text=self._template_filters(filters))
 
@@ -158,7 +160,26 @@ class ActionFilterResults(Action):
             if num_documents:
                 dispatcher.utter_message(text=f'Ich habe einige Ergebnisse gefunden')
                 dispatcher.utter_message(text=f'[Hier klicken]({self._bfz_url(filters)}) um die Ergebnisse im Bfz anzuzeigen')
+                action_filter_error = None
             else:
                 dispatcher.utter_message(text=f'Es wurden leider keine Angebote gefunden')
+                action_filter_error = 'no_results_found'
 
-        return []
+        return [SlotSet('action_filter_error', action_filter_error)]
+
+
+class ResetActionFilterError(Action):
+    """Absolute hacky way of resetting the slot but I can't think of a better way to do this in Rasa"""
+
+
+    def name(self) -> Text:
+        return 'reset_action_filter_error'
+
+
+    async def run(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        return [SlotSet('action_filter_error', None)]

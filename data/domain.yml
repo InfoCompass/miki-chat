@@ -26,6 +26,10 @@ responses:
   - text: Ich habe Ihre Frage nicht verstanden.
   utter_default:
   - text: Ich habe Ihre Frage leider nicht verstanden. Versuchen Sie mal erneut.
+  utter_ask_another_question: # #08
+    - text: Bitte stellen Sie mir eine andere Frage.
+  utter_ask_question_another_form: # #09
+    - text: Bitte stellen Sie Ihre Frage noch einmal in anderer Form!
   utter_ask_again:
   - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut,
       wenn sie möglichst kurz formuliert sind und nur wenige Teilaspekte beinhalten.
