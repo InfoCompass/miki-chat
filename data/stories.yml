@@ -57,6 +57,12 @@ stories:
     - action: utter_ask_question_another_form
     - checkpoint: before_question
 
+- story: before question chitchat
+  steps:
+    - intent: chitchat
+    - action: utter_chitchat
+    - checkpoint: before_question
+
 - story: faq
   steps:
   - checkpoint: before_question
@@ -113,6 +119,12 @@ stories:
     - intent: filter_question
     - action: utter_dont_understand
     - action: utter_ask_again
+
+- story: before question chitchat
+  steps:
+    - checkpoint: before_question
+    - intent: chitchat
+    - action: utter_chitchat
 
 ## Continuing the check after a question
 
