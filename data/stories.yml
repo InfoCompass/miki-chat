@@ -4,12 +4,10 @@ stories:
 
 ## What comes before questions
 
-- story: greet + help
+- story: start + help
   steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_chitchat/who_are_you
-  - action: utter_chitchat/help
+  - intent: start
+  - action: utter_chitchat/chitchat_start
   - checkpoint: before_question
 
 - story: before question check positive

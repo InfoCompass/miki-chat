@@ -7,6 +7,7 @@ intents:
 - goodbye
 - affirm
 - deny
+- start
 responses:
   utter_greet:
   - text: Hey! Wie geht's dir?
