@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Used in Ansible playbook
-export MIKI_VERSION=`cat config/MIKI_ACTION_SERVER_VERSION`
+export MIKI_VERSION=`cat config/APP_VERSION`
 
 # Agree to Rasa X license
 mkdir -p /etc/rasa/terms
