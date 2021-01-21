@@ -19,6 +19,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # The contexts for which questions and answers are retrieved
 QNA_CONTEXTS = ['/bfz', '/specialitems']
+CHITCHAT_CONTEXTS = ['/chitchat']
 
 # The contexts for filter questions
 FQ_CONTEXTS = ['/content']
@@ -97,12 +98,18 @@ def main():
 
     # Create directory structure
     os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/chitchat', exist_ok=True)
     os.makedirs(f'{args.output_dir}/data/filter_questions/entities', exist_ok=True)
 
     # Dump FAQ NLU data
     question_rows = get_question_sheet(spreadsheet)
     with open(f'{args.output_dir}/data/faq/nlu.yml', 'w') as f:
-        faq = questions_answers_nlu_data(args, question_rows)
+        faq = questions_answers_nlu_data(QNA_CONTEXTS, question_rows, 'faq')
+        f.write(yaml.dump(faq, allow_unicode=True))
+
+    question_rows = get_question_sheet(spreadsheet)
+    with open(f'{args.output_dir}/data/chitchat/nlu.yml', 'w') as f:
+        faq = questions_answers_nlu_data(CHITCHAT_CONTEXTS, question_rows, 'chitchat', do_paraphrase=False)
         f.write(yaml.dump(faq, allow_unicode=True))
 
     filter_rows = get_filter_keyword_sheet(spreadsheet)
@@ -312,28 +319,31 @@ def filters_nlu_data(filter_rows):
              for r in filter_rows]
     })
 
-def questions_answers_nlu_data(args, question_rows):
+def questions_answers_nlu_data(contexts, question_rows, main_intent, do_paraphrase=True):
     gs = group_by_column(question_rows, 'context')
-    qa_rows = [row._replace(context=context) for context in QNA_CONTEXTS if context in gs for row in gs[context]]
+    qa_rows = [row._replace(context=context) for context in contexts if context in gs for row in gs[context]]
     bfz_questions = group_by_column(qa_rows, 'intent')
 
     questions = [Question(rows[0].context,
                           f'{rows[0].context[1:]}_{intent[1:]}',
                           rows[0].question,
                           [r.question_variant for r in rows if r.question_variant is not ''],
-                          rows[0].answers)
+                          [r.answers for r in rows if r.answers])
                  for intent, rows in bfz_questions.items()]
 
-    for context in QNA_CONTEXTS:
+    for context in contexts:
         qs = [q for q in questions if q.context==context]
         discarded = [q for q in qs if not q.question]
         sum_logger.info(f'Questions and Answers, context {context}: Importing {len(qs)} questions and answers, discarding {len(discarded)}')
 
     questions = [q for q in questions if q.question]
 
-    def create_responses(question):
-        paraphrase = f'{PARA_QUESTION}: "{question.question}"'
-        responses = [paraphrase] + question.answers
+    def create_responses(main_question, answers):
+        if do_paraphrase:
+            paraphrase = f'{PARA_QUESTION}: "{main_question}"'
+            responses = [paraphrase] + answers
+        else:
+            responses = answers
         responses = [r + '\n' for r in responses]
         return '\n'.join(responses)
 
@@ -342,13 +352,13 @@ def questions_answers_nlu_data(args, question_rows):
         'version': '2.0',
         'nlu':
             [OrderedDict(
-                {'intent': f'faq/{q.intent}',
+                {'intent': f'{main_intent}/{q.intent}',
                  'examples': format_examples([q.question] + [v for v in q.question_variants])})
                 for q in questions],
         'responses':
             OrderedDict(
                 # CONSTANT
-                {f'utter_faq/{q.intent}': [{'text': create_responses(q)}]
+                {f'utter_{main_intent}/{q.intent}': [{'text': create_responses(q.question, answers)} for answers in q.answers]
                  for q in questions})
     })
 
