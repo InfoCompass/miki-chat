@@ -30,7 +30,7 @@ stories:
     intent: start
   - action: utter_chitchat/chitchat_start
   - user: |
-      Wo wird Migrationsberatung angeboten?
+      Wo wird [Migrationsberatung]{"entity": "filter", "value": "migration_counseling"} angeboten?
     intent: faq
   - action: utter_faq
   - action: utter_ask_whether_question_answered

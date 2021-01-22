@@ -70,6 +70,15 @@ stories:
   - action: utter_faq
   - action: utter_ask_whether_question_answered
 
+- story: faq with filter keywords
+  steps:
+    - checkpoint: before_question
+    - intent: faq
+      entities:
+      - filter
+    - action: utter_faq
+    - action: utter_ask_whether_question_answered
+
 - story: no more questions + goodbye
   steps:
     - checkpoint: before_question
@@ -131,6 +140,15 @@ stories:
 - story: faq before check
   steps:
   - intent: faq
+  - action: utter_faq
+  - action: utter_ask_whether_question_answered
+  - checkpoint: before_check
+
+- story: faq with filter keywords before check
+  steps:
+  - intent: faq
+    entities:
+      - filter
   - action: utter_faq
   - action: utter_ask_whether_question_answered
   - checkpoint: before_check
