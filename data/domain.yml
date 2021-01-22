@@ -18,14 +18,13 @@ responses:
       kann, schreiben Sie bitte eine Frage, zum beispiel "Was ist das Berliner Beratungsnetz
       für Zugewanderte?"
   utter_another_question:
-  - text: |
-      Kann ich Ihnen noch eine weitere Frage beantworten?
-
-      Wenn Ja, fragen Sie noch mal.
+  - text: Sehr schön. Stellen Sie gerne weitere Fragen.
   utter_dont_understand:
   - text: Ich habe Ihre Frage nicht verstanden.
   utter_default:
-  - text: Ich habe Ihre Frage leider nicht verstanden. Versuchen Sie mal erneut.
+  - text: |
+      Ich habe Ihre Frage leider nicht verstanden.
+      Bitte stellen Sie Ihre Frage noch einmal in anderer Form.
   utter_ask_another_question: # #08
     - text: Bitte stellen Sie mir eine andere Frage.
   utter_ask_question_another_form: # #09
