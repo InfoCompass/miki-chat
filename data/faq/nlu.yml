@@ -194,8 +194,6 @@ nlu:
     - Welche Nachbarschaftszentren gibt es?
     - Nachbarschaftszentren
     - zeige alle NBZ
-    - NBZ
-    - NBZ
 - intent: faq/specialitems_Familienzentrum
   examples: |-
     - Finde ich Informationen zu Familenzentren im BfZ?

@@ -21,7 +21,7 @@ Kindergeld,Kindergeld,s,_searchterms,True,True
 Kita,Kita,s,_searchterms,True,True
 Krankenversicherung,Krankenversicherung,s,_searchterms,True,True
 Mehrsprachige Ärzte,Mehrsprachige Ärzte,s,_searchterms,True,True
-Menschen ohne Papier,Menschen ohne Papier,s,_searchterms,True,True
+Menschen ohne Papiere,Menschen ohne Papiere,s,_searchterms,True,True
 Menschenhandel,Menschenhandel,s,_searchterms,True,True
 Mieterberatung,Mieterberatung,s,_searchterms,True,True
 Migranten,Migrant*innen,s,_searchterms,True,True
@@ -35,7 +35,6 @@ Rückkehrhilfe,Rückkehrhilfe,s,_searchterms,True,True
 Schulanmeldung,Schulanmeldung,s,_searchterms,True,True
 Sexuelle Gewalt,Sexuelle Gewalt,s,_searchterms,True,True
 Sozialberatung,Sozialberatung,s,_searchterms,True,True
-Sprachmittlung,Sprachmittlung,s,_searchterms,True,True
 Verbraucherschutz,Verbraucherschutz,s,_searchterms,True,True
 Wohnungssuche,Wohnungssuche,s,_searchterms,True,True
 accomodation,Wohnen,c,_topic,False,False
@@ -66,7 +65,6 @@ english,Englisch,u,_language,False,False
 eu_citizens,EU-Bürger*innen,u,_targetgroup,False,False
 family_conflict,Familienkonflikt,c,_topic,False,False
 farsi,Farsi,u,_language,False,False
-felony,Straftat,c,_topic,False,False
 french,Französisch,u,_language,False,False
 friedrichshain_kreuzberg,Friedrichshain-Kreuzberg,u,_quarter,False,False
 greek,Griechisch,u,_language,False,False
@@ -108,11 +106,9 @@ romani,Romanes,u,_language,False,False
 romanian,Rumänisch,u,_language,False,False
 russian,Russisch,u,_language,False,False
 serbian_croatian,Bosnisch/Kroatisch/Serbisch,u,_language,False,False
-sex_work,Sexarbeit,c,_topic,False,False
 slovene,Slowenisch,u,_language,False,False
 spandau,Spandau,u,_quarter,False,False
 spanish,Spanisch,u,_language,False,False
-sport,Sport,c,_topic,False,False
 steglitz_zehlendorf,Steglitz-Zehlendorf,u,_quarter,False,False
 sti,HIV und STI,c,_topic,False,False
 suomi,Finnisch,u,_language,False,False
