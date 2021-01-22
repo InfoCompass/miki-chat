@@ -2,90 +2,83 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: happy path 1
+- story: filter keyword and faq
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      /start
+    intent: start
+  - action: utter_chitchat/chitchat_start
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-
-- story: happy path 2
-  steps:
+      Welche Angebote gibt es für [Kinder]{"entity": "filter", "value": "young"}?
+    intent: filter_question
+  - action: action_filter_results
+  - action: utter_ask_whether_question_answered
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
+      Ja
     intent: affirm
-  - action: utter_happy
+  - action: utter_another_question
+  - user: |
+      Warum gibt es das BfZ?
+    intent: faq
+  - action: utter_faq
+  - action: utter_ask_whether_question_answered
 
-- story: sad path 2
+- story: negative repetition path
   steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+    - user: |
+        /start
+      intent: start
+    - action: utter_chitchat/chitchat_start
+    - user: |
+        Warum gibt es das BfZ?
+      intent: faq
+    - action: utter_faq
+    - action: utter_ask_whether_question_answered
+    - user: |
+        Nein
+      intent: deny
+    - action: utter_rephrase_question
+    - user: |
+        Warum gibt es das BfZ?
+      intent: faq
+    - action: utter_faq
+    - action: utter_ask_whether_question_answered
 
-- story: sad path 3
+- story: direct repetition after no results from backend
   steps:
-  - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
+    - user: |
+        /start
+      intent: start
+    - action: utter_chitchat/chitchat_start
+    - user: |
+        Welche Angebote gibt es für [Kinder]{"entity": "filter", "value": "young"}?
+      intent: filter_question
+    - action: action_filter_results
+    - slot_was_set:
+      - action_filter_error: 'no_results_found'
+    - action: reset_action_filter_error
+    - slot_was_set:
+      - action_filter_error: null
+    - action: utter_ask_another_question
+    - user: |
+        Warum gibt es das BfZ?
+      intent: faq
+    - action: utter_faq
+    - action: utter_ask_whether_question_answered
 
-- story: say goodbye
+- story: chit chat does not interfere with Q&A
   steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+    - user: |
+        /start
+      intent: start
+    - action: utter_chitchat/chitchat_start
+    - user: |
+        Hallo
+      intent: chitchat
+    - action: utter_chitchat
+    - user: |
+        Warum gibt es das BfZ?
+      intent: faq
+    - action: utter_faq
+    - action: utter_ask_whether_question_answered
 
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot

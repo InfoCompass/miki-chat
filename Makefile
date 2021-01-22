@@ -4,6 +4,9 @@ VERSION=$(shell cat config/MIKI_ACTION_SERVER_VERSION)
 APP_NAME=miki-chat
 DOCKER_REPO=mikichatbot
 
+test:
+	rasa test --nlu tests/test_nlu.yml --fail-on-prediction-errors
+
 build:
 	docker build -t $(APP_NAME) .
 

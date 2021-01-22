@@ -1,0 +1,11 @@
+version: "2.0"
+nlu:
+  - intent: filter_question
+    examples: |
+      - Wo finde ich eine [Wohnung](filter)
+      - [Drogen]{"entity": "filter", "value": "addiction"}
+      - Wer berät zum [HIV](sti)?
+
+#      - Obdachlose ohne Krankenversicherung  # We still don't know what is wanted here
+
+
