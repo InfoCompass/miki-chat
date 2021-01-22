@@ -1,119 +1,126 @@
 synonym,filter
-antiziganismus,Antiziganismus
 rassismus gegen roma,Antiziganismus
+antiziganismus,Antiziganismus
 gadjé-rassismus,Antiziganismus
+sozialleist,Arbeitslosengeld
+algi,Arbeitslosengeld
+algii,Arbeitslosengeld
 hartz4,Arbeitslosengeld
 alg2,Arbeitslosengeld
 jobcent,Arbeitslosengeld
 alg1,Arbeitslosengeld
 arbeitslosengeld,Arbeitslosengeld
-aufenthaltsrecht,Aufenthaltsrecht
-aufenthaltserlaubnis,Aufenthaltsrecht
-niederlassungserlaubnis,Aufenthaltsrecht
+aufenthaltssicher,Aufenthaltsrecht
 aufenthaltsstatus,Aufenthaltsrecht
-spataussiedl,Aussiedler
+niederlassungserlaubnis,Aufenthaltsrecht
+aufenthaltserlaubnis,Aufenthaltsrecht
+aufenthaltsrecht,Aufenthaltsrecht
 aussiedl,Aussiedler
+spataussiedl,Aussiedler
+begleit,Begleitung
 integrationslots*inn,Begleitung
 integrationslots,Begleitung
-begleit,Begleitung
-anerkennung von abschluss,Berufsanerkennung
-anerkennungs- und qualifizierungsberat,Berufsanerkennung
+praktikum,Berufliche Qualifizierung
+berufsorientier,Berufliche Qualifizierung
+praktika,Berufliche Qualifizierung
+berufsausbild,Berufliche Qualifizierung
+weiterbild,Berufliche Qualifizierung
+berufliche ausbild,Berufliche Qualifizierung
 berufsanerkenn,Berufsanerkennung
-anerkennungsberat,Berufsanerkennung
+anerkennung von abschluss,Berufsanerkennung
 anerkennung auslandischer abschluss,Berufsanerkennung
+anerkennungsberat,Berufsanerkennung
+anerkennungs- und qualifizierungsberat,Berufsanerkennung
 schulabschluss,Berufsanerkennung
-abschluss nachhol,Berufsanerkennung
 iq netzwerk,Berufsanerkennung
-berufsberat,Berufsberatung
+abschluss nachhol,Berufsanerkennung
 berufsorientier,Berufsberatung
-integrationskur,Deutschkurs
+berufsberat,Berufsberatung
 sprachkur,Deutschkurs
 alphabetisier,Deutschkurs
-deutschkur,Deutschkurs
 deutschkurs,Deutschkurs
-daueraufenthaltsrecht,EU-Recht
+deutschkur,Deutschkurs
+integrationskur,Deutschkurs
 eu-recht,EU-Recht
-staatsangehor,Einbürgerung
-staatsburgerschaft,Einbürgerung
+daueraufenthaltsrecht,EU-Recht
 einburger,Einbürgerung
+staatsburgerschaft,Einbürgerung
+staatsangehor,Einbürgerung
+familiennachzug,Familiennachzug
 familie nachhol,Familiennachzug
 familienzusammenfuhr,Familiennachzug
-familiennachzug,Familiennachzug
 frauengesund,Frauengesundheit
 fruhe hilf,Frühe Hilfen
 fgm,Genitalverstümmelung
 genitalverstummel,Genitalverstümmelung
-zwangsheirat,Gewalt gegen Mädchen
+sexismus,Gewalt gegen Mädchen
 gewalt gegen madch,Gewalt gegen Mädchen
+zwangsheirat,Gewalt gegen Mädchen
 madchennotdien,Gewalt gegen Mädchen
-kitagutschein,Hort
-hort,Hort
+hortgutschein,Hort
 hortbetreu,Hort
-betreuungsgutschein,Hort
-kita,Hort
-kitabetreu,Hort
-betreuungsgutschein,Hort
-hausliche gewalt,Häusliche Gewalt
+hort,Hort
 gewalt gegen frau,Häusliche Gewalt
+hausliche gewalt,Häusliche Gewalt
 gewalt gegen kind,Häusliche Gewalt
-kindergeld,Kindergeld
 kinderzuschlag,Kindergeld
 familienleist,Kindergeld
-menschen ohne krankenversicher,Krankenversicherung
+kindergeld,Kindergeld
+kita,Kita
+kinderbetreu,Kita
+kitagutschein,Kita
 krankenversicher,Krankenversicherung
-mehrsprachige arzt,Mehrsprachige Ärzte
-arzte mehrsprach,Mehrsprachige Ärzte
+menschen ohne krankenversicher,Krankenversicherung
 arztprax,Mehrsprachige Ärzte
-menschen ohne aufenthaltsstatus,Menschen ohne Papier
-illegalisiert,Menschen ohne Papier
+arzte mehrsprach,Mehrsprachige Ärzte
+mehrsprachige arzt,Mehrsprachige Ärzte
 menschen ohne papi,Menschen ohne Papier
+illegalisiert,Menschen ohne Papier
+menschen ohne aufenthaltsstatus,Menschen ohne Papier
 human trafficking,Menschenhandel
 menschenhandel,Menschenhandel
+mietrecht,Mieterberatung
 mieterberat,Mieterberatung
+migrant*inn,Migranten
+ausland,Migranten
+zugewandert,Migranten
 religionsgemeind,Moschee
 mosche,Moschee
 hausaufgaben hilf,Nachhilfe
 hausaufgab,Nachhilfe
 nachhilf,Nachhilfe
-kris,Notdienst
-krisendien,Notdienst
 notdien,Notdienst
-anwalt,Rechtsberatung
+krisendien,Notdienst
+kris,Notdienst
 juristische berat,Rechtsberatung
 rechtsberat,Rechtsberatung
+anwalt,Rechtsberatung
+rentenberat,Rente
 rent,Rente
-roma und sinti,Roma
-sinti und roma,Roma
-roma,Roma
 rroma,Roma
+roma,Roma
+sinti und roma,Roma
+roma und sinti,Roma
 ruckkehrhilf,Rückkehrhilfe
-ruckkehrberat,Rückkehrhilfe
 ruckkehr,Rückkehrhilfe
-schulanmeld,Schulanmeldung
+ruckkehrberat,Rückkehrhilfe
 schulwechsel,Schulanmeldung
+schulanmeld,Schulanmeldung
 sexualisierte gewalt,Sexuelle Gewalt
 sexuelle gewalt,Sexuelle Gewalt
+sozialberat,Sozialberatung
 sprachmittl,Sprachmittlung
-therapi,Therapie
-psychotherapi,Therapie
 verbraucherfrag,Verbraucherschutz
 verbraucherschutz,Verbraucherschutz
-verbraucherzentral,Verbraucherzentrale
-weiterbild,Weiterbildung
-berufsausbild,Weiterbildung
-berufsorientier,Weiterbildung
-praktika,Weiterbildung
-praktikum,Weiterbildung
-berufliche ausbild,Weiterbildung
 wohnungssuch,Wohnungssuche
-wohnungsuch,accomodation
-wohnraum,accomodation
 wohnungsnot,accomodation
+wohnhilf,accomodation
+wohnraum,accomodation
+wohnungsuch,accomodation
 wohnscouting,accomodation
 wohn,accomodation
-wohnhilf,accomodation
-suchtberat,addiction
 drog,addiction
+suchtberat,addiction
 sucht,addiction
 abhang,addiction
 alban,albanian
@@ -121,61 +128,63 @@ amhar,amharic
 arab,arabic
 arama,aramaic
 armen,armenian
-bleibeperspektiv,asylum_counseling
-bleibeperspektiv,asylum_counseling
-asyl- und verfahrensberat,asylum_counseling
-asylberat,asylum_counseling
 asylrechtsberat,asylum_counseling
-bleiberecht,asylum_counseling
+asylberat,asylum_counseling
+drohende abschieb,asylum_counseling
+bleibeperspektiv,asylum_counseling
+bleibeperspektiv,asylum_counseling
 abschieb,asylum_counseling
 drohender abschieb,asylum_counseling
-drohende abschieb,asylum_counseling
-aufenthaltssicher,asylum_counseling
-gefluchtet,asylum_seekers
-fluchtling,asylum_seekers
-asylsuch,asylum_seekers
+bleiberecht,asylum_counseling
+asyl- und verfahrensberat,asylum_counseling
 asylbewerb,asylum_seekers
+fluchtling,asylum_seekers
+gefluchtet,asylum_seekers
+asylsuch,asylum_seekers
+gefluchtet,asylum_seekers
 gefluchtet,asylum_seekers
 menschen mit fluchthintergrund,asylum_seekers
-gefluchtet,asylum_seekers
 aserbaidschan,azerbaijani
 bengali,bengali
-besonders schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
-schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
 schutzbedurftige gefluchtet,besonders schutzbedürftige Flüchtlinge
+schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
+besonders schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
 bulgar,bulgarian
 pfleg,care
 demenz,care
 pflegebedurft,care
+pflegende angehor,care
+pflegestutzpunkt,care
 charlottenburg-wilmersdorf,charlottenburg_wilmersdorf
 tschetschen,chechen
 chines,chinese
 kreolisch,creole
 dari,dari
-schuld,debt
-schuldnerberat,debt
 pfandung,debt
 schuldenregulier,debt
-behinder,disability
-behindertenausweis,disability
+schuldnerberat,debt
+schuld,debt
 schwerbehinder,disability
+behindertenausweis,disability
 beeintracht,disability
-antidiskriminier,discrimation
-diskriminier,discrimation
-rassismus,discrimation
+behinder,disability
 rechte gewalt,discrimation
+rassismus,discrimation
+diskriminier,discrimation
+antidiskriminier,discrimation
 niederland,dutch
-senior,elderly
-seniorinn,elderly
-menschen im alt,elderly
-alt,elderly
 senior*inn,elderly
+alt,elderly
+menschen im alt,elderly
+seniorinn,elderly
+senior,elderly
 englisch,english
+unionsburg,eu_citizens
+eu-burg,eu_citizens
 eu-ausland,eu_citizens
 eu-burger*inn,eu_citizens
-eu-burg,eu_citizens
-familienberat,family_conflict
 erziehungsberat,family_conflict
+familienberat,family_conflict
 familienkonflikt,family_conflict
 farsi,farsi
 haft,felony
@@ -197,31 +206,32 @@ japan,japanese
 kikuyu,kikuyu
 korean,korean
 kurdisch,kurdish
-bildung,labour
 arbeit und bild,labour
 arbeit,labour
+bildung,labour
 lasisch,laz
-lgbttiq*,lgbtqi
-trans*,lgbtqi
-transperson,lgbtqi
 lgbtiq*,lgbtqi
-queer,lgbtqi
-lsbti,lgbtqi
-lgbt,lgbtqi
-tran,lgbtqi
+transperson,lgbtqi
+lgbttiq*,lgbtqi
 lgbtiq,lgbtqi
+tran,lgbtqi
+trans*,lgbtqi
+queer,lgbtqi
+lgbt,lgbtqi
+lsbti,lgbtqi
 lichtenberg,lichtenberg
 litau,lithuanian
 luo,luo
 mazedon,macedonian
 marzahn-hellersdorf,marzahn_hellersdorf
-ptbs,mental_health
-psychotherapi,mental_health
-psychologische berat,mental_health
-depression,mental_health
-psychische gesund,mental_health
 psychische krank,mental_health
+psychische gesund,mental_health
+depression,mental_health
+psychologische berat,mental_health
+psychotherapi,mental_health
+ptbs,mental_health
 trauma,mental_health
+traumatisier,mental_health
 migrationsberat,migration_counseling
 sonstig,misc_target
 mitt,mitte
@@ -236,6 +246,7 @@ polnisch,polish
 portugies,portuguese
 schwangerschaft,pregnacy
 familienplan,pregnacy
+schwangerenberat,pregnacy
 punjabi,punjabi
 reinickendorf,reinickendorf
 roman,romani
@@ -255,8 +266,8 @@ sexuelle gesund,sti
 aid,sti
 sexuell ubertragbare krank,sti
 hiv und sti,sti
-hiv,sti
 sti,sti
+hiv,sti
 finnisch,suomi
 begleit,support
 sprachmittl,support
@@ -270,10 +281,10 @@ treptow-kopenick,treptow_koepenik
 turkisch,turkish
 turkmen,turkmen
 ukrain,ukranian
-unbegleitete minderjahrige gefluchtet,unbegleitete minderjährige Flüchtlinge
 minderjahrige fluchtling,unbegleitete minderjährige Flüchtlinge
 umf,unbegleitete minderjährige Flüchtlinge
 unbegleitete minderjahrige fluchtling,unbegleitete minderjährige Flüchtlinge
+unbegleitete minderjahrige gefluchtet,unbegleitete minderjährige Flüchtlinge
 minderjahr,unbegleitete minderjährige Flüchtlinge
 urdu,urdu
 usbek,uzbek

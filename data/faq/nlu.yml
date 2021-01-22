@@ -34,11 +34,14 @@ nlu:
     \ zeigen falsche Daten über unserer Organisation. \n- Ihre Daten sind nicht aktuell.\n\
     - Warum sind ihre Daten nicht aktuell?\n- Wie oft werden die Daten aktualisiert?"
 - intent: faq/bfz_content
-  examples: |-
-    - Welche Angebote werden ins BfZ aufgenommen?
-    - Welche Stellen sind im BfZ erfasst?
-    - Welche Angebot werden ins BfZ aufgenommen?
-    - Was erfahre ich hier?
+  examples: "- Welche Angebote werden ins BfZ aufgenommen?\n- Welche Stellen sind\
+    \ im BfZ erfasst?\n- Welche Organisationen sind im BfZ vertreten?\n- Welche Stellen\
+    \ finde ich im BfZ?\n- Welche Organisationen finde ich im BfZ?\n- Welche Stellen\
+    \ werden ins BfZ aufgenommen?\n- Welche Angebot werden ins BfZ aufgenommen?\n\
+    - Welche Träger sind im BfZ erfasst?\n- Welche Träger werden ins BfZ aufgenommen?\n\
+    - Welche Träger finde ich im BfZ?\n- Was erfahre ich hier?\n- Wer ist hier vertreten?\n\
+    - Wer ist hier erfasst?\n- Wonach kann ich hier suchen?\n- Was kann ich hier finden?\
+    \ \n- Nach welchen Angeboten kann ich hier suchen?"
 - intent: faq/bfz_criteria
   examples: |-
     - Nach welchen Kriterien werden die Inhalte ausgewählt?
@@ -130,12 +133,12 @@ nlu:
     - Wo finde ich Deutschkurse?
     - Wo finde ich Integrationskurse in meiner Nähe?
 - intent: faq/specialitems_eu_law
-  examples: |-
-    - Finde ich Beratung zum EU-Recht?
-    - Finde ich spezialisierte Beratung zum EU-Recht?
-    - Wer berät zur Freizügigkeit?
-    - Wo gibt es Beratung für Zugewanderte aus EU-Staaten?
-    - Wo gibt es Beratung für Migranten und Migrantinnen aus EU-Staaten?
+  examples: "- Finde ich Beratung zum EU-Recht?\n- Finde ich spezialisierte Beratung\
+    \ zum EU-Recht?\n- Wer berät zum EU-Recht?\n- Wo finde ich Beratung zum EU-Recht?\n\
+    - Welche Stelle berät zum EU-Recht?\n- Wo gibt es Infos zum EU-Recht?\n- Ich brauche\
+    \ Beratung zum EU-Recht?\n- Ich habe Fragen zum EU-Recht. \n- Wer berät zur Freizügigkeit?\n\
+    - Wo gibt es Beratung für Zugewanderte aus EU-Staaten?\n- Wo gibt es Beratung\
+    \ für Migranten und Migrantinnen aus EU-Staaten?"
 - intent: faq/specialitems_emergency_service
   examples: |-
     - Finde ich Adressen der Notdienste im BfZ?

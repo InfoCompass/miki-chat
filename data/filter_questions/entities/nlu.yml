@@ -9,7 +9,6 @@ nlu:
     - Asyl- und Verfahrensberatung
     - Bleibeperspektive
     - Bleiberecht
-    - Aufenthaltssicherung
     - Abschiebung
     - Bleibeperspektiven
     - drohender Abschiebung
@@ -35,6 +34,7 @@ nlu:
     - Psychotherapie
     - PTBS
     - Trauma
+    - Traumatisierung
 - synonym: sti
   examples: |-
     - HIV und STI
@@ -47,11 +47,14 @@ nlu:
   examples: |-
     - Schwangerschaft
     - Familienplanung
+    - Schwangerenberatung
 - synonym: care
   examples: |-
     - Pflege
     - Demenz
     - Pflegebedürftigkeit
+    - pflegende Angehörige
+    - Pflegestützpunkte
 - synonym: addiction
   examples: |-
     - Sucht
@@ -135,6 +138,7 @@ nlu:
     - Aufenthaltserlaubnis
     - Niederlassungserlaubnis
     - Aufenthaltsstatus
+    - Aufenthaltssicherung
 - synonym: unbegleitete minderjährige Flüchtlinge
   examples: |-
     - unbegleitete minderjährige Flüchtlinge
@@ -152,7 +156,7 @@ nlu:
     - Familiennachzug
     - Familienzusammenführung
     - Familie nachholen
-- synonym: Weiterbildung
+- synonym: Berufliche Qualifizierung
   examples: |-
     - Weiterbildung
     - Berufsausbildung
@@ -170,6 +174,7 @@ nlu:
     - Gewalt gegen Mädchen
     - Zwangsheirat
     - Mädchennotdienst
+    - Sexismus
 - synonym: Berufsanerkennung
   examples: |-
     - Berufsanerkennung
@@ -183,7 +188,9 @@ nlu:
 - synonym: Wohnungssuche
   examples: '- Wohnungssuche'
 - synonym: Rente
-  examples: '- Rente'
+  examples: |-
+    - Rente
+    - Rentenberatung
 - synonym: Genitalverstümmelung
   examples: |-
     - Genitalverstümmelung
@@ -211,6 +218,8 @@ nlu:
     - Rechtsberatung
     - Anwalt
     - juristische Beratung
+- synonym: Sozialberatung
+  examples: '- Sozialberatung'
 - synonym: Berufsberatung
   examples: |-
     - Berufsberatung
@@ -221,7 +230,9 @@ nlu:
     - Ärzte mehrsprachig
     - Arztpraxen
 - synonym: Mieterberatung
-  examples: '- Mieterberatung'
+  examples: |-
+    - Mieterberatung
+    - Mietrecht
 - synonym: Aussiedler
   examples: |-
     - Aussiedler
@@ -232,6 +243,11 @@ nlu:
     - Rroma
     - Roma und Sinti
     - Sinti und Roma
+- synonym: Migranten
+  examples: |-
+    - Migrant*innen
+    - Ausländer
+    - Zugewanderte
 - synonym: Einbürgerung
   examples: |-
     - Einbürgerung
@@ -254,11 +270,12 @@ nlu:
   examples: |-
     - Hort
     - Hortbetreuung
-    - Betreuungsgutschein
+    - Hortgutschein
+- synonym: Kita
+  examples: |-
     - Kita
+    - Kinderbetreuung
     - Kitagutschein
-    - Kitabetreuung
-    - Betreuungsgutschein
 - synonym: Arbeitslosengeld
   examples: |-
     - Arbeitslosengeld
@@ -266,6 +283,9 @@ nlu:
     - Jobcenter
     - ALG2
     - Hartz4
+    - ALGII
+    - ALGI
+    - Sozialleistung
 - synonym: Rückkehrhilfe
   examples: |-
     - Rückkehrhilfe
@@ -288,12 +308,6 @@ nlu:
     - Nachhilfe
     - Hausaufgaben
     - Hausaufgaben Hilfe
-- synonym: Therapie
-  examples: |-
-    - Therapie
-    - Psychotherapie
-- synonym: Verbraucherzentrale
-  examples: '- Verbraucherzentrale'
 - synonym: young
   examples: |-
     - Kinder und Jugendliche
@@ -317,6 +331,7 @@ nlu:
     - EU-Bürger*innen
     - EU-Ausländer
     - EU-Bürger
+    - Unionsbürger
 - synonym: no_health_insurance
   examples: '- Ohne Krankenversicherung'
 - synonym: houseless

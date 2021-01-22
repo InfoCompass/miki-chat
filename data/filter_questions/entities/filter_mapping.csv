@@ -4,6 +4,7 @@ Arbeitslosengeld,Arbeitslosengeld,s,_searchterms,True,True
 Aufenthaltsrecht,Aufenthaltsrecht,s,_searchterms,True,True
 Aussiedler,Aussiedler,s,_searchterms,True,True
 Begleitung,Begleitung,s,_searchterms,True,True
+Berufliche Qualifizierung,Weiterbildung,s,_searchterms,True,True
 Berufsanerkennung,Berufsanerkennung,s,_searchterms,True,True
 Berufsberatung,Berufsberatung,s,_searchterms,True,True
 Deutschkurs,Deutschkurse,s,_searchterms,True,True
@@ -17,11 +18,13 @@ Gewalt gegen Mädchen,Gewalt gegen Mädchen,s,_searchterms,True,True
 Hort,Hort,s,_searchterms,True,True
 Häusliche Gewalt,Häusliche Gewalt,s,_searchterms,True,True
 Kindergeld,Kindergeld,s,_searchterms,True,True
+Kita,Kita,s,_searchterms,True,True
 Krankenversicherung,Krankenversicherung,s,_searchterms,True,True
 Mehrsprachige Ärzte,Mehrsprachige Ärzte,s,_searchterms,True,True
 Menschen ohne Papier,Menschen ohne Papier,s,_searchterms,True,True
 Menschenhandel,Menschenhandel,s,_searchterms,True,True
 Mieterberatung,Mieterberatung,s,_searchterms,True,True
+Migranten,Migrant*innen,s,_searchterms,True,True
 Moschee,Moschee,s,_searchterms,True,True
 Nachhilfe,Nachhilfe,s,_searchterms,True,True
 Notdienst,Notdienst,s,_searchterms,True,True
@@ -31,11 +34,9 @@ Roma,Roma,s,_searchterms,True,True
 Rückkehrhilfe,Rückkehrhilfe,s,_searchterms,True,True
 Schulanmeldung,Schulanmeldung,s,_searchterms,True,True
 Sexuelle Gewalt,Sexuelle Gewalt,s,_searchterms,True,True
+Sozialberatung,Sozialberatung,s,_searchterms,True,True
 Sprachmittlung,Sprachmittlung,s,_searchterms,True,True
-Therapie,Therapie,s,_searchterms,True,True
 Verbraucherschutz,Verbraucherschutz,s,_searchterms,True,True
-Verbraucherzentrale,Verbraucherzentrale,s,_searchterms,True,True
-Weiterbildung,Weiterbildung,s,_searchterms,True,True
 Wohnungssuche,Wohnungssuche,s,_searchterms,True,True
 accomodation,Wohnen,c,_topic,False,False
 addiction,Sucht,c,_topic,False,False
