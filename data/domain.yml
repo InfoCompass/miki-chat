@@ -28,7 +28,7 @@ responses:
   utter_ask_another_question: # #08
   - text: |
       Sie erhalten umfangreiche Informationen in einer
-      [Migrationsberatungsstelle](www.beratungsnetz-migration.de/list/s/migrationsberatung).
+      [Migrationsberatungsstelle](/list/s/migrationsberatung).
 
       … oder stellen Sie mir eine andere Frage.
   utter_ask_question_another_form: # #09

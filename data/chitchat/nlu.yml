@@ -1,7 +1,7 @@
 version: '2.0'
 nlu:
 - intent: chitchat/chitchat_start
-  examples: '- start'
+  examples: '- do not change this text'
 - intent: chitchat/chitchat_hello
   examples: |-
     - Hallo!
