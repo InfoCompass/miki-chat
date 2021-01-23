@@ -63,6 +63,32 @@ stories:
     - action: utter_chitchat
     - checkpoint: before_question
 
+# The following three make it possible for the user to ask a question even when a yes no answer is required
+- story: faq before check
+  steps:
+    - intent: faq
+    - action: utter_faq
+    - action: utter_ask_whether_question_answered
+    - checkpoint: before_question
+
+- story: faq with filter keywords before check
+  steps:
+    - intent: faq
+      entities:
+        - filter
+    - action: utter_faq
+    - action: utter_ask_whether_question_answered
+    - checkpoint: before_question
+
+- story: filter question before check
+  steps:
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - action: utter_ask_whether_question_answered
+    - checkpoint: before_question
+
 - story: faq
   steps:
   - checkpoint: before_question
@@ -78,12 +104,6 @@ stories:
       - filter
     - action: utter_faq
     - action: utter_ask_whether_question_answered
-
-- story: no more questions + goodbye
-  steps:
-    - checkpoint: before_question
-    - intent: deny
-    - action: utter_chitchat/chitchat_bye
 
 - story: filter question
   steps:
