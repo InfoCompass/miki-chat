@@ -4,7 +4,7 @@ VERSION=$(shell cat config/MIKI_ACTION_SERVER_VERSION)
 APP_NAME=miki-chat
 DOCKER_REPO=mikichatbot
 
-test:
+test-model:
 	rasa test --nlu tests/test_nlu.yml --fail-on-prediction-errors
 
 build:
@@ -23,4 +23,43 @@ tag-version:
 
 docker-login:
 	cat config/docker_hub_pass | docker login -u ${DOCKER_HUB_LOGIN} --password-stdin
+
+
+# Install dev requirements
+requirements-dev:
+	pip install -r requirements-dev.txt
+
+# Running import script
+#   The import script needs the option --save-logs-to-spreadsheet to save the generated logs to the spreadsheet.
+spreadsheet-to-model:
+	python scripts/import_questions.py \
+		--client-secret=config/client-secret.json \
+		--spreadsheet-url=$(SPREADSHEET_URL) \
+		--output-dir=out
+	cp -a out/data ./
+	rasa train --domain data
+
+rasa-x-token.txt:
+	curl -s --header "Content-Type: application/json" \
+		--request POST \
+		--fail \
+		--data "{\"username\":\"me\",\"password\":\"${RASA_X_PASSWORD}\"}" \
+              http://${RASA_DOMAIN}/api/auth | jq -r .access_token > $@
+
+# It uses the most recent model (because it's not possible to specify the output in training very annoyingly
+upload-model: rasa-x-token.txt
+	MODEL=$$(ls models | sort | tail -n 1) && \
+	curl -k --fail \
+      -H "Authorization: Bearer `cat $<`" \
+      -F "model=@models/$$MODEL" \
+      http://${RASA_DOMAIN}/api/projects/default/models
+
+# It uses the most recent model (because it's not possible to specify the output in training very annoyingly
+publish-model: rasa-x-token.txt
+	MODEL=$$(ls models | sort | tail -n 1) && \
+    curl -k --fail -XPUT $$MODEL \
+      -H "Authorization: Bearer `cat $<`" \
+      http://${RASA_DOMAIN}/api/projects/default/models/$$(basename $$MODEL .tar.gz)/tags/production
+
+update-model: requirements-dev spreadsheet-to-model test-model
 
