@@ -16,6 +16,13 @@ nlu:
     - Tschüss
     - Auf wiedersehen
     - Bis bald
+- intent: chitchat/chitchat_feedback request
+  examples: "- Wie kann ich persönlich mit den Verantwortlichen des BfZ in Kontakt\
+    \ treten?\n- Wie kann ich Sie persönlich kontaktieren?\n- Ich brauche einen Ansprechpartner.\
+    \ \n- Wo finde ich einen Ansprechpartner?\n- Wie kann ich persönlich mit Ihnen\
+    \ in Kontakt treten?\n- Ich möchte Ihnen eine Email schreiben.\n- Wie kann ich\
+    \ Ihnen eine Email schreiben?\n- Unter welcher Telefonnummer kann ich Sie erreichen?\n\
+    - Wie kann ich Sie anrufen?\n- Ich suche einen Ansprechpartner."
 responses:
   utter_chitchat/chitchat_start:
   - text: 'Hallo, ich bin MIKI der Chatbot vom Beratungsnetz für Zugewanderte (BfZ)!
@@ -43,3 +50,6 @@ responses:
   - text: 'Bis bald!
 
       '
+  utter_chitchat/chitchat_feedback request:
+  - text: "Bitte schreiben Sie uns an: info@beratungsnetz-migration.de \n\nOder rufen\
+      \ uns an unter: +49 30 2900 6948.\n"

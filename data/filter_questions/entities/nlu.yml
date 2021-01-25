@@ -98,6 +98,18 @@ nlu:
     - Familienkonflikt
     - Familienberatung
     - Erziehungsberatung
+- synonym: sex_work
+  examples: |-
+    - Sexarbeit
+    - Sexarbeiter*in
+    - Sexwork
+    - Prostitution
+- synonym: felony
+  examples: |-
+    - Straftat
+    - Haft
+- synonym: sport
+  examples: '- Sport'
 - synonym: Menschen ohne Papiere
   examples: |-
     - Menschen ohne Papiere
@@ -145,10 +157,10 @@ nlu:
     - Familie nachholen
 - synonym: Berufliche Qualifizierung
   examples: |-
-    - Weiterbildung
+    - Berufliche Qualifizierung
     - Berufsausbildung
     - Berufsorientierung
-    - Praktika
+    - Weiterbildung
     - Praktikum
     - berufliche Ausbildung
 - synonym: Häusliche Gewalt
@@ -335,7 +347,8 @@ nlu:
     - LGBTTIQ*
     - LGBTIQ
     - Trans
-    - Trans*
+    - lesbisch
+    - schwul
     - Transpersonen
 - synonym: elderly
   examples: |-
