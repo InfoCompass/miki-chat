@@ -23,16 +23,23 @@ The following services are relevant to our purposes:
    
 Now we will describe the maintenance steps for MIKI Chatbot
 
+# Requirements
+
+The installation instructions are targetted to an Ubuntu 20 System.
+
+You will need to install Make and Docker.
+
 # Checkout and unlock the MIKI Chatbot repo
 
-In order to unlock the secrets, you need to install transcrypt and unlock using the instructions you have received.
+In order to unlock the secrets, you need to install [Transcrypt](https://github.com/elasticdog/transcrypt)
+and unlock using the instructions you have received.
 
 # Update the Action Server Image
 
 The action server's Docker image needs to be updated in a new installation or whenever the conversation
 data was updated.
 
-To do this, run the following Makefile target:
+To do this, run the following Makefile target (You might need to install make):
 
 `make publish`
    
