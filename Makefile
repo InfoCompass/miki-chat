@@ -36,7 +36,7 @@ requirements-dev:
 
 # Running import script
 spreadsheet-to-conversation-data:
-	python scripts/import_questions.py \
+	python3 scripts/import_questions.py \
 		--client-secret=config/client-secret.json \
 		--spreadsheet-url=$(SPREADSHEET_URL) \
 		--output-dir=out && \
@@ -45,7 +45,7 @@ spreadsheet-to-conversation-data:
 # Running import script
 #   Before running this you might want to backup the sheets "Logs" and "Logs Detailed"
 spreadsheet-to-conversation-data-with-logs:
-	python scripts/import_questions.py \
+	python3 scripts/import_questions.py \
 		--client-secret=config/client-secret.json \
 		--spreadsheet-url=$(SPREADSHEET_URL) \
 		--output-dir=out \
