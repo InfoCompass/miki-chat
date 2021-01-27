@@ -31,6 +31,7 @@ requirements-dev:
 
 # Running import script
 #   The import script needs the option --save-logs-to-spreadsheet to save the generated logs to the spreadsheet.
+#   Before running this you might want to backup the sheets "Logs" and "Logs Detailed"
 spreadsheet-to-model:
 	python scripts/import_questions.py \
 		--client-secret=config/client-secret.json \
