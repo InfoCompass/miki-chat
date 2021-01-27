@@ -72,4 +72,22 @@ This target should take care of building the docker image and pushing it into th
 Here we update the conversation model by training it from the conversation data and pushing it
 to the Rasa server.
 
+First of all make sure that you have all the required dependencies:
+`sudo make requirements-dev`
+For this step you will need to have `pip` installed.
+
+Now generate conversation model using the corresponding make target:
+`make train-model`
+
+Then upload to the sever:
+`make upload-model`
+This step will upload the most recent model from the directory `models`.
+
+At this point the model will be at the server, now before publishing it to production, please
+make sure that you have updated the action server image and redeployed it.
+This step is important as the new model might require an updated action server.
+
+When you have done it, now you can publish to production:
+`make publish-model`
+
 

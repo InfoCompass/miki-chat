@@ -31,6 +31,7 @@ docker-login:
 # Install dev requirements
 requirements-dev:
 	pip install -r requirements-dev.txt
+	apt install jq --yes
 	python3 -m spacy download de
 
 # Running import script
