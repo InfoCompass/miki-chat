@@ -35,15 +35,22 @@ requirements-dev:
 	python3 -m spacy download de
 
 # Running import script
-#   The import script needs the option --save-logs-to-spreadsheet to save the generated logs to the spreadsheet.
-#   Before running this you might want to backup the sheets "Logs" and "Logs Detailed"
 spreadsheet-to-model:
 	python scripts/import_questions.py \
 		--client-secret=config/client-secret.json \
 		--spreadsheet-url=$(SPREADSHEET_URL) \
-		--output-dir=out
+		--output-dir=out && \
 	cp -a out/data ./
-	rasa train --domain data
+
+# Running import script
+#   Before running this you might want to backup the sheets "Logs" and "Logs Detailed"
+spreadsheet-to-model-with-logs:
+	python scripts/import_questions.py \
+		--client-secret=config/client-secret.json \
+		--spreadsheet-url=$(SPREADSHEET_URL) \
+		--output-dir=out \
+		--save-logs-to-spreadsheet && \
+	cp -a out/data ./
 
 rasa-x-token.txt:
 	curl -s --header "Content-Type: application/json" \

@@ -110,4 +110,56 @@ So in summary before continuing you have to have:
 When you have done it, now you can publish to production:
 `make publish-model`
 
+# Import new conversation data from spreadsheet
+
+This section explains how to update the chatbot with conversation data from the configuration Spreadsheet.
+
+The steps are:
+ * Import conversation data
+ * Train a model
+ * Test the model
+ * Update version and commit conversation data.
+ * Update chatbot
+ 
+ 
+## Import conversation data from Spreadsheet
+
+In order to import conversation data you need to run the following target:
+
+`make spreadsheet-to-model`
+
+The script will import conversation data from the Spreadsheet into the directory `out` and
+subsequently copied to the data directories.
+
+Consider the above a test run. You will prefer to run the following target rather:
+
+`make spreadsheet-to-model-with-logs`
+
+Before you run this target, make sure you duplicate the sheets "Logs" and "Logs Detailed"
+so that you can compare the import logs of the new run with the previous runs. After you are
+happy with the results, you can delete the copies.
+
+## Train a model
+
+You run `make train-model` as before
+
+## Test a model
+
+You run `make test-model` to make sure that some important scenarios haven't been broken.
+There is a corner case with a Question Answer involing a filter keyword, you might need to
+comment a test and uncomment another to make the test pass. See the test documentation.
+
+## Update version and commit conversation data
+
+At this point you can commit the modified conversation files in `data` and also bump the
+version in `config/APP_VERSION`.
+
+## Update Chatbot
+
+At this point you have to update the conversation model and the action server as described above.
+Just recapping the above, the steps have to be done in the following order:
+ * Upload model to server
+ * Update action server
+ * Deploy up-to-date version of action server
+ * Publish model to production
 
