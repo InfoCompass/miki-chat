@@ -67,7 +67,8 @@ nlu:
   examples: "- Wo finde ich Hilfe zur Benutzung?\n- Wo finde ich ein Tutorial?\n-\
     \ Wo finde ich Hinweise zur Nutzung?\n- Wer kann mir helfen?\n- Wie funktioniert\
     \ das BfZ?\n- Was kann ich hier tun?\n- Ich brauche Hilfe bei der Benutzung. \n\
-    - Gibt es ein Tutorial? \n- Wo finde ich FAQ?\n- Gibt es FAQ?"
+    - Gibt es ein Tutorial? \n- Wo finde ich FAQ?\n- Gibt es FAQ?\n- Wie suche ich\
+    \ am Besten?\n- Wie funktioniert die Suche?"
 - intent: faq/bfz_responsibility
   examples: |-
     - Wer ist für die Inhalte verantwortlich?
