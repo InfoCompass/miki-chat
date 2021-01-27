@@ -50,7 +50,8 @@ rasa-x-token.txt:
 		--request POST \
 		--fail \
 		--data "{\"username\":\"me\",\"password\":\"${RASA_X_PASSWORD}\"}" \
-              http://${RASA_DOMAIN}/api/auth | jq -r .access_token > $@
+              http://${RASA_DOMAIN}/api/auth | jq -r .access_token > rasa-x-token.txt.tmp && \
+    mv rasa-x-token.txt.tmp $@
 
 # It uses the most recent model (because it's not possible to specify the output in training very annoyingly
 upload-model: rasa-x-token.txt
