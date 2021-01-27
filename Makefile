@@ -31,6 +31,7 @@ docker-login:
 # Install dev requirements
 requirements-dev:
 	pip install -r requirements-dev.txt
+	python -m spacy download
 
 # Running import script
 #   The import script needs the option --save-logs-to-spreadsheet to save the generated logs to the spreadsheet.
