@@ -67,6 +67,23 @@ To do this, run the following Makefile target (You might need to install make):
    
 This target should take care of building the docker image and pushing it into the DockerHub repo.
 
+Take note of the action server version. You will need it to deploy it on the server.
+
+# Deploy Updated Action Server Image
+
+Go to the directory where the server is installed
+
+`cd /etc/rasa`
+
+Modify the version of the action server in place to the version that you want to deploy.
+Where is the version specified, have a look at the file `config/APP_VERSION`
+
+`sudo sed 's/MIKI_VERSION=.*$/MIKI_VERSION=YOUR_DESIRED_VERSION/' -i .env`
+
+Restart the action server component:
+
+`sudo docker-compose up -d`
+
 # Update model
 
 Here we update the conversation model by training it from the conversation data and pushing it
@@ -86,6 +103,9 @@ This step will upload the most recent model from the directory `models`.
 At this point the model will be at the server, now before publishing it to production, please
 make sure that you have updated the action server image and redeployed it.
 This step is important as the new model might require an updated action server.
+So in summary before continuing you have to have:
+ * An up to date action server
+ * The updated action server should have been deployed in the Rasa X server.
 
 When you have done it, now you can publish to production:
 `make publish-model`

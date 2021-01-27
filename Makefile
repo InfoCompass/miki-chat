@@ -64,7 +64,7 @@ upload-model: rasa-x-token.txt
 # It uses the most recent model (because it's not possible to specify the output in training very annoyingly
 publish-model: rasa-x-token.txt
 	MODEL=$$(ls models | sort | tail -n 1) && \
-    curl -k --fail -XPUT $$MODEL \
+    curl -k --fail -XPUT \
       -H "Authorization: Bearer `cat $<`" \
       http://${RASA_DOMAIN}/api/projects/default/models/$$(basename $$MODEL .tar.gz)/tags/production
 
