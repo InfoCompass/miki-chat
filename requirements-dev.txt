@@ -1,4 +1,4 @@
 rasa==2.1.2
 nltk==3.5
 gspread==3.0.1
-pandas==0.24.2
+pandas
