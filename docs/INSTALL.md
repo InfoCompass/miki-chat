@@ -34,6 +34,28 @@ You will need to install Make and Docker.
 In order to unlock the secrets, you need to install [Transcrypt](https://github.com/elasticdog/transcrypt)
 and unlock using the instructions you have received.
 
+# Install MIKI Chatbot
+
+Please before starting an install, make sure that the Action Server Image is up to date.
+
+## Install server
+
+On a target box with an Ubuntu 20 System, checkout the repository and unlock it as described above.
+
+From within the repository,
+
+`cd miki-chat`
+
+run the installation script as follows:
+
+`sudo bash scripts/install.sh`
+
+You should be able to access the UI at the http endpoint using the "me" user and the password in secrets.
+
+## Try out conversation data
+
+Before continuing the installation check if the chatbot works properly by first updating the model.
+
 # Update the Action Server Image
 
 The action server's Docker image needs to be updated in a new installation or whenever the conversation
@@ -45,17 +67,9 @@ To do this, run the following Makefile target (You might need to install make):
    
 This target should take care of building the docker image and pushing it into the DockerHub repo.
 
-# BLAH
+# Update model
 
-
-On an Ubuntu 20 System, checkout the repository.
-
-Install transcrypt and unlock the miki-chat repository.
-
-`cd miki-chat`
-
-Then run
-
-`sudo bash scripts/install.sh`
+Here we update the conversation model by training it from the conversation data and pushing it
+to the Rasa server.
 
 

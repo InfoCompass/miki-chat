@@ -7,6 +7,9 @@ DOCKER_REPO=mikichatbot
 test-model:
 	rasa test --nlu tests/test_nlu.yml --fail-on-prediction-errors
 
+train-model:
+	rasa train --domain data
+
 build:
 	docker build -t $(APP_NAME) .
 
