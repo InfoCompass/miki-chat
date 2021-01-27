@@ -126,14 +126,14 @@ The steps are:
 
 In order to import conversation data you need to run the following target:
 
-`make spreadsheet-to-model`
+`make spreadsheet-to-conversation-data`
 
 The script will import conversation data from the Spreadsheet into the directory `out` and
 subsequently copied to the data directories.
 
 Consider the above a test run. You will prefer to run the following target rather:
 
-`make spreadsheet-to-model-with-logs`
+`make spreadsheet-to-conversation-data-with-logs`
 
 Before you run this target, make sure you duplicate the sheets "Logs" and "Logs Detailed"
 so that you can compare the import logs of the new run with the previous runs. After you are

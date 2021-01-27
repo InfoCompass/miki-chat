@@ -35,7 +35,7 @@ requirements-dev:
 	python3 -m spacy download de
 
 # Running import script
-spreadsheet-to-model:
+spreadsheet-to-conversation-data:
 	python scripts/import_questions.py \
 		--client-secret=config/client-secret.json \
 		--spreadsheet-url=$(SPREADSHEET_URL) \
@@ -44,7 +44,7 @@ spreadsheet-to-model:
 
 # Running import script
 #   Before running this you might want to backup the sheets "Logs" and "Logs Detailed"
-spreadsheet-to-model-with-logs:
+spreadsheet-to-conversation-data-with-logs:
 	python scripts/import_questions.py \
 		--client-secret=config/client-secret.json \
 		--spreadsheet-url=$(SPREADSHEET_URL) \
