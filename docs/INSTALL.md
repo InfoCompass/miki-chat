@@ -54,9 +54,21 @@ This will install the Rasa X server in `/etc/rasa`
 
 You should be able to access the UI at the http endpoint using the "me" user and the password in secrets.
 
-## Try out conversation data
+Before continuing the installation check if the chatbot works properly by first updating the model and publishing
+it to production.
 
-Before continuing the installation check if the chatbot works properly by first updating the model.
+Next, we install the certificates for https serving. You need to follow the instructions in:
+
+https://rasa.com/docs/rasa-x/installation-and-setup/customize#securing-with-ssl
+
+and
+
+https://sslmate.com/caa/
+
+The certificates have to be installed into `/etc/rasa/certs` and I have needed to set them to mode `660` to be
+readable by the `root` group.
+
+
 
 # Update the Action Server Image
 
