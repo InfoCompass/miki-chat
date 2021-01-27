@@ -1,4 +1,5 @@
-rasa==2.1.2
-nltk==3.5
-gspread==3.0.1
+rasa~=2.1.2
+nltk~=3.5
+gspread~=3.0.1
+spacy~=2.3.0
 pandas
