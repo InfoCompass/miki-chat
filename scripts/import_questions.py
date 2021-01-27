@@ -327,7 +327,7 @@ def questions_answers_nlu_data(contexts, question_rows, main_intent, do_paraphra
     questions = [Question(rows[0].context,
                           f'{rows[0].context[1:]}_{intent[1:]}',
                           rows[0].question,
-                          [r.question_variant for r in rows if r.question_variant is not ''],
+                          [r.question_variant for r in rows if r.question_variant != ''],
                           [r.answers for r in rows if r.answers])
                  for intent, rows in bfz_questions.items()]
 
