@@ -50,6 +50,8 @@ run the installation script as follows:
 
 `sudo bash scripts/install.sh`
 
+This will install the Rasa X server in `/etc/rasa`
+
 You should be able to access the UI at the http endpoint using the "me" user and the password in secrets.
 
 ## Try out conversation data
