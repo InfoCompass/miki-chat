@@ -62,6 +62,7 @@ nlu:
     - Drogen
     - Abhängigkeit
     - Suchtberatung
+    - Drogenberatung
 - synonym: disability
   examples: |-
     - Behinderung
@@ -75,7 +76,6 @@ nlu:
     - Wohnungsuche
     - Wohnraum
     - Wohnhilfe
-    - Wohnungsnot
 - synonym: discrimation
   examples: |-
     - Antidiskriminierung
@@ -335,7 +335,6 @@ nlu:
   examples: |-
     - Wohnungslose
     - Obdachlose
-    - Wohnungsnot
     - Wohnungslosigkeit
     - Obdachlosigkeit
 - synonym: lgbtqi

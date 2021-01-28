@@ -31,10 +31,12 @@ nlu:
     \ [Asylsuchende](filter)?\n- Gibt es in Berlin [Bleibeperspektive](filter) für\
     \ [Geflüchtete](filter)?\n- Gibt es in Berlin [Bleiberecht](filter) für [Flüchtlinge](filter)?\n\
     - Haben [Asylsuchende](filter) einen Anspruch auf [Aufenthaltssicherung](filter)?\n\
+    - Hilft jemand [Flüchtlinge](filter) dabei, ein [Bleiberecht](filter) zu finden?\n\
     - Hilft jemand [Geflüchtete](filter) dabei, eine [Bleibeperspektive](filter) zu\
     \ finden?\n- Ich brauche Beratung zu [drohender Abschiebung](filter) von [Menschen\
     \ mit Fluchthintergrund](filter)\n- Ich möchte etwas über [Bleibeperspektiven](filter)\
-    \ für [Geflüchtete](filter) erfahren?\n- Ich möchte etwas über [drohende Abschiebung](filter)\
+    \ für [Geflüchtete](filter) erfahren?\n- Ich möchte etwas über [Bleiberecht](filter)\
+    \ bei [Flüchtlinge](filter) erfahren?\n- Ich möchte etwas über [drohende Abschiebung](filter)\
     \ bei [Menschen mit Fluchthintergrund](filter) erfahren?\n- Ich muss dringend\
     \ Hilfe bei [Abschiebung](filter) finden\n- Ich muss dringend Hilfe bei [Aufenthaltssicherung](filter)\
     \ finden\n- Ich muss dringend Hilfe für eine [drohende Abschiebung](filter) finden\n\
@@ -217,184 +219,179 @@ nlu:
     \ [Bildung](filter) auf [Urdu](filter)\n- Informationen beim Thema [Wohnen](filter)\
     \ auf [Wolof](filter)\n- Welche Möglichkeiten gibt es, etwas zum Thema [Antidiskriminierung\
     \ auf [Finnisch](filter) zu erfahren?\n- Gibt es [Antigewalt](filter) Beratung\
-    \ auf [Tadschikisch](filter)?\n- Gibt es [Asylrechtsberatung](filter) auf [Spanisch](filter)?\n\
+    \ auf [Tadschikisch](filter)?\n- Wo gibt es [Asylrechtsberatung](filter) mit [Kinderbetreuung](filter)?\n\
     - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Asyl- und Verfahrensberatung](filter)?\n\
     - Gibt es [Begleitung und Sprachmittlung](filter) auf [Spanisch](filter)?\n- Gibt\
-    \ es [Dolmetschen](filter) auf [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Arbeit](filter)?\n- Gibt es [Gesundheit](filter) auf [Spanisch](filter)?\n\
-    - Wo gibt es [Psychische Krankheit](filter) mit [Kinderbetreuung](filter)?\n-\
-    \ Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [psychische Gesundheit](filter)?\n\
-    - Gibt es [Depression](filter) auf [Spanisch](filter)?\n- Wo gibt es [psychologische\
-    \ Beratung](filter) mit [Kinderbetreuung](filter)?\n- Wo gibt es [Psychotherapie](filter)\
-    \ mit [Kinderbetreuung](filter)?\n- Wo gibt es [PTBS](filter) mit [Kinderbetreuung](filter)?\n\
-    - Wo gibt es [Trauma](filter) mit [Kinderbetreuung](filter)?\n- Wo gibt es [HIV\
-    \ und STI](filter) mit [Kinderbetreuung](filter)?\n- Gibt es [sexuelle Gesundheit](filter)\
-    \ auf [Spanisch](filter)?\n- Wo gibt es [AIDS](filter) mit [Kinderbetreuung](filter)?\n\
+    \ es [Dolmetschen](filter) auf [Spanisch](filter)?\n- Wo gibt es [Arbeit](filter)\
+    \ mit [Kinderbetreuung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt\
+    \ es Angebote für [Gesundheit](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [Psychische Krankheit](filter)?\n- Wo gibt es [psychische\
+    \ Gesundheit](filter) mit [Kinderbetreuung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [Depression](filter)?\n- Gibt es [psychologische Beratung](filter)\
+    \ auf [Spanisch](filter)?\n- Wo gibt es [Psychotherapie](filter) mit [Kinderbetreuung](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [PTBS](filter)?\n\
+    - Gibt es [Trauma](filter) auf [Spanisch](filter)?\n- Gibt es [HIV und STI](filter)\
+    \ auf [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es\
+    \ Angebote für [sexuelle Gesundheit](filter)?\n- Gibt es [AIDS](filter) auf [Spanisch](filter)?\n\
     - Gibt es [Sexuell übertragbare Krankheiten](filter) auf [Spanisch](filter)?\n\
-    - Wo gibt es [HIV](filter) mit [Kinderbetreuung](filter)?\n- Wo gibt es [STI](filter)\
-    \ mit [Kinderbetreuung](filter)?\n- Wo gibt es [Schwangerschaft](filter) mit [Kinderbetreuung](filter)?\n\
-    - Wo gibt es [Familienplanung](filter) mit [Kinderbetreuung](filter)?\n- Gibt\
-    \ es [Pflege](filter) auf [Spanisch](filter)?\n- Wo gibt es [Demenz](filter) mit\
-    \ [Kinderbetreuung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt\
-    \ es Angebote für [Pflegebedürftigkeit](filter)?\n- Gibt es [Pflegestützpunkte](filter)\
-    \ auf [Spanisch](filter)?\n- Gibt es [Drogen](filter) auf [Spanisch](filter)?\n\
-    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Abhängigkeit](filter)?\n\
-    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Behindertenausweis](filter)?\n\
-    - Gibt es [Schwerbehinderung](filter) auf [Spanisch](filter)?\n- Wo gibt es [Wohnscouting](filter)\
-    \ mit [Kinderbetreuung](filter)?\n- Gibt es [Wohnungsuche](filter) auf [Spanisch](filter)?\n\
-    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Wohnraum](filter)?\n\
-    - Wo gibt es [Wohnhilfe](filter) mit [Kinderbetreuung](filter)?\n- Bitte stelle\
-    \ mir eine Liste mit Unterstützungsmöglichkeiten für [Wohnungsnot](filter) und\
-    \ [Jugendliche](filter) zusammen.\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Antidiskriminierung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [rechte Gewalt](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Opfer](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
-    \ gibt es Angebote für [Schuldnerberatung](filter)?\n- Gibt es [Schuldenregulierung](filter)\
-    \ auf [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es\
-    \ Angebote für [Pfändung](filter)?\n- Wo gibt es [Familienkonflikt](filter) mit\
-    \ [Kinderbetreuung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt\
-    \ es Angebote für [Familienberatung](filter)?\n- Gibt es [Erziehungsberatung](filter)\
-    \ auf [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt es\
-    \ Angebote für [Sexarbeit](filter)?\n- Wo gibt es [Sexarbeiter*in](filter) mit\
-    \ [Kinderbetreuung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter) gibt\
-    \ es Angebote für [Sexwork](filter)?\n- Wo gibt es [Prostitution](filter) mit\
-    \ [Kinderbetreuung](filter)?\n- Wo gibt es [Straftat](filter) mit [Kinderbetreuung](filter)?\n\
-    - Wo gibt es [Haft](filter) mit [Kinderbetreuung](filter)?\n- Wer hilft [Illegalisierte](filter)?\n\
-    - Welche Angebote für [Menschen ohne Aufenthaltsstatus](filter) gibt es?\n- Ich\
-    \ suche einen [Integrationskurs](filter) nur für [Frauen](filter).\n- Ich suche\
-    \ einen [Alphabetisierung](filter) nur für [Frauen](filter).\n- Wo finden [Deutschkurs](filter)\
-    \ statt?\n- Wer kennt sich aus mit [Daueraufenthaltsrecht](filter)?\n- Wo finde\
-    \ ich Unterstützung bei [Aufenthaltserlaubnis](filter)?\n- Ich brauche Beratung\
-    \ zu [Niederlassungserlaubnis](filter)\n- Wer kennt sich mit [Aufenthaltsstatus](filter)\
-    \ aus?\n- Welche Angebote gibt es für [UMF](filter)?\n- Welche Angebote gibt es\
-    \ für [minderjährige Flüchtlinge](filter)?\n- Wer unterstützt [minderjährige](filter)?\n\
-    - Wer unterstützt [unbegleitete minderjährige Geflüchtete](filter)?\n- Wer unterstützt\
-    \ [schutzbedürftige Flüchtlinge](filter)?\n- Wer unterstützt [schutzbedürftige\
-    \ Geflüchtete](filter)?\n- Ich möchte etwas über [Familie nachholen](filter) bei\
-    \ [Frauen](filter) erfahren?\n- Kann ich Informationen zu [Berufliche Qualifizierung](filter)\
-    \ bekommen, wenn ich nur [Albanisch](filter) spreche?\n- Wer bietet [Berufsorientierung](filter)\
-    \ an?\n- Kann ich Informationen zu [Praktikum](filter) bekommen, wenn ich nur\
-    \ [Albanisch](filter) spreche?\n- Wo bekomme ich Hilfe zur [berufliche Ausbildung](filter)\
-    \ mit [Albanisch](filter) Dolmetscher?\n- Ich suche [Zwangsheirat](filter)?\n\
-    - Welche Angebote gibt es zur [Anerkennung von Abschlüssen](filter)?\n- Wie können\
-    \ Migrant*innen [Anerkennung ausländischer Abschlüsse](filter) bekommen?\n- Ich\
-    \ möchte meinen [Anerkennungsberatung](filter) nachmachen. Wo finde ich passende\
-    \ Informationen auf [Albanisch](filter)?\n- Ich möchte meinen [Anerkennungs- und\
-    \ Qualifizierungsberatung](filter) nachmachen. Wo finde ich passende Informationen\
-    \ auf [Albanisch](filter)?\n- Wer unterstützt die [IQ Netzwerk](filter)?\n- Ich\
-    \ möchte meinen [Abschluss nachholen](filter) nachmachen. Wo finde ich passende\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [HIV](filter)?\n\
+    - Wo gibt es [STI](filter) mit [Kinderbetreuung](filter)?\n- Wo gibt es [Schwangerschaft](filter)\
+    \ mit [Kinderbetreuung](filter)?\n- Gibt es [Familienplanung](filter) auf [Spanisch](filter)?\n\
+    - Gibt es [Pflege](filter) auf [Spanisch](filter)?\n- Wo gibt es [Demenz](filter)\
+    \ mit [Kinderbetreuung](filter)?\n- Wo gibt es [Pflegebedürftigkeit](filter) mit\
+    \ [Kinderbetreuung](filter)?\n- Wo gibt es [Pflegestützpunkte](filter) mit [Kinderbetreuung](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Drogen](filter)?\n\
+    - Wo gibt es [Abhängigkeit](filter) mit [Kinderbetreuung](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [Drogenberatung](filter)?\n- Gibt es [Behindertenausweis](filter)\
+    \ auf [Spanisch](filter)?\n- Gibt es [Schwerbehinderung](filter) auf [Spanisch](filter)?\n\
+    - Gibt es [Wohnscouting](filter) auf [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [Wohnungsuche](filter)?\n- Wo gibt es [Wohnraum](filter)\
+    \ mit [Kinderbetreuung](filter)?\n- Gibt es [Wohnhilfe](filter) auf [Spanisch](filter)?\n\
+    - Gibt es [Antidiskriminierung](filter) auf [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [rechte Gewalt](filter)?\n- Gibt es [Opfer](filter) auf\
+    \ [Spanisch](filter)?\n- Wo gibt es [Schuldnerberatung](filter) mit [Kinderbetreuung](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Schuldenregulierung](filter)?\n\
+    - Wo in [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Pfändung](filter)?\n\
+    - Gibt es [Familienkonflikt](filter) auf [Spanisch](filter)?\n- Wo in [Friedrichshain-Kreuzberg](filter)\
+    \ gibt es Angebote für [Familienberatung](filter)?\n- Gibt es [Erziehungsberatung](filter)\
+    \ auf [Spanisch](filter)?\n- Wo gibt es [Sexarbeit](filter) mit [Kinderbetreuung](filter)?\n\
+    - Wo gibt es [Sexarbeiter*in](filter) mit [Kinderbetreuung](filter)?\n- Wo in\
+    \ [Friedrichshain-Kreuzberg](filter) gibt es Angebote für [Sexwork](filter)?\n\
+    - Wo gibt es [Prostitution](filter) mit [Kinderbetreuung](filter)?\n- Gibt es\
+    \ [Straftat](filter) auf [Spanisch](filter)?\n- Wo gibt es [Haft](filter) mit\
+    \ [Kinderbetreuung](filter)?\n- Wer hilft [Illegalisierte](filter)?\n- Welche\
+    \ Angebote für [Menschen ohne Aufenthaltsstatus](filter) gibt es?\n- Sag mir,\
+    \ wer [Integrationskurs](filter) anbietet.\n- Zeige mir alle [Alphabetisierung](filter).\n\
+    - Zeige mir alle [Deutschkurs](filter).\n- Wer berät zu [Daueraufenthaltsrecht](filter)?\n\
+    - Welche Beratung gibt es bei [Aufenthaltserlaubnis](filter)?\n- Wer kann etwas\
+    \ zum Thema [Niederlassungserlaubnis](filter) sagen?\n- Wie ist die [Aufenthaltsstatus](filter),\
+    \ wenn ich krank bin?\n- Welche Angebote gibt es für [UMF](filter)?\n- Welche\
+    \ Angebote gibt es für [minderjährige Flüchtlinge](filter)?\n- Welche Angebote\
+    \ gibt es für [minderjährige](filter)?\n- Welche Angebote gibt es für [unbegleitete\
+    \ minderjährige Geflüchtete](filter)?\n- Wer unterstützt [schutzbedürftige Flüchtlinge](filter)?\n\
+    - Wer unterstützt [schutzbedürftige Geflüchtete](filter)?\n- Ich möchte etwas\
+    \ über [Familie nachholen](filter) bei [Frauen](filter) erfahren?\n- Kann ich\
+    \ Informationen zu [Berufliche Qualifizierung](filter) bekommen, wenn ich nur\
+    \ [Albanisch](filter) spreche?\n- Welche Angebote gibt es zum Thema [Berufsorientierung](filter)\n\
+    - Wo bekomme ich Hilfe zur [Praktikum](filter) mit [Albanisch](filter) Dolmetscher?\n\
+    - Kann ich Informationen zu [berufliche Ausbildung](filter) bekommen, wenn ich\
+    \ nur [Albanisch](filter) spreche?\n- Wo finde ich Unterstützung bei [Zwangsheirat](filter)?\n\
+    - Ich möchte meinen [Anerkennung von Abschlüssen](filter) nachmachen. Wo finde\
+    \ ich passende Informationen auf [Albanisch](filter)?\n- Wie können Migrant*innen\
+    \ [Anerkennung ausländischer Abschlüsse](filter) bekommen?\n- Welche Angebote\
+    \ gibt es zur [Anerkennungsberatung](filter)?\n- Wie können Migrant*innen [Anerkennungs-\
+    \ und Qualifizierungsberatung](filter) bekommen?\n- Ich möchte meinen [IQ Netzwerk](filter)\
+    \ nachmachen. Wo finde ich passende Informationen auf [Albanisch](filter)?\n-\
+    \ Ich möchte meinen [Abschluss nachholen](filter) nachmachen. Wo finde ich passende\
     \ Informationen auf [Albanisch](filter)?\n- Welche Angebote gibt es zum Thema\
-    \ [Rentenberatung](filter)?\n- Gibt es in Berlin Hilfe bei [FGM](filter) in [Albanisch](filter)\n\
-    - Wer kann was zum Thema [Human Trafficking](filter) sagen?\n- Ich benötige spezielle\
-    \ Hilfe bei [Rassismus gegen Roma](filter) gegen [Sinti und Roma](filter).\n-\
-    \ Ich benötige spezielle Hilfe bei [Gadjé-Rassismus](filter) gegen [Sinti und\
-    \ Roma](filter).\n- [sexualisierte Gewalt](filter)\n- Wer organisiert [Integrationslotsen](filter)?\n\
-    - [Integrationslots*innen](filter)\n- Wer leistet [Anwalt](filter)?\n- [juristische\
-    \ Beratung](filter)\n- Welche Angebote gibt es zum Thema [Berufsorientierung](filter)\n\
-    - [Ärzte mehrsprachig](filter)\n- [Arztpraxen](filter)\n- Wer berät zum Thema\
-    \ [Spätaussiedler](filter)\n- Ich benötige spezielle Hilfe bei [Antiziganismus](filter)\
+    \ [Rentenberatung](filter)?\n- Welche Angebote gibt es zum Thema [FGM](filter)?\n\
+    - Welche Angebote gibt es zum Thema [Human Trafficking](filter)?\n- Welche Angebote\
+    \ gibt es zum Thema [Rassismus gegen Roma](filter)?\n- Welche Angebote gibt es\
+    \ zum Thema [Gadjé-Rassismus](filter)?\n- [sexualisierte Gewalt](filter)\n- Wer\
+    \ organisiert [Integrationslotsen](filter)?\n- Wer organisiert [Integrationslots*innen](filter)?\n\
+    - [Anwalt](filter)\n- [juristische Beratung](filter)\n- Wer bietet [Berufsorientierung](filter)\
+    \ an?\n- [Ärzte mehrsprachig](filter)\n- [Arztpraxen](filter)\n- Wer berät zum\
+    \ Thema [Spätaussiedler](filter)\n- Ich benötige spezielle Hilfe bei [Antiziganismus](filter)\
     \ gegen [Rroma](filter).\n- Ich benötige spezielle Hilfe bei [Antiziganismus](filter)\
-    \ gegen [Roma und Sinti](filter).\n- Wie können [Ausländer](filter) ihr [Bleiberecht](filter)\
-    \ anerkennen lassen?\n- Wie können [Zugewanderte](filter) ihr [Bleiberecht](filter)\
-    \ anerkennen lassen?\n- Welche Angebote gibt es zum Thema [Staatsangehörigkeit](filter)\n\
-    - Welche Angebote gibt es zum Thema [Staatsbürgerschaft](filter)\n- Wer informiert\
-    \ zum Thema [Verbraucherfragen](filter)?\n- Welche Angebote gibt es zum Thema\
-    \ [Kinderzuschlag](filter)\n- Wer bietet Informationen zum Thema [Familienleistungen](filter)?\n\
-    - Wer bietet Informationen zum Thema [Hortbetreuung](filter)\n- Welche Angebote\
-    \ gibt es zum Thema [Hortgutschein](filter)\n- Wo gibt es [Migrationsberatung](filter)\
-    \ mit [Kita](filter)?\n- Wo gibt es [Migrationsberatung](filter) mit [Kitagutschein](filter)?\n\
-    - Wer bietet Informationen zum Thema [ALG1](filter)\n- Wer bietet Informationen\
-    \ zum Thema [Jobcenter](filter)\n- Wer bietet Informationen zum Thema [ALG2](filter)\n\
-    - Wer berät zum Thema [Hartz4](filter)\n- Wer berät zum Thema [ALGII](filter)\n\
-    - Wer bietet Informationen zum Thema [ALGI](filter)\n- Wer bietet Informationen\
-    \ zum Thema [Sozialleistung](filter)\n- Wer bietet Informationen zum Thema [Rückkehrberatung](filter)\n\
-    - Wer berät zum Thema [Rückkehr](filter)\n- Wer berät zum Thema [Religionsgemeinde](filter)\n\
-    - Wer berät zum Thema [Schulwechsel](filter)\n- Wer bietet Informationen zum Thema\
-    \ [Hausaufgaben](filter)\n- Wer bietet Informationen zum Thema [Hausaufgaben Hilfe](filter)\n\
-    - Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Kinder und\
-    \ Jugendliche](filter) und [Jugendliche](filter) zusammen.\n- Wissen Sie, wo [junge\
-    \ Menschen](filter) und [Jugendliche](filter) Angebote finden können?\n- Wo finde\
-    \ ich Hilfe für [JMD](filter)?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [Geflüchteten](filter) und [Jugendliche](filter) zusammen.\n- Bitte stelle\
-    \ mir eine Liste mit Unterstützungsmöglichkeiten für [Geflüchteter](filter) und\
-    \ [Jugendliche](filter) zusammen.\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [EU-Ausländer](filter) und [Jugendliche](filter) zusammen.\n- Wissen Sie,\
-    \ wo [Unionsbürger](filter) und [Jugendliche](filter) Angebote finden können?\n\
-    - Wissen Sie, wo [Ohne Krankenversicherung](filter) und [Jugendliche](filter)\
-    \ Angebote finden können?\n- Wissen Sie, wo [Obdachlose](filter) und [Jugendliche](filter)\
-    \ Angebote finden können?\n- Wissen Sie, wo [Wohnungsnot](filter) und [Jugendliche](filter)\
+    \ gegen [Roma und Sinti](filter).\n- Wo können sich [Ausländer](filter) wegen\
+    \ [Diskriminierung](filter) beschweren?\n- Unterstützung für [Zugewanderte](filter)\
+    \ mit [Behinderung](filter)?\n- Welche Angebote gibt es zum Thema [Staatsangehörigkeit](filter)\n\
+    - Welche Angebote gibt es zum Thema [Staatsbürgerschaft](filter)\n- Welche Angebote\
+    \ gibt es zum Thema [Verbraucherfragen](filter)\n- Wer berät zum Thema [Kinderzuschlag](filter)\n\
+    - Wer berät zum Thema [Familienleistungen](filter)\n- Welche Angebote gibt es\
+    \ zum Thema [Hortbetreuung](filter)\n- Wer berät zum Thema [Hortgutschein](filter)\n\
+    - Wo gibt es [Migrationsberatung](filter) mit [Kita](filter)?\n- Wo gibt es [Migrationsberatung](filter)\
+    \ mit [Kitagutschein](filter)?\n- Wer berät zum Thema [ALG1](filter)\n- Wer bietet\
+    \ Informationen zum Thema [Jobcenter](filter)\n- Wer bietet Informationen zum\
+    \ Thema [ALG2](filter)\n- Wer berät zum Thema [Hartz4](filter)\n- Wer berät zum\
+    \ Thema [ALGII](filter)\n- Wer bietet Informationen zum Thema [ALGI](filter)\n\
+    - Wer bietet Informationen zum Thema [Sozialleistung](filter)\n- Wer bietet Informationen\
+    \ zum Thema [Rückkehrberatung](filter)\n- Wer bietet Informationen zum Thema [Rückkehr](filter)\n\
+    - Wer berät zum Thema [Religionsgemeinde](filter)\n- Wer bietet Informationen\
+    \ zum Thema [Schulwechsel](filter) zur Verfügung?\n- Wer bietet Informationen\
+    \ zum Thema [Hausaufgaben](filter)\n- Wer bietet Informationen zum Thema [Hausaufgaben\
+    \ Hilfe](filter)\n- Wissen Sie, wo [Kinder und Jugendliche](filter) und [Jugendliche](filter)\
+    \ Angebote finden können?\n- Wissen Sie, wo [junge Menschen](filter) und [Jugendliche](filter)\
     \ Angebote finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [Obdachlosigkeit](filter) und [Jugendliche](filter) zusammen.\n- Bitte stelle\
-    \ mir eine Liste mit Unterstützungsmöglichkeiten für [LGBTIQ*](filter) und [Jugendliche](filter)\
-    \ zusammen.\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für\
-    \ [queer](filter) und [Jugendliche](filter) zusammen.\n- Wo finde ich Hilfe für\
-    \ [LSBTI](filter)?\n- Wo finde ich Hilfe für [LGBT](filter)?\n- Wissen Sie, wo\
-    \ [LGBTTIQ*](filter) und [Jugendliche](filter) Angebote finden können?\n- Bitte\
-    \ stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Trans](filter) und\
-    \ [Jugendliche](filter) zusammen.\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
-    \ für [lesbisch](filter) und [Jugendliche](filter) zusammen.\n- Wissen Sie, wo\
-    \ [schwul](filter) und [Jugendliche](filter) Angebote finden können?\n- Bitte\
-    \ stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Transpersonen](filter)\
-    \ und [Jugendliche](filter) zusammen.\n- Wo finde ich Hilfe für [Ältere](filter)?\n\
-    - Wo finde ich Hilfe für [Menschen im Alter](filter)?\n- Wo finde ich Hilfe für\
-    \ [Senioren](filter)?\n- Wissen Sie, wo [Seniorinnen](filter) und [Jugendliche](filter)\
-    \ Angebote finden können?\n- Wo finde ich Hilfe für [Sonstige](filter)?\n- Ich\
-    \ suche [Suchtberatung](filter) in [Charlottenburg-Wilmersdorf](filter).\n- Ich\
-    \ benötige [Suchtberatung](filter) in [Spandau](filter).\n- Wen kann ich in [Tempelhof-Schöneberg](filter)\
-    \ zu Thema [Suchtberatung](filter) ansprechen?\n- Wen kann ich in [Marzahn-Hellersdorf](filter)\
-    \ zu Thema [Suchtberatung](filter) ansprechen?\n- Ich benötige [Suchtberatung](filter)\
-    \ in [Lichtenberg](filter).\n- Wen kann ich in [Reinickendorf](filter) zu Thema\
-    \ [Suchtberatung](filter) ansprechen?\n- Wo gibt es Beratung zu [Bleiberecht](filter)\
-    \ auf [Amharisch](filter)?\n- Wo gibt es Beratung zu [Bleiberecht](filter) auf\
-    \ [Aramäisch](filter)?\n- Ich möchte meinen [Schulabschluss](filter) nachmachen.\
-    \ Wo finde ich passende Informationen auf [Arabisch](filter)?\n- Wo gibt es Beratung\
-    \ zu [Bleiberecht](filter) auf [Armenisch](filter)?\n- Ich suche Informationen\
-    \ zum [Bleiberecht](filter) auf [Aserbaidschanisch](filter).\n- Gibt es Angebote\
-    \ auf [Bengali](filter) für Menschen mit [Beeinträchtigung](filter)?\n- Ich möchte\
-    \ meinen [Schulabschluss](filter) nachmachen. Wo finde ich passende Informationen\
-    \ auf [Bulgarisch](filter)?\n- Wo gibt es Beratung zu [Bleiberecht](filter) auf\
-    \ [Tschetschenisch](filter)?\n- Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter)\
-    \ in [Chinesisch](filter)\n- Wo bekomme ich Hilfe zur [Weiterbildung](filter)\
-    \ mit [Kreolisch](filter) Dolmetscher?\n- Wo bekomme ich Hilfe zur [Weiterbildung](filter)\
-    \ mit [Dari](filter) Dolmetscher?\n- Gibt es Angebote auf [Niederländisch](filter)\
-    \ für Menschen mit [Beeinträchtigung](filter)?\n- Wo finden Sinti und Roma Angebote\
-    \ zur [Schwangerenberatung](filter) auf [Englisch](filter)?\n- Wo finden Sinti\
-    \ und Roma Angebote zur [Schwangerenberatung](filter) auf [Farsi](filter)?\n-\
-    \ Ich suche Informationen zum [Bleiberecht](filter) auf [Französisch](filter).\n\
+    \ für [JMD](filter) und [Jugendliche](filter) zusammen.\n- Wo finde ich Hilfe\
+    \ für [Geflüchteten](filter)?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
+    \ für [Geflüchteter](filter) und [Jugendliche](filter) zusammen.\n- Wo finde ich\
+    \ Hilfe für [EU-Ausländer](filter)?\n- Wissen Sie, wo [Unionsbürger](filter) und\
+    \ [Jugendliche](filter) Angebote finden können?\n- Wissen Sie, wo [Ohne Krankenversicherung](filter)\
+    \ und [Jugendliche](filter) Angebote finden können?\n- Wissen Sie, wo [Obdachlose](filter)\
+    \ und [Jugendliche](filter) Angebote finden können?\n- Wo finde ich Hilfe für\
+    \ [Obdachlosigkeit](filter)?\n- Wissen Sie, wo [LGBTIQ*](filter) und [Jugendliche](filter)\
+    \ Angebote finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
+    \ für [queer](filter) und [Jugendliche](filter) zusammen.\n- Wissen Sie, wo [LSBTI](filter)\
+    \ und [Jugendliche](filter) Angebote finden können?\n- Wissen Sie, wo [LGBT](filter)\
+    \ und [Jugendliche](filter) Angebote finden können?\n- Wissen Sie, wo [LGBTTIQ*](filter)\
+    \ und [Jugendliche](filter) Angebote finden können?\n- Wo finde ich Hilfe für\
+    \ [Trans](filter)?\n- Wissen Sie, wo [lesbisch](filter) und [Jugendliche](filter)\
+    \ Angebote finden können?\n- Wissen Sie, wo [schwul](filter) und [Jugendliche](filter)\
+    \ Angebote finden können?\n- Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten\
+    \ für [Transpersonen](filter) und [Jugendliche](filter) zusammen.\n- Wo finde\
+    \ ich Hilfe für [Ältere](filter)?\n- Wo finde ich Hilfe für [Menschen im Alter](filter)?\n\
+    - Bitte stelle mir eine Liste mit Unterstützungsmöglichkeiten für [Senioren](filter)\
+    \ und [Jugendliche](filter) zusammen.\n- Wissen Sie, wo [Seniorinnen](filter)\
+    \ und [Jugendliche](filter) Angebote finden können?\n- Wo finde ich Hilfe für\
+    \ [Sonstige](filter)?\n- Ich suche [Suchtberatung](filter) in [Charlottenburg-Wilmersdorf](filter).\n\
+    - Wen kann ich in [Spandau](filter) zu Thema [Suchtberatung](filter) ansprechen?\n\
+    - Ich benötige [Suchtberatung](filter) in [Tempelhof-Schöneberg](filter).\n- Wissen\
+    \ Sie, wer in [Marzahn-Hellersdorf](filter) zum Thema [Sucht](filter) berät?\n\
+    - Wer berät in [Lichtenberg](filter) zum Thema [Sucht](filter)?\n- Wer berät in\
+    \ [Reinickendorf](filter) zum Thema [Sucht](filter)?\n- Ich möchte meinen [Schulabschluss](filter)\
+    \ nachmachen. Wo finde ich passende Informationen auf [Amharisch](filter)?\n-\
+    \ Wo finden Sinti und Roma Angebote zur [Schwangerenberatung](filter) auf [Aramäisch](filter)?\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Arabisch](filter)?\n- Wo finden\
+    \ Sinti und Roma Angebote zur [Schwangerenberatung](filter) auf [Armenisch](filter)?\n\
+    - Kann ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur\
+    \ [Aserbaidschanisch](filter) spreche?\n- Kann ich Informationen zu [Berufsausbildung](filter)\
+    \ bekommen, wenn ich nur [Bengali](filter) spreche?\n- Gibt es in Berlin Hilfe\
+    \ bei [Genitalverstümmelung](filter) in [Bulgarisch](filter)\n- Gibt es Angebote\
+    \ auf [Tschetschenisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    - Wo gibt es Beratung zu [Bleiberecht](filter) auf [Chinesisch](filter)?\n- Kann\
+    \ ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur [Kreolisch](filter)\
+    \ spreche?\n- Wo bekomme ich Hilfe zur [Weiterbildung](filter) mit [Dari](filter)\
+    \ Dolmetscher?\n- Ich möchte meinen [Schulabschluss](filter) nachmachen. Wo finde\
+    \ ich passende Informationen auf [Niederländisch](filter)?\n- Kann ich Informationen\
+    \ zu [Berufsausbildung](filter) bekommen, wenn ich nur [Englisch](filter) spreche?\n\
+    - Wo finden Sinti und Roma Angebote zur [Schwangerenberatung](filter) auf [Farsi](filter)?\n\
+    - Gibt es Angebote auf [Französisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    - Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Griechisch](filter)\n\
+    - Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Hebräisch](filter)\n\
     - Ich möchte meinen [Schulabschluss](filter) nachmachen. Wo finde ich passende\
-    \ Informationen auf [Griechisch](filter)?\n- Wer hilft bei [Rassismus](filter)\
-    \ mit Sprachmittlung auf [Hebräisch](filter)?\n- Wo finden Sinti und Roma Angebote\
-    \ zur [Schwangerenberatung](filter) auf [Hindi](filter)?\n- Ich suche Informationen\
-    \ zum [Bleiberecht](filter) auf [Ungarisch](filter).\n- Kann ich Informationen\
-    \ zu [Berufsausbildung](filter) bekommen, wenn ich nur [Italienisch](filter) spreche?\n\
-    - Wo bekomme ich Hilfe zur [Weiterbildung](filter) mit [Japanisch](filter) Dolmetscher?\n\
-    - Ich suche Informationen zum [Bleiberecht](filter) auf [Kikuyu](filter).\n- Kann\
-    \ ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur [Koreanisch](filter)\
+    \ Informationen auf [Hindi](filter)?\n- Ich möchte meinen [Schulabschluss](filter)\
+    \ nachmachen. Wo finde ich passende Informationen auf [Ungarisch](filter)?\n-\
+    \ Gibt es Angebote auf [Italienisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    - Kann ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur\
+    \ [Japanisch](filter) spreche?\n- Wo bekomme ich Hilfe zur [Weiterbildung](filter)\
+    \ mit [Kikuyu](filter) Dolmetscher?\n- Ich suche Informationen zum [Bleiberecht](filter)\
+    \ auf [Koreanisch](filter).\n- Gibt es Angebote auf [Kurdisch](filter) für Menschen\
+    \ mit [Beeinträchtigung](filter)?\n- Wo bekomme ich Hilfe zur [Weiterbildung](filter)\
+    \ mit [Lasisch](filter) Dolmetscher?\n- Wo finden Sinti und Roma Angebote zur\
+    \ [Schwangerenberatung](filter) auf [Litauisch](filter)?\n- Wo bekomme ich Hilfe\
+    \ zur [Weiterbildung](filter) mit [Luo](filter) Dolmetscher?\n- Ich möchte meinen\
+    \ [Schulabschluss](filter) nachmachen. Wo finde ich passende Informationen auf\
+    \ [Mazedonisch](filter)?\n- Ich suche Informationen zum [Bleiberecht](filter)\
+    \ auf [Montenegrinisch](filter).\n- Ich suche Informationen zum [Bleiberecht](filter)\
+    \ auf [Nepali](filter).\n- Kann ich Informationen zu [Berufsausbildung](filter)\
+    \ bekommen, wenn ich nur [Oromo](filter) spreche?\n- Wo finden Sinti und Roma\
+    \ Angebote zur [Schwangerenberatung](filter) auf [Paschtu](filter)?\n- Gibt es\
+    \ in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Polnisch](filter)\n-\
+    \ Gibt es Angebote auf [Portugiesisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
+    - Kann ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur\
+    \ [Punjabi](filter) spreche?\n- Wo gibt es Beratung zu [Bleiberecht](filter) auf\
+    \ [Romanes](filter)?\n- Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter)\
+    \ in [Rumänisch](filter)\n- Wo finden Sinti und Roma Angebote zur [Schwangerenberatung](filter)\
+    \ auf [Russisch](filter)?\n- Ich möchte meinen [Schulabschluss](filter) nachmachen.\
+    \ Wo finde ich passende Informationen auf [Bosnisch/Kroatisch/Serbisch](filter)?\n\
+    - Ich möchte meinen [Schulabschluss](filter) nachmachen. Wo finde ich passende\
+    \ Informationen auf [Slowenisch](filter)?\n- Wer hilft bei [Rassismus](filter)\
+    \ mit Sprachmittlung auf [Kisuaheli](filter)?\n- Gibt es Angebote auf [Thailändisch](filter)\
+    \ für Menschen mit [Beeinträchtigung](filter)?\n- Ich möchte meinen [Schulabschluss](filter)\
+    \ nachmachen. Wo finde ich passende Informationen auf [Türkisch](filter)?\n- Kann\
+    \ ich Informationen zu [Berufsausbildung](filter) bekommen, wenn ich nur [Turkmenisch](filter)\
     \ spreche?\n- Ich möchte meinen [Schulabschluss](filter) nachmachen. Wo finde\
-    \ ich passende Informationen auf [Kurdisch](filter)?\n- Ich suche Informationen\
-    \ zum [Bleiberecht](filter) auf [Lasisch](filter).\n- Gibt es in Berlin Hilfe\
-    \ bei [Genitalverstümmelung](filter) in [Litauisch](filter)\n- Gibt es in Berlin\
-    \ Hilfe bei [Genitalverstümmelung](filter) in [Luo](filter)\n- Ich suche Informationen\
-    \ zum [Bleiberecht](filter) auf [Mazedonisch](filter).\n- Kann ich Informationen\
-    \ zu [Berufsausbildung](filter) bekommen, wenn ich nur [Montenegrinisch](filter)\
-    \ spreche?\n- Kann ich Informationen zu [Berufsausbildung](filter) bekommen, wenn\
-    \ ich nur [Nepali](filter) spreche?\n- Wer hilft bei [Rassismus](filter) mit Sprachmittlung\
-    \ auf [Oromo](filter)?\n- Wer hilft bei [Rassismus](filter) mit Sprachmittlung\
-    \ auf [Paschtu](filter)?\n- Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter)\
-    \ in [Polnisch](filter)\n- Kann ich Informationen zu [Berufsausbildung](filter)\
-    \ bekommen, wenn ich nur [Portugiesisch](filter) spreche?\n- Gibt es Angebote\
-    \ auf [Punjabi](filter) für Menschen mit [Beeinträchtigung](filter)?\n- Gibt es\
-    \ Angebote auf [Romanes](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
-    - Gibt es Angebote auf [Rumänisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Russisch](filter)?\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Bosnisch/Kroatisch/Serbisch](filter)?\n\
-    - Gibt es in Berlin Hilfe bei [Genitalverstümmelung](filter) in [Slowenisch](filter)\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Kisuaheli](filter)?\n\
-    - Gibt es Angebote auf [Thailändisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
-    - Gibt es Angebote auf [Türkisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n\
-    - Wer hilft bei [Rassismus](filter) mit Sprachmittlung auf [Turkmenisch](filter)?\n\
-    - Ich möchte meinen [Schulabschluss](filter) nachmachen. Wo finde ich passende\
-    \ Informationen auf [Ukrainisch](filter)?\n- Wo finden Sinti und Roma Angebote\
-    \ zur [Schwangerenberatung](filter) auf [Usbekisch](filter)?\n- Kann ich Informationen\
-    \ zu [Berufsausbildung](filter) bekommen, wenn ich nur [Vietnamesisch](filter)\
-    \ spreche?"
+    \ ich passende Informationen auf [Ukrainisch](filter)?\n- Gibt es Angebote auf\
+    \ [Usbekisch](filter) für Menschen mit [Beeinträchtigung](filter)?\n- Wo gibt\
+    \ es Beratung zu [Bleiberecht](filter) auf [Vietnamesisch](filter)?"

@@ -96,38 +96,37 @@ rechtsberat,Rechtsberatung
 juristische berat,Rechtsberatung
 rentenberat,Rente
 rent,Rente
-roma und sinti,Roma
+sinti und roma,Roma
 roma,Roma
 rroma,Roma
-sinti und roma,Roma
+roma und sinti,Roma
 ruckkehrhilf,Rückkehrhilfe
 ruckkehrberat,Rückkehrhilfe
 ruckkehr,Rückkehrhilfe
-schulanmeld,Schulanmeldung
 schulwechsel,Schulanmeldung
-sexualisierte gewalt,Sexuelle Gewalt
+schulanmeld,Schulanmeldung
 sexuelle gewalt,Sexuelle Gewalt
+sexualisierte gewalt,Sexuelle Gewalt
 sozialberat,Sozialberatung
-verbraucherschutz,Verbraucherschutz
 verbraucherfrag,Verbraucherschutz
+verbraucherschutz,Verbraucherschutz
 wohnungssuch,Wohnungssuche
-wohnungsnot,accomodation
+wohn,accomodation
+wohnscouting,accomodation
+wohnraum,accomodation
 wohnhilf,accomodation
 wohnungsuch,accomodation
-wohnscouting,accomodation
-wohn,accomodation
-wohnraum,accomodation
-suchtberat,addiction
-abhang,addiction
 drog,addiction
 sucht,addiction
+drogenberat,addiction
+suchtberat,addiction
+abhang,addiction
 alban,albanian
 amhar,amharic
 arab,arabic
 arama,aramaic
 armen,armenian
 drohende abschieb,asylum_counseling
-asylberat,asylum_counseling
 asylrechtsberat,asylum_counseling
 asyl- und verfahrensberat,asylum_counseling
 bleibeperspektiv,asylum_counseling
@@ -135,13 +134,14 @@ bleiberecht,asylum_counseling
 abschieb,asylum_counseling
 bleibeperspektiv,asylum_counseling
 drohender abschieb,asylum_counseling
+asylberat,asylum_counseling
 gefluchtet,asylum_seekers
 gefluchtet,asylum_seekers
 fluchtling,asylum_seekers
-gefluchtet,asylum_seekers
-menschen mit fluchthintergrund,asylum_seekers
-asylbewerb,asylum_seekers
 asylsuch,asylum_seekers
+asylbewerb,asylum_seekers
+menschen mit fluchthintergrund,asylum_seekers
+gefluchtet,asylum_seekers
 aserbaidschan,azerbaijani
 bengali,bengali
 besonders schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
@@ -158,22 +158,22 @@ tschetschen,chechen
 chines,chinese
 kreolisch,creole
 dari,dari
-pfandung,debt
-schuldenregulier,debt
 schuldnerberat,debt
 schuld,debt
-schwerbehinder,disability
-behinder,disability
-beeintracht,disability
+schuldenregulier,debt
+pfandung,debt
 behindertenausweis,disability
-rassismus,discrimation
-diskriminier,discrimation
+beeintracht,disability
+behinder,disability
+schwerbehinder,disability
 antidiskriminier,discrimation
+diskriminier,discrimation
+rassismus,discrimation
 rechte gewalt,discrimation
 niederland,dutch
-seniorinn,elderly
 alt,elderly
 senior*inn,elderly
+seniorinn,elderly
 senior,elderly
 menschen im alt,elderly
 englisch,english
@@ -193,9 +193,8 @@ griechisch,greek
 gesund,health
 hebraisch,hebrew
 hindi,hindu
-obdachlos,houseless
 wohnungslos,houseless
-wohnungsnot,houseless
+obdachlos,houseless
 obdachlos,houseless
 wohnungslos,houseless
 ungar,hungarian
@@ -204,17 +203,17 @@ japan,japanese
 kikuyu,kikuyu
 korean,korean
 kurdisch,kurdish
+arbeit,labour
 arbeit und bild,labour
 bildung,labour
-arbeit,labour
 lasisch,laz
 lgbtiq*,lgbtqi
-tran,lgbtqi
+schwul,lgbtqi
 lgbttiq*,lgbtqi
 lgbtiq,lgbtqi
+tran,lgbtqi
 lesbisch,lgbtqi
 queer,lgbtqi
-schwul,lgbtqi
 transperson,lgbtqi
 lgbt,lgbtqi
 lsbti,lgbtqi
