@@ -42,7 +42,7 @@ Please before starting an install, make sure that the Action Server Image is up 
 
 On a target box with an Ubuntu 20 System, checkout the repository and unlock it as described above.
 
-From within the repository,
+~From within the repository,~ after clonging (into miki-chat) switch folders:
 
 `cd miki-chat`
 
