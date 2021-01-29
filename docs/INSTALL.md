@@ -90,13 +90,15 @@ Go to the directory where the server is installed
 `cd /etc/rasa`
 
 Modify the version of the action server in place to the version that you want to deploy.
-Where is the version specified, have a look at the file `config/APP_VERSION`
+Where is the version specified, have a look at the file `config/APP_VERSION` (in 'miki-chat', see above)
 
 `sudo sed 's/MIKI_VERSION=.*$/MIKI_VERSION=YOUR_DESIRED_VERSION/' -i .env`
 
 Restart the action server component:
 
 `sudo docker-compose up -d`
+
+(configure ports in docker-compse.yml)
 
 # Update model
 
