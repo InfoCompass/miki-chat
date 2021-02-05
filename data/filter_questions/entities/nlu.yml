@@ -13,19 +13,26 @@ nlu:
     - Bleibeperspektiven
     - drohender Abschiebung
     - drohende Abschiebung
+    - Dublin-Verfahren
 - synonym: support
   examples: |-
     - Begleitung und Sprachmittlung
     - Sprachmittlung
     - Begleitung
     - Dolmetschen
+    - Integrationslotsen
 - synonym: labour
   examples: |-
     - Arbeit und Bildung
     - Arbeit
     - Bildung
+    - arbeiten
+    - Arbeit suchen
+    - Arbeit finden
 - synonym: health
-  examples: '- Gesundheit'
+  examples: |-
+    - Gesundheit
+    - Arzt
 - synonym: mental_health
   examples: |-
     - Psychische Krankheit
@@ -49,6 +56,7 @@ nlu:
     - Schwangerschaft
     - Familienplanung
     - Schwangerenberatung
+    - schwanger
 - synonym: care
   examples: |-
     - Pflege
@@ -76,6 +84,8 @@ nlu:
     - Wohnungsuche
     - Wohnraum
     - Wohnhilfe
+    - Wohnung suchen
+    - Wohnung finden
 - synonym: discrimation
   examples: |-
     - Antidiskriminierung
@@ -138,6 +148,7 @@ nlu:
     - Niederlassungserlaubnis
     - Aufenthaltsstatus
     - Aufenthaltssicherung
+    - Aufenthalt
 - synonym: unbegleitete minderjährige Flüchtlinge
   examples: |-
     - unbegleitete minderjährige Flüchtlinge
@@ -163,11 +174,13 @@ nlu:
     - Weiterbildung
     - Praktikum
     - berufliche Ausbildung
+    - Ausbildung
 - synonym: Häusliche Gewalt
   examples: |-
     - Häusliche Gewalt
     - Gewalt gegen Frauen
     - Gewalt gegen Kinder
+    - Frauenhaus
 - synonym: Gewalt gegen Mädchen
   examples: |-
     - Gewalt gegen Mädchen
@@ -183,9 +196,8 @@ nlu:
     - Anerkennungs- und Qualifizierungsberatung
     - Schulabschluss
     - IQ Netzwerk
-    - Abschluss nachholen
-- synonym: Wohnungssuche
-  examples: '- Wohnungssuche'
+    - Abschluss
+    - Abschluss anerkennen
 - synonym: Rente
   examples: |-
     - Rente
@@ -207,11 +219,6 @@ nlu:
   examples: |-
     - Sexuelle Gewalt
     - sexualisierte Gewalt
-- synonym: Begleitung
-  examples: |-
-    - Begleitung
-    - Integrationslotsen
-    - Integrationslots*innen
 - synonym: Rechtsberatung
   examples: |-
     - Rechtsberatung
@@ -220,9 +227,7 @@ nlu:
 - synonym: Sozialberatung
   examples: '- Sozialberatung'
 - synonym: Berufsberatung
-  examples: |-
-    - Berufsberatung
-    - Berufsorientierung
+  examples: '- Berufsberatung'
 - synonym: Mehrsprachige Ärzte
   examples: |-
     - Mehrsprachige Ärzte
@@ -273,6 +278,10 @@ nlu:
     - Kita
     - Kinderbetreuung
     - Kitagutschein
+- synonym: Schulabschluss
+  examples: |-
+    - Schulabschluss
+    - MSA
 - synonym: Arbeitslosengeld
   examples: |-
     - Arbeitslosengeld
@@ -305,6 +314,11 @@ nlu:
     - Nachhilfe
     - Hausaufgaben
     - Hausaufgaben Hilfe
+- synonym: Formular
+  examples: |-
+    - Foumulare
+    - Antragshilfe
+    - Antrag ausfüllen
 - synonym: young
   examples: |-
     - Kinder und Jugendliche
@@ -330,7 +344,9 @@ nlu:
     - EU-Bürger
     - Unionsbürger
 - synonym: no_health_insurance
-  examples: '- Ohne Krankenversicherung'
+  examples: |-
+    - Ohne Krankenversicherung
+    - keine Krankenversicherung
 - synonym: houseless
   examples: |-
     - Wohnungslose

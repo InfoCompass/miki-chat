@@ -33,10 +33,7 @@ COL_CONTEXT = 'Context'
 COL_INTENT = 'Intent'
 COL_EXAMPLE = 'Ausgangsfrage / Beispiel'
 COL_VARIANTS = 'Fragen (Varianten)'
-COL_ANSWER_1 = 'Antwort_Part1'
-COL_ANSWER_2 = 'Antwort_Part2'
-COL_ANSWER_3 = 'Antwort_Part3'
-COL_LINK_1 = 'Link 1'
+COL_ANSWERS = ['Antwort_Part0 (Paraphrasing Question)'] + [f'Antwort_Part{i+1}' for i in range(3)] + ['Link 1']
 
 # Columns used in the filter keywords sheet
 COL_FILTER_CONTEXT = 'Context'
@@ -45,9 +42,6 @@ COL_FILTER = 'Filter ID'
 COL_KEYWORD = 'Schlüsselwörter'
 COL_SYNONYM = 'Synonym _NUMBER_'
 NUM_SYNONYMS = 15
-
-# Paraphrase of question in questions and answers
-PARA_QUESTION = 'Sie möchten wissen'
 
 # Automatic example generation, generate examples for the following contexts
 AUTO_GENERATE_FOR_CONTEXTS =  ['_quarter', '_language', '_targetgroup', '_topic']
@@ -109,7 +103,7 @@ def main():
 
     question_rows = get_question_sheet(spreadsheet)
     with open(f'{args.output_dir}/data/chitchat/nlu.yml', 'w') as f:
-        faq = questions_answers_nlu_data(CHITCHAT_CONTEXTS, question_rows, 'chitchat', do_paraphrase=False)
+        faq = questions_answers_nlu_data(CHITCHAT_CONTEXTS, question_rows, 'chitchat')
         f.write(yaml.dump(faq, allow_unicode=True))
 
     filter_rows = get_filter_keyword_sheet(spreadsheet)
@@ -319,7 +313,7 @@ def filters_nlu_data(filter_rows):
              for r in filter_rows]
     })
 
-def questions_answers_nlu_data(contexts, question_rows, main_intent, do_paraphrase=True):
+def questions_answers_nlu_data(contexts, question_rows, main_intent):
     gs = group_by_column(question_rows, 'context')
     qa_rows = [row._replace(context=context) for context in contexts if context in gs for row in gs[context]]
     bfz_questions = group_by_column(qa_rows, 'intent')
@@ -339,12 +333,7 @@ def questions_answers_nlu_data(contexts, question_rows, main_intent, do_paraphra
     questions = [q for q in questions if q.question]
 
     def create_responses(main_question, answers):
-        if do_paraphrase:
-            paraphrase = f'{PARA_QUESTION}: "{main_question}"'
-            responses = [paraphrase] + answers
-        else:
-            responses = answers
-        responses = [r + '\n' for r in responses]
+        responses = [r + '\n' for r in answers]
         return '\n'.join(responses)
 
     # Create faq yaml
@@ -477,9 +466,6 @@ def open_spreadsheet(args):
 
 def get_question_sheet(spreadsheet):
 
-    def consume_answers(*answers):
-        return [a for a in answers if a]
-
     # Raw rows of the question spreadsheet
     Row = namedtuple('Row', 'context intent question question_variant answers')
 
@@ -487,7 +473,7 @@ def get_question_sheet(spreadsheet):
     list_of_hashes = sheet.get_all_records()
 
     rows = [Row(r[COL_CONTEXT], r[COL_INTENT], r[COL_EXAMPLE], r[COL_VARIANTS],
-                consume_answers(r[COL_ANSWER_1], r[COL_ANSWER_2], r[COL_ANSWER_3], r[COL_LINK_1]))
+                [r[col_answer] for col_answer in COL_ANSWERS if r[col_answer]])
             for r in list_of_hashes]
     return rows
 

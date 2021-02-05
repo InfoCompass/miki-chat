@@ -91,7 +91,7 @@ nlu:
     - Wo erhalte ich Informationen/Infos über das BfZ
     - Wo finde ich den BfZ Flyer?
     - Wo finde ich mehr/weitere Infos über das BfZ?
-    - Wer kann mir weitere Infomationen über das BfZ geben?
+    - Wer kann mir weitere Informationen über das BfZ geben?
 - intent: faq/bfz_finanzierung
   examples: |-
     - Wer finanziert das BfZ?
@@ -201,7 +201,7 @@ nlu:
     - zeige alle NBZ
 - intent: faq/specialitems_Familienzentrum
   examples: |-
-    - Finde ich Informationen zu Familenzentren im BfZ?
+    - Finde ich Informationen zu Familienzentren im BfZ?
     - Ich suche Familienzentren
     - zeige alle Familienzentren
     - Welche Familienzentren gibt es?
@@ -210,14 +210,14 @@ nlu:
 - intent: faq/specialitems_Nachbarschaftshaus
   examples: |-
     - Finde ich Informationen zu Nachbarschaftshäusern im BfZ?
-    - Ich suche Nachbaschaftshäuser
+    - Ich suche Nachbarschaftshäuser
     - Ich suche ein Nachbarschaftshaus
     - Welche Nachbarschaftshäuser gibt es?
     - Welche Angebote gibt es im Nachbarschaftshaus?
     - Bitte zeige alle NBH
     - zeige alle NBH
     - Ich suche NBH
-    - Wer betreut die Nachbaschaftshäuser?
+    - Wer betreut die Nachbarschaftshäuser?
 - intent: faq/specialitems_Stadtteilzentrum
   examples: "- Finde ich Informationen zu Stadtteilzentren im BfZ?\n- Ich suche Stadtteilzentren\n\
     - Zeige ein Stadtteilzentrum\n- Bitte zeige alle \n- Ich suche STZ\n- zeige alle\
@@ -249,10 +249,10 @@ nlu:
     - Wer arbeitet mit Opfern häuslicher Gewalt?
     - Welche Einrichtungen beschäftigen sich mit häuslicher Gewalt?
     - Wer hat Erfahrung mit Opfern häuslicher Gewalt?
-- intent: faq/specialitems_besonders schützbedürftige Flüchtlinge
+- intent: faq/specialitems_besonders schutzbedürftige Flüchtlinge
   examples: |-
-    - Wo erhalte ich Beratung für besonders schützbedürftige Flüchtlinge?
-    - Wo gibt es Angebot für besonders schützbedürftige Flüchtlinge?
+    - Wo erhalte ich Beratung für besonders schutzbedürftige Flüchtlinge?
+    - Wo gibt es Angebot für besonders schutzbedürftige Flüchtlinge?
     - besonders schützbedürftige Flüchtling
     - besonders schützbedürftige Flüchtling
     - Wer arbeitet mit besonders schützbedürftige Flüchtling
@@ -316,7 +316,7 @@ nlu:
     - Haben sie Informationen zu Integrationslots*innen?
     - Welche Integrationslots*innen gibt es?
     - Wo finde ich die Integrationslots*innen?
-- intent: faq/specialitems_Berufsankernnung
+- intent: faq/specialitems_Berufsanerkennung
   examples: |-
     - Finde ich Beratung zur Berufsanerkennung im BfZ?
     - Gibt es Angebote zur Berufsanerkennung im BfZ?
@@ -324,286 +324,243 @@ nlu:
     - Welche Angebote gibt es zu Berufsanerkennung?
     - Wer kennt sich aus mit Berufsanerkennung?
     - Welche Einrichtungen arbeiten zum Thema Berufsanerkennung?
+- intent: faq/specialitems_Formulare
+  examples: |-
+    - Finde ich Beratung zum Ausfüllen von Anträgen im BfZ?
+    - Finde ich Hilfe zum Formular für das Jobcenter?
+    - Wer hilfr mir beimAusfüllen vom Antrag?
 responses:
   utter_faq/bfz_goal:
   - text: |
-      Sie möchten wissen: "Was ist die Zielsetzung des BfZ?"
+      Was Sie möchten wissen: "Was ist die Zielsetzung des BfZ?"
 
       Das BfZ soll Fachkräften bei Vermittlung und Verweis in andere Fachbereich oder Bezirke erleichtern.
 
-      Das BfZ gibt eine ressortübergreifende Übersicht der Angebote für Zugewanderte. Wir hoffen eine bessere Vernetung und Zusammenarbeit von Projekten/Einrichtungen.
-
-      https://www.beratungsnetz-migration.de/p/about
+      Das BfZ gibt eine ressortübergreifende Übersicht der Angebote für Zugewanderte. Wir hoffen eine bessere Vernetung und Zusammenarbeit von Projekten/Einrichtungen. [Hier erfahren Sie mehr](/p/about) zu unseren Zielsetzungen.
   utter_faq/bfz_users:
   - text: |
-      Sie möchten wissen: "An wen richtet sich das BfZ?"
+      Was Sie möchten wissen: "An wen richtet sich das BfZ?"
 
       Das BfZ richtet sich an Haupt- und Ehrenamtliche, die mit zugewanderten/ Geflüchteten Menschen in Berlin arbeiten.
 
-      Darüber hinaus ist die Onlineplattform natürlich für alle da und kann von jedem genutzt werden.
+      Darüber hinaus ist die Onlineplattform natürlich für alle da und kann von jedem/jeder genutzt werden.
   utter_faq/bfz_update:
-  - text: "Sie möchten wissen: \"Welche Aktualität haben die Daten?\"\n\nDaten werden\
-      \ aktualisiert, wenn uns Projekte, Einrichtungen oder Benutzer Änderungen mitteilen.\
-      \ Die geschieht über Klick auf \"Änderungen vorschlagen\"  Alle Institutionen\
+  - text: "Was Sie möchten wissen: \"Welche Aktualität haben die Daten?\"\n\nDaten\
+      \ werden aktualisiert, wenn uns Projekte, Einrichtungen oder Benutzer Änderungen\
+      \ mitteilen. Die geschieht über Klick auf \"Änderungen vorschlagen\"  Alle Institutionen\
       \ werden zweimal im Jahr angeschrieben und gebeten, ihre Daten zu überprüfen.\
       \ \n\nAuch Sie können Aktualisierungen vorschlagen! Klicken Sie dazu auf \"\
       Eintrag bearbeiten\" – unten in der Einzelansicht eines Beitrags. Tragen Sie\
-      \ einfach die gewünschten Änderungen ein und klicken Sie auf \"Vorschlag senden\"\
-      . Wir prüfen die Vorschläge und schalten die Änderungen zeitnah frei.\n\n[BfZ\
-      \ / Hilfeseite / update]\n"
+      \ einfach die gewünschten Änderungen ein, und klicken Sie auf \"Vorschlag senden\"\
+      . Wir prüfen die Vorschläge und schalten die Änderungen zeitnah frei.\n\nHier\
+      \ erhalten Sie [weitere Informationen zur Benutzung](BfZ / Hilfeseite / update).\n"
   utter_faq/bfz_content:
-  - text: "Sie möchten wissen: \"Welche Angebote werden ins BfZ aufgenommen?\"\n\n\
-      Wir erfassen grundsätzlich mehrsprachige Beratungsangebote in verschiedenen\
+  - text: "Was Sie möchten wissen: \"Welche Angebote werden ins BfZ aufgenommen?\"\
+      \n\nWir erfassen grundsätzlich mehrsprachige Beratungsangebote in verschiedenen\
       \ Bereichen der Sozialarbeit. \n\nHinzu kommen Begleitung und Sprachmittlung\
       \ sowie weitere migrationsrelevante Angebote, auch wenn sie nicht mehrsprachig\
-      \ sind.\n\nGruppeangebote, Sprachschulen und sonstige Bildungsangebote finden\
+      \ sind.\n\nGruppenangebote, Sprachschulen und sonstige Bildungsangebote finden\
       \ Sie aber hier nicht.\n"
   utter_faq/bfz_criteria:
   - text: |
-      Sie möchten wissen: "Nach welchen Kriterien werden die Inhalte ausgewählt?"
+      Was Sie möchten wissen: "Nach welchen Kriterien werden die Inhalte ausgewählt?"
 
       Neben der Mehrsprachigkeit und Themen sind die Qualität, Erreichbarkeit und gesicherte Finanzierung wichtige Kriterien für die Datenaufnahme. Jeder kann Einträge vorschlagen.
 
       Das BfZ-Team von VIA enscheidet, was veröffentlicht wird.
 
-      https://www.beratungsnetz-migration.de/p/contact
+      [Hier mehr erfahren](/p/contact)
   utter_faq/bfz_languages:
   - text: |
-      Sie möchten wissen: "In welchen Sprachen ist das BfZ verfügbar?"
+      Was Sie möchten wissen: "In welchen Sprachen ist das BfZ verfügbar?"
 
       Das BfZ stellt Daten in Deutsch und Englisch zur Verfügung. Wir gehen davon aus, dass alle professionellen Nutzer*innen Deutsch oder Englisch beherrschen, um ihre Arbeit auszuüben.
   utter_faq/bfz_help:
   - text: |
-      Sie möchten wissen: "Wo finde ich Hilfe zur Benutzung?"
+      Was Sie möchten wissen: "Wo finde ich Hilfe zur Benutzung?"
 
       Am besten klicken Sie erst auf "alle Einträge". Diese Ergebnisse können nach Themen, Zielgruppen, Bezirken und Sprachen eingeschränkt werden. Oder Sie geben ein Stichwort im Suchfeld ein. Beide Suchmöglichkeiten können auch kombiniert werden.
 
-      Der Chat-Bot MIKI kann auch bei der Suche behilflich sein.
+      Der Chatbot MIKI kann auch bei der Suche behilflich sein.
 
-      Allgemeine Informationen zur Einführung erhalten Sie hier: (Hilfeseite)
-
-      https://www.beratungsnetz-migration.de/p/manual
-  - text: |
-      Sie möchten wissen: "Wo finde ich Hilfe zur Benutzung?"
-
-      https://www.beratungsnetz-migration.de/p/manual
-  - text: |
-      Sie möchten wissen: "Wo finde ich Hilfe zur Benutzung?"
-
-      https://www.beratungsnetz-migration.de/p/contact
+      Allgemeine Informationen zur Einführung [erhalten Sie hier](/p/manual)
   utter_faq/bfz_responsibility:
-  - text: |
-      Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
-
-      Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt das BfZ.
-
-      GANGWAY Straßensozialarbeit Berlin e.V. und das WIllkommenszentrum Berlin des Senats waren an der Konzeption beteiligt.
-  - text: |
-      Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
-
-      Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt das BfZ.
-  - text: |
-      Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
-
-      Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt das BfZ.
-  - text: |
-      Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
-
-      Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt das BfZ.
-  - text: |
-      Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
-
-      Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt das BfZ und bearbeiten die Daten.
-  - text: |
-      Sie möchten wissen: "Wer ist für die Inhalte verantwortlich?"
-
-      Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V. betreibt das BfZ.
+  - text: "Was Sie möchten wissen: \"Wer ist für die Inhalte verantwortlich?\"\n\n\
+      [Verband für interkulturelle Arbeit (VIA) Berlin/Bandenburg e.V.] (https://www.via-in-berlin.de/)\
+      \ betreibt das BfZ.\n\nGANGWAY Straßensozialarbeit Berlin e.V. und das WIllkommenszentrum\
+      \ Berlin des Senats waren an der Konzeption beteiligt.\n\nSie können uns [hier\
+      \ kontaktieren](/p/contact). \n"
   utter_faq/bfz_infomaterial:
-  - text: |
-      Sie möchten wissen: "Wo erhalte ich InfoMaterial zum BfZ?"
-
-      Es gibt einen Flyer im Postkartenformat sowie Aufkleber mit dem BfZ-Logo (im Format A6).
-
-      Auf Wünschen senden wir Ihnen die Materialien zu.
-
-      https://www.beratungsnetz-migration.de/p/contact
-  - text: |
-      Sie möchten wissen: "Wo erhalte ich InfoMaterial zum BfZ?"
-
-      https://www.beratungsnetz-migration.de/p/contact
+  - text: "Was Sie möchten wissen: \"Wo erhalte ich InfoMaterial zum BfZ?\"\n\nEs\
+      \ gibt einen Flyer im Postkartenformat sowie Aufkleber mit dem BfZ-Logo (im\
+      \ Format A6).\n\nAuf Wunsch senden wir Ihnen gerne die Materialien zu.\n\nSie\
+      \ können uns [hier kontaktieren](/p/contact). \n"
   utter_faq/bfz_finanzierung:
   - text: |
-      Sie möchten wissen: "Wer finanziert das BfZ?"
+      Was Sie möchten wissen: "Wer finanziert das BfZ?"
 
-      Die Erstellung wurde durch das Land Berlin finanziert. Die Weiterentwicklung finanzierten der Paritätische Wohlfahrtsverband, Landesverband Berlin aus Mitteln der Klasenlotterie.
+      Die Erstellung wurde durch das Land Berlin finanziert. Die Weiterentwicklung finanzierten der Paritätische Wohlfahrtsverband, Landesverband Berlin aus Mitteln der Klassenlotterie.
 
-      Der Chat-Bot MIKI wurde gefördert duch das Bundesministerium für Familien, Senioren, Frauen und Jugend.
+      Der Chatbot MIKI wurde gefördert duch das Bundesministerium für Familien, Senioren, Frauen und Jugend.
   utter_faq/specialitems_POC:
   - text: |
-      Sie möchten wissen: "Welche Stellen beraten zu PoC?"
+      Was Sie möchten wissen: "Welche Stellen beraten zu PoC?"
 
-      Alle Stellen im BfZ stehen selbstverständlich PoC/BPoC/BIPoC gegenüber offen. Wenn Sie spezielle Angebote bei Diskriminierung suchen, nutzen Sie den Filter "Antidiskriminierung": https://www.beratungsnetz-migration.de/list/c/discrimination
+      Alle Stellen im BfZ stehen selbstverständlich PoC/BPoC/BIPoC gegenüber offen. Wenn Sie spezielle Angebote bei Diskriminierung suchen, nutzen Sie den Filter [Antidiskriminierung](/list/c/discrimination)
   utter_faq/specialitems_people_withoutpaper:
-  - text: |
-      Sie möchten wissen: "Wo werden Menschen ohne Papiere beraten?"
-
-      Geht es um Legalisierung des Aufenthaltstitels? Vielleicht kann Ihnen eine der Härtefallberatungsstellen weiterhelfen: https://www.beratungsnetz-migration.de/list/item/be2546379bf0481c
-
-      Geht es um gesundheitliche Belange? Dann sind diese Stellen Ihre Ansprechpartner: https://www.beratungsnetz-migration.de/list/c/health/u/no_health_ensurance
-
-      Viele Angebote können auch anonym genutzt werden. Am besten fragen Sie immer im Vorfeld nach.
+  - text: "Was Sie möchten wissen: \"Wo werden Menschen ohne Papiere beraten?\"\n\n\
+      Geht es um Legalisierung des Aufenthaltstitels? Vielleicht kann Ihnen eine der\
+      \ [Härtefallberatungsstellen](/list/item/be2546379bf0481c) weiterhelfen: \n\n\
+      Geht es um gesundheitliche Belange? Dann sind [diese Stellen](/list/c/health/u/no_health_ensurance)\
+      \ Ihre Ansprechpartner.\n\nViele Angebote können auch anonym genutzt werden.\
+      \ Am besten fragen Sie immer im Vorfeld nach.\n"
   utter_faq/specialitems_german_course:
-  - text: |
-      Sie möchten wissen: "Finde ich Deutschkurse im BfZ?"
+  - text: |+
+      Was Sie möchten wissen: "Finde ich Deutschkurse im BfZ?"
 
-      Träger der Integrationskurse sind nicht im BfZ erfasst. Migrationsberatungsstellen (MBE) in Ihrer Nähe können Ihnen bei der Suche weiterhelfen. Oder Sie suchen hier in der Datenbank vom BAMF:
-      https://www.beratungsnetz-migration.de/list/item/c2e1209c359d0b19/s/integrationskurs
+      Träger der Integrationskurse sind nicht im BfZ erfasst. Migrationsberatungsstellen (MBE) in Ihrer Nähe können Ihnen bei der Suche weiterhelfen. Oder Sie suchen hier in der [Datenbank vom BAMF](/list/item/c2e1209c359d0b19/s/integrationskurs).
 
-      Hier finden Sie zudem Deutschkurse für Menschen, die aus verschiedenen Gründen keine Integrationskurse besuchen können:
-      https://www.beratungsnetz-migration.de/list/item/28f1f038e54d9a9f/s/netzwerk
+
+      Hier finden Sie zudem [Deutschkurse](/list/item/28f1f038e54d9a9f/s/netzwerk) für Menschen, die aus verschiedenen Gründen keine Integrationskurse besuchen können.
+
   utter_faq/specialitems_eu_law:
-  - text: "Sie möchten wissen: \"Finde ich Beratung zum EU-Recht?\"\n\nZum EU-Recht\
-      \ allgemein finden Sie bei spezialisieriten Migratiosberatungsstellen für EU-Bürger*innen:\n\
-      \ https://www.beratungsnetz-migration.de/list/item/f1c3fcdb1634e9fb/c/migration_counseling/u/eu_citizens\
-      \ \n\n… sowie zum Arbeitsrecht bei BEMA https://www.beratungsnetz-migration.de/list/s/bema.\n"
+  - text: |
+      Was Sie möchten wissen: "Finde ich Beratung zum EU-Recht?"
+
+      Zum EU-Recht allgemein finden Sie bei spezialisierten [Migrationsberatungsstellen für EU-Bürger*innen]
+       (/list/item/f1c3fcdb1634e9fb/c/migration_counseling/u/eu_citizens).
+
+      … sowie zum Arbeitsrecht bei [BEMA](/list/s/bema).
   utter_faq/specialitems_emergency_service:
-  - text: "Sie möchten wissen: \"Finde ich Adressen der Notdienste im BfZ?\"\n\nHier\
-      \ finden Sie Nummern für Notfälle für viele unterschiedliche Zielgruppen: \n\
-      \nhttps://www.beratungsnetz-migration.de/p/emergency \n"
+  - text: "Was Sie möchten wissen: \"Finde ich Adressen der Notdienste im BfZ?\"\n\
+      \nHier finden Sie [Nummern für Notfälle](/p/emergency) für viele unterschiedliche\
+      \ Zielgruppen: \n"
   utter_faq/specialitems_language_mediation:
   - text: |
-      Sie möchten wissen: "Finde ich Angebote zur Sprachmittlung/Begleitung im BfZ?"
+      Was Sie möchten wissen: "Finde ich Angebote zur Sprachmittlung/Begleitung im BfZ?"
 
       Integrationslotsinnen und Integrationslotsen bieten in Berlin in verschiedenen Sprachen Sprachmittlung an, wenn diese im Rahmen der Information, Beratung und Begleitung erforderlich ist.
 
-      Sprachmittler*innen können bei kostenpflichtigen Dolmeschdiensten wie z.B. Gemeindedolmetschdient angefordert werden.
+      Im Gesundheitsbereich könnne unter bestimmten Vorausstzungen Sprach- und Integrationsmittler*inenn von SprInt angefordert werden. [SprInt](list/item/08155f57ac607879/s/sprint)
+
+      Sprachmittler*innen können bei kostenpflichtigen Dolmeschdiensten wie z.B. "Gemeindedolmetschdienst Berlin" angefordert werden.
+
+      [Gemeindedolmetschdienst Berlin](list/item/e0cd498f9fc61abb/s/GDD)
   utter_faq/specialitems_residence_right:
   - text: |
-      Sie möchten wissen: "Finde ich Beratung zum Aufenthaltsrecht im BfZ?"
+      Was Sie möchten wissen: "Finde ich Beratung zum Aufenthaltsrecht im BfZ?"
 
-      Beratung zum Aufenthaltsrecht erhalten Sie bei MBE https://www.beratungsnetz-migration.de/list/u/bamf_mbe
+      Beratung zum Aufenthaltsrecht erhalten Sie bei [MBE](/list/u/bamf_mbe)
 
-      Auch die Beratung bei der Berliner Integrationsbeauftragten ist eine Anlaufstelle zu aufenthaltsrechtlichen Fragen: https://www.beratungsnetz-migration.de/list/item/3a9adcd034d44962/s/beauftragte
+      Auch die Beratung bei der [Berliner Integrationsbeauftragten](/list/item/3a9adcd034d44962/s/beauftragte) ist eine Anlaufstelle zu aufenthaltsrechtlichen Fragen.
   utter_faq/specialitems_Kinder- und Jugendzentrum:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?"
+      Was Sie möchten wissen: "Finde ich Informationen zu Kinder- und Jugendzentren im BfZ?"
 
-      https://www.berlin.de/familie/de/informationen/jugendfreizeiteinrichtungen-in-berlin-289
+      Informationen zu Jugendclubs [erhalten Sie hier](https://www.berlin.de/familie/de/informationen/jugendfreizeiteinrichtungen-in-berlin-289).
   utter_faq/specialitems_Frauencafé:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu [Frauen]zentren im BfZ?"
+      Was Sie möchten wissen: "Finde ich Informationen zu [Frauen]zentren im BfZ?"
 
-      https://www.berlin.de/sen/[Frauen]/vielfalt/soziale-und-kulturelle-projekte/
+      Informationen zu Frauenzentren [erhalten Sie hier](https://www.berlin.de/sen/Frauen/vielfalt/soziale-und-kulturelle-projekte/).
   utter_faq/specialitems_Sprachcafé:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Sprachcafés im BfZ?"
+      Was Sie möchten wissen: "Finde ich Informationen zu Sprachcafés im BfZ?"
 
-      https://www.info-compass.net/list/l/de/s/sprachcafe/t/location
+      Informationen zu Sprachcafés [erhalten Sie hier](https://www.info-compass.net/list/l/de/s/sprachcafe/t/location).
   utter_faq/specialitems_Nachbarschaftszentrum:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Nachbarschaftszentren im BfZ?"
+      Was Sie möchten wissen: "Finde ich Informationen zu Nachbarschaftszentren im BfZ?"
 
-      https://www.info-compass.net/list/l/de/s/nachbarschaftszentrum/t/location
+      Informationen zu Nachbarschaftszentren [erhalten Sie hier](https://www.info-compass.net/list/l/de/s/nachbarschaftszentrum/t/location).
   utter_faq/specialitems_Familienzentrum:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Familenzentren im BfZ?"
+      Was Sie möchten wissen: "Finde ich Informationen zu Familienzentren im BfZ?"
 
-      https://www.info-compass.net/list/l/de/s/familienzentrum/t/location
+      Informationen zu Familienzentren [erhalten Sie hier](https://www.info-compass.net/list/l/de/s/familienzentrum/t/location).
   utter_faq/specialitems_Nachbarschaftshaus:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Nachbarschaftshäusern im BfZ?"
+      Was Sie möchten wissen: "Finde ich Informationen zu Nachbarschaftshäusern im BfZ?"
 
-      https://www.info-compass.net/list/l/de/s/nachbarschaftshaus
+      Informationen zu Nachbarschaftshäusern [erhalten Sie hier](https://www.info-compass.net/list/l/de/s/nachbarschaftshaus).
   utter_faq/specialitems_Stadtteilzentrum:
   - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Stadtteilzentren im BfZ?"
+      Was Sie möchten wissen: "Finde ich Informationen zu Stadtteilzentren im BfZ?"
 
-      https://www.info-compass.net/list/l/de/s/stadtteilzentrum/t/location
+      Informationen zu Stadtteilzentren [erhalten Sie hier](https://www.info-compass.net/list/l/de/s/stadtteilzentrum/t/location).
   utter_faq/specialitems_Mehrgenerationenhaus:
-  - text: |
-      Sie möchten wissen: "Finde ich Informationen zu Mehrgenerationenhäusern im BfZ?"
-
-      Mehrgenerationenhaus
-
-      https://www.info-compass.net/list/l/de/s/mehrgenerationenhaus/t/location
+  - text: "Was Sie möchten wissen: \"Finde ich Informationen zu Mehrgenerationenhäusern\
+      \ im BfZ?\"\n\nInformationen zu Mehrgenerationenhäusern [erhalten Sie hier](https://www.info-compass.net/list/l/de/s/mehrgenerationenhaus/t/location).\
+      \ \n"
   utter_faq/specialitems_UMF:
   - text: |
-      Sie möchten wissen: "Wo erhalte ich Beratung für UMF?"
+      Was Sie möchten wissen: "Wo erhalte ich Beratung für UMF?"
 
-      KommMit-BBZ ist die Fachstelle für minderjährige und unbegleitete minderjährige Flüchtlinge:https://www.beratungsnetz-migration.de/list/item/0a50e4fc98eed87b/s/bbz
+      [KommMit-BBZ](/list/item/0a50e4fc98eed87b/s/bbz) ist die Fachstelle für minderjährige und unbegleitete minderjährige Flüchtlinge.
 
-      Beim BumF – Bundesfachverband unbegleitete minderjährige Flüchtlinge finden Sie außerdem umfassende Beratung auch für Haupt- und Ehrenamtliche.
-
-      https://www.beratungsnetz-migration.de/list/item/bf68547fc22b7805/s/UNBEGLEITETE%20minderj%C3%A4hrige
+      Beim BumF – [Bundesfachverband unbegleitete minderjährige Flüchtlinge](/list/item/bf68547fc22b7805/s/UNBEGLEITETE%20minderj%C3%A4hrige) finden Sie außerdem umfassende Beratung auch für Haupt- und Ehrenamtliche.
   utter_faq/specialitems_Häusliche Gewalt:
   - text: |
-      Sie möchten wissen: "Wo erhalte ich Beratung zum Thema Häusliche Gewalt?"
+      Was Sie möchten wissen: "Wo erhalte ich Beratung zum Thema Häusliche Gewalt?"
 
-      BIG-Hotline ist ein Unterstützungsangebot für alle Frauen und deren Kinder, die in ihrer Beziehung Gewalt erleben.
+      Die [BIG-Hotline](/list/item/5182626457a5e885) ist ein Unterstützungsangebot für alle Frauen und deren Kinder, die in ihrer Beziehung Gewalt erleben.
 
-      https://www.beratungsnetz-migration.de/list/item/5182626457a5e885
-
-      Auch die Fachberatungs- und Interventionsstellen bei häuslicher Gewalt können Ihnen weiterhelfen.
-
-      https://www.beratungsnetz-migration.de/list/s/fachberatung/u/women
-  utter_faq/specialitems_besonders schützbedürftige Flüchtlinge:
-  - text: "Sie möchten wissen: \"Wo erhalte ich Beratung für besonders schützbedürftige\
+      Auch die [Fachberatungs- und Interventionsstellen bei häuslicher Gewalt](/list/s/fachberatung/u/women) können Ihnen weiterhelfen.
+  utter_faq/specialitems_besonders schutzbedürftige Flüchtlinge:
+  - text: "Was Sie möchten wissen: \"Wo erhalte ich Beratung für besonders schutzbedürftige\
       \ Flüchtlinge?\"\n\nAlle Einrichtungen im Berliner Netzwerk für besonders schutzbedürftige\
-      \ Flüchtlinge (BNS) sind im BfZ einzeln erfasst. \n\nEine Übersicht aller Projekt\
-      \ im Netzwerk schutzbedürftiger Flüchtlinge (BNS) finden Sie hier (externer\
-      \ Link).\n\nhttps://www.ueberleben.org/allgemein/schutzbeduerftige-fluechtlinge-bns-iii/\n"
+      \ Flüchtlinge (BNS) sind im BfZ einzeln erfasst. \n\nEine Übersicht aller Projekte\
+      \ im Netzwerk schutzbedürftiger Flüchtlinge (BNS) [finden Sie hier](https://www.ueberleben.org/allgemein/schutzbeduerftige-fluechtlinge-bns-iii/)\
+      \ (externer Link).\n"
   utter_faq/specialitems_Gewalt gegen Mädchen:
   - text: |
-      Sie möchten wissen: "Wo erhalte ich Beratung zum Thema Gewalt gegen Mädchen?"
+      Was Sie möchten wissen: "Wo erhalte ich Beratung zum Thema Gewalt gegen Mädchen?"
 
-      Viele Beratungsstellen im BfZ sind spazialisiert für Frauen und Mädchen als Opfer von Gewalt.
+      Viele Beratungsstellen im BfZ sind spezialisiert für Frauen und Mädchen als Opfer von Gewalt.
 
-      Hier finden Sie auch Beratungen speziellen Themen wie sexualisierte Gewalt oder Menschenhandel.
-
-      https://www.beratungsnetz-migration.de/list/c/violence/u/women
+      Hier finden Sie auch [Beratungen zu speziellen Themen](/list/c/violence/u/women) wie sexualisierte Gewalt oder Menschenhandel.
   utter_faq/specialitems_MBE:
   - text: |
-      Sie möchten wissen: "Finde ich MBE im BfZ?"
+      Was Sie möchten wissen: "Finde ich MBE im BfZ?"
 
-      Migrationsberatung für erwachsene Zuwanderer (MBE) ist im BfZ kompett erfasst und kann gesondert aufgerufen werden
-
-      https://www.beratungsnetz-migration.de/list/u/bamf_mbe
+      [Migrationsberatung für erwachsene Zuwanderer (MBE)](/list/u/bamf_mbe) ist im BfZ komplett erfasst und kann gesondert aufgerufen werden
   utter_faq/specialitems_MSD:
   - text: |
-      Sie möchten wissen: "Finde ich Einträge zum MIgrationssozialdienst im BfZ?"
+      Was Sie möchten wissen: "Finde ich Einträge zum MIgrationssozialdienst im BfZ?"
 
-      Migrationssozialdienste (MSD) sind im BfZ komplett erfasst und können über diesen Link gesondert aufgerufen werden:
-
-      https://www.beratungsnetz-migration.de/list/u/senias_msd
+      [Migrationssozialdienste (MSD)](/list/u/senias_msd) sind im BfZ komplett erfasst und können über diesen Link gesondert aufgerufen werden:
   utter_faq/specialitems_JMD:
   - text: |
-      Sie möchten wissen: "Finde ich Einträge zum Jugendmigrationsdienst im BfZ?"
+      Was Sie möchten wissen: "Finde ich Einträge zum Jugendmigrationsdienst im BfZ?"
 
-      Jugendmigrationsdienste (JMD) sind im BfZ komplett erfasst und können über diesen Link aufgerufen werden:
-
-      https://www.beratungsnetz-migration.de/list/u/bamf_jmd
+      [Jugendmigrationsdienste (JMD)](/list/u/bamf_jmd) sind im BfZ komplett erfasst und können über diesen Link aufgerufen werden:
   utter_faq/specialitems_mehrsprachige Ärzte:
   - text: |
-      Sie möchten wissen: "Finde ich mehrsprachige Ärzte im BfZ?"
+      Was Sie möchten wissen: "Finde ich mehrsprachige Ärzte im BfZ?"
 
-      Arztpraxen sind nicht im BfZ erfasst. Aber es gibt den Wegweiser MyHealth mit Adressen von fremsprachigen Ärzten in Berlin:
-
-      https://www.beratungsnetz-migration.de/list/item/8ef930d896f118ce/s/myhealth
+      Welche Mehrgenerationenhäuser gibt es?
   utter_faq/specialitems_Integrationslotsen:
   - text: |
-      Sie möchten wissen: "Finde ich Integrationslots*innen im BfZ?"
+      Was Sie möchten wissen: "Finde ich Integrationslots*innen im BfZ?"
 
       Meinen Sie die Integrationslotsinnen und Integrationslotsen im Landesrahmenprogramm des Senats?
 
-      Diese finden Sie hier. https://www.beratungsnetz-migration.de/list/u/senias_intlot
+      Diese [finden Sie hier](/list/u/senias_intlot).
 
-      Sie können die Ergebnisse nach Sprache oder Bezirk weiterfiltern.
-  utter_faq/specialitems_Berufsankernnung:
+      Sie können die Ergebnisse nach Sprache oder Bezirk weiter filtern.
+  utter_faq/specialitems_Berufsanerkennung:
   - text: |
-      Sie möchten wissen: "Finde ich Beratung zur Berufsanerkennung im BfZ?"
+      Was Sie möchten wissen: "Finde ich Beratung zur Berufsanerkennung im BfZ?"
 
-      Meinen Sie die Ankerkennung von im Ausland erworbenen Abschlüssen?
+      Meinen Sie die Anerkennung von im Ausland erworbenen Abschlüssen?
 
-      Anerkennungs- und Qualifizierungsberatungsstellen im IQ-Landesnetzwerk Berlin sind die kompetenten Anlaufstellen dafür:
+      Anerkennungs- und Qualifizierungsberatungsstellen im [IQ-Landesnetzwerk Berlin](/list/u/iq) sind die kompetenten Anlaufstellen dafür:
+  utter_faq/specialitems_Formulare:
+  - text: |
+      Was Sie möchten wissen: "Finde ich Beratung zum Ausfüllen von Anträgen im BfZ?"
 
-      https://www.beratungsnetz-migration.de/list/u/iq
+      Für die Beantragung von Leistungen usw. erhalten Sie Hilfe in einer [Migrationsberatungssstelle](list/c/migration_counseling).
+
+      Die Ergebnisse können Sie nach Sprache oder Bezirken filtern.
+
+      [Hier](/list/item/d6fa326129e44ba5/s/formular) finden Sie außerdem die Übersetzungen von Formularen als Ausfüllhilfe.
