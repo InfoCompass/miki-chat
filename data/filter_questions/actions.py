@@ -150,19 +150,17 @@ class ActionFilterResults(Action):
                     filters.append(self.synonym_to_filter[stemmed])
 
         if not filters:
-            dispatcher.utter_message(text='Leider habe ich Ihre Anfrage nicht verstanden')
-            dispatcher.utter_message(text=f'Ich erkenne nicht folgende Schlüsselwörter: {self._format(raw_filters)}')
+            dispatcher.utter_message(template='utter_keywords_not_understood', keywords=self._format(raw_filters))
             action_filter_error = 'keyword_not_understood'
         else:
             dispatcher.utter_message(text=self._template_filters(filters))
 
             num_documents = await self._num_bfz_documents(filters)
             if num_documents:
-                dispatcher.utter_message(text=f'Ich habe einige Ergebnisse gefunden')
-                dispatcher.utter_message(text=f'[Hier klicken]({self._bfz_url(filters)}) um die Ergebnisse im Bfz anzuzeigen')
+                dispatcher.utter_message(template='utter_results_found', results_url=self._bfz_url(filters))
                 action_filter_error = None
             else:
-                dispatcher.utter_message(text=f'Es wurden leider keine Angebote gefunden')
+                dispatcher.utter_message(template='utter_no_results_found')
                 action_filter_error = 'no_results_found'
 
         return [SlotSet('action_filter_error', action_filter_error)]

@@ -47,3 +47,16 @@ responses:
   - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut, wenn sie möglichst kurz formuliert sind.
   utter_goodbye:
   - text: Tschüss
+  utter_no_results_found:
+  - text: Es wurden leider keine Angebote gefunden
+  utter_keywords_not_understood:
+  - text: |
+      Leider habe ich Ihre Anfrage nicht verstanden
+
+      Ich erkenne nicht folgende Schlüsselwörter: {keywords}
+  utter_results_found:
+  - text: |
+      Ich habe einige Ergebnisse gefunden
+
+      [Hier klicken]({results_url}) um die Ergebnisse im Bfz anzuzeigen
+
