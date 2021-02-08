@@ -48,6 +48,9 @@ NUM_SYNONYMS = 15
 COL_PHRASE_KEY = 'Key'
 COL_PHRASE_ANSWERS = [f'Answer {i+1}' for i in range(5)]
 
+# Utterances with yes/no answers
+YESNO_PHRASES = '/ask_whether_question_answered'
+
 # Automatic example generation, generate examples for the following contexts
 AUTO_GENERATE_FOR_CONTEXTS =  ['_quarter', '_language', '_targetgroup', '_topic']
 
@@ -442,11 +445,22 @@ def filter_questions_yaml(qs):
 
 
 def phrase_utterances(phrases):
+    def gen_response(p):
+        res = []
+        for answers in p.answers:
+            d = OrderedDict()
+            d['text'] = create_responses(answers)
+            if p.key in YESNO_PHRASES:
+                d['buttons'] = [OrderedDict({'title': 'Ja', 'payload': '/affirm'}),
+                                OrderedDict({'title': 'Nein', 'payload': '/deny'})]
+            res.append(d)
+        return res
+
     return OrderedDict({
         'version': '2.0',
         'responses':
             OrderedDict(
-                {f'utter_{p.key}': [{'text': create_responses(answers)} for answers in p.answers]
+                {f'utter_{p.key}': gen_response(p)
                  for p in phrases})
     })
 
