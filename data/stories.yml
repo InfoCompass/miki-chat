@@ -26,7 +26,6 @@ stories:
   steps:
     - intent: filter_question
     - action: utter_dont_understand
-    - action: utter_ask_again
     - checkpoint: before_question
 
 - story: before question filter question no results
@@ -143,7 +142,6 @@ stories:
     - checkpoint: before_question
     - intent: filter_question
     - action: utter_dont_understand
-    - action: utter_ask_again
 
 - story: before question chitchat
   steps:
