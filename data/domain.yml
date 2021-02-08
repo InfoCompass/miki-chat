@@ -9,14 +9,6 @@ intents:
 - deny
 - start
 responses:
-  utter_greet:
-  - text: Hey! Wie geht's dir?
-  - text: Hallo!
-  utter_intro:
-  - text: Ich bin **MIKI**, der Chatbot vom [Berliner Beratungsnetz für
-      Zugewanderte](https://www.beratungsnetz-migration.de/). Damit ich Ihnen helfen
-      kann, schreiben Sie bitte eine Frage, zum beispiel "Was ist das Berliner Beratungsnetz
-      für Zugewanderte?"
   utter_another_question:
   - text: Sehr schön. Stellen Sie gerne weitere Fragen.
   utter_dont_understand:
@@ -38,8 +30,6 @@ responses:
       payload: '/deny'
   utter_rephrase_question:
   - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut, wenn sie möglichst kurz formuliert sind.
-  utter_goodbye:
-  - text: Tschüss
   utter_no_results_found:
   - text: |
       Es wurden leider keine Angebote gefunden
