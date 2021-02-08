@@ -59,7 +59,6 @@ stories:
     - action: reset_action_filter_error
     - slot_was_set:
       - action_filter_error: null
-    - action: utter_ask_another_question
     - user: |
         Warum gibt es das BfZ?
       intent: faq

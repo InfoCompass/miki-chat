@@ -160,6 +160,7 @@ class ActionFilterResults(Action):
                 dispatcher.utter_message(template='utter_results_found', results_url=self._bfz_url(filters))
                 action_filter_error = None
             else:
+                logger.info('No results found')
                 dispatcher.utter_message(template='utter_no_results_found')
                 action_filter_error = 'no_results_found'
 

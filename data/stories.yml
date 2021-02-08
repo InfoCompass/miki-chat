@@ -40,7 +40,6 @@ stories:
     - action: reset_action_filter_error
     - slot_was_set:
         - action_filter_error: null
-    - action: utter_ask_another_question
     - checkpoint: before_question
 
 - story: before question filter question unknown keyword
@@ -54,7 +53,6 @@ stories:
     - action: reset_action_filter_error
     - slot_was_set:
         - action_filter_error: null
-    - action: utter_ask_question_another_form
     - checkpoint: before_question
 
 - story: before question chitchat
@@ -126,7 +124,6 @@ stories:
     - action: reset_action_filter_error
     - slot_was_set:
         - action_filter_error: null
-    - action: utter_ask_another_question
 
 - story: filter question unknown keyword
   steps:
@@ -140,7 +137,6 @@ stories:
     - action: reset_action_filter_error
     - slot_was_set:
         - action_filter_error: null
-    - action: utter_ask_question_another_form
 
 - story: filter_question confused
   steps:
