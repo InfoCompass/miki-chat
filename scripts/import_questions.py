@@ -91,28 +91,28 @@ def main():
     spreadsheet = open_spreadsheet(args)
 
     # Create directory structure
-    os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
-    os.makedirs(f'{args.output_dir}/data/chitchat', exist_ok=True)
-    os.makedirs(f'{args.output_dir}/data/filter_questions/entities', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/generated/faq', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/generated/chitchat', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/generated/filter_questions/entities', exist_ok=True)
 
     # Dump FAQ NLU data
     question_rows = get_question_sheet(spreadsheet)
-    with open(f'{args.output_dir}/data/faq/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/faq/nlu.yml', 'w') as f:
         faq = questions_answers_nlu_data(QNA_CONTEXTS, question_rows, 'faq')
         f.write(yaml.dump(faq, allow_unicode=True))
 
     question_rows = get_question_sheet(spreadsheet)
-    with open(f'{args.output_dir}/data/chitchat/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/chitchat/nlu.yml', 'w') as f:
         faq = questions_answers_nlu_data(CHITCHAT_CONTEXTS, question_rows, 'chitchat')
         f.write(yaml.dump(faq, allow_unicode=True))
 
     filter_rows = get_filter_keyword_sheet(spreadsheet)
     filter_rows = filter_keywords(args, filter_rows)
 
-    filters_df(filter_rows).to_csv(f'{args.output_dir}/data/filter_questions/entities/filter_mapping.csv', index=False)
-    synonyms_df(filter_rows).to_csv(f'{args.output_dir}/data/filter_questions/entities/filter_synonyms.csv', index=False)
+    filters_df(filter_rows).to_csv(f'{args.output_dir}/data/generated/filter_questions/entities/filter_mapping.csv', index=False)
+    synonyms_df(filter_rows).to_csv(f'{args.output_dir}/data/generated/filter_questions/entities/filter_synonyms.csv', index=False)
 
-    with open(f'{args.output_dir}/data/filter_questions/entities/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/filter_questions/entities/nlu.yml', 'w') as f:
         nlu = filters_nlu_data(filter_rows)
         f.write(yaml.dump(nlu, allow_unicode=True))
 
@@ -124,7 +124,7 @@ def main():
     log_generated_questions(new_qs)
     nlu = filter_questions_yaml(qs + new_qs)
 
-    with open(f'{args.output_dir}/data/filter_questions/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/filter_questions/nlu.yml', 'w') as f:
         f.write(yaml.dump(nlu, allow_unicode=True))
 
     if args.save_logs_to_spreadsheet:
