@@ -557,6 +557,8 @@ def get_phrases(spreadsheet):
         if key[0]=='/'
     ]
 
+    sum_logger.info(f'Phrases, Importing {len(phrases)} phrases')
+
     return phrases
 
 
