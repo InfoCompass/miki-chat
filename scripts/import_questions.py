@@ -27,6 +27,7 @@ FQ_CONTEXTS = ['/content']
 # Sheets
 SHEET_QUESTIONS = 'Fragenkatalog'
 SHEET_FILTER_KEYWORDS = 'Schlüsselwörter'
+SHEET_PHRASES = 'Imported Phrases'
 
 # Columns used in the Questions Sheet
 COL_CONTEXT = 'Context'
@@ -42,6 +43,13 @@ COL_FILTER = 'Filter ID'
 COL_KEYWORD = 'Schlüsselwörter'
 COL_SYNONYM = 'Synonym _NUMBER_'
 NUM_SYNONYMS = 15
+
+# Columns used in the phrases sheet
+COL_PHRASE_KEY = 'Key'
+COL_PHRASE_ANSWERS = [f'Answer {i+1}' for i in range(5)]
+
+# Utterances with yes/no answers
+YESNO_PHRASES = '/ask_whether_question_answered'
 
 # Automatic example generation, generate examples for the following contexts
 AUTO_GENERATE_FOR_CONTEXTS =  ['_quarter', '_language', '_targetgroup', '_topic']
@@ -91,28 +99,28 @@ def main():
     spreadsheet = open_spreadsheet(args)
 
     # Create directory structure
-    os.makedirs(f'{args.output_dir}/data/faq', exist_ok=True)
-    os.makedirs(f'{args.output_dir}/data/chitchat', exist_ok=True)
-    os.makedirs(f'{args.output_dir}/data/filter_questions/entities', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/generated/faq', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/generated/chitchat', exist_ok=True)
+    os.makedirs(f'{args.output_dir}/data/generated/filter_questions/entities', exist_ok=True)
 
     # Dump FAQ NLU data
     question_rows = get_question_sheet(spreadsheet)
-    with open(f'{args.output_dir}/data/faq/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/faq/nlu.yml', 'w') as f:
         faq = questions_answers_nlu_data(QNA_CONTEXTS, question_rows, 'faq')
         f.write(yaml.dump(faq, allow_unicode=True))
 
     question_rows = get_question_sheet(spreadsheet)
-    with open(f'{args.output_dir}/data/chitchat/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/chitchat/nlu.yml', 'w') as f:
         faq = questions_answers_nlu_data(CHITCHAT_CONTEXTS, question_rows, 'chitchat')
         f.write(yaml.dump(faq, allow_unicode=True))
 
     filter_rows = get_filter_keyword_sheet(spreadsheet)
     filter_rows = filter_keywords(args, filter_rows)
 
-    filters_df(filter_rows).to_csv(f'{args.output_dir}/data/filter_questions/entities/filter_mapping.csv', index=False)
-    synonyms_df(filter_rows).to_csv(f'{args.output_dir}/data/filter_questions/entities/filter_synonyms.csv', index=False)
+    filters_df(filter_rows).to_csv(f'{args.output_dir}/data/generated/filter_questions/entities/filter_mapping.csv', index=False)
+    synonyms_df(filter_rows).to_csv(f'{args.output_dir}/data/generated/filter_questions/entities/filter_synonyms.csv', index=False)
 
-    with open(f'{args.output_dir}/data/filter_questions/entities/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/filter_questions/entities/nlu.yml', 'w') as f:
         nlu = filters_nlu_data(filter_rows)
         f.write(yaml.dump(nlu, allow_unicode=True))
 
@@ -124,7 +132,12 @@ def main():
     log_generated_questions(new_qs)
     nlu = filter_questions_yaml(qs + new_qs)
 
-    with open(f'{args.output_dir}/data/filter_questions/nlu.yml', 'w') as f:
+    with open(f'{args.output_dir}/data/generated/filter_questions/nlu.yml', 'w') as f:
+        f.write(yaml.dump(nlu, allow_unicode=True))
+
+    phrases = get_phrases(spreadsheet)
+    with open(f'{args.output_dir}/data/generated/domain.yml', 'w') as f:
+        nlu = phrase_utterances(phrases)
         f.write(yaml.dump(nlu, allow_unicode=True))
 
     if args.save_logs_to_spreadsheet:
@@ -313,6 +326,11 @@ def filters_nlu_data(filter_rows):
              for r in filter_rows]
     })
 
+
+def create_responses(answers):
+    return '\n\n'.join(answers)
+
+
 def questions_answers_nlu_data(contexts, question_rows, main_intent):
     gs = group_by_column(question_rows, 'context')
     qa_rows = [row._replace(context=context) for context in contexts if context in gs for row in gs[context]]
@@ -332,10 +350,6 @@ def questions_answers_nlu_data(contexts, question_rows, main_intent):
 
     questions = [q for q in questions if q.question]
 
-    def create_responses(main_question, answers):
-        responses = [r + '\n' for r in answers]
-        return '\n'.join(responses)
-
     # Create faq yaml
     faq = OrderedDict({
         'version': '2.0',
@@ -346,8 +360,7 @@ def questions_answers_nlu_data(contexts, question_rows, main_intent):
                 for q in questions],
         'responses':
             OrderedDict(
-                # CONSTANT
-                {f'utter_{main_intent}/{q.intent}': [{'text': create_responses(q.question, answers)} for answers in q.answers]
+                {f'utter_{main_intent}/{q.intent}': [{'text': create_responses(answers)} for answers in q.answers]
                  for q in questions})
     })
 
@@ -431,6 +444,27 @@ def filter_questions_yaml(qs):
     })
 
 
+def phrase_utterances(phrases):
+    def gen_response(p):
+        res = []
+        for answers in p.answers:
+            d = OrderedDict()
+            d['text'] = create_responses(answers)
+            if p.key in YESNO_PHRASES:
+                d['buttons'] = [OrderedDict({'title': 'Ja', 'payload': '/affirm'}),
+                                OrderedDict({'title': 'Nein', 'payload': '/deny'})]
+            res.append(d)
+        return res
+
+    return OrderedDict({
+        'version': '2.0',
+        'responses':
+            OrderedDict(
+                {f'utter_{p.key}': gen_response(p)
+                 for p in phrases})
+    })
+
+
 def format_examples(qs):
     return '\n'.join([f'- {q}' for q in qs if q])
 
@@ -500,6 +534,33 @@ def get_filter_keyword_sheet(spreadsheet):
                 [clean(syn(r, i)) for i in range(1, NUM_SYNONYMS) if clean(syn(r, i))], True)
             for r in list_of_hashes]
     return rows
+
+
+def get_phrases(spreadsheet):
+
+    # Raw rows of the question spreadsheet
+    Phrase = namedtuple('Phrase', 'key answers')
+
+    sheet = spreadsheet.worksheet(SHEET_PHRASES)
+    list_of_hashes = sheet.get_all_records()
+
+    phrases = [Phrase(r[COL_PHRASE_KEY],
+                [r[col_answer].strip() for col_answer in COL_PHRASE_ANSWERS if r[col_answer].strip()])
+            for r in list_of_hashes]
+
+    # Post process to group variants per key
+    # There is a change of type in answers where there is a list of lists
+    # The outer list represent the variants, the inner list represents the bubbles (multiple subsequent answers)
+    gs = group_by_column(phrases, 'key')
+    phrases = [Phrase(key[1:], [phrase.answers for phrase in phrases if phrase.answers])
+        for key, phrases in gs.items()
+        if key[0]=='/'
+    ]
+
+    sum_logger.info(f'Phrases, Importing {len(phrases)} phrases')
+
+    return phrases
+
 
 #################
 # YAML rendering setup

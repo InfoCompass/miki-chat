@@ -1,0 +1,47 @@
+version: '2.0'
+responses:
+  utter_results_found:
+  - text: |-
+      Ich habe mehrere Ergebnisse gefunden.
+
+      [Hier klicken]({results_url}) um die Ergebnisse im Bfz anzuzeigen
+  utter_no_results_found:
+  - text: |-
+      Ich habe leider keine Angebote gefunden.
+
+      Sie erhalten umfangreiche Informationen in einer [Migrationsberatungsstelle](/list/s/migrationsberatung).
+
+      … oder stellen Sie mir eine andere Frage.
+  - text: |-
+      Es wurden leider keine Angebote gefunden
+
+      Sie erhalten umfangreiche Informationen in einer [Migrationsberatungsstelle](/list/s/migrationsberatung).
+
+      … oder stellen Sie mir eine andere Frage.
+  utter_keywords_not_understood:
+  - text: |-
+      Leider habe ich Ihre Anfrage nicht richtig verstanden.
+
+      Ich erkenne nicht folgende Schlüsselwörter: {keywords}
+
+      Bitte stellen Sie Ihre Frage noch einmal in anderer Form!
+  utter_dont_understand:
+  - text: |-
+      Ich habe Ihre Frage nicht verstanden.
+
+      Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders gut, wenn sie möglichst kurz formuliert sind und nur wenige Teilaspekte beinhalten.
+  utter_ask_whether_question_answered:
+  - text: Habe ich Ihre Frage richtig beantwortet?
+    buttons:
+    - title: Ja
+      payload: /affirm
+    - title: Nein
+      payload: /deny
+  utter_another_question:
+  - text: Sehr schön. Stellen Sie gerne weitere Fragen.
+  utter_rephrase_question:
+  - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders
+      gut, wenn sie möglichst kurz formuliert sind.
+  utter_default:
+  - text: Ich habe Ihre Frage leider nicht verstanden. Bitte stellen Sie Ihre Frage
+      noch einmal in anderer Form.

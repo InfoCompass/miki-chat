@@ -25,31 +25,18 @@ nlu:
     - Wie kann ich Sie anrufen?\n- Ich suche einen Ansprechpartner."
 responses:
   utter_chitchat/chitchat_start:
-  - text: 'Hallo, ich bin MIKI der Chatbot vom Beratungsnetz für Zugewanderte (BfZ)!
+  - text: Hallo, ich bin MIKI der Chatbot vom Beratungsnetz für Zugewanderte (BfZ)!
       Ich helfe bei der Suche von Inhalten und beantworte allgemeine Fragen zum BfZ
       und zur Funktionsweise der Plattform.
-
-      '
-  - text: "Sie können Fragen in das Textfeld eingeben. Bitte versuchen Sie ihre Frage\
-      \ möglichst kurz und knapp zu formulieren, dann kann ich sie besser verstehen.\
-      \ \n"
+  - text: 'Sie können Fragen in das Textfeld eingeben. Bitte versuchen Sie ihre Frage
+      möglichst kurz und knapp zu formulieren, dann kann ich sie besser verstehen. '
   utter_chitchat/chitchat_hello:
-  - text: 'Hallo! Wie kann ich Ihnen helfen?
-
-      '
-  - text: 'Hallo, ich beantworte gerne Ihre Frage!
-
-      '
-  - text: 'Hallo, fragen Sie mich gerne etwas.
-
-      '
+  - text: Hallo! Wie kann ich Ihnen helfen?
+  - text: Hallo, ich beantworte gerne Ihre Frage!
+  - text: Hallo, fragen Sie mich gerne etwas.
   utter_chitchat/chitchat_bye:
-  - text: 'Auf wiedersehen!
-
-      '
-  - text: 'Bis bald!
-
-      '
+  - text: Auf wiedersehen!
+  - text: Bis bald!
   utter_chitchat/chitchat_feedback request:
   - text: "Bitte schreiben Sie uns an: info@beratungsnetz-migration.de \n\nOder rufen\
-      \ uns an unter: +49 30 2900 6948.\n"
+      \ uns an unter: +49 30 2900 6948."
