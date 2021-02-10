@@ -57,14 +57,14 @@ rasa-x-token-debug:
 		--request POST \
 		--fail \
 		--data "{\"username\":\"me\",\"password\":\"${RASA_X_PASSWORD}\"}" \
-              http://${RASA_DOMAIN}/api/auth
+              https://${RASA_DOMAIN}/api/auth
 
 rasa-x-token.txt:
 	curl -s --header "Content-Type: application/json" \
 		--request POST \
 		--fail \
 		--data "{\"username\":\"me\",\"password\":\"${RASA_X_PASSWORD}\"}" \
-              http://${RASA_DOMAIN}/api/auth | jq -r .access_token > rasa-x-token.txt.tmp && \
+              https://${RASA_DOMAIN}/api/auth | jq -r .access_token > rasa-x-token.txt.tmp && \
     mv rasa-x-token.txt.tmp $@
 
 # It uses the most recent model (because it's not possible to specify the output in training very annoyingly
@@ -73,14 +73,14 @@ upload-model: rasa-x-token.txt
 	curl -k --fail \
       -H "Authorization: Bearer `cat $<`" \
       -F "model=@models/$$MODEL" \
-      http://${RASA_DOMAIN}/api/projects/default/models
+      https://${RASA_DOMAIN}/api/projects/default/models
 
 # It uses the most recent model (because it's not possible to specify the output in training very annoyingly
 publish-model: rasa-x-token.txt
 	MODEL=$$(ls models | sort | tail -n 1) && \
     curl -k --fail -XPUT \
       -H "Authorization: Bearer `cat $<`" \
-      http://${RASA_DOMAIN}/api/projects/default/models/$$(basename $$MODEL .tar.gz)/tags/production
+      https://${RASA_DOMAIN}/api/projects/default/models/$$(basename $$MODEL .tar.gz)/tags/production
 
 update-model: requirements-dev spreadsheet-to-model test-model
 
