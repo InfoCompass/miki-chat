@@ -52,6 +52,13 @@ spreadsheet-to-conversation-data-with-logs:
 		--save-logs-to-spreadsheet && \
 	cp -a out/data ./
 
+rasa-x-token-debug:
+	curl -s --header "Content-Type: application/json" \
+		--request POST \
+		--fail \
+		--data "{\"username\":\"me\",\"password\":\"${RASA_X_PASSWORD}\"}" \
+              http://${RASA_DOMAIN}/api/auth
+
 rasa-x-token.txt:
 	curl -s --header "Content-Type: application/json" \
 		--request POST \
