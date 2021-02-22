@@ -1,30 +1,33 @@
 synonym,filter
-rassismus gegen roma,Antiziganismus
 gadjé-rassismus,Antiziganismus
 antiziganismus,Antiziganismus
+rassismus gegen roma,Antiziganismus
 arbeitslosengeld,Arbeitslosengeld
-alg1,Arbeitslosengeld
-jobcent,Arbeitslosengeld
-alg2,Arbeitslosengeld
+algi,Arbeitslosengeld
 algii,Arbeitslosengeld
 hartz4,Arbeitslosengeld
+alg1,Arbeitslosengeld
+alg2,Arbeitslosengeld
 sozialleist,Arbeitslosengeld
-algi,Arbeitslosengeld
-aufenthaltssicher,Aufenthaltsrecht
-aufenthaltsstatus,Aufenthaltsrecht
-niederlassungserlaubnis,Aufenthaltsrecht
-aufenthalt,Aufenthaltsrecht
+jobcent,Arbeitslosengeld
+arbeitslosengeld 2,Arbeitslosengeld
 aufenthaltserlaubnis,Aufenthaltsrecht
+niederlassungserlaubnis,Aufenthaltsrecht
+aufenthaltsstatus,Aufenthaltsrecht
+aufenthaltssicher,Aufenthaltsrecht
+aufenthalt,Aufenthaltsrecht
 aufenthaltsrecht,Aufenthaltsrecht
-spataussiedl,Aussiedler
 aussiedl,Aussiedler
-berufliche ausbild,Berufliche Qualifizierung
-ausbild,Berufliche Qualifizierung
+spataussiedl,Aussiedler
 weiterbild,Berufliche Qualifizierung
+praktikum,Berufliche Qualifizierung
+ausbild,Berufliche Qualifizierung
+berufsausbild,Berufliche Qualifizierung
+berufliche ausbild,Berufliche Qualifizierung
 berufsorientier,Berufliche Qualifizierung
 berufliche qualifizier,Berufliche Qualifizierung
-praktikum,Berufliche Qualifizierung
-berufsausbild,Berufliche Qualifizierung
+berufliche anerkenn,Berufsanerkennung
+abschluss anerkenn,Berufsanerkennung
 berufsanerkenn,Berufsanerkennung
 anerkennung von abschluss,Berufsanerkennung
 anerkennung auslandischer abschluss,Berufsanerkennung
@@ -33,79 +36,78 @@ anerkennungs- und qualifizierungsberat,Berufsanerkennung
 schulabschluss,Berufsanerkennung
 iq netzwerk,Berufsanerkennung
 abschluss,Berufsanerkennung
-abschluss anerkenn,Berufsanerkennung
 berufsberat,Berufsberatung
+integrationskur,Deutschkurs
+deutschkurs,Deutschkurs
 deutschkur,Deutschkurs
 alphabetisier,Deutschkurs
-deutschkurs,Deutschkurs
 sprachkur,Deutschkurs
-integrationskur,Deutschkurs
 eu-recht,EU-Recht
 daueraufenthaltsrecht,EU-Recht
 einburger,Einbürgerung
 staatsangehor,Einbürgerung
 staatsburgerschaft,Einbürgerung
+familienzusammenfuhr,Familiennachzug
 familie nachhol,Familiennachzug
 familiennachzug,Familiennachzug
-familienzusammenfuhr,Familiennachzug
 antrag ausfull,Formular
 antragshilf,Formular
 foumular,Formular
 frauengesund,Frauengesundheit
 fruhe hilf,Frühe Hilfen
-fgm,Genitalverstümmelung
 genitalverstummel,Genitalverstümmelung
-zwangsheirat,Gewalt gegen Mädchen
+fgm,Genitalverstümmelung
+gewalt gegen madch,Gewalt gegen Mädchen
 sexismus,Gewalt gegen Mädchen
 madchennotdien,Gewalt gegen Mädchen
-gewalt gegen madch,Gewalt gegen Mädchen
+zwangsheirat,Gewalt gegen Mädchen
 hort,Hort
-hortgutschein,Hort
 hortbetreu,Hort
-gewalt gegen kind,Häusliche Gewalt
+hortgutschein,Hort
 frauenhaus,Häusliche Gewalt
+gewalt gegen kind,Häusliche Gewalt
 gewalt gegen frau,Häusliche Gewalt
 hausliche gewalt,Häusliche Gewalt
-familienleist,Kindergeld
-kinderzuschlag,Kindergeld
 kindergeld,Kindergeld
-kitagutschein,Kita
-kinderbetreu,Kita
+kinderzuschlag,Kindergeld
+familienleist,Kindergeld
 kita,Kita
+kinderbetreu,Kita
+kitagutschein,Kita
 krankenversicher,Krankenversicherung
+arztprax,Mehrsprachige Ärzte
 arzte mehrsprach,Mehrsprachige Ärzte
 mehrsprachige arzt,Mehrsprachige Ärzte
-arztprax,Mehrsprachige Ärzte
-menschen ohne papi,Menschen ohne Papiere
-illegalisiert,Menschen ohne Papiere
 menschen ohne aufenthaltsstatus,Menschen ohne Papiere
-human trafficking,Menschenhandel
+illegalisiert,Menschen ohne Papiere
+menschen ohne papi,Menschen ohne Papiere
 menschenhandel,Menschenhandel
+human trafficking,Menschenhandel
 mieterberat,Mieterberatung
 mietrecht,Mieterberatung
+ausland,Migranten
 migrant*inn,Migranten
 zugewandert,Migranten
-ausland,Migranten
 mosche,Moschee
 religionsgemeind,Moschee
 nachhilf,Nachhilfe
 hausaufgab,Nachhilfe
 hausaufgaben hilf,Nachhilfe
-notdien,Notdienst
 kris,Notdienst
 krisendien,Notdienst
+notdien,Notdienst
+juristische berat,Rechtsberatung
 rechtsberat,Rechtsberatung
 anwalt,Rechtsberatung
-juristische berat,Rechtsberatung
 rentenberat,Rente
 rent,Rente
-sinti und roma,Roma
-roma und sinti,Roma
 roma,Roma
 rroma,Roma
-ruckkehrhilf,Rückkehrhilfe
+roma und sinti,Roma
+sinti und roma,Roma
 ruckkehr,Rückkehrhilfe
 ruckkehrberat,Rückkehrhilfe
+ruckkehrhilf,Rückkehrhilfe
 msa,Schulabschluss
 schulabschluss,Schulabschluss
 schulanmeld,Schulanmeldung
@@ -115,82 +117,87 @@ sexuelle gewalt,Sexuelle Gewalt
 sozialberat,Sozialberatung
 verbraucherfrag,Verbraucherschutz
 verbraucherschutz,Verbraucherschutz
-wohnung find,accomodation
-wohnscouting,accomodation
-wohn,accomodation
-wohnungsuch,accomodation
-wohnraum,accomodation
-wohnhilf,accomodation
 wohnung such,accomodation
-sucht,addiction
-abhang,addiction
-drog,addiction
+wohnscouting,accomodation
+wohnungsuch,accomodation
+wohnhilf,accomodation
+wohnraum,accomodation
+wohnung,accomodation
+wohnung find,accomodation
+wohn,accomodation
 drogenberat,addiction
 suchtberat,addiction
+abhang,addiction
+drog,addiction
+sucht,addiction
 alban,albanian
 amhar,amharic
 arab,arabic
 arama,aramaic
 armen,armenian
-asyl- und verfahrensberat,asylum_counseling
-abschieb,asylum_counseling
-drohende abschieb,asylum_counseling
-bleibeperspektiv,asylum_counseling
+drohender abschieb,asylum_counseling
+asylverfahr,asylum_counseling
+duldung,asylum_counseling
 dublin-verfahr,asylum_counseling
+abschieb,asylum_counseling
 bleiberecht,asylum_counseling
 asylberat,asylum_counseling
-drohender abschieb,asylum_counseling
-bleibeperspektiv,asylum_counseling
 asylrechtsberat,asylum_counseling
-asylsuch,asylum_seekers
+bleibeperspektiv,asylum_counseling
+asyl- und verfahrensberat,asylum_counseling
 gefluchtet,asylum_seekers
-gefluchtet,asylum_seekers
-gefluchtet,asylum_seekers
-menschen mit fluchthintergrund,asylum_seekers
 asylbewerb,asylum_seekers
+gefluchtet,asylum_seekers
 fluchtling,asylum_seekers
+asylsuch,asylum_seekers
+menschen mit fluchthintergrund,asylum_seekers
+gefluchtet,asylum_seekers
 aserbaidschan,azerbaijani
 bengali,bengali
 besonders schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
-schutzbedurftige gefluchtet,besonders schutzbedürftige Flüchtlinge
 schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
+schutzbedurftige gefluchtet,besonders schutzbedürftige Flüchtlinge
 bulgar,bulgarian
-pflegende angehor,care
 pfleg,care
 demenz,care
-pflegebedurft,care
 pflegestutzpunkt,care
+pflegende angehor,care
+pflegebedurft,care
 charlottenburg-wilmersdorf,charlottenburg_wilmersdorf
 tschetschen,chechen
 chines,chinese
 kreolisch,creole
 dari,dari
+pfandung,debt
+schuldenfall,debt
+schuld,debt
 schuldnerberat,debt
 schuldenregulier,debt
 schuld,debt
-pfandung,debt
-schwerbehinder,disability
 beeintracht,disability
-behinder,disability
 behindertenausweis,disability
+schwerbehinder,disability
+behinder,disability
+antidiskriminier,discrimation
+diskriminier,discrimation
 rassismus,discrimation
 rechte gewalt,discrimation
-diskriminier,discrimation
-antidiskriminier,discrimation
 niederland,dutch
+senior*inn,elderly
+seniorinn,elderly
+senior,elderly
 menschen im alt,elderly
 alt,elderly
-senior,elderly
-seniorinn,elderly
-senior*inn,elderly
 englisch,english
-eu-burg,eu_citizens
-eu-burger*inn,eu_citizens
-eu-ausland,eu_citizens
 unionsburg,eu_citizens
-familienkonflikt,family_conflict
-familienberat,family_conflict
+eu-burg,eu_citizens
+eu-ausland,eu_citizens
+eu-burger*inn,eu_citizens
+familienberatungsstell,family_conflict
 erziehungsberat,family_conflict
+erziehungsberatungsstell,family_conflict
+familienberat,family_conflict
+familienkonflikt,family_conflict
 farsi,farsi
 straftat,felony
 haft,felony
@@ -198,12 +205,11 @@ franzos,french
 friedrichshain-kreuzberg,friedrichshain_kreuzberg
 griechisch,greek
 gesund,health
-arzt,health
 hebraisch,hebrew
 hindi,hindu
 obdachlos,houseless
-wohnungslos,houseless
 obdachlos,houseless
+wohnungslos,houseless
 wohnungslos,houseless
 ungar,hungarian
 italien,italian
@@ -211,44 +217,46 @@ japan,japanese
 kikuyu,kikuyu
 korean,korean
 kurdisch,kurdish
-arbeit,labour
 arbeit und bild,labour
+arbeit,labour
 bildung,labour
 arbeit,labour
 arbeit such,labour
 arbeit find,labour
 lasisch,laz
-schwul,lgbtqi
-lesbisch,lgbtqi
-transperson,lgbtqi
 tran,lgbtqi
+lesbisch,lgbtqi
 lgbtiq,lgbtqi
 lgbttiq*,lgbtqi
-lgbt,lgbtqi
-lgbtiq*,lgbtqi
 queer,lgbtqi
 lsbti,lgbtqi
+lgbt,lgbtqi
+transperson,lgbtqi
+lgbtiq*,lgbtqi
+schwul,lgbtqi
 lichtenberg,lichtenberg
 litau,lithuanian
 luo,luo
 mazedon,macedonian
 marzahn-hellersdorf,marzahn_hellersdorf
-depression,mental_health
 traumatisier,mental_health
-trauma,mental_health
 ptbs,mental_health
-psychische krank,mental_health
-psychische gesund,mental_health
-psychologische berat,mental_health
 psychotherapi,mental_health
+psychologische berat,mental_health
+depression,mental_health
+psychische gesund,mental_health
+psychische krank,mental_health
+kris,mental_health
+trauma,mental_health
 migrationsberat,migration_counseling
 sonstig,misc_target
 mitt,mitte
 montenegrin,montenegrin
 nepali,nepali
 neukolln,neukoelln
-ohne krankenversicher,no_health_insurance
 keine krankenversicher,no_health_insurance
+ohne krankenversicher,no_health_insurance
+clearingstell,no_health_insurance
 oromo,oromo
 pankow,pankow
 paschtu,pashto
@@ -273,18 +281,19 @@ spandau,spandau
 spanisch,spanish
 sport,sport
 steglitz-zehlendorf,steglitz_zehlendorf
-hiv und sti,sti
 sexuelle gesund,sti
-aid,sti
-sexuell ubertragbare krank,sti
 sti,sti
 hiv,sti
+sexuell ubertragbare krank,sti
+aid,sti
+hiv und sti,sti
 finnisch,suomi
+begleitung und sprachmittl,support
+sprachmittl,support
+begleit,support
 integrationslots,support
 dolmetsch,support
-begleit,support
-sprachmittl,support
-begleitung und sprachmittl,support
+ubersetz,support
 kisuaheli,swahili
 tadschik,tajiki
 tempelhof-schoneberg,tempelhof_schoeneberg
@@ -294,21 +303,23 @@ treptow-kopenick,treptow_koepenik
 turkisch,turkish
 turkmen,turkmen
 ukrain,ukranian
+unbegleitete minderjahrige gefluchtet,unbegleitete minderjährige Flüchtlinge
+minderjahr,unbegleitete minderjährige Flüchtlinge
 minderjahrige fluchtling,unbegleitete minderjährige Flüchtlinge
 umf,unbegleitete minderjährige Flüchtlinge
 unbegleitete minderjahrige fluchtling,unbegleitete minderjährige Flüchtlinge
-unbegleitete minderjahrige gefluchtet,unbegleitete minderjährige Flüchtlinge
-minderjahr,unbegleitete minderjährige Flüchtlinge
 urdu,urdu
 usbek,uzbek
 vietnames,vietnamese
+stalking,violence
 antigewalt,violence
-opf,violence
 gewalt,violence
+opf,violence
+opferberat,violence
 wolof,wolof
 frau,women
-jmd,young
-junge mensch,young
-jugend,young
-kind,young
 kinder und jugend,young
+kind,young
+jugend,young
+junge mensch,young
+jmd,young

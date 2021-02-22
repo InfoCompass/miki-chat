@@ -10,9 +10,9 @@ nlu:
     - Bleibeperspektive
     - Bleiberecht
     - Abschiebung
-    - Bleibeperspektiven
+    - Asylverfahren
     - drohender Abschiebung
-    - drohende Abschiebung
+    - Duldung
     - Dublin-Verfahren
 - synonym: support
   examples: |-
@@ -21,6 +21,7 @@ nlu:
     - Begleitung
     - Dolmetschen
     - Integrationslotsen
+    - Übersetzung
 - synonym: labour
   examples: |-
     - Arbeit und Bildung
@@ -30,9 +31,7 @@ nlu:
     - Arbeit suchen
     - Arbeit finden
 - synonym: health
-  examples: |-
-    - Gesundheit
-    - Arzt
+  examples: '- Gesundheit'
 - synonym: mental_health
   examples: |-
     - Psychische Krankheit
@@ -43,6 +42,7 @@ nlu:
     - PTBS
     - Trauma
     - Traumatisierung
+    - Krise
 - synonym: sti
   examples: |-
     - HIV und STI
@@ -86,6 +86,7 @@ nlu:
     - Wohnhilfe
     - Wohnung suchen
     - Wohnung finden
+    - Wohnung
 - synonym: discrimation
   examples: |-
     - Antidiskriminierung
@@ -97,17 +98,23 @@ nlu:
     - Antigewalt
     - Gewalt
     - Opfer
+    - Stalking
+    - Opferberatung
 - synonym: debt
   examples: |-
     - Schulden
     - Schuldnerberatung
     - Schuldenregulierung
     - Pfändung
+    - Schuldenfalle
+    - Schulden
 - synonym: family_conflict
   examples: |-
     - Familienkonflikt
     - Familienberatung
     - Erziehungsberatung
+    - Erziehungsberatungsstelle
+    - Familienberatungsstelle
 - synonym: sex_work
   examples: |-
     - Sexarbeit
@@ -198,6 +205,7 @@ nlu:
     - IQ Netzwerk
     - Abschluss
     - Abschluss anerkennen
+    - berufliche Anerkennung
 - synonym: Rente
   examples: |-
     - Rente
@@ -292,6 +300,7 @@ nlu:
     - ALGII
     - ALGI
     - Sozialleistung
+    - Arbeitslosengeld 2
 - synonym: Rückkehrhilfe
   examples: |-
     - Rückkehrhilfe
@@ -347,6 +356,7 @@ nlu:
   examples: |-
     - Ohne Krankenversicherung
     - keine Krankenversicherung
+    - Clearingstelle
 - synonym: houseless
   examples: |-
     - Wohnungslose

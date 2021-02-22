@@ -306,9 +306,11 @@ nlu:
     - Welche JMD gibt es?
     - Haben sie Informationen zu JMD?
 - intent: faq/specialitems_mehrsprachige Ärzte
-  examples: "- Finde ich mehrsprachige Ärzte im BfZ?\n- Finde ich mehrsprachige Ärzte\
-    \ im BfZ?\n- Wer kennt sich aus mit mehrsprachigen Ärzten?\n- Wer ist spezialisiert\
-    \ auf mehrsprachige medizinische Beratung?\n- Haben sie Informationen zu "
+  examples: |-
+    - Finde ich mehrsprachige Ärzte im BfZ?
+    - Finde ich mehrsprachige Ärzte im BfZ?
+    - Wer kennt sich aus mit mehrsprachigen Ärzten?
+    - Wer ist spezialisiert auf mehrsprachige medizinische Beratung?
 - intent: faq/specialitems_Integrationslotsen
   examples: |-
     - Finde ich Integrationslots*innen im BfZ?
@@ -329,6 +331,11 @@ nlu:
     - Finde ich Beratung zum Ausfüllen von Anträgen im BfZ?
     - Finde ich Hilfe zum Formular für das Jobcenter?
     - Wer hilfr mir beimAusfüllen vom Antrag?
+- intent: faq/specialitems_Selbsthilfe
+  examples: |-
+    - Finde ich Beratung zur Selbsthilfe im BfZ?
+    - Finde ich Beratung zur Selbsthilfe?
+    - Wer kann mich zur Selbsthilfegruppe beraten?
 responses:
   utter_faq/bfz_goal:
   - text: |-
@@ -497,6 +504,8 @@ responses:
       [KommMit-BBZ](/list/item/0a50e4fc98eed87b/s/bbz) ist die Fachstelle für minderjährige und unbegleitete minderjährige Flüchtlinge.
 
       Beim BumF – [Bundesfachverband unbegleitete minderjährige Flüchtlinge](/list/item/bf68547fc22b7805/s/UNBEGLEITETE%20minderj%C3%A4hrige) finden Sie außerdem umfassende Beratung auch für Haupt- und Ehrenamtliche.
+
+      Erstaufnahme- und Clearingstelle (EAC) finden Sie [hier](/list/item/8142493b84606884/s/netzwerk)
   utter_faq/specialitems_Häusliche Gewalt:
   - text: |-
       Was Sie möchten wissen: "Wo erhalte ich Beratung zum Thema Häusliche Gewalt?"
@@ -533,10 +542,10 @@ responses:
 
       [Jugendmigrationsdienste (JMD)](/list/u/bamf_jmd) sind im BfZ komplett erfasst und können über diesen Link aufgerufen werden:
   utter_faq/specialitems_mehrsprachige Ärzte:
-  - text: |-
-      Was Sie möchten wissen: "Finde ich mehrsprachige Ärzte im BfZ?"
-
-      Welche Mehrgenerationenhäuser gibt es?
+  - text: "Was Sie möchten wissen: \"Finde ich mehrsprachige Ärzte im BfZ?\"\n\nIm\
+      \ BfZ sind keine Daten von mehrsprachigen Ärzten erfasst. \n\nSie können aber\
+      \ bei der [KV Berlin](https://www.kvberlin.de/fuer-patienten/arzt-und-psychotherapeutensuche)\
+      \ Ärzt*innen nach Sprache suchen."
   utter_faq/specialitems_Integrationslotsen:
   - text: |-
       Was Sie möchten wissen: "Finde ich Integrationslots*innen im BfZ?"
@@ -562,3 +571,8 @@ responses:
       Die Ergebnisse können Sie nach Sprache oder Bezirken filtern.
 
       [Hier](/list/item/d6fa326129e44ba5/s/formular) finden Sie außerdem die Übersetzungen von Formularen als Ausfüllhilfe.
+  utter_faq/specialitems_Selbsthilfe:
+  - text: "Was Sie möchten wissen: \"Finde ich Beratung zur Selbsthilfe im BfZ?\"\n\
+      \nEine Übersicht der Selbsthilfegruppen finden Sie bei [SEKIS](https://www.sekis-berlin.de/selbsthilfe/suche-nach-gruppen).\n\
+      \nZur Selbsthilfe und Migration bekommen Sie [hier](/list/item/6d775c9db12ec860/l/none/s/selbsthilfe)\
+      \ eine Beratung. "
