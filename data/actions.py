@@ -149,6 +149,9 @@ class ActionFilterResults(Action):
                     logger.info(f'Resolving synonym {f} to {self.synonym_to_filter[stemmed]}')
                     filters.append(self.synonym_to_filter[stemmed])
 
+        # Deduplicate filters
+        filters = list(set(filters))
+
         if not filters:
             dispatcher.utter_message(template='utter_keywords_not_understood', keywords=self._format(raw_filters))
             action_filter_error = 'keyword_not_understood'
