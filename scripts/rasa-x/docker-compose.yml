@@ -45,7 +45,7 @@ x-rasa-credentials: &rasa-credentials
 
 x-rasa-services: &default-rasa-service
   restart: always
-  image: "rasa/rasa:${RASA_VERSION}-full"
+  image: "mikichatbot/miki-chat:${MIKI_VERSION}"
   volumes:
       - ./.config:/.config
   expose:

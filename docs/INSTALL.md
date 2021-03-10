@@ -179,3 +179,10 @@ Just recapping the above, the steps have to be done in the following order:
  * Deploy up-to-date version of action server
  * Publish model to production
 
+# Rasa Extensions
+
+The Chatbot is now using custom extensions to the NLU pipeline. In order to load them,
+the `x-rasa-services` has to use the `miki-chat` image rather than the `rasa` full image.
+The `docker-compose.yml` file in the repository is already updated to do exactly that
+(line 48), but if you have an older `docker-compose.yml` installed, you will need to
+perform the change manually.
