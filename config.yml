@@ -1,6 +1,7 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
 language: de
+# language: de_core_news_lg
 
 pipeline:
 # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
@@ -25,8 +26,12 @@ pipeline:
     retrieval_intent: chitchat
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.65
+    threshold: 0.8
     ambiguity_threshold: 0.1
+  - name: fallback.SingleTokenFallbackClassifier
+    threshold: 0.95
+    intent_name: single_word
+    maximum_num_tokens: 1
 
 #  - name: fallback.SingleTokenFallbackClassifier
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
