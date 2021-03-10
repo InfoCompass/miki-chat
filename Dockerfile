@@ -7,6 +7,10 @@ RUN pip install nltk==3.5
 
 COPY . /miki-chat
 
+RUN mkdir /rasa-extensions
+COPY fallback.py /rasa-extensions
+ENV PYTHONPATH "${PYTHONPATH}:/rasa-extensions"
+
 WORKDIR /miki-chat
 
 CMD ["run", "actions", "--actions", "data"]

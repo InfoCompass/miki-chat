@@ -50,7 +50,7 @@ responses:
   utter_default:
   - text: Ich habe Ihre Frage leider nicht verstanden. Bitte stellen Sie Ihre Frage
       noch einmal in anderer Form.
-  utter_single-word-request:
+  utter_single_word_request:
   - text: Nutzen Sie für Einzelbegriffe bitte die Suchfunktion (Textfeld oben im Fenster).
   - text: Bitte stelle mir eine Frage. Für einzelne Begriffe bitte die Suche nutzen!
       (oben im Fenster)

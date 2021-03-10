@@ -60,6 +60,12 @@ stories:
     - action: utter_chitchat
     - checkpoint: before_question
 
+- story: before question single token
+  steps:
+    - intent: single_word
+    - action: utter_single_word_request
+    - checkpoint: before_question
+
 # The following three make it possible for the user to ask a question even when a yes no answer is required
 - story: faq before check
   steps:
@@ -148,6 +154,12 @@ stories:
     - checkpoint: before_question
     - intent: chitchat
     - action: utter_chitchat
+
+- story: before question single word
+  steps:
+    - checkpoint: before_question
+    - intent: single_word
+    - action: utter_single_word_request
 
 ## Continuing the check after a question
 
