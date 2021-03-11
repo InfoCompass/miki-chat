@@ -44,7 +44,7 @@ responses:
     - title: Nein
       payload: /deny
   utter_another_question:
-  - text: Sehr schön. Stellen Sie mir gerne noch weitere Fragen.
+  - text: Stellen Sie mir gerne noch weitere Fragen.
   utter_rephrase_question:
   - text: Bitte stellen Sie Ihre Frage noch einmal. Ich verstehe Fragen besonders
       gut, wenn sie kurz formuliert sind.

@@ -12,16 +12,12 @@ stories:
         welche angebote gibt es für [kinder]{"entity": "filter", "value": "young"}?
       intent: filter_question
     - action: action_filter_results
-    - action: utter_ask_whether_question_answered
-    - user: |
-        ja
-      intent: affirm
     - action: utter_another_question
     - user: |
         warum gibt es das bfz?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
 
 - story: negative repetition path
   steps:
@@ -33,16 +29,12 @@ stories:
         Warum gibt es das BfZ?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
-    - user: |
-        Nein
-      intent: deny
-    - action: utter_rephrase_question
+    - action: utter_another_question
     - user: |
         Warum gibt es das BfZ?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
 
 - story: direct repetition after no results from backend
   steps:
@@ -63,7 +55,7 @@ stories:
         Warum gibt es das BfZ?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
 
 - story: chit chat does not interfere with Q&A
   steps:
@@ -79,7 +71,7 @@ stories:
         Warum gibt es das BfZ?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
 
 - story: test that user can ask a question (chitchat) when a yes/no is required
   steps:
@@ -91,7 +83,7 @@ stories:
         Warum gibt es das BfZ?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
     - user: |
         Hallo
       intent: chitchat
@@ -107,12 +99,12 @@ stories:
         warum gibt es das bfz?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
     - user: |
         warum gibt es das bfz?
       intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
 
 
 # The following tests are tricky.

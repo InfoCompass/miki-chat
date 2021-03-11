@@ -60,6 +60,31 @@ stories:
     - action: utter_chitchat
     - checkpoint: before_question
 
+- story: before question faq
+  steps:
+    - intent: faq
+    - action: utter_faq
+    - action: utter_another_question
+    - checkpoint: before_question
+
+- story: before question faq with filter keywords
+  steps:
+    - intent: faq
+      entities:
+        - filter
+    - action: utter_faq
+    - action: utter_another_question
+    - checkpoint: before_question
+
+- story: before question filter question
+  steps:
+    - intent: filter_question
+      entities:
+        - filter
+    - action: action_filter_results
+    - action: utter_another_question
+    - checkpoint: before_question
+
 - story: before question single token
   steps:
     - intent: single_word
@@ -71,7 +96,7 @@ stories:
   steps:
     - intent: faq
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
     - checkpoint: before_question
 
 - story: faq with filter keywords before check
@@ -80,7 +105,7 @@ stories:
       entities:
         - filter
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
     - checkpoint: before_question
 
 - story: filter question before check
@@ -89,7 +114,7 @@ stories:
       entities:
         - filter
     - action: action_filter_results
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
     - checkpoint: before_question
 
 - story: faq
@@ -97,7 +122,7 @@ stories:
   - checkpoint: before_question
   - intent: faq
   - action: utter_faq
-  - action: utter_ask_whether_question_answered
+  - action: utter_another_question
 
 - story: faq with filter keywords
   steps:
@@ -106,7 +131,7 @@ stories:
       entities:
       - filter
     - action: utter_faq
-    - action: utter_ask_whether_question_answered
+    - action: utter_another_question
 
 - story: filter question
   steps:
@@ -115,7 +140,7 @@ stories:
     entities:
       - filter
   - action: action_filter_results
-  - action: utter_ask_whether_question_answered
+  - action: utter_another_question
 
 - story: filter question no results
   steps:
@@ -161,42 +186,4 @@ stories:
     - intent: single_word
     - action: utter_single_word_request
 
-## Continuing the check after a question
-
-- story: faq before check
-  steps:
-  - intent: faq
-  - action: utter_faq
-  - action: utter_ask_whether_question_answered
-  - checkpoint: before_check
-
-- story: faq with filter keywords before check
-  steps:
-  - intent: faq
-    entities:
-      - filter
-  - action: utter_faq
-  - action: utter_ask_whether_question_answered
-  - checkpoint: before_check
-
-- story: filter question before check
-  steps:
-  - intent: filter_question
-    entities:
-      - filter
-  - action: action_filter_results
-  - action: utter_ask_whether_question_answered
-  - checkpoint: before_check
-
-- story: check answered positive
-  steps:
-  - checkpoint: before_check
-  - intent: affirm
-  - action: utter_another_question
-
-- story: check answered negative
-  steps:
-  - checkpoint: before_check
-  - intent: deny
-  - action: utter_rephrase_question
 
