@@ -2,10 +2,13 @@ version: '2.0'
 responses:
   utter_results_found:
   - text: |-
+      Ich konnte verschiedene Ergebnisse finden:
+
+      [Hier klicken]({results_url}) um die Ergebnisse im Bfz anzuzeigen.
+  - text: |-
       Ich habe einige Ergebnisse gefunden:
 
       [Hier klicken]({results_url}) um die Ergebnisse im Bfz anzuzeigen.
-  - text: 'Ich konnte verschiedene Ergebnisse finden:'
   utter_no_results_found:
   - text: |-
       Ich habe leider keine Angebote gefunden.
