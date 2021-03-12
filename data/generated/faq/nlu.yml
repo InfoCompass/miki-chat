@@ -178,7 +178,7 @@ nlu:
     - Ich suche Kinder- und Jugendzentren.
 - intent: faq/specialitems_Frauencafé
   examples: |-
-    - Finde ich Informationen zu [Frauen]zentren im BfZ?
+    - Finde ich Informationen zu Frauenzentren im BfZ?
     - Ich suche Frauenzentren
     - Ich suche Frauenzentren
     - Ich suche Frauencafés
@@ -466,12 +466,12 @@ responses:
       Informationen zu Jugendclubs [erhalten Sie hier](https://www.berlin.de/familie/de/informationen/jugendfreizeiteinrichtungen-in-berlin-289).
   utter_faq/specialitems_Frauencafé:
   - text: |-
-      Was Sie möchten wissen: "Finde ich Informationen zu [Frauen]zentren im BfZ?"
+      Sie möchten wissen: "Finde ich Informationen zu Frauenzentren im BfZ?"
 
       Informationen zu Frauenzentren [erhalten Sie hier](https://www.berlin.de/sen/Frauen/vielfalt/soziale-und-kulturelle-projekte/).
   utter_faq/specialitems_Sprachcafé:
   - text: |-
-      Was Sie möchten wissen: "Finde ich Informationen zu Sprachcafés im BfZ?"
+      Sie möchten wissen: "Finde ich Informationen zu Sprachcafés im BfZ?"
 
       Informationen zu Sprachcafés [erhalten Sie hier](https://www.info-compass.net/list/l/de/s/sprachcafe/t/location).
   utter_faq/specialitems_Nachbarschaftszentrum:
