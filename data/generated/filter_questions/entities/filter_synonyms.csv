@@ -1,210 +1,213 @@
 synonym,filter
+antiziganismus,Antiziganismus
 gadjé-rassismus,Antiziganismus
 rassismus gegen roma,Antiziganismus
-antiziganismus,Antiziganismus
-arbeitslosengeld 2,Arbeitslosengeld
-sozialleist,Arbeitslosengeld
-algi,Arbeitslosengeld
-algii,Arbeitslosengeld
-hartz4,Arbeitslosengeld
-alg2,Arbeitslosengeld
-jobcent,Arbeitslosengeld
-alg1,Arbeitslosengeld
 arbeitslosengeld,Arbeitslosengeld
-aufenthalt,Aufenthaltsrecht
+alg1,Arbeitslosengeld
+alg2,Arbeitslosengeld
+hartz4,Arbeitslosengeld
+algii,Arbeitslosengeld
+algi,Arbeitslosengeld
+sozialleist,Arbeitslosengeld
+arbeitslosengeld 2,Arbeitslosengeld
+jobcent,Arbeitslosengeld
 aufenthaltserlaubnis,Aufenthaltsrecht
-aufenthaltssicher,Aufenthaltsrecht
-aufenthaltsstatus,Aufenthaltsrecht
 aufenthaltsrecht,Aufenthaltsrecht
+aufenthaltsstatus,Aufenthaltsrecht
+aufenthaltssicher,Aufenthaltsrecht
+aufenthalt,Aufenthaltsrecht
 niederlassungserlaubnis,Aufenthaltsrecht
-aussiedl,Aussiedler
 spataussiedl,Aussiedler
+aussiedl,Aussiedler
 praktikum,Berufliche Qualifizierung
-berufliche qualifizier,Berufliche Qualifizierung
-berufsausbild,Berufliche Qualifizierung
 weiterbild,Berufliche Qualifizierung
-berufliche ausbild,Berufliche Qualifizierung
 berufsorientier,Berufliche Qualifizierung
+berufsausbild,Berufliche Qualifizierung
+berufliche qualifizier,Berufliche Qualifizierung
 ausbild,Berufliche Qualifizierung
-berufsanerkenn,Berufsanerkennung
-anerkennung von abschluss,Berufsanerkennung
-anerkennung auslandischer abschluss,Berufsanerkennung
-anerkennungsberat,Berufsanerkennung
-anerkennungs- und qualifizierungsberat,Berufsanerkennung
-schulabschluss,Berufsanerkennung
+berufliche ausbild,Berufliche Qualifizierung
 abschluss,Berufsanerkennung
-abschluss anerkenn,Berufsanerkennung
-berufliche anerkenn,Berufsanerkennung
 iq netzwerk,Berufsanerkennung
+schulabschluss,Berufsanerkennung
+anerkennung von abschluss,Berufsanerkennung
+anerkennungs- und qualifizierungsberat,Berufsanerkennung
+anerkennungsberat,Berufsanerkennung
+abschluss anerkenn,Berufsanerkennung
+anerkennung auslandischer abschluss,Berufsanerkennung
+berufliche anerkenn,Berufsanerkennung
+berufsanerkenn,Berufsanerkennung
 berufsberat,Berufsberatung
-deutschkurs,Deutschkurs
-integrationskur,Deutschkurs
-sprachkur,Deutschkurs
-alphabetisier,Deutschkurs
 deutschkur,Deutschkurs
-eu-recht,EU-Recht
+alphabetisier,Deutschkurs
+sprachkur,Deutschkurs
+integrationskur,Deutschkurs
+deutschkurs,Deutschkurs
 daueraufenthaltsrecht,EU-Recht
-staatsburgerschaft,Einbürgerung
-staatsangehor,Einbürgerung
+eu-recht,EU-Recht
 einburger,Einbürgerung
+staatsangehor,Einbürgerung
+staatsburgerschaft,Einbürgerung
 familiennachzug,Familiennachzug
 familienzusammenfuhr,Familiennachzug
 familie nachhol,Familiennachzug
 antrag ausfull,Formular
-foumular,Formular
 antragshilf,Formular
+foumular,Formular
 frauengesund,Frauengesundheit
 fruhe hilf,Frühe Hilfen
-genitalverstummel,Genitalverstümmelung
 fgm,Genitalverstümmelung
-sexismus,Gewalt gegen Mädchen
+genitalverstummel,Genitalverstümmelung
 madchennotdien,Gewalt gegen Mädchen
-zwangsheirat,Gewalt gegen Mädchen
 gewalt gegen madch,Gewalt gegen Mädchen
-hortgutschein,Hort
+zwangsheirat,Gewalt gegen Mädchen
+sexismus,Gewalt gegen Mädchen
 hort,Hort
 hortbetreu,Hort
+hortgutschein,Hort
+frauenhaus,Häusliche Gewalt
 gewalt gegen kind,Häusliche Gewalt
 gewalt gegen frau,Häusliche Gewalt
 hausliche gewalt,Häusliche Gewalt
-frauenhaus,Häusliche Gewalt
+kindergeld,Kindergeld
 familienleist,Kindergeld
 kinderzuschlag,Kindergeld
-kindergeld,Kindergeld
 kitagutschein,Kita
 kinderbetreu,Kita
 kita,Kita
 krankenversicher,Krankenversicherung
-arzt,Mehrsprachige Ärzte
-arzte mehrsprach,Mehrsprachige Ärzte
 arztprax,Mehrsprachige Ärzte
+arzte mehrsprach,Mehrsprachige Ärzte
 mehrsprachige arzt,Mehrsprachige Ärzte
-illegalisiert,Menschen ohne Papiere
+arzt,Mehrsprachige Ärzte
 menschen ohne aufenthaltsstatus,Menschen ohne Papiere
+illegalisiert,Menschen ohne Papiere
 menschen ohne papi,Menschen ohne Papiere
 menschenhandel,Menschenhandel
 human trafficking,Menschenhandel
 mieterberat,Mieterberatung
 mietrecht,Mieterberatung
 zugewandert,Migranten
-ausland,Migranten
 migrant*inn,Migranten
-religionsgemeind,Moschee
+ausland,Migranten
 mosche,Moschee
-hausaufgaben hilf,Nachhilfe
-hausaufgab,Nachhilfe
+religionsgemeind,Moschee
 nachhilf,Nachhilfe
+hausaufgab,Nachhilfe
+hausaufgaben hilf,Nachhilfe
 kris,Notdienst
 notdien,Notdienst
 krisendien,Notdienst
 juristische berat,Rechtsberatung
-anwalt,Rechtsberatung
 rechtsberat,Rechtsberatung
+anwalt,Rechtsberatung
 rentenberat,Rente
 rent,Rente
-sinti und roma,Roma
-roma,Roma
-roma und sinti,Roma
 rroma,Roma
-ruckkehr,Rückkehrhilfe
-ruckkehrberat,Rückkehrhilfe
+sinti und roma,Roma
+roma und sinti,Roma
+roma,Roma
 ruckkehrhilf,Rückkehrhilfe
-msa,Schulabschluss
+ruckkehrberat,Rückkehrhilfe
+ruckkehr,Rückkehrhilfe
 schulabschluss,Schulabschluss
+msa,Schulabschluss
 schulwechsel,Schulanmeldung
 schulanmeld,Schulanmeldung
 sexuelle gewalt,Sexuelle Gewalt
 sexualisierte gewalt,Sexuelle Gewalt
 sozialberat,Sozialberatung
-verbraucherfrag,Verbraucherschutz
 verbraucherschutz,Verbraucherschutz
-wohnhilf,accomodation
-wohnungsuch,accomodation
-wohnscouting,accomodation
+verbraucherfrag,Verbraucherschutz
 wohn,accomodation
+wohnscouting,accomodation
+wohnungsuch,accomodation
+wohnhilf,accomodation
 wohnung such,accomodation
 wohnung find,accomodation
 wohnung,accomodation
 wohnraum,accomodation
+suchtberat,addiction
+drogenberat,addiction
+sucht,addiction
 drog,addiction
 abhang,addiction
-sucht,addiction
-drogenberat,addiction
-suchtberat,addiction
 alban,albanian
 amhar,amharic
 arab,arabic
 arama,aramaic
 armen,armenian
+dublin-verfahr,asylum_counseling
 duldung,asylum_counseling
+bleibeperspektiv,asylum_counseling
 drohender abschieb,asylum_counseling
 asyl- und verfahrensberat,asylum_counseling
-asylberat,asylum_counseling
-bleibeperspektiv,asylum_counseling
+asylrechtsberat,asylum_counseling
 abschieb,asylum_counseling
 bleiberecht,asylum_counseling
-dublin-verfahr,asylum_counseling
 asylverfahr,asylum_counseling
-asylrechtsberat,asylum_counseling
-menschen mit fluchthintergrund,asylum_seekers
+asylberat,asylum_counseling
+asylsuch,asylum_seekers
+gefluchtet,asylum_seekers
+gefluchtet,asylum_seekers
 gefluchtet,asylum_seekers
 fluchtling,asylum_seekers
-asylsuch,asylum_seekers
 asylbewerb,asylum_seekers
-gefluchtet,asylum_seekers
-gefluchtet,asylum_seekers
+menschen mit fluchthintergrund,asylum_seekers
 aserbaidschan,azerbaijani
 bengali,bengali
-besonders schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
 schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
 schutzbedurftige gefluchtet,besonders schutzbedürftige Flüchtlinge
+besonders schutzbedurftige fluchtling,besonders schutzbedürftige Flüchtlinge
 bulgar,bulgarian
-pflegestutzpunkt,care
-pflegebedurft,care
-demenz,care
-pfleg,care
 pflegende angehor,care
+pfleg,care
+demenz,care
+pflegebedurft,care
+pflegestutzpunkt,care
 charlottenburg-wilmersdorf,charlottenburg_wilmersdorf
 tschetschen,chechen
 chines,chinese
 kreolisch,creole
 dari,dari
-schuldenfall,debt
-pfandung,debt
-schuldenregulier,debt
+schuld,debt
+schuld,debt
 schuldnerberat,debt
-schuld,debt
-schuld,debt
+pfandung,debt
+schuldenfall,debt
+schuldenregulier,debt
+behindertenausweis,disability
+schwerbehinder,disability
 behinder,disability
 beeintracht,disability
-schwerbehinder,disability
-behindertenausweis,disability
 rechte gewalt,discrimation
 rassismus,discrimation
-diskriminier,discrimation
 antidiskriminier,discrimation
+diskriminier,discrimation
 niederland,dutch
-senior*inn,elderly
-senior,elderly
 seniorinn,elderly
 alt,elderly
 menschen im alt,elderly
+senior*inn,elderly
+senior,elderly
 englisch,english
-eu-burg,eu_citizens
-eu-ausland,eu_citizens
 eu-burger*inn,eu_citizens
+eu-ausland,eu_citizens
+eu-burg,eu_citizens
 unionsburg,eu_citizens
+familienberatungsstell,family_conflict
 familienberat,family_conflict
 erziehungsberat,family_conflict
-familienberatungsstell,family_conflict
-familienkonflikt,family_conflict
 erziehungsberatungsstell,family_conflict
+familienkonflikt,family_conflict
 farsi,farsi
-straftat,felony
 haft,felony
+straftat,felony
 franzos,french
 friedrichshain-kreuzberg,friedrichshain_kreuzberg
 griechisch,greek
+gesund,health
+krank,health
+krankheit,health
 gesund,health
 hebraisch,hebrew
 hindi,hindu
@@ -218,37 +221,40 @@ japan,japanese
 kikuyu,kikuyu
 korean,korean
 kurdisch,kurdish
-arbeit,labour
-arbeit und bild,labour
 bildung,labour
 arbeit,labour
-arbeit such,labour
+job,labour
+jobsuch,labour
+arbeitssuch,labour
 arbeit find,labour
+arbeit such,labour
+arbeit,labour
+arbeit und bild,labour
 lasisch,laz
-tran,lgbtqi
+transperson,lgbtqi
 lesbisch,lgbtqi
-lgbtiq,lgbtqi
+schwul,lgbtqi
+lsbti,lgbtqi
+lgbt,lgbtqi
+lgbttiq*,lgbtqi
 lgbtiq*,lgbtqi
 queer,lgbtqi
-lgbttiq*,lgbtqi
-lgbt,lgbtqi
-transperson,lgbtqi
-lsbti,lgbtqi
-schwul,lgbtqi
+tran,lgbtqi
+lgbtiq,lgbtqi
 lichtenberg,lichtenberg
 litau,lithuanian
 luo,luo
 mazedon,macedonian
 marzahn-hellersdorf,marzahn_hellersdorf
-traumatisier,mental_health
 kris,mental_health
+trauma,mental_health
+ptbs,mental_health
 psychotherapi,mental_health
 psychologische berat,mental_health
 depression,mental_health
 psychische gesund,mental_health
 psychische krank,mental_health
-trauma,mental_health
-ptbs,mental_health
+traumatisier,mental_health
 migrationsberat,migration_counseling
 sonstig,misc_target
 mitt,mitte

@@ -30,8 +30,15 @@ nlu:
     - arbeiten
     - Arbeit suchen
     - Arbeit finden
+    - Arbeitssuche
+    - Jobsuche
+    - Job
 - synonym: health
-  examples: '- Gesundheit'
+  examples: |-
+    - Gesundheit
+    - Krankheit
+    - krank
+    - gesund
 - synonym: mental_health
   examples: |-
     - Psychische Krankheit

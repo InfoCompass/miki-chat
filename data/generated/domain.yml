@@ -22,8 +22,14 @@ responses:
       Sie erhalten umfangreiche Informationen in einer [Migrationsberatungsstelle](/list/s/migrationsberatung).
 
       … oder stellen Sie mir eine andere Frage.
-  - text: Leider konnte ich zu Ihrer Anfrage keine Ergebnisse finden.
-  - text: Entschuldigen Sie bitte, aber zu dieser Frage kann ich keine Antwort finden.
+  - text: |-
+      Leider konnte ich zu Ihrer Anfrage keine Ergebnisse finden.
+
+      Sie erhalten umfangreiche Informationen in einer [Migrationsberatungsstelle](/list/s/migrationsberatung).
+  - text: |-
+      Entschuldigen Sie bitte, aber zu dieser Frage kann ich keine Antwort finden.
+
+      Sie erhalten umfangreiche Informationen in einer [Migrationsberatungsstelle](/list/s/migrationsberatung).
   utter_keywords_not_understood:
   - text: |-
       Leider habe ich Ihre Frage nicht richtig verstanden.

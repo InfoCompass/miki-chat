@@ -11,6 +11,7 @@ nlu:
     - Was machst Du?
     - Guten Tag
     - Guten Morgen
+    - Moin
 - intent: chitchat/chitchat_bye
   examples: |-
     - Tschüss
