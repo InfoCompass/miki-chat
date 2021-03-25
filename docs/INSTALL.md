@@ -186,3 +186,10 @@ the `x-rasa-services` has to use the `miki-chat` image rather than the `rasa` fu
 The `docker-compose.yml` file in the repository is already updated to do exactly that
 (line 48), but if you have an older `docker-compose.yml` installed, you will need to
 perform the change manually.
+
+# Warning that can be ignored
+
+UserWarning: Action 'utter_chitchat' ... and similar
+
+UserWarning: Intent 'single_word' has only 1 training examples!
+
